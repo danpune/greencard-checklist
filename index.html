@@ -142,6 +142,13 @@ h2 .num{flex:none;width:28px;height:28px;border-radius:8px;background:var(--bran
 .sources h3{font-size:15px;margin:14px 0 6px}
 .sources ul{margin:0;padding-left:18px;font-size:14px;color:var(--muted)}
 .sources li{margin:4px 0}
+.newsmeta{font-weight:400;font-size:13px;color:var(--muted);margin-left:6px}
+.newslist{list-style:none;padding-left:0!important}
+.newslist li{margin:0!important;padding:8px 0;border-top:1px dashed var(--line)}
+.newslist li:first-child{border-top:0}
+.newslist a{display:inline!important;white-space:normal!important;color:var(--ink);font-size:15px;text-decoration:none}
+.newslist a:hover{text-decoration:underline}
+.newslist time{display:block;font-size:12px;font-variant-numeric:tabular-nums}
 
 /* Travel table */
 .rules{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
@@ -229,7 +236,7 @@ footer p{margin:0 0 8px}
     <a href="#travel">Travel</a>
     <a href="#money">Money</a>
     <a href="#citizenship">Citizenship</a>
-    <a href="#unlocks">Unlocks</a>
+    <a href="#news">News</a>
     <a href="#sources">Sources</a>
   </nav>
   </div>
@@ -574,6 +581,56 @@ footer p{margin:0 0 8px}
   </div>
 </section>
 
+<!-- NEWS -->
+<section>
+  <h2 id="news"><span class="num">📰</span>News &amp; updates</h2>
+  <p class="sub">Immigration rules change often. Here's how to stay on top of them.</p>
+  <div class="card sources" id="newscard" style="margin-bottom:12px" hidden>
+    <h3>Latest USCIS alerts <span class="newsmeta" id="newsmeta"></span></h3>
+    <ul class="newslist" id="newslist"></ul>
+  </div>
+  <div class="card sources">
+    <h3>Official updates</h3>
+    <ul>
+      <li>USCIS alerts (the feed shown above): <a href="https://www.uscis.gov/newsroom/alerts" target="_blank" rel="noopener">uscis.gov/newsroom/alerts</a></li>
+      <li>USCIS email updates, free sign-up: <a href="https://public.govdelivery.com/accounts/USDHSCIS/subscriber/new" target="_blank" rel="noopener">public.govdelivery.com/accounts/USDHSCIS/subscriber/new</a></li>
+      <li>Form updates: new editions and fee changes: <a href="https://www.uscis.gov/forms/forms-updates" target="_blank" rel="noopener">uscis.gov/forms/forms-updates</a></li>
+      <li>Policy Manual updates: <a href="https://www.uscis.gov/policy-manual/updates" target="_blank" rel="noopener">uscis.gov/policy-manual/updates</a></li>
+      <li>Processing times: <a href="https://egov.uscis.gov/processing-times/" target="_blank" rel="noopener">egov.uscis.gov/processing-times</a></li>
+    </ul>
+    <h3>YouTube</h3>
+    <ul>
+      <li>RedBus2US: plain-English news on USCIS, green cards and visas: <a href="https://www.youtube.com/@RedBus2US" target="_blank" rel="noopener">youtube.com/@RedBus2US</a></li>
+      <li>Reddy Neumann Brown PC: immigration attorneys, frequent policy updates: <a href="https://www.youtube.com/@ReddyNeumannPC" target="_blank" rel="noopener">youtube.com/@ReddyNeumannPC</a></li>
+      <li>USCIS: the official channel: <a href="https://www.youtube.com/@uscis" target="_blank" rel="noopener">youtube.com/@uscis</a></li>
+      <li>Ashoori Law: immigration attorney, regular news videos: <a href="https://www.youtube.com/@AshooriLaw" target="_blank" rel="noopener">youtube.com/@AshooriLaw</a></li>
+      <li>Immigration Station: attorney Josh Goldstein: <a href="https://www.youtube.com/@ImmigrationStation4U" target="_blank" rel="noopener">youtube.com/@ImmigrationStation4U</a></li>
+    </ul>
+    <h3>News sites</h3>
+    <ul>
+      <li>RedBus2US: news, guides and trackers: <a href="https://redbus2us.com/" target="_blank" rel="noopener">redbus2us.com</a></li>
+      <li>Reddy Neumann Brown: immigration law blog: <a href="https://www.rnlawgroup.com/news/" target="_blank" rel="noopener">rnlawgroup.com/news</a></li>
+    </ul>
+    <h3>Podcasts</h3>
+    <ul>
+      <li>The Immigration Mastermind: for immigrants and their families: <a href="https://podcasts.apple.com/us/podcast/the-immigration-mastermind/id1514882182" target="_blank" rel="noopener">podcasts.apple.com/us/podcast/the-immigration-mastermind/id1514882182</a></li>
+      <li>Immigration Nerds: news and policy: <a href="https://podcasts.apple.com/us/podcast/immigration-nerds/id1400312981" target="_blank" rel="noopener">podcasts.apple.com/us/podcast/immigration-nerds/id1400312981</a></li>
+      <li>Immigrantly: immigrant stories and identity: <a href="https://podcasts.apple.com/us/podcast/immigrantly-podcast/id1440233951" target="_blank" rel="noopener">podcasts.apple.com/us/podcast/immigrantly-podcast/id1440233951</a></li>
+      <li>Immigration Review: weekly court decisions, lawyer-level: <a href="https://podcasts.apple.com/us/podcast/immigration-review/id1511655047" target="_blank" rel="noopener">podcasts.apple.com/us/podcast/immigration-review/id1511655047</a></li>
+    </ul>
+    <h3>Reddit</h3>
+    <ul>
+      <li>r/USCIS: timelines and case questions: <a href="https://www.reddit.com/r/USCIS/" target="_blank" rel="noopener">reddit.com/r/USCIS</a></li>
+      <li>r/greencard: <a href="https://www.reddit.com/r/greencard/" target="_blank" rel="noopener">reddit.com/r/greencard</a></li>
+      <li>r/immigration: <a href="https://www.reddit.com/r/immigration/" target="_blank" rel="noopener">reddit.com/r/immigration</a></li>
+    </ul>
+  </div>
+  <div class="callout tip">
+    <span class="ic" aria-hidden="true">🔎</span>
+    <p><strong>Check before you act.</strong> Videos, podcasts and Reddit are great for real experiences and early news, but anyone can post. Confirm anything important on the official pages or with an attorney. USCIS will never ask you to pay by phone, gift card or payment app. <a href="https://www.uscis.gov/avoid-scams" target="_blank" rel="noopener">uscis.gov/avoid-scams</a></p>
+  </div>
+</section>
+
 <!-- SOURCES -->
 <section>
   <h2 id="sources"><span class="num">📚</span>Sources &amp; helpful tools</h2>
@@ -598,7 +655,7 @@ footer p{margin:0 0 8px}
     </ul>
     <h3>Guides &amp; community</h3>
     <ul>
-      <li>US Immigration FAQ (open source, every claim footnoted): <a href="https://github.com/t3nsor/us-immigration-faq/blob/master/green-card.md" target="_blank" rel="noopener">github.com/t3nsor/us-immigration-faq/blob/master/green-card.md</a></li>
+      <li>US Immigration FAQ (open source, every claim footnoted, last updated 2023): <a href="https://github.com/t3nsor/us-immigration-faq/blob/master/green-card.md" target="_blank" rel="noopener">github.com/t3nsor/us-immigration-faq/blob/master/green-card.md</a></li>
       <li>CitizenPath: how travel affects citizenship: <a href="https://citizenpath.com/travel-abroad-affects-citizenship-eligibility/" target="_blank" rel="noopener">citizenpath.com/travel-abroad-affects-citizenship-eligibility</a></li>
       <li>Boundless: green card FAQs from Reddit: <a href="https://www.boundless.com/blog/green-card-reddit-faqs" target="_blank" rel="noopener">boundless.com/blog/green-card-reddit-faqs</a></li>
       <li>Reddy Neumann Brown: green card do's and don'ts for 2026: <a href="https://www.rnlawgroup.com/green-card-rules-in-2026-essential-dos-and-donts-for-new-lawful-permanent-residents/" target="_blank" rel="noopener">rnlawgroup.com/green-card-rules-in-2026-essential-dos-and-donts-for-new-lawful-permanent-residents</a></li>
@@ -833,6 +890,23 @@ footer p{margin:0 0 8px}
   since.addEventListener('input', calc);
   renderTrips();
   calc();
+
+  // Latest USCIS alerts. news.json is rebuilt daily by .github/workflows/news.yml.
+  fetch('news.json').then(function(r){ if (!r.ok) throw 0; return r.json(); }).then(function(d){
+    var list = document.getElementById('newslist');
+    (d.items || []).slice(0, 8).forEach(function(i){
+      if (!/^https:\/\/www\.uscis\.gov\//.test(i.url) || !/^\d{4}-\d\d-\d\d$/.test(i.date)) return;
+      var li = document.createElement('li'), t = document.createElement('time'), a = document.createElement('a');
+      t.textContent = fmt(parse(i.date));
+      a.textContent = i.title; a.href = i.url; a.target = '_blank'; a.rel = 'noopener';
+      li.appendChild(t); li.appendChild(a);
+      if (i.hit) { var g = document.createElement('span'); g.className = 'tag must'; g.textContent = 'Green card / citizenship'; li.appendChild(g); }
+      list.appendChild(li);
+    });
+    if (!list.children.length) return;
+    document.getElementById('newsmeta').textContent = 'checked ' + fmt(parse(d.updated));
+    document.getElementById('newscard').hidden = false;
+  }).catch(function(){ /* links below still work */ });
 
   // Visit counter (free Abacus counting API: no cookies, no personal data stored).
   // Counts once per browser session so refreshes don't inflate the number.
