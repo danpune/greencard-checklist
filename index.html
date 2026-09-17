@@ -314,7 +314,7 @@ footer p{margin:0 0 8px}
       <input type="checkbox" id="c-dl">
       <div class="body">
         <label for="c-dl">Renew your driver's license as a REAL ID</label>
-        <p>Your old license may expire with your visa. Take your green card to the DMV and ask for the longest validity your state allows. Make sure it's a REAL ID, which you need for domestic flights.</p>
+        <p>Your old license may expire with your visa. Take your green card to the DMV and ask for the longest validity your state allows. Make sure it's a REAL ID. For domestic flights you need a REAL ID or another accepted ID, like your green card or passport.</p>
         <div class="links">
           <a href="https://www.usa.gov/state-motor-vehicle-services" target="_blank" rel="noopener">https://www.usa.gov/state-motor-vehicle-services</a>
           <a href="https://www.tsa.gov/realid" target="_blank" rel="noopener">https://www.tsa.gov/realid</a>
@@ -374,7 +374,7 @@ footer p{margin:0 0 8px}
       <input type="checkbox" id="c-ge">
       <div class="body">
         <label for="c-ge">Apply for Global Entry (includes TSA PreCheck)</label>
-        <p>Green card holders can apply. It's $120 for 5 years, and many travel credit cards pay it back. <b>Tip from Reddit:</b> once you're approved, do the interview through "Enrollment on Arrival" when you land from an international trip. It's much faster than waiting for an appointment.</p>
+        <p>Green card holders can apply. It's $120 for 5 years, and many travel credit cards pay it back. <b>Tip from Reddit:</b> once you're conditionally approved, do the interview through "Enrollment on Arrival" when you land from an international trip. It's much faster than waiting for an appointment.</p>
         <div class="links">
           <a href="https://ttp.cbp.dhs.gov/" target="_blank" rel="noopener">https://ttp.cbp.dhs.gov/</a>
           <a href="https://www.cbp.gov/travel/trusted-traveler-programs/global-entry/eligibility" target="_blank" rel="noopener">https://www.cbp.gov/travel/trusted-traveler-programs/global-entry/eligibility</a>
@@ -719,7 +719,7 @@ footer p{margin:0 0 8px}
     });
     if (!trips.length) { sum.hidden = true; return; }
     var msg = '<b>' + total + ' days abroad</b> across ' + trips.length + (trips.length === 1 ? ' trip' : ' trips') + '. ';
-    msg += 'For the 5-year path you need at least 913 days (30 months) inside the U.S. in the 5 years before filing, so keep days abroad under about 913. On the 3-year path, keep them under about 548. ';
+    msg += 'For the 5-year path you need at least 913 days (30 months) inside the U.S. in the 5 years before filing, so keep days abroad under about 913. On the 3-year path, keep them under about 548. Only trips in the 5 (or 3) years before you file count, so ignore older ones. ';
     if (long6) msg += '<br><b>Heads up:</b> trips flagged above can break continuous residence. Talk to an immigration attorney before filing.';
     sum.innerHTML = msg; sum.hidden = false;
   }
