@@ -17,7 +17,8 @@ A simple, mobile-friendly checklist for people who just got a U.S. green card (l
 ## Features
 
 - Tick-box progress, saved only in your own browser (no accounts, no server)
-- "When can I apply?" calculator, with an add-to-calendar download
+- Sticky section bar with per-section progress (e.g. 2/5); ticked items collapse to their title
+- "When can I apply?" calculator with a countdown and an add-to-calendar download
 - Trip tracker that flags trips of 6+ months and 1+ year
 - WhatsApp share, copy link, and print/PDF
 - Works in light and dark mode
