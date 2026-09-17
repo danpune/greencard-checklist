@@ -188,6 +188,17 @@ footer p{margin:0 0 8px}
   background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;transition:.25s;pointer-events:none}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
+/* Desktop: larger type, slightly wider column (line length stays readable) */
+@media (min-width:900px){
+  body{font-size:17px}
+  .wrap{max-width:820px}
+  .lede{font-size:18px}
+  h2{font-size:22px}
+  .sub,.links a,.sources ul,.hint,.rules span,.count{font-size:15px}
+  .body p,ul.plain,.callout,.rules b,.newslist a{font-size:16px}
+  nav.jump a{font-size:14px}
+}
+
 @media print{
   header{background:none;color:#000;padding:0}
   .actions,.progress,.sharecard,.toast,.linkbtn{display:none!important}
