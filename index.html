@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Green Card Next Steps Checklist</title>
+<meta name="description" content="Just got your green card? A simple checklist of what to do next: IDs, work, travel rules, taxes, and the road to U.S. citizenship. With official links.">
+<meta name="theme-color" content="#14365c">
+
+<!-- Link preview (WhatsApp, iMessage, Slack) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Green Card Approved? Next Steps Checklist">
+<meta property="og:description" content="A simple checklist of what to do after getting your green card: IDs, work, travel, taxes, and the road to citizenship.">
+<meta property="og:url" content="https://danpune.github.io/greencard-checklist/">
+<meta property="og:image" content="https://danpune.github.io/greencard-checklist/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314365c'/%3E%3Cpath d='M18 33l9 9 19-20' fill='none' stroke='%23fff' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+<style>
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --ink:#1c2430; --muted:#5b6573; --line:#e3dfd6;
+  --brand:#14365c; --brand-soft:#e7eef6; --ok:#1f7a4d; --ok-soft:#e3f3ea;
+  --warn:#9a3412; --warn-soft:#fdeee4; --note-soft:#f1efe8;
+  --radius:14px; --shadow:0 1px 2px rgba(20,30,45,.06),0 4px 16px rgba(20,30,45,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#10151c; --card:#171e27; --ink:#e7ebf0; --muted:#9aa5b3; --line:#27313d;
+    --brand:#8db7e6; --brand-soft:#1b2a3b; --ok:#5cc58f; --ok-soft:#16291f;
+    --warn:#f4a36f; --warn-soft:#2e1d13; --note-soft:#1c232c;
+    --shadow:none;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--brand)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+
+/* Header */
+header{background:var(--brand);color:#fff;padding:36px 0 28px}
+@media (prefers-color-scheme: dark){header{background:#0c2340}}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.8;margin:0 0 6px}
+h1{font-size:clamp(28px,6vw,40px);line-height:1.15;margin:0 0 10px;letter-spacing:-.01em}
+.lede{margin:0 0 18px;opacity:.92;max-width:58ch}
+.actions{display:flex;flex-wrap:wrap;gap:8px}
+.btn{appearance:none;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.1);color:#fff;
+  font-weight:600;font-size:14px;line-height:1;font-family:inherit;padding:10px 14px;border-radius:999px;cursor:pointer;
+  display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+.btn:hover{background:rgba(255,255,255,.2)}
+.btn.primary{background:#25d366;border-color:#25d366;color:#083b1d}
+.btn.primary:hover{background:#3ee07a}
+.btn svg{width:16px;height:16px}
+
+/* Sticky progress */
+.progress{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line)}
+.progress .wrap{display:flex;align-items:center;gap:12px;padding-top:10px;padding-bottom:10px}
+.bar{flex:1;height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar span{display:block;height:100%;width:0;background:var(--ok);transition:width .3s}
+.count{font-size:14px;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.linkbtn{background:none;border:0;color:var(--muted);font:inherit;font-size:13px;cursor:pointer;text-decoration:underline;padding:4px}
+
+/* Jump nav */
+nav.jump{display:flex;gap:6px;overflow-x:auto;padding:14px 0 4px;scrollbar-width:none}
+nav.jump::-webkit-scrollbar{display:none}
+nav.jump a{flex:none;font-size:13px;text-decoration:none;color:var(--ink);background:var(--card);
+  border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+
+/* Sections */
+section{margin:22px 0}
+h2{font-size:20px;margin:0 0 4px;display:flex;align-items:center;gap:10px;scroll-margin-top:64px}
+h2 .num{flex:none;width:28px;height:28px;border-radius:8px;background:var(--brand-soft);color:var(--brand);
+  font-size:14px;display:grid;place-items:center}
+.sub{color:var(--muted);margin:0 0 12px 38px;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+
+/* Checklist items */
+.item{display:flex;gap:12px;padding:14px 16px;border-top:1px solid var(--line)}
+.item:first-child{border-top:0}
+.item input{flex:none;appearance:none;width:24px;height:24px;margin:1px 0 0;border:2px solid var(--muted);
+  border-radius:7px;cursor:pointer;display:grid;place-items:center;background:var(--card)}
+.item input:checked{background:var(--ok);border-color:var(--ok)}
+.item input:checked::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.item input:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.body{flex:1;min-width:0}
+.item label{font-weight:650;cursor:pointer;display:block}
+.item.done label{text-decoration:line-through;color:var(--muted)}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;
+  padding:2px 7px;border-radius:6px;margin-left:6px;vertical-align:2px;background:var(--note-soft);color:var(--muted)}
+.tag.must{background:var(--brand-soft);color:var(--brand)}
+.body p{margin:4px 0 0;color:var(--muted);font-size:15px}
+.links{display:flex;flex-direction:column;gap:4px;margin-top:8px}
+.links a{font-size:14px;overflow-wrap:anywhere;text-decoration:none}
+.links a:hover{text-decoration:underline}
+.links a::before{content:"↗ ";opacity:.7}
+
+/* Callouts */
+.callout{display:flex;gap:12px;padding:14px 16px;border-radius:var(--radius);margin:12px 0;font-size:15px}
+.callout.warn{background:var(--warn-soft);color:var(--ink);border:1px solid color-mix(in srgb,var(--warn) 30%,transparent)}
+.callout.tip{background:var(--note-soft);border:1px solid var(--line)}
+.callout strong{color:var(--warn)}
+.callout.tip strong{color:var(--ink)}
+.callout .ic{flex:none;font-size:18px;line-height:1.3}
+.callout p{margin:0;min-width:0;overflow-wrap:anywhere}
+.callout a,.hint a,.sources a{overflow-wrap:anywhere}
+
+/* Trips */
+.trips{padding:16px;border-top:1px solid var(--line)}
+.trips h3{font-size:16px;margin:0 0 4px}
+.trips .row{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;align-items:end;margin-top:10px}
+.trips .row label{font-size:13px;color:var(--muted);display:block;margin-bottom:4px;font-weight:500}
+.trips .row input[type=date]{max-width:none;padding:9px 8px;font-size:15px}
+.addbtn{appearance:none;border:0;background:var(--brand);color:#fff;font-weight:600;font-size:14px;line-height:1;font-family:inherit;padding:12px 14px;border-radius:10px;cursor:pointer}
+@media (prefers-color-scheme: dark){.addbtn{color:#0c2340}}
+.triplist{list-style:none;margin:12px 0 0;padding:0}
+.triplist li{display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px dashed var(--line);font-size:14px;flex-wrap:wrap}
+.triplist .days{font-weight:700;font-variant-numeric:tabular-nums;margin-left:auto}
+.triplist .flag{font-size:12px;font-weight:700;padding:2px 7px;border-radius:6px}
+.flag.amber{background:#fbefd5;color:#7a4b00}.flag.red{background:var(--warn-soft);color:var(--warn)}
+.triplist button{background:none;border:0;color:var(--muted);cursor:pointer;font-size:18px;line-height:1;padding:2px 6px}
+.tripsum{margin-top:10px;font-size:14px;background:var(--bg);border-radius:10px;padding:10px 12px}
+.calbtn{margin-top:12px;appearance:none;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:600;font-size:14px;line-height:1;font-family:inherit;padding:10px 14px;border-radius:999px;cursor:pointer}
+@media (max-width:420px){.trips .row{grid-template-columns:1fr 1fr}.trips .row .addbtn{grid-column:1/-1}}
+
+/* Sources */
+.sources{padding:6px 16px 14px}
+.sources h3{font-size:15px;margin:14px 0 6px}
+.sources ul{margin:0;padding-left:18px;font-size:14px;color:var(--muted)}
+.sources li{margin:4px 0}
+
+/* Travel table */
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.rules div{padding:14px 16px;border-left:1px solid var(--line)}
+.rules div:first-child{border-left:0}
+.rules b{display:block;font-size:15px;margin-bottom:2px}
+.rules span{font-size:14px;color:var(--muted)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px}
+@media (max-width:560px){
+  .rules{grid-template-columns:1fr}
+  .rules div{border-left:0;border-top:1px solid var(--line)}
+  .rules div:first-child{border-top:0}
+}
+
+/* Calculator */
+.calc{padding:16px}
+.calc label{font-weight:650;display:block;margin-bottom:6px}
+.calc input[type=date],.trips input[type=date]{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;
+  background:var(--bg);color:var(--ink);width:100%;max-width:240px}
+.calc .out{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.calc .box{background:var(--bg);border-radius:10px;padding:12px}
+.calc .box small{display:block;color:var(--muted);font-size:13px}
+.calc .box b{font-size:18px;font-variant-numeric:tabular-nums}
+.hint{font-size:13px;color:var(--muted);margin:10px 0 0}
+@media (max-width:420px){.calc .out{grid-template-columns:1fr}}
+
+ul.plain{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:15px}
+ul.plain li{margin:2px 0}
+
+footer{color:var(--muted);font-size:13px;padding:24px 0 48px;border-top:1px solid var(--line);margin-top:32px}
+footer p{margin:0 0 8px}
+.visits{margin-top:14px!important;display:inline-flex;gap:6px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+.visits[hidden]{display:none}
+.visits b{color:var(--ink);font-variant-numeric:tabular-nums}
+
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);opacity:0;
+  background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;transition:.25s;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media print{
+  header{background:none;color:#000;padding:0}
+  .actions,.progress,nav.jump,.toast,.linkbtn{display:none!important}
+  .card{box-shadow:none}
+  .links a::after{content:""}
+  section{break-inside:avoid-page}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Updated September 2026</p>
+    <h1>Green card approved? Here's what to do next.</h1>
+    <p class="lede">A simple checklist for new permanent residents: IDs, work, travel rules, taxes, and the road to citizenship. Tick things off as you go. Your progress is saved on this device only.</p>
+    <div class="actions">
+      <a class="btn primary" id="wa" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+        Share on WhatsApp
+      </a>
+      <button class="btn" id="copy" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        Copy link
+      </button>
+      <button class="btn" id="print" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a1 1 0 0 1-1-1v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1h-2"/><rect x="6" y="14" width="12" height="7"/></svg>
+        Print / PDF
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="progress" aria-live="polite">
+  <div class="wrap">
+    <div class="bar" aria-hidden="true"><span id="barfill"></span></div>
+    <span class="count" id="count">0 of 0 done</span>
+    <button class="linkbtn" id="reset" type="button">Reset</button>
+  </div>
+</div>
+
+<main class="wrap">
+
+<nav class="jump" aria-label="Jump to section">
+  <a href="#first-week">First week</a>
+  <a href="#work">Work</a>
+  <a href="#ids">IDs</a>
+  <a href="#travel">Travel</a>
+  <a href="#money">Money & taxes</a>
+  <a href="#citizenship">Citizenship</a>
+  <a href="#unlocks">Unlocks</a>
+  <a href="#sources">Sources</a>
+</nav>
+
+<!-- 1. FIRST WEEK -->
+<section>
+  <h2 id="first-week"><span class="num">1</span>First week</h2>
+  <p class="sub">Quick things to do as soon as the card arrives.</p>
+  <div class="card">
+    <div class="item">
+      <input type="checkbox" id="c-check-card">
+      <div class="body">
+        <label for="c-check-card">Check your card for mistakes <span class="tag must">Do now</span></label>
+        <p>Check your name, date of birth, country of birth, and the <b>"Resident Since"</b> date. That date starts your citizenship clock. If anything is wrong, fix it with Form I-90 (no fee if the error was made by DHS/USCIS).</p>
+        <div class="links"><a href="https://www.uscis.gov/i-90" target="_blank" rel="noopener">https://www.uscis.gov/i-90</a></div>
+      </div>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="c-copies">
+      <div class="body">
+        <label for="c-copies">Make copies of your documents</label>
+        <p>Scan the card (front and back) and the I-797 approval notice. Keep your old visas, I-94s and work permit (EAD) in the same folder.</p>
+      </div>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="c-carry">
+      <div class="body">
+        <label for="c-carry">Carry your green card at all times <span class="tag must">Required</span></label>
+        <p>The law requires this for everyone 18 and older, and not carrying it can be a misdemeanor. It's enforced more strictly now. Keep the original on you and a copy at home.</p>
+        <div class="links">
+          <a href="https://www.uscis.gov/alienregistration" target="_blank" rel="noopener">https://www.uscis.gov/alienregistration</a>
+          <a href="https://www.uscis.gov/green-card/after-we-grant-your-green-card/rights-and-responsibilities-of-a-green-card-holder-permanent-resident" target="_blank" rel="noopener">https://www.uscis.gov/green-card/after-we-grant-your-green-card/rights-and-responsibilities-of-a-green-card-holder-permanent-resident</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="c-account">
+      <div class="body">
+        <label for="c-account">Set up a USCIS online account</label>
+        <p>Use it to track cases and update your address.</p>
+        <div class="links"><a href="https://myaccount.uscis.gov/" target="_blank" rel="noopener">https://myaccount.uscis.gov/</a></div>
+      </div>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="c-conditional">
+      <div class="body">
+        <label for="c-conditional">Put your card's expiry date in your calendar</label>
+        <p>Most cards are good for 10 years. Renew with Form I-90 in the 6 months before it expires. Your status doesn't end when the card expires, but you need a valid card to work, travel and prove status. A <b>2-year card</b> (usually marriage-based) is different: file Form I-751 in the 90 days before it expires.</p>
+        <div class="links">
+          <a href="https://www.uscis.gov/green-card/after-we-grant-your-green-card" target="_blank" rel="noopener">https://www.uscis.gov/green-card/after-we-grant-your-green-card</a>
+          <a href="https://www.uscis.gov/i-751" target="_blank" rel="noopener">https://www.uscis.gov/i-751</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. WORK -->
+<section>
+  <h2 id="work"><span class="num">2</span>Work</h2>
+  <p class="sub">Let your employer know, and enjoy the new freedom.</p>
+  <div class="card">
+    <div class="item">
+      <input type="checkbox" id="c-i9">
+      <div class="body">
+        <label for="c-i9">Update your I-9 with HR</label>
+        <p>Tell HR and the immigration team you've moved from H-1B/L-1/EAD to a green card, so they stop tracking visa expiry dates. Ask the attorney to close any pending H-1B filings. Once your green card is on file, your employer shouldn't ask you to re-verify it when it expires.</p>
+        <div class="links"><a href="https://www.uscis.gov/i-9-central/form-i-9-resources/handbook-for-employers-m-274/70-evidence-of-employment-authorization-for-certain-categories/71-lawful-permanent-residents-lpr" target="_blank" rel="noopener">https://www.uscis.gov/i-9-central/form-i-9-resources/handbook-for-employers-m-274/70-evidence-of-employment-authorization-for-certain-categories/71-lawful-permanent-residents-lpr</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="callout tip">
+    <span class="ic" aria-hidden="true">💡</span>
+    <p><strong>Thinking of changing jobs?</strong> If your green card came through an employer, it's common to stay about 6 months after approval to show you meant to take the job. That's a good habit, not a law. You're now free to change jobs, freelance, do side gigs, or start an LLC (talk to a CPA first), and there's no more visa stamping.</p>
+  </div>
+</section>
+
+<!-- 3. IDs -->
+<section>
+  <h2 id="ids"><span class="num">3</span>IDs &amp; eligibility</h2>
+  <p class="sub">Update your IDs, and avoid the one mistake that can't be undone.</p>
+  <div class="card">
+    <div class="item">
+      <input type="checkbox" id="c-ssn">
+      <div class="body">
+        <label for="c-ssn">Get a new Social Security card <span class="tag">Optional</span></label>
+        <p>This removes the "Valid for work only with DHS authorization" line. Your old card plus your green card is still fine for work. Start online and SSA will book an appointment. Bring your green card and passport. It's free.</p>
+        <div class="links"><a href="https://www.ssa.gov/personal-record/update-citizenship-or-immigration-status" target="_blank" rel="noopener">https://www.ssa.gov/personal-record/update-citizenship-or-immigration-status</a></div>
+      </div>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="c-dl">
+      <div class="body">
+        <label for="c-dl">Renew your driver's license as a REAL ID</label>
+        <p>Your old license may expire with your visa. Take your green card to the DMV and ask for the longest validity your state allows. Make sure it's a REAL ID, which you need for domestic flights.</p>
+        <div class="links">
+          <a href="https://www.usa.gov/state-motor-vehicle-services" target="_blank" rel="noopener">https://www.usa.gov/state-motor-vehicle-services</a>
+          <a href="https://www.tsa.gov/realid" target="_blank" rel="noopener">https://www.tsa.gov/realid</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="c-sss">
+      <div class="body">
+        <label for="c-sss">Register for Selective Service <span class="tag must">Men 18–25</span></label>
+        <p>Men aged 18 to 25 must register. Skipping it can cause problems on your citizenship application.</p>
+        <div class="links"><a href="https://www.sss.gov/register/" target="_blank" rel="noopener">https://www.sss.gov/register/</a></div>
+      </div>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="c-ar11">
+      <div class="body">
+        <label for="c-ar11">Report every move to USCIS within 10 days <span class="tag must">Required</span></label>
+        <p>This is Form AR-11. Your USCIS online account is the fastest way to do it.</p>
+        <div class="links"><a href="https://www.uscis.gov/addresschange" target="_blank" rel="noopener">https://www.uscis.gov/addresschange</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="callout warn">
+    <span class="ic" aria-hidden="true">⚠️</span>
+    <p><strong>Never register to vote or vote.</strong> DMV and other forms sometimes ask about voter registration. Say no. Never tick "U.S. citizen" on any form either (I-9, loans, job applications). This is one of the few mistakes that can cost you the green card and citizenship for good. <a href="https://www.usa.gov/who-can-vote" target="_blank" rel="noopener">https://www.usa.gov/who-can-vote</a></p>
+  </div>
+  <div class="callout warn">
+    <span class="ic" aria-hidden="true">🌿</span>
+    <p><strong>Marijuana is still illegal under federal law</strong>, even in states where it's legal. Using it, or working in the cannabis industry, can hurt your citizenship application and your green card. <a href="https://www.uscis.gov/archive/uscis-issues-policy-guidance-clarifying-how-federal-controlled-substances-law-applies-to" target="_blank" rel="noopener">https://www.uscis.gov/archive/uscis-issues-policy-guidance-clarifying-how-federal-controlled-substances-law-applies-to</a></p>
+  </div>
+</section>
+
+<!-- 4. TRAVEL -->
+<section>
+  <h2 id="travel"><span class="num">4</span>Travel</h2>
+  <p class="sub">Always carry your passport and green card. No U.S. visa needed to come back.</p>
+
+  <div class="card" style="margin-bottom:12px">
+    <div class="rules">
+      <div><b><span class="dot" style="background:var(--ok)"></span>Under 6 months</b><span>Fine.</span></div>
+      <div><b><span class="dot" style="background:#d99a1e"></span>6 to 12 months</b><span>USCIS assumes your "continuous residence" for citizenship is broken unless you can prove strong U.S. ties. Expect questions at the airport.</span></div>
+      <div><b><span class="dot" style="background:var(--warn)"></span>1 year or more</b><span>Breaks continuous residence. Without a re-entry permit, your green card is generally treated as given up.</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="item">
+      <input type="checkbox" id="c-log">
+      <div class="body">
+        <label for="c-log">Start a travel log from day 1</label>
+        <p>Write down every date you leave and come back. You'll need it for citizenship. Check it against CBP's "Travel History" records.</p>
+        <div class="links"><a href="https://i94.cbp.dhs.gov/search/history-search" target="_blank" rel="noopener">https://i94.cbp.dhs.gov/search/history-search</a></div>
+      </div>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="c-ge">
+      <div class="body">
+        <label for="c-ge">Apply for Global Entry (includes TSA PreCheck)</label>
+        <p>Green card holders can apply. It's $120 for 5 years, and many travel credit cards pay it back. <b>Tip from Reddit:</b> once you're approved, do the interview through "Enrollment on Arrival" when you land from an international trip. It's much faster than waiting for an appointment.</p>
+        <div class="links">
+          <a href="https://ttp.cbp.dhs.gov/" target="_blank" rel="noopener">https://ttp.cbp.dhs.gov/</a>
+          <a href="https://www.cbp.gov/travel/trusted-traveler-programs/global-entry/eligibility" target="_blank" rel="noopener">https://www.cbp.gov/travel/trusted-traveler-programs/global-entry/eligibility</a>
+          <a href="https://www.cbp.gov/travel/trusted-traveler-programs/global-entry/enrollment-arrival" target="_blank" rel="noopener">https://www.cbp.gov/travel/trusted-traveler-programs/global-entry/enrollment-arrival</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="c-reentry">
+      <div class="body">
+        <label for="c-reentry">Long trip planned? Get a re-entry permit first <span class="tag">If needed</span></label>
+        <p>If you might be away close to a year or longer, apply for a re-entry permit (Form I-131) <b>while you're still in the U.S.</b> Plan to stay for the biometrics appointment. It's usually good for up to 2 years. It protects your green card, but <b>not</b> your citizenship clock.</p>
+        <div class="links">
+          <a href="https://www.uscis.gov/i-131" target="_blank" rel="noopener">https://www.uscis.gov/i-131</a>
+          <a href="https://www.uscis.gov/green-card/after-we-grant-your-green-card/international-travel-as-a-permanent-resident" target="_blank" rel="noopener">https://www.uscis.gov/green-card/after-we-grant-your-green-card/international-travel-as-a-permanent-resident</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout warn">
+    <span class="ic" aria-hidden="true">🚫</span>
+    <p><strong>Never sign Form I-407 at the airport</strong> without talking to a lawyer. Signing it gives up your green card. It's voluntary, and you have the right to see an immigration judge instead. <a href="https://www.uscis.gov/i-407" target="_blank" rel="noopener">https://www.uscis.gov/i-407</a></p>
+  </div>
+  <div class="callout tip">
+    <span class="ic" aria-hidden="true">🌍</span>
+    <p><strong>From a country on the 2025–26 travel restriction list?</strong> Green card holders are exempt from the entry ban. But USCIS has added extra screening for people from those countries, so expect more checks on filings like I-90, I-751 and N-400. <a href="https://www.uscis.gov/newsroom/alerts/update-on-uscis-strengthened-screening-and-vetting" target="_blank" rel="noopener">https://www.uscis.gov/newsroom/alerts/update-on-uscis-strengthened-screening-and-vetting</a></p>
+  </div>
+  <div class="callout tip">
+    <span class="ic" aria-hidden="true">🇨🇦</span>
+    <p><strong>Going to Canada?</strong> Green card holders don't need an eTA. Just carry your passport and green card. <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/eligibility.html" target="_blank" rel="noopener">https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/eligibility.html</a></p>
+  </div>
+</section>
+
+<!-- 5. MONEY -->
+<section>
+  <h2 id="money"><span class="num">5</span>Money &amp; taxes</h2>
+  <p class="sub">What you file now is looked at when you apply for citizenship.</p>
+  <div class="card">
+    <div class="item">
+      <input type="checkbox" id="c-tax">
+      <div class="body">
+        <label for="c-tax">File taxes as a resident, every year <span class="tag must">Required</span></label>
+        <p>Report worldwide income. <b>Never</b> file as a nonresident, and don't claim to be a resident on a tax return in another country. Either can be treated as giving up your green card. Keep every return; the citizenship application asks about them.</p>
+        <div class="links"><a href="https://www.irs.gov/individuals/international-taxpayers/introduction-to-residency-under-us-tax-law" target="_blank" rel="noopener">https://www.irs.gov/individuals/international-taxpayers/introduction-to-residency-under-us-tax-law</a></div>
+      </div>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="c-fbar">
+      <div class="body">
+        <label for="c-fbar">Report foreign bank accounts <span class="tag">If you have them</span></label>
+        <p>If your foreign accounts add up to more than $10K at any point in the year, file an FBAR. Larger balances also need Form 8938 with your tax return: $50K at year-end or $75K at any time if single, $100K or $150K if married filing jointly.</p>
+        <div class="links">
+          <a href="https://www.fincen.gov/report-foreign-bank-and-financial-accounts" target="_blank" rel="noopener">https://www.fincen.gov/report-foreign-bank-and-financial-accounts</a>
+          <a href="https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements" target="_blank" rel="noopener">https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="c-mortgage">
+      <div class="body">
+        <label for="c-mortgage">Shop for mortgage or refinance quotes <span class="tag">Optional</span></label>
+        <p>More lenders and loan programs are open to you now, so it's worth getting fresh quotes. Your rate still depends on credit, income and down payment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. CITIZENSHIP -->
+<section>
+  <h2 id="citizenship"><span class="num">6</span>Road to citizenship (N-400)</h2>
+  <p class="sub">Eligible after 5 years, or 3 if married to and living with a U.S. citizen. You can file 90 days early.</p>
+
+  <div class="card" style="margin-bottom:12px">
+    <div class="calc">
+      <label for="since">When can I apply? Enter your "Resident Since" date:</label>
+      <input type="date" id="since">
+      <div class="out" id="calcout" hidden>
+        <div class="box"><small>Earliest filing date (5-year path)</small><b id="d5">–</b></div>
+        <div class="box"><small>Earliest filing date (3-year path, married to a citizen)</small><b id="d3">–</b></div>
+      </div>
+      <p class="hint" id="tripnote" hidden></p>
+      <button class="calbtn" id="ics" type="button" hidden>📅 Add filing date to my calendar</button>
+      <p class="hint">This counts back 90 days from your 5-year (or 3-year) anniversary, as USCIS allows. Double-check with the official tool before filing: <a href="https://www.uscis.gov/citizenship-resource-center/learn-about-citizenship/naturalization-eligibility-tool-0" target="_blank" rel="noopener">https://www.uscis.gov/citizenship-resource-center/learn-about-citizenship/naturalization-eligibility-tool-0</a></p>
+    </div>
+    <div class="trips">
+      <h3>Trip tracker</h3>
+      <p class="hint" style="margin-top:0">Add each trip outside the U.S. It flags long trips and adds up your days abroad. Saved on this device only.</p>
+      <div class="row">
+        <div><label for="tout">Left the U.S.</label><input type="date" id="tout"></div>
+        <div><label for="tin">Came back</label><input type="date" id="tin"></div>
+        <button class="addbtn" id="addtrip" type="button">Add trip</button>
+      </div>
+      <ul class="triplist" id="triplist"></ul>
+      <div class="tripsum" id="tripsum" hidden></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="item">
+      <input type="checkbox" id="c-req">
+      <div class="body">
+        <label for="c-req">Know the main requirements</label>
+        <ul class="plain">
+          <li>Continuous residence (no trips of 6 months or more)</li>
+          <li>Physically in the U.S. at least 30 of the 60 months (18 of 36 on the 3-year path)</li>
+          <li>Lived in your state for 3 months before filing</li>
+          <li>Good moral character</li>
+          <li>English test + civics test</li>
+        </ul>
+        <div class="links">
+          <a href="https://www.uscis.gov/policy-manual/volume-12-part-d-chapter-3" target="_blank" rel="noopener">https://www.uscis.gov/policy-manual/volume-12-part-d-chapter-3</a>
+          <a href="https://www.uscis.gov/policy-manual/volume-12-part-d-chapter-4" target="_blank" rel="noopener">https://www.uscis.gov/policy-manual/volume-12-part-d-chapter-4</a>
+          <a href="https://www.uscis.gov/policy-manual/volume-12-part-d-chapter-6" target="_blank" rel="noopener">https://www.uscis.gov/policy-manual/volume-12-part-d-chapter-6</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="c-folder">
+      <div class="body">
+        <label for="c-folder">Start a citizenship folder now</label>
+        <ul class="plain">
+          <li>Travel log</li>
+          <li>5 years of tax returns</li>
+          <li>Home addresses and employers for the last 5 years</li>
+          <li>Papers for any tickets or court issues</li>
+        </ul>
+      </div>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="c-civics">
+      <div class="body">
+        <label for="c-civics">Study for the new civics test</label>
+        <p>For applications filed on or after Oct 20, 2025: 128 questions to study, 20 asked, 12 correct to pass.</p>
+        <div class="links"><a href="https://www.uscis.gov/citizenship-resource-center/naturalization-test-and-study-resources/2025-civics-test" target="_blank" rel="noopener">https://www.uscis.gov/citizenship-resource-center/naturalization-test-and-study-resources/2025-civics-test</a></div>
+      </div>
+    </div>
+    <div class="item">
+      <input type="checkbox" id="c-n400">
+      <div class="body">
+        <label for="c-n400">File Form N-400</label>
+        <p>The fee is $710 online or $760 on paper. Check the current fee before you file.</p>
+        <div class="links">
+          <a href="https://www.uscis.gov/n-400" target="_blank" rel="noopener">https://www.uscis.gov/n-400</a>
+          <a href="https://www.uscis.gov/g-1055?form=n-400" target="_blank" rel="noopener">https://www.uscis.gov/g-1055?form=n-400</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout warn">
+    <span class="ic" aria-hidden="true">⚠️</span>
+    <p><strong>Stricter since 2025.</strong> USCIS looks harder at "good moral character": taxes, tickets, and honesty on past forms. Neighborhood and employer checks are back in some cases, and social media may be reviewed. File taxes on time, pay tickets, and keep your answers the same on every form. <a href="https://www.uscis.gov/policy-manual/updates" target="_blank" rel="noopener">https://www.uscis.gov/policy-manual/updates</a></p>
+  </div>
+</section>
+
+<!-- 7. UNLOCKS -->
+<section>
+  <h2 id="unlocks"><span class="num">7</span>What your green card unlocks</h2>
+  <p class="sub">Good to know, nothing to tick off.</p>
+  <div class="card">
+    <div class="item" style="display:block">
+      <ul class="plain" style="margin:0">
+        <li><b>Sponsor family:</b> you can petition for your spouse and unmarried children (Form I-130). <a href="https://www.usa.gov/sponsor-family-member" target="_blank" rel="noopener">https://www.usa.gov/sponsor-family-member</a></li>
+        <li><b>Work freely:</b> any employer, freelancing, or your own business.</li>
+        <li><b>Student aid:</b> you can get federal student aid. In-state tuition depends on your state's rules. <a href="https://studentaid.gov/understand-aid/eligibility/requirements/non-us-citizens" target="_blank" rel="noopener">https://studentaid.gov/understand-aid/eligibility/requirements/non-us-citizens</a></li>
+        <li><b>Health coverage:</b> you can buy Marketplace plans. Many public benefits have a 5-year wait. <a href="https://www.healthcare.gov/immigrants/lawfully-present-immigrants/" target="_blank" rel="noopener">https://www.healthcare.gov/immigrants/lawfully-present-immigrants/</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SOURCES -->
+<section>
+  <h2 id="sources"><span class="num">📚</span>Sources &amp; helpful tools</h2>
+  <p class="sub">Everything above was checked against these pages in September 2026.</p>
+  <div class="card sources">
+    <h3>Official government pages</h3>
+    <ul>
+      <li>USCIS: Welcome to the United States, guide for new permanent residents (PDF): <a href="https://www.uscis.gov/sites/default/files/document/guides/M-618.pdf" target="_blank" rel="noopener">https://www.uscis.gov/sites/default/files/document/guides/M-618.pdf</a></li>
+      <li>USCIS: After we grant your green card: <a href="https://www.uscis.gov/green-card/after-we-grant-your-green-card" target="_blank" rel="noopener">https://www.uscis.gov/green-card/after-we-grant-your-green-card</a></li>
+      <li>USCIS: Rights and responsibilities of a green card holder: <a href="https://www.uscis.gov/green-card/after-we-grant-your-green-card/rights-and-responsibilities-of-a-green-card-holder-permanent-resident" target="_blank" rel="noopener">https://www.uscis.gov/green-card/after-we-grant-your-green-card/rights-and-responsibilities-of-a-green-card-holder-permanent-resident</a></li>
+      <li>USCIS: International travel as a permanent resident: <a href="https://www.uscis.gov/green-card/after-we-grant-your-green-card/international-travel-as-a-permanent-resident" target="_blank" rel="noopener">https://www.uscis.gov/green-card/after-we-grant-your-green-card/international-travel-as-a-permanent-resident</a></li>
+      <li>USCIS: Alien registration requirement: <a href="https://www.uscis.gov/alienregistration" target="_blank" rel="noopener">https://www.uscis.gov/alienregistration</a></li>
+      <li>USCIS: Policy Manual, naturalization (continuous residence, physical presence, early filing): <a href="https://www.uscis.gov/policy-manual/volume-12-part-d-chapter-3" target="_blank" rel="noopener">https://www.uscis.gov/policy-manual/volume-12-part-d-chapter-3</a></li>
+      <li>USCIS: Fee schedule G-1055: <a href="https://www.uscis.gov/g-1055" target="_blank" rel="noopener">https://www.uscis.gov/g-1055</a></li>
+      <li>USCIS: Policy Manual updates (2025–26 changes): <a href="https://www.uscis.gov/policy-manual/updates" target="_blank" rel="noopener">https://www.uscis.gov/policy-manual/updates</a></li>
+      <li>SSA: Update citizenship or immigration status: <a href="https://www.ssa.gov/personal-record/update-citizenship-or-immigration-status" target="_blank" rel="noopener">https://www.ssa.gov/personal-record/update-citizenship-or-immigration-status</a></li>
+      <li>TSA: Acceptable ID: <a href="https://www.tsa.gov/travel/security-screening/identification" target="_blank" rel="noopener">https://www.tsa.gov/travel/security-screening/identification</a></li>
+      <li>CBP: Global Entry: <a href="https://www.cbp.gov/travel/trusted-traveler-programs/global-entry" target="_blank" rel="noopener">https://www.cbp.gov/travel/trusted-traveler-programs/global-entry</a></li>
+      <li>Selective Service: who must register: <a href="https://www.sss.gov/register/who-needs-to-register/" target="_blank" rel="noopener">https://www.sss.gov/register/who-needs-to-register/</a></li>
+      <li>IRS: U.S. tax residency: <a href="https://www.irs.gov/individuals/international-taxpayers/introduction-to-residency-under-us-tax-law" target="_blank" rel="noopener">https://www.irs.gov/individuals/international-taxpayers/introduction-to-residency-under-us-tax-law</a></li>
+      <li>Canada: eTA facts for U.S. permanent residents: <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/facts.html" target="_blank" rel="noopener">https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/facts.html</a></li>
+    </ul>
+    <h3>Guides &amp; community</h3>
+    <ul>
+      <li>US Immigration FAQ (open source, every claim footnoted): <a href="https://github.com/t3nsor/us-immigration-faq/blob/master/green-card.md" target="_blank" rel="noopener">https://github.com/t3nsor/us-immigration-faq/blob/master/green-card.md</a></li>
+      <li>CitizenPath: how travel affects citizenship: <a href="https://citizenpath.com/travel-abroad-affects-citizenship-eligibility/" target="_blank" rel="noopener">https://citizenpath.com/travel-abroad-affects-citizenship-eligibility/</a></li>
+      <li>Boundless: green card FAQs from Reddit: <a href="https://www.boundless.com/blog/green-card-reddit-faqs" target="_blank" rel="noopener">https://www.boundless.com/blog/green-card-reddit-faqs</a></li>
+      <li>Reddy Neumann Brown: green card do's and don'ts for 2026: <a href="https://www.rnlawgroup.com/green-card-rules-in-2026-essential-dos-and-donts-for-new-lawful-permanent-residents/" target="_blank" rel="noopener">https://www.rnlawgroup.com/green-card-rules-in-2026-essential-dos-and-donts-for-new-lawful-permanent-residents/</a></li>
+      <li>SG Legal Group: green card travel rules in 2026: <a href="https://www.sglegalgroup.com/blog/green-card-travel-rules-in-2026-what-you-can-do-what-can-go-wrong-and-how-to-protect-yourself" target="_blank" rel="noopener">https://www.sglegalgroup.com/blog/green-card-travel-rules-in-2026-what-you-can-do-what-can-go-wrong-and-how-to-protect-yourself</a></li>
+    </ul>
+    <h3>Free tools (third-party, not affiliated)</h3>
+    <ul>
+      <li>CitizenCalc: turns your I-94 travel history into an N-400 trip list: <a href="https://citizencalc.com/" target="_blank" rel="noopener">https://citizencalc.com/</a></li>
+      <li>2025 civics test flashcards (open source): <a href="https://github.com/QbitPrime/USCIS_2025_Civics_Test_Flashcard_Quiz" target="_blank" rel="noopener">https://github.com/QbitPrime/USCIS_2025_Civics_Test_Flashcard_Quiz</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Not legal advice.</b> This is an unofficial, community-made checklist and isn't connected to USCIS or any government agency. Rules and fees change, so always check the official links or talk to an immigration attorney about your own case.</p>
+    <p>Put together from official USCIS, SSA, CBP and IRS pages, immigration lawyer articles, and tips from people who've been through it. Last reviewed September 2026.</p>
+    <p class="visits" id="visits" hidden>👀 <b id="visitcount">–</b> visits</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  var KEY = 'gc-checklist-v1';
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('.item input[type=checkbox]'));
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { saved = {}; }
+
+  function save(){
+    var state = {};
+    boxes.forEach(function(b){ if (b.checked) state[b.id] = 1; });
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+  }
+  function update(){
+    var done = 0;
+    boxes.forEach(function(b){
+      b.closest('.item').classList.toggle('done', b.checked);
+      if (b.checked) done++;
+    });
+    document.getElementById('count').textContent = done + ' of ' + boxes.length + ' done';
+    document.getElementById('barfill').style.width = (boxes.length ? done / boxes.length * 100 : 0) + '%';
+  }
+  boxes.forEach(function(b){
+    b.checked = !!saved[b.id];
+    b.addEventListener('change', function(){ update(); save(); });
+  });
+  update();
+
+  document.getElementById('reset').addEventListener('click', function(){
+    if (!confirm('Clear all your ticks on this device?')) return;
+    boxes.forEach(function(b){ b.checked = false; });
+    update(); save();
+  });
+
+  // Sharing
+  var pageUrl = location.protocol.indexOf('http') === 0
+    ? location.origin + location.pathname
+    : 'https://danpune.github.io/greencard-checklist/';
+  var msg = 'Just got your green card? Here’s a simple checklist of what to do next 👇\n' + pageUrl;
+  document.getElementById('wa').href = 'https://wa.me/?text=' + encodeURIComponent(msg);
+
+  var toastEl = document.getElementById('toast'), toastTimer;
+  function toast(t){
+    toastEl.textContent = t; toastEl.classList.add('show');
+    clearTimeout(toastTimer); toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2000);
+  }
+  document.getElementById('copy').addEventListener('click', function(){
+    if (navigator.share && /Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+      navigator.share({ title: document.title, url: pageUrl }).catch(function(){});
+      return;
+    }
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(pageUrl).then(function(){ toast('Link copied'); }, function(){ prompt('Copy this link:', pageUrl); });
+    } else { prompt('Copy this link:', pageUrl); }
+  });
+  document.getElementById('print').addEventListener('click', function(){ window.print(); });
+
+  // Citizenship date calculator
+  var since = document.getElementById('since');
+  function addYears(d, y){
+    var r = new Date(d.getTime());
+    r.setFullYear(r.getFullYear() + y);
+    if (r.getMonth() !== d.getMonth()) r.setDate(0); // Feb 29 -> Feb 28
+    return r;
+  }
+  function fmt(d){ return d.toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' }); }
+  function parse(v){ var p = v.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function iso(d){ return d.getFullYear() + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0'); }
+  var DAY = 86400000;
+  // Days abroad: the day you leave and the day you return count as days in the U.S.
+  function daysAbroad(t){ return Math.max(0, Math.round((parse(t.back) - parse(t.out)) / DAY) - 1); }
+  function yearPlus(t){ return parse(t.back) >= addYears(parse(t.out), 1); }
+
+  var trips = [];
+  try { trips = JSON.parse(localStorage.getItem(KEY + '-trips') || '[]') || []; } catch (e) { trips = []; }
+  var earliest5 = null;
+
+  function calc(){
+    var out = document.getElementById('calcout'), note = document.getElementById('tripnote'), ics = document.getElementById('ics');
+    if (!since.value) { out.hidden = true; note.hidden = true; ics.hidden = true; earliest5 = null; return; }
+    var d = parse(since.value);
+    var f5 = addYears(d, 5); f5.setDate(f5.getDate() - 90);
+    var f3 = addYears(d, 3); f3.setDate(f3.getDate() - 90);
+    // A trip of 1 year or more breaks continuous residence: you can file 4 years + 1 day (or 2 years + 1 day) after returning.
+    var longTrips = trips.filter(function(t){ return yearPlus(t) && parse(t.out) >= d; });
+    note.hidden = true;
+    if (longTrips.length) {
+      var lastBack = longTrips.map(function(t){ return parse(t.back); }).sort(function(a,b){ return b - a; })[0];
+      var r5 = addYears(lastBack, 4); r5.setDate(r5.getDate() + 1);
+      var r3 = addYears(lastBack, 2); r3.setDate(r3.getDate() + 1);
+      if (r5 > f5) f5 = r5;
+      if (r3 > f3) f3 = r3;
+      note.textContent = 'Your dates were moved later because of a trip of 1 year or more. After a trip that long, you can file 4 years + 1 day after returning (2 years + 1 day on the 3-year path).';
+      note.hidden = false;
+    }
+    document.getElementById('d5').textContent = fmt(f5);
+    document.getElementById('d3').textContent = fmt(f3);
+    out.hidden = false; ics.hidden = false; earliest5 = f5;
+    try { localStorage.setItem(KEY + '-since', since.value); } catch (e) {}
+  }
+
+  function renderTrips(){
+    var list = document.getElementById('triplist'), sum = document.getElementById('tripsum');
+    list.innerHTML = '';
+    trips.sort(function(a,b){ return parse(a.out) - parse(b.out); });
+    var total = 0, long6 = 0;
+    trips.forEach(function(t, i){
+      var n = daysAbroad(t); total += n;
+      var li = document.createElement('li');
+      var dates = document.createElement('span');
+      dates.textContent = fmt(parse(t.out)) + ' → ' + fmt(parse(t.back));
+      li.appendChild(dates);
+      if (yearPlus(t)) { var f = document.createElement('span'); f.className = 'flag red'; f.textContent = '1 year+'; li.appendChild(f); long6++; }
+      else if (n > 180) { var g = document.createElement('span'); g.className = 'flag amber'; g.textContent = '6+ months'; li.appendChild(g); long6++; }
+      var days = document.createElement('span'); days.className = 'days'; days.textContent = n + (n === 1 ? ' day' : ' days');
+      li.appendChild(days);
+      var del = document.createElement('button'); del.type = 'button'; del.setAttribute('aria-label', 'Remove trip'); del.textContent = '×';
+      del.addEventListener('click', function(){ trips.splice(i, 1); persistTrips(); });
+      li.appendChild(del);
+      list.appendChild(li);
+    });
+    if (!trips.length) { sum.hidden = true; return; }
+    var msg = '<b>' + total + ' days abroad</b> across ' + trips.length + (trips.length === 1 ? ' trip' : ' trips') + '. ';
+    msg += 'For the 5-year path you need at least 913 days (30 months) inside the U.S. in the 5 years before filing, so keep days abroad under about 913. On the 3-year path, keep them under about 548. ';
+    if (long6) msg += '<br><b>Heads up:</b> trips flagged above can break continuous residence. Talk to an immigration attorney before filing.';
+    sum.innerHTML = msg; sum.hidden = false;
+  }
+  function persistTrips(){
+    try { localStorage.setItem(KEY + '-trips', JSON.stringify(trips)); } catch (e) {}
+    renderTrips(); calc();
+  }
+  document.getElementById('addtrip').addEventListener('click', function(){
+    var o = document.getElementById('tout').value, b = document.getElementById('tin').value;
+    if (!o || !b) { toast('Pick both dates'); return; }
+    if (parse(b) < parse(o)) { toast('Return date is before departure'); return; }
+    trips.push({ out: o, back: b });
+    document.getElementById('tout').value = ''; document.getElementById('tin').value = '';
+    persistTrips();
+  });
+
+  // Calendar reminder (.ics)
+  document.getElementById('ics').addEventListener('click', function(){
+    if (!earliest5) return;
+    var end = new Date(earliest5.getTime() + DAY);
+    var ics = [
+      'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//greencard-checklist//EN','BEGIN:VEVENT',
+      'UID:' + Date.now() + '@greencard-checklist',
+      'DTSTAMP:' + new Date().toISOString().replace(/[-:]/g,'').split('.')[0] + 'Z',
+      'DTSTART;VALUE=DATE:' + iso(earliest5), 'DTEND;VALUE=DATE:' + iso(end),
+      'SUMMARY:Earliest date to file N-400 (U.S. citizenship)',
+      'DESCRIPTION:Check eligibility and current fee first: https://www.uscis.gov/n-400',
+      'BEGIN:VALARM','TRIGGER:-P30D','ACTION:DISPLAY','DESCRIPTION:N-400 filing window opens in 30 days','END:VALARM',
+      'END:VEVENT','END:VCALENDAR'
+    ].join('\r\n');
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
+    a.download = 'n400-filing-date.ics';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+
+  try { var s = localStorage.getItem(KEY + '-since'); if (s) since.value = s; } catch (e) {}
+  since.addEventListener('change', calc);
+  since.addEventListener('input', calc);
+  renderTrips();
+  calc();
+
+  // Visit counter (free Abacus counting API: no cookies, no personal data stored).
+  // Counts once per browser session so refreshes don't inflate the number.
+  // Only counts on the live site, not local previews.
+  (function(){
+    if (location.hostname !== 'danpune.github.io') return;
+    var base = 'https://abacus.jasoncameron.dev/';
+    var path = 'danpune-greencard-checklist/visits';
+    var counted = false;
+    try { counted = sessionStorage.getItem('gc-counted') === '1'; } catch (e) {}
+    fetch(base + (counted ? 'get/' : 'hit/') + path)
+      .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function(d){
+        if (typeof d.value !== 'number') return;
+        try { sessionStorage.setItem('gc-counted', '1'); } catch (e) {}
+        document.getElementById('visitcount').textContent = d.value.toLocaleString();
+        document.getElementById('visits').hidden = false;
+      })
+      .catch(function(){ /* counter is optional; stay hidden */ });
+  })();
+})();
+</script>
+</body>
+</html>
