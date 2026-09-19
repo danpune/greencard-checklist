@@ -10,7 +10,7 @@ A simple, mobile-friendly checklist for people who just got a U.S. green card (l
 - Work: I-9 update, job-change guidance
 - IDs and eligibility: Social Security card, REAL ID, Selective Service, AR-11 address changes, voting warning
 - Travel: 6-month and 1-year rules, re-entry permit, Form I-407, travel log, Global Entry
-- Money and taxes: resident filing, FBAR and Form 8938
+- Money and taxes: resident filing, IRS tax transcripts for the N-400, FBAR and Form 8938
 - Road to citizenship (N-400): early-filing date calculator, trip tracker, 2025 civics test, fees
 - News & updates: latest USCIS alerts, plus official feeds, YouTube channels, podcasts and Reddit to follow
 - Sources: official USCIS, SSA, CBP, TSA, IRS, FinCEN and SSS pages
