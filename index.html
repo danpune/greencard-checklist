@@ -370,7 +370,7 @@ footer p{margin:0 0 8px}
       <input type="checkbox" id="c-sss">
       <div class="body">
         <label for="c-sss">Register for Selective Service <span class="tag must">Men 18–25</span></label>
-        <p>Men aged 18 to 25 must register. Skipping it can cause problems on your citizenship application.</p>
+        <p>Men must register before their 26th birthday (ages 18 through 25). Skipping it can cause problems on your citizenship application.</p>
         <div class="links"><a href="https://www.sss.gov/register/" target="_blank" rel="noopener">sss.gov/register</a></div>
       </div>
     </div>
@@ -471,11 +471,16 @@ footer p{margin:0 0 8px}
       <input type="checkbox" id="c-transcripts">
       <div class="body">
         <label for="c-transcripts">Download your IRS tax transcript every year and keep it <span class="tag must">Every year</span></label>
-        <p>After you file each year, download that year's transcript and put it in your citizenship folder. When you file the N-400 you'll want 5 years of them (3 on the marriage path): USCIS's N-400 checklist asks for them if you had any trip of 6 months or more or apply through marriage, and officers commonly ask everyone. A transcript is the IRS's own record of what you filed. It is <b>not</b> the same as filing your taxes, and it isn't your copy of the return: it proves the IRS received it. Collect it yearly because the "tax return transcript" is only available for the current and 3 prior tax years. If you're already behind, your IRS online account has the "tax account transcript" for the current and 9 prior tax years; ordering by mail gives the current and 3 prior and takes 5 to 10 days. Transcripts are free.</p>
+        <p>After you file each year, download that year's transcript into your citizenship folder. A transcript is the IRS's own record of what you filed. It is <b>not</b> the same as filing your taxes, and it isn't your copy of the return: it proves the IRS received it. Transcripts are free.</p>
+        <ul class="plain">
+          <li>For the N-400 you'll want 5 years of them (3 on the marriage path). USCIS's checklist asks for 5 years if you had any trip of 6 months or more; on the marriage path, a 3-year transcript is one of the accepted ways to document your marriage. It is a common request at the interview.</li>
+          <li>Collect yearly because the "tax return transcript" only covers the current and 3 prior tax years.</li>
+          <li>Already behind? Your IRS online account has the "tax account transcript" for the current and 9 prior years. By mail you get the current and 3 prior, in 5 to 10 days.</li>
+        </ul>
         <div class="links">
           <a href="https://www.irs.gov/individuals/get-transcript" target="_blank" rel="noopener">irs.gov/individuals/get-transcript</a>
-          <a href="https://www.irs.gov/individuals/tax-return-transcript-types-and-ways-to-order-them" target="_blank" rel="noopener">irs.gov/individuals/tax-return-transcript-types-and-ways-to-order-them</a>
-          <a href="https://www.uscis.gov/sites/default/files/document/guides/M-477.pdf" target="_blank" rel="noopener">uscis.gov/sites/default/files/document/guides/M-477.pdf</a>
+          <a href="https://www.irs.gov/individuals/tax-return-transcript-types-and-ways-to-order-them" target="_blank" rel="noopener">irs.gov: transcript types and which years each covers</a>
+          <a href="https://www.uscis.gov/sites/default/files/document/guides/M-477.pdf" target="_blank" rel="noopener">uscis.gov: N-400 document checklist (M-477, PDF)</a>
         </div>
       </div>
     </div>
@@ -536,7 +541,7 @@ footer p{margin:0 0 8px}
       <div class="body">
         <label for="c-req">Know the main requirements</label>
         <ul class="plain">
-          <li>Continuous residence (no trips of 6 months or more)</li>
+          <li>Continuous residence (a trip of 6 months or more can break it, see Travel)</li>
           <li>Physically in the U.S. at least 30 of the 60 months (18 of 36 on the 3-year path)</li>
           <li>Lived in your state for 3 months before filing</li>
           <li>Good moral character</li>
@@ -931,7 +936,7 @@ footer p{margin:0 0 8px}
       list.appendChild(li);
     });
     if (!list.children.length) return;
-    document.getElementById('newsmeta').textContent = 'checked ' + fmt(parse(d.updated));
+    document.getElementById('newsmeta').textContent = 'latest ' + fmt(parse(d.items[0].date));
     document.getElementById('newscard').hidden = false;
   }).catch(function(){ /* links below still work */ });
 
