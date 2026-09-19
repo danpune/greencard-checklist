@@ -73,7 +73,7 @@ nav.jump{display:flex;gap:5px;overflow-x:auto;padding:0 0 10px;scrollbar-width:n
 nav.jump::-webkit-scrollbar{display:none}
 nav.jump a{flex:none;font-size:13px;text-decoration:none;color:var(--ink);background:var(--bg);
   border:1px solid var(--line);padding:6px 9px;border-radius:999px}
-nav.jump .n{margin-left:5px;opacity:.7;font-variant-numeric:tabular-nums}
+nav.jump .n{margin-left:5px;font-weight:600;font-variant-numeric:tabular-nums}
 nav.jump a.active{background:var(--brand-soft);border-color:var(--brand);color:var(--brand)}
 nav.jump a.complete{background:var(--ok-soft);border-color:transparent;color:var(--ok)}
 
@@ -926,9 +926,10 @@ footer p{margin:0 0 8px}
 
   // Latest USCIS alerts. news.json is rebuilt daily by .github/workflows/news.yml.
   fetch('news.json').then(function(r){ if (!r.ok) throw 0; return r.json(); }).then(function(d){
-    var list = document.getElementById('newslist');
+    var list = document.getElementById('newslist'), latest = '';
     (d.items || []).slice(0, 8).forEach(function(i){
       if (!/^https:\/\/www\.uscis\.gov\//.test(i.url) || !/^\d{4}-\d\d-\d\d$/.test(i.date)) return;
+      if (!latest) latest = i.date;
       var li = document.createElement('li'), t = document.createElement('time'), a = document.createElement('a');
       t.textContent = fmt(parse(i.date));
       a.textContent = i.title; a.href = i.url; a.target = '_blank'; a.rel = 'noopener';
@@ -937,7 +938,7 @@ footer p{margin:0 0 8px}
       list.appendChild(li);
     });
     if (!list.children.length) return;
-    document.getElementById('newsmeta').textContent = 'latest ' + fmt(parse(d.items[0].date));
+    document.getElementById('newsmeta').textContent = 'latest ' + fmt(parse(latest));
     document.getElementById('newscard').hidden = false;
   }).catch(function(){ /* links below still work */ });
 
