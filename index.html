@@ -6,6 +6,7 @@
 <title>Green Card Next Steps Checklist</title>
 <meta name="description" content="Just got your green card? A simple checklist of what to do next: IDs, work, travel rules, taxes, and the road to U.S. citizenship. With official links.">
 <meta name="theme-color" content="#14365c">
+<link rel="canonical" href="https://danpune.github.io/greencard-checklist/">
 
 <!-- Link preview (WhatsApp, iMessage, Slack) -->
 <meta property="og:type" content="website">
@@ -182,6 +183,14 @@ footer{color:var(--muted);font-size:13px;padding:24px 0 48px;border-top:1px soli
 footer p{margin:0 0 8px}
 .visits{margin-top:14px!important;display:inline-flex;gap:6px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
 .visits[hidden]{display:none}
+[hidden]{display:none!important}
+.fit{margin-top:18px}
+.fit summary{cursor:pointer;padding:14px 16px;font-weight:650}
+.fit summary span{font-weight:400;color:var(--muted);font-size:14px;margin-left:6px}
+.fit .opts{padding:0 16px 14px;display:grid;gap:10px}
+.fit label{display:flex;gap:10px;align-items:flex-start;font-size:15px;cursor:pointer}
+.fit input{flex:none;width:20px;height:20px;margin:2px 0 0;accent-color:var(--ok)}
+.fit small{display:block;color:var(--muted);font-size:13px}
 .visits b{color:var(--ink);font-variant-numeric:tabular-nums}
 
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);opacity:0;
@@ -201,7 +210,7 @@ footer p{margin:0 0 8px}
 
 @media print{
   header{background:none;color:#000;padding:0}
-  .actions,.progress,.sharecard,.toast,.linkbtn{display:none!important}
+  .actions,.progress,.sharecard,.toast,.linkbtn,.fit{display:none!important}
   .links a,.sources a{white-space:normal;overflow-wrap:anywhere}
   .card{box-shadow:none}
   .links a::after{content:""}
@@ -255,6 +264,17 @@ footer p{margin:0 0 8px}
 </div>
 
 <main class="wrap">
+
+<details class="card fit" id="fit">
+  <summary>Skip what doesn't apply to you <span id="fitn"></span></summary>
+  <div class="opts">
+    <label><input type="checkbox" data-skip="male"> <span>I'm not male <small>Hides Selective Service</small></span></label>
+    <label><input type="checkbox" data-skip="kids"> <span>No children with green cards <small>Hides the age-14 card replacement</small></span></label>
+    <label><input type="checkbox" data-skip="foreign"> <span>No bank accounts outside the U.S. <small>Hides foreign account reporting</small></span></label>
+    <label><input type="checkbox" data-skip="cond"> <span>My card is valid for 10 years, not 2 <small>Hides the 2-year card note</small></span></label>
+    <label><input type="checkbox" data-skip="employer"> <span>My green card wasn't through an employer <small>Hides the job-change tip</small></span></label>
+  </div>
+</details>
 
 <!-- 1. FIRST WEEK -->
 <section>
@@ -313,7 +333,7 @@ footer p{margin:0 0 8px}
       <input type="checkbox" id="c-conditional">
       <div class="body">
         <label for="c-conditional">Put your card's expiry date in your calendar</label>
-        <p>Most cards are good for 10 years. Renew with Form I-90 in the 6 months before it expires. Your status doesn't end when the card expires, but you need a valid card to work, travel and prove status. A <b>2-year card</b> (usually marriage-based) is different: file Form I-751 in the 90 days before it expires.</p>
+        <p>Most cards are good for 10 years. Renew with Form I-90 in the 6 months before it expires. Your status doesn't end when the card expires, but you need a valid card to work, travel and prove status. <span data-if="cond">A <b>2-year card</b> (usually marriage-based) is different: file Form I-751 in the 90 days before it expires.</span></p>
         <div class="links">
           <a href="https://www.uscis.gov/sites/default/files/document/guides/M-618.pdf" target="_blank" rel="noopener">uscis.gov: Welcome to the United States guide (M-618, PDF)</a>
           <a href="https://www.uscis.gov/green-card/after-we-grant-your-green-card" target="_blank" rel="noopener">uscis.gov/green-card/after-we-grant-your-green-card</a>
@@ -338,7 +358,7 @@ footer p{margin:0 0 8px}
       </div>
     </div>
   </div>
-  <div class="callout tip">
+  <div class="callout tip" data-if="employer">
     <span class="ic" aria-hidden="true">💡</span>
     <p><strong>Thinking of changing jobs?</strong> If your green card came through an employer, many immigration attorneys suggest staying about 6 months after approval to show you meant to take the job. That's common advice, not a law. You're now free to change jobs, freelance, do side gigs, or start an LLC (talk to a CPA first), and there's no more visa stamping.</p>
   </div>
@@ -368,12 +388,27 @@ footer p{margin:0 0 8px}
         </div>
       </div>
     </div>
-    <div class="item">
+    <div class="item" data-if="male">
       <input type="checkbox" id="c-sss">
       <div class="body">
         <label for="c-sss">Register for Selective Service <span class="tag must">Men 18–25</span></label>
         <p>Men must register before their 26th birthday (ages 18 through 25). Skipping it can cause problems on your citizenship application.</p>
-        <div class="links"><a href="https://www.sss.gov/register/" target="_blank" rel="noopener">sss.gov/register</a></div>
+        <p><b>Past 26 and never registered?</b> You can no longer register. It can delay citizenship, but the law says a benefit can't be denied if you show the failure wasn't knowing and willful. Talk to an immigration attorney before you file the N-400.</p>
+        <div class="links">
+          <a href="https://www.sss.gov/register/" target="_blank" rel="noopener">sss.gov/register</a>
+          <a href="https://www.sss.gov/register/men-26-and-older/" target="_blank" rel="noopener">sss.gov/register/men-26-and-older</a>
+        </div>
+      </div>
+    </div>
+    <div class="item" data-if="kids">
+      <input type="checkbox" id="c-age14">
+      <div class="body">
+        <label for="c-age14">Kids with green cards: replace the card when they turn 14 <span class="tag">Families</span></label>
+        <p>A child who is a permanent resident must register and file Form I-90 within 30 days of turning 14. It includes fingerprinting. Put the birthday in your calendar now.</p>
+        <div class="links">
+          <a href="https://www.uscis.gov/i-90" target="_blank" rel="noopener">uscis.gov/i-90</a>
+          <a href="https://www.uscis.gov/sites/default/files/document/forms/i-90instr.pdf" target="_blank" rel="noopener">uscis.gov: Form I-90 instructions (PDF)</a>
+        </div>
       </div>
     </div>
     <div class="item">
@@ -486,7 +521,7 @@ footer p{margin:0 0 8px}
         </div>
       </div>
     </div>
-    <div class="item">
+    <div class="item" data-if="foreign">
       <input type="checkbox" id="c-fbar">
       <div class="body">
         <label for="c-fbar">Report foreign bank accounts <span class="tag">If you have them</span></label>
@@ -716,6 +751,7 @@ footer p{margin:0 0 8px}
   <div class="wrap">
     <p><b>Not legal advice.</b> This is an unofficial, community-made checklist and isn't connected to USCIS or any government agency. Rules and fees change, so always check the official links or talk to an immigration attorney about your own case.</p>
     <p>Put together from official USCIS, SSA, CBP and IRS pages, immigration lawyer articles, and tips from people who've been through it. Last reviewed September 2026.</p>
+    <p>This page keeps anonymous totals only: visits, where they came from (such as search or a WhatsApp share) and which sections get used. No cookies, no accounts, and nothing about you is stored.</p>
     <p class="visits" id="visits" hidden>👀 <b id="visitcount">–</b> visits</p>
   </div>
 </footer>
@@ -725,7 +761,23 @@ footer p{margin:0 0 8px}
 <script>
 (function(){
   var KEY = 'gc-checklist-v1';
+  // Anonymous totals via the free Abacus counting API: no cookies, no IDs. Live site only.
+  var LIVE = location.hostname === 'danpune.github.io';
+  function hit(key){ if (LIVE) fetch('https://abacus.jasoncameron.dev/hit/danpune-greencard-checklist/' + key).catch(function(){}); }
   var boxes = Array.prototype.slice.call(document.querySelectorAll('.item input[type=checkbox]'));
+  // "Skip what doesn't apply": hidden items drop out of every count
+  var skips = Array.prototype.slice.call(document.querySelectorAll('#fit input'));
+  var skipState = {};
+  try { skipState = JSON.parse(localStorage.getItem(KEY + '-skip') || '{}') || {}; } catch (e) { skipState = {}; }
+  function live(list){ return list.filter(function(b){ return !b.closest('[hidden]'); }); }
+  function applySkips(){
+    var n = 0;
+    skips.forEach(function(k){
+      if (k.checked) n++;
+      Array.prototype.forEach.call(document.querySelectorAll('[data-if="' + k.getAttribute('data-skip') + '"]'), function(el){ el.hidden = k.checked; });
+    });
+    document.getElementById('fitn').textContent = n ? '(' + n + ' skipped)' : '';
+  }
   var saved = {};
   try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { saved = {}; }
 
@@ -742,19 +794,18 @@ footer p{margin:0 0 8px}
              boxes: boxes.filter(function(b){ return sec.contains(b); }) };
   });
   function update(announce){
-    var done = 0;
-    boxes.forEach(function(b){
-      b.closest('.item').classList.toggle('done', b.checked);
-      if (b.checked) done++;
-    });
-    document.getElementById('count').textContent = done + ' of ' + boxes.length + ' done';
-    document.getElementById('barfill').style.width = (boxes.length ? done / boxes.length * 100 : 0) + '%';
+    var done = 0, all = live(boxes);
+    boxes.forEach(function(b){ b.closest('.item').classList.toggle('done', b.checked); });
+    all.forEach(function(b){ if (b.checked) done++; });
+    document.getElementById('count').textContent = done + ' of ' + all.length + ' done';
+    document.getElementById('barfill').style.width = (all.length ? done / all.length * 100 : 0) + '%';
     chips.forEach(function(c){
-      if (!c.boxes.length) return;
-      var d = c.boxes.filter(function(b){ return b.checked; }).length, full = d === c.boxes.length;
-      c.n.textContent = d + '/' + c.boxes.length;
+      var mine = live(c.boxes);
+      if (!mine.length) { c.n.textContent = ''; c.a.classList.remove('complete'); return; }
+      var d = mine.filter(function(b){ return b.checked; }).length, full = d === mine.length;
+      c.n.textContent = d + '/' + mine.length;
       c.a.classList.toggle('complete', full);
-      if (announce && full && !c.complete) toast(done === boxes.length ? 'All done. Congratulations! 🎉' : c.name + ' done ✅');
+      if (announce && full && !c.complete) toast(done === all.length ? 'All done. Congratulations! 🎉' : c.name + ' done ✅');
       c.complete = full;
     });
   }
@@ -771,10 +822,25 @@ footer p{margin:0 0 8px}
     }, { rootMargin: '-120px 0px -70% 0px' });
     chips.forEach(function(c){ io.observe(c.sec); });
   }
+  // ponytail: counts a section's first tick per page load, so a reload can count it again
+  var ticked = {};
   boxes.forEach(function(b){
     b.checked = !!saved[b.id];
-    b.addEventListener('change', function(){ update(true); save(); });
+    b.addEventListener('change', function(){
+      update(true); save();
+      var id = b.closest('section').querySelector('h2').id;
+      if (b.checked && !ticked[id]) { ticked[id] = 1; hit('tick-' + id); }
+    });
   });
+  skips.forEach(function(k){
+    k.checked = !!skipState[k.getAttribute('data-skip')];
+    k.addEventListener('change', function(){
+      skipState[k.getAttribute('data-skip')] = k.checked ? 1 : 0;
+      try { localStorage.setItem(KEY + '-skip', JSON.stringify(skipState)); } catch (e) {}
+      applySkips(); update();
+    });
+  });
+  applySkips();
   update();
 
   document.getElementById('reset').addEventListener('click', function(){
@@ -787,7 +853,7 @@ footer p{margin:0 0 8px}
   var pageUrl = location.protocol.indexOf('http') === 0
     ? location.origin + location.pathname
     : 'https://danpune.github.io/greencard-checklist/';
-  var msg = 'Just got your green card? Here’s a simple checklist of what to do next 👇\n' + pageUrl;
+  var msg = 'Just got your green card? Here’s a simple checklist of what to do next 👇\n' + pageUrl + '?s=wa';
   Array.prototype.forEach.call(document.querySelectorAll('.wa'), function(a){ a.href = 'https://wa.me/?text=' + encodeURIComponent(msg); });
 
   var toastEl = document.getElementById('toast'), toastTimer;
@@ -797,12 +863,12 @@ footer p{margin:0 0 8px}
   }
   document.getElementById('copy').addEventListener('click', function(){
     if (navigator.share && /Mobi|Android|iPhone/i.test(navigator.userAgent)) {
-      navigator.share({ title: document.title, url: pageUrl }).catch(function(){});
+      navigator.share({ title: document.title, url: pageUrl + '?s=link' }).catch(function(){});
       return;
     }
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(pageUrl).then(function(){ toast('Link copied'); }, function(){ prompt('Copy this link:', pageUrl); });
-    } else { prompt('Copy this link:', pageUrl); }
+      navigator.clipboard.writeText(pageUrl + '?s=link').then(function(){ toast('Link copied'); }, function(){ prompt('Copy this link:', pageUrl + '?s=link'); });
+    } else { prompt('Copy this link:', pageUrl + '?s=link'); }
   });
   document.getElementById('print').addEventListener('click', function(){ window.print(); });
 
@@ -943,15 +1009,24 @@ footer p{margin:0 0 8px}
     document.getElementById('newscard').hidden = false;
   }).catch(function(){ /* links below still work */ });
 
-  // Visit counter (free Abacus counting API: no cookies, no personal data stored).
-  // Counts once per browser session so refreshes don't inflate the number.
-  // Only counts on the live site, not local previews.
+  // Visit counter. Counts once per browser session so refreshes don't inflate the number.
+  // Also counts where the visit came from, as one of a few fixed buckets.
   (function(){
-    if (location.hostname !== 'danpune.github.io') return;
+    var src = (/[?&]s=(wa|link)\b/.exec(location.search) || [])[1];
+    if (src && history.replaceState) history.replaceState(null, '', location.pathname + location.hash);
+    if (!src) {
+      var h = ''; try { h = new URL(document.referrer).hostname; } catch (e) {}
+      src = !h ? 'direct'
+        : /(google|bing|duckduckgo|yahoo)\./.test(h) ? 'search'
+        : /reddit|facebook|instagram|linkedin|youtube|twitter|whatsapp|^t\.co$|(^|\.)x\.com$/.test(h) ? 'social'
+        : /github/.test(h) ? 'github' : 'other';
+    }
+    if (!LIVE) return;
     var base = 'https://abacus.jasoncameron.dev/';
     var path = 'danpune-greencard-checklist/visits';
     var counted = false;
     try { counted = sessionStorage.getItem('gc-counted') === '1'; } catch (e) {}
+    if (!counted) hit('src-' + src);
     fetch(base + (counted ? 'get/' : 'hit/') + path)
       .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function(d){
