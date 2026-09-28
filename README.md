@@ -2,7 +2,7 @@
 
 A simple, mobile-friendly checklist for people who just got a U.S. green card (lawful permanent residence).
 
-**Live page:** https://danpune.github.io/greencard-checklist/ · **En español:** https://danpune.github.io/greencard-checklist/es/
+**Live page:** https://danpune.github.io/greencard-checklist/
 
 ## What's inside
 
@@ -19,7 +19,6 @@ A simple, mobile-friendly checklist for people who just got a U.S. green card (l
 
 - Tick-box progress, saved only in your own browser (no accounts, no server)
 - "Skip what doesn't apply to you": hide items for things like Selective Service or foreign accounts, and the counts adjust
-- Spanish version at `/es/`, built from the English page so the two can't drift apart
 - Sticky section bar with per-section progress (e.g. 2/5); ticked items collapse to their title
 - "When can I apply?" calculator with a countdown and an add-to-calendar download
 - Trip tracker that flags trips of 6+ months and 1+ year
@@ -31,7 +30,6 @@ A simple, mobile-friendly checklist for people who just got a U.S. green card (l
 
 - `update_news.py` pulls the official USCIS Alerts RSS feed into `news.json`. A GitHub Action runs it every day and commits only when something changed.
 - `check_links.py` runs every Monday and fails the workflow (GitHub emails the owner) if any link on the page returns 404 or 410.
-- `build_es.py` builds `es/index.html` from `index.html` and the translations in `es.json`. It fails if any English text has no translation, so run `python3 build_es.py` after every change to `index.html` and commit both pages together.
 - All scripts are plain Python 3, standard library only. Run any of them by hand, for example `python3 update_news.py`.
 
 ## Disclaimer
