@@ -50,11 +50,13 @@ def senators():
 def representatives():
     out, named = {}, 0
     for m in ET.fromstring(get("https://clerk.house.gov/xml/lists/MemberData.xml")).iter("member"):
-        code = m.findtext("statedistrict").strip()
+        # the statedistrict prefix is not always the postal code (American Samoa is "AQ"), so read the postal code itself
+        state = m.find("member-info/state")
+        code = state.get("postal-code") if state is not None and state.get("postal-code") else m.findtext("statedistrict").strip()[:2]
         name = clean(m.findtext("member-info/official-name"))
         named += bool(name)
-        out.setdefault(code[:2], []).append([clean(m.findtext("member-info/district")) or "At Large", name or "Vacant"])
-    assert named >= 425 and len(out) == 56, "expected about 441 House members in 56 states and territories"
+        out.setdefault(code, []).append([clean(m.findtext("member-info/district")) or "At Large", name or "Vacant"])
+    assert named >= 425 and sorted(out) == sorted(STATES), "expected House members for exactly the 56 states and territories"
     key = lambda d: (0, int(re.sub(r"\D", "", d[0]))) if re.search(r"\d", d[0]) else (1, 0)
     return {k: sorted(v, key=key) for k, v in out.items()}
 

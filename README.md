@@ -31,6 +31,8 @@ A simple, mobile-friendly checklist for people who just got a U.S. green card (l
 - All 128 questions and answers of the 2025 civics test, taken from USCIS form M-1778 (09/25), in `questions.json`
 - Practice cards with self-grading and a read-aloud button, a mock test that stops when the result is decided (20 questions, 12 to pass; 65/20: 10 and 6), a list of missed questions, and progress by topic
 - Flash cards that turn over, a full-screen view, and an auto-play mode that goes through the questions on its own and keeps the screen awake
+- Previous and Next on every card, a card you miss comes back a few cards later, and you can hear the question or the answer, at normal or slow speed
+- A searchable list of all 128 questions with your own answers filled in, which prints cleanly
 - Learn mode: twelve chapters matching the official study guide, with a short "why" for each of the 128 answers in `why.json`. The notes are based on the USCIS 2025 Civics Test Study Guide and were checked against it by a second reader
 - Reading and writing practice for the English test: read a sentence aloud, or write one as the page dictates it. The sentences use only words from the official USCIS reading and writing vocabulary lists
 - Enter a ZIP code to fill in your own senators, representative, governor and state capital. The ZIP code is matched on the device against `zip.json` (built from the U.S. Census 2020 ZCTA file) and is never sent anywhere

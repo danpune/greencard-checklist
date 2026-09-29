@@ -34,16 +34,19 @@ body{margin:0;background:var(--bg);color:var(--ink);
   font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 a{color:var(--brand)}
 .wrap{max-width:760px;margin:0 auto;padding:0 16px}
-header{background:var(--brand);color:#fff;padding:28px 0 24px}
+header{background:var(--brand);color:#fff;padding:20px 0 18px}
 @media (prefers-color-scheme: dark){header{background:#0c2340}}
 header a{color:inherit}
 .eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.8;margin:0 0 6px}
 h1{font-size:clamp(26px,6vw,36px);line-height:1.15;margin:0 0 10px;letter-spacing:-.01em}
 .lede{margin:0;opacity:.92;max-width:58ch}
 h2{font-size:20px;margin:0 0 4px}
+#youd summary{font-size:20px;font-weight:650;cursor:pointer}
+#youd[open] summary{margin-bottom:6px}
+#youd summary small{font-weight:400;font-size:14px;color:var(--muted);margin-left:6px}
 h3{font-size:16px;margin:16px 0 6px}
 .sub{color:var(--muted);margin:0 0 12px;font-size:14px}
-section{margin:22px 0}
+section{margin:22px 0;scroll-margin-top:64px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
 button,select,input{font:inherit;color:inherit}
 .btn{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:600;font-size:15px;
@@ -59,7 +62,7 @@ button,select,input{font:inherit;color:inherit}
 label.f{display:block;font-size:13px;color:var(--muted);margin:0 0 4px}
 input[type=text],select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media (max-width:520px){.grid{grid-template-columns:1fr}}
+@media (max-width:520px){.grid{grid-template-columns:1fr}.grid.two{grid-template-columns:2fr 3fr}}
 .mine{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
 .mine li{background:var(--bg);border-radius:10px;padding:10px 12px}
 .mine small{display:block;color:var(--muted);font-size:13px}
@@ -84,9 +87,16 @@ input[type=text],select{width:100%;padding:11px 12px;border:1px solid var(--line
 .face.back{position:absolute;inset:0;overflow:auto;transform:rotateY(180deg)}
 .face.back::before{content:"";margin-top:auto}   /* centres short answers; collapses when the list is long */
 .turn{margin:auto 0 0;padding-top:12px;text-align:center;font-size:13px;color:var(--muted)}
+.btn.small{padding:9px 12px;font-size:14px;min-height:40px}
 .nav{margin-top:8px}
 .nav .btn{padding:9px 12px;font-size:14px;font-weight:600;color:var(--muted)}
 .btn:disabled{opacity:.4;cursor:default}
+.opt{margin:0;display:inline-flex;align-items:center;gap:6px;min-height:40px;cursor:pointer}
+.opt select{width:auto;padding:8px 10px}
+.opt input{width:20px;height:20px;accent-color:var(--brand)}
+::placeholder{color:var(--muted);opacity:1}
+.eyebrow a{display:inline-block;padding:8px 0}
+.tabs.more{-webkit-mask-image:linear-gradient(to right,#000 82%,transparent);mask-image:linear-gradient(to right,#000 82%,transparent)}
 .tools{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
 .tools .btn{padding:9px 12px;font-size:14px}
 .fs{position:fixed;inset:0;z-index:20;background:var(--bg);overflow:auto;margin:0;padding:16px max(16px,4vw)}
@@ -140,7 +150,16 @@ textarea:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
 .sent{font-size:clamp(20px,4.6vw,24px);font-weight:650;line-height:1.35;margin:10px 0 14px}
 footer{color:var(--muted);font-size:13px;padding:24px 0 48px;border-top:1px solid var(--line);margin-top:32px}
 footer p{margin:0 0 8px}
-@media (min-width:900px){body{font-size:17px}.wrap{max-width:820px}.tabs{flex-wrap:wrap;overflow:visible}}
+@media (min-width:900px){body{font-size:17px}.wrap{max-width:820px}.tabs{flex-wrap:wrap;overflow:visible}.tabs button{padding:9px 12px}}
+@media print{
+  header,footer,.tabs,#you,section{display:none!important}
+  #list{display:block!important}
+  #list .row,#list .sub{display:none!important}
+  body{background:#fff;color:#000}
+  .card{border:0;box-shadow:none;padding:0}
+  .list li{break-inside:avoid}
+  .list small{color:#333}
+}
 </style>
 </head>
 <body>
@@ -149,39 +168,41 @@ footer p{margin:0 0 8px}
   <div class="wrap">
     <p class="eyebrow"><a href="./">← Green card checklist</a></p>
     <h1>Practice for the citizenship test</h1>
-    <p class="lede">All 128 official questions from the 2025 civics test, with your own senators, representative and governor filled in. Your progress and your ZIP code stay on this device.</p>
+    <p class="lede">All 128 official questions from the 2025 civics test. Your progress stays on this device.</p>
   </div>
 </header>
 
 <main class="wrap">
 
-<section id="you">
-  <div class="card">
-    <h2>Where do you live?</h2>
-    <p class="sub">This page is for the 2025 test, taken by everyone who filed Form N-400 on or after Oct 20, 2025. Four questions depend on your state. Enter your ZIP code and we'll fill in your answers. It is never sent anywhere.</p>
-    <div class="grid">
+<section id="you" style="margin:14px 0 6px">
+  <details class="card" id="youd" open>
+    <summary id="yous">Where do you live?</summary>
+    <p class="sub">Four questions depend on your state. Enter your ZIP code and we'll fill in your senators, representative, governor and capital. It is never sent anywhere.</p>
+    <div class="grid two">
       <div><label class="f" for="zip">ZIP code</label><input type="text" id="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="e.g. 75001"></div>
       <div><label class="f" for="state">State or territory</label><select id="state"><option value="">Choose…</option></select></div>
     </div>
     <div id="repwrap" hidden style="margin-top:10px">
       <label class="f" for="rep">Your U.S. representative</label>
       <select id="rep"></select>
-      <p class="hint">A ZIP code can cover more than one district. Not sure which is yours? Look it up on the official site, then pick it here: <a href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener">house.gov/representatives/find-your-representative</a></p>
+      <p class="hint">This list has every district in your state, because one ZIP code can cover more than one. Not sure which is yours? Look it up on the official site, then pick it here: <a href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener">house.gov/representatives/find-your-representative</a></p>
     </div>
     <ul class="mine" id="mine" hidden></ul>
     <p class="hint" id="checked" hidden></p>
-  </div>
+    <button class="btn go" id="youdone" type="button" style="margin-top:12px" hidden>Done, start practising</button>
+  </details>
 </section>
 
+<div id="tabtop"></div>
 <div class="tabs" role="tablist" aria-label="Practice modes">
-  <button role="tab" data-tab="learn" aria-selected="false">Learn</button>
   <button role="tab" data-tab="practice" aria-selected="true">Practice</button>
+  <button role="tab" data-tab="learn" aria-selected="false">Learn</button>
   <button role="tab" data-tab="mock" aria-selected="false">Mock test</button>
-  <button role="tab" data-tab="missed" aria-selected="false">Missed <span id="missedn"></span></button>
+  <button role="tab" data-tab="list" aria-selected="false">Questions <span id="missedn"></span></button>
   <button role="tab" data-tab="progress" aria-selected="false">Progress</button>
-  <button role="tab" data-tab="english" aria-selected="false">Reading &amp; writing</button>
-  <button role="tab" data-tab="interview" aria-selected="false">The interview</button>
-  <button role="tab" data-tab="prep" aria-selected="false">How to prepare</button>
+  <button role="tab" data-tab="english" aria-selected="false">English test</button>
+  <button role="tab" data-tab="interview" aria-selected="false">Interview</button>
+  <button role="tab" data-tab="prep" aria-selected="false">Study plan</button>
 </div>
 
 <section id="learn" hidden>
@@ -191,7 +212,7 @@ footer p{margin:0 0 8px}
 </section>
 
 <section id="practice">
-  <div class="row two" style="margin-bottom:12px">
+  <div class="row two" style="margin-bottom:10px">
     <div><label class="f" for="set">Questions</label>
       <select id="set">
         <option value="all">All 128 questions</option>
@@ -201,26 +222,44 @@ footer p{margin:0 0 8px}
       </select></div>
     <div><label class="f" for="topic">Topic</label><select id="topic"><option value="">All topics</option></select></div>
   </div>
-  <div class="tools">
+  <div class="card" id="pcard"></div>
+  <p class="hint" id="pnote" hidden></p>
+  <div class="tools" style="margin-top:12px">
     <button class="btn" id="full" type="button">⛶ Full screen</button>
     <button class="btn" id="play" type="button">▶ Auto-play</button>
-    <label class="f" style="margin:0;display:flex;align-items:center;gap:6px">Seconds per side
-      <select id="secs" style="width:auto;padding:8px 10px"><option>5</option><option selected>8</option><option>12</option><option>20</option></select></label>
-    <label class="f" style="margin:0;display:flex;align-items:center;gap:6px"><input type="checkbox" id="voice" style="width:18px;height:18px"> Read aloud</label>
+    <label class="f opt">Pace
+      <select id="secs"><option value="5">5 seconds</option><option value="8" selected>8 seconds</option><option value="12">12 seconds</option><option value="20">20 seconds</option></select></label>
+    <label class="f opt"><input type="checkbox" id="voice"> Read aloud</label>
+    <label class="f opt"><input type="checkbox" id="slow"> Slow voice</label>
   </div>
-  <div class="card" id="pcard" aria-live="polite"></div>
-  <p class="hint">Use Previous and Next, or the left and right arrow keys, to move between cards without grading them.</p>
-  <p class="hint">Auto-play fills the screen and goes through the questions on its own, like the screens in a USCIS waiting room. It uses the questions chosen above. Press Esc or Exit to stop.</p>
+  <p class="hint">Tap the card to turn it over. Use Previous and Next, or the left and right arrow keys, to move between cards without grading them. A card you miss comes back a few cards later.</p>
+  <p class="hint">Auto-play fills the screen and goes through the chosen questions on its own, like the screens in a USCIS waiting room. Pace is how long each side stays up. Press Esc or Exit to stop.</p>
+  <p class="hint">The 65/20 list is for people aged 65 or older who have been permanent residents for 20 years. They study only those 20 questions.</p>
+  <p class="hint">This is the 2025 test, for everyone who filed Form N-400 on or after Oct 20, 2025. If you filed earlier, see the Interview tab.</p>
 </section>
 
 <section id="mock" hidden>
-  <div class="card" id="mcard" aria-live="polite"></div>
+  <div class="card" id="mcard"></div>
 </section>
 
-<section id="missed" hidden>
-  <h2>Questions you missed</h2>
-  <p class="sub">Every question whose last answer was wrong. Get it right once and it leaves this list.</p>
-  <div class="card"><ul class="list" id="missedlist"></ul></div>
+<section id="list" hidden>
+  <h2>All questions</h2>
+  <p class="sub">Every question with its accepted answers, and your own answers where they depend on your state.</p>
+  <div class="row two" style="margin-bottom:10px">
+    <div><label class="f" for="find">Search by word or number</label><input type="text" id="find" placeholder="senator, or 23" autocomplete="off"></div>
+    <div><label class="f" for="which">Show</label>
+      <select id="which">
+        <option value="all">All 128 questions</option>
+        <option value="missed">Only the ones I missed</option>
+        <option value="star">65/20 list (20 questions)</option>
+      </select></div>
+  </div>
+  <div class="row" style="margin-bottom:10px">
+    <button class="btn go" id="pmissed" type="button" hidden></button>
+    <button class="btn" id="printlist" type="button">Print this list</button>
+  </div>
+  <p class="sub" id="listn" aria-live="polite"></p>
+  <div class="card"><ul class="list" id="qlist"></ul></div>
 </section>
 
 <section id="progress" hidden>
@@ -265,7 +304,7 @@ footer p{margin:0 0 8px}
     <p class="hint">A different wording of a correct answer still counts.</p>
 
     <h3>If you don't pass a part</h3>
-    <p style="margin:0 0 8px">You get one retest, 60 to 90 days after the first interview, on only the part you failed. Missing the retest counts as a failed attempt. Failing a second time means the application is denied.</p>
+    <p style="margin:0 0 8px">You get one retest, 60 to 90 days after the first interview, on only the part you failed. Missing the retest counts as a failed attempt, unless USCIS excuses it. Failing a second time means the application is denied.</p>
     <h3>After the interview</h3>
     <p style="margin:0 0 8px">You leave with a results notice (Form N-652). The decision is granted, continued or denied, and USCIS has 120 days from the interview to decide. You are not a citizen until you take the Oath of Allegiance at a ceremony, which may be the same day or scheduled later by mail. You hand in your green card at the ceremony.</p>
 
@@ -273,14 +312,16 @@ footer p{margin:0 0 8px}
     <div class="scroll"><table class="tbl">
       <tr><th>50/20</th><td>Age 50 or older with 20 years as a permanent resident when you file. No English test. Civics test in your own language, with an interpreter you bring.</td></tr>
       <tr><th>55/15</th><td>Age 55 or older with 15 years as a permanent resident. Same as above.</td></tr>
-      <tr><th>65/20</th><td>Age 65 or older with 20 years as a permanent resident. No English test. Study only the 20 starred questions: asked 10, need 6.</td></tr>
-      <tr><th>Medical</th><td>A physical or developmental disability or mental impairment lasting 12 months or more may exempt you from English, civics or both. A licensed doctor or clinical psychologist completes Form N-648, which goes in with the N-400.</td></tr>
+      <tr><th>65/20</th><td>Age 65 or older with 20 years as a permanent resident. No English test. Study only the 20 starred questions: asked 10, need 6. You may take it in your own language, with an interpreter you bring.</td></tr>
+      <tr><th>Medical</th><td>A physical or developmental disability or mental impairment that has lasted, or is expected to last, 12 months or more may exempt you from English, civics or both. A licensed doctor or clinical psychologist completes Form N-648, which goes in with the N-400.</td></tr>
     </table></div>
     <h3>Sources</h3>
     <ul class="res">
       <li><a href="https://www.uscis.gov/citizenship/learn-about-citizenship/the-naturalization-interview-and-test" target="_blank" rel="noopener">USCIS: The naturalization interview and test</a></li>
       <li><a href="https://www.uscis.gov/policy-manual/volume-12-part-e-chapter-2" target="_blank" rel="noopener">USCIS Policy Manual: English and civics testing</a></li>
       <li><a href="https://www.uscis.gov/citizenship/exceptions-and-accommodations" target="_blank" rel="noopener">USCIS: Exceptions and accommodations</a></li>
+      <li><a href="https://www.uscis.gov/policy-manual/volume-12-part-e-chapter-3" target="_blank" rel="noopener">USCIS Policy Manual: medical disability exception</a></li>
+      <li><a href="https://www.uscis.gov/policy-manual/volume-12-part-b-chapter-4" target="_blank" rel="noopener">USCIS Policy Manual: results of the examination</a></li>
       <li><a href="https://www.uscis.gov/citizenship/learn-about-citizenship/naturalization-ceremonies" target="_blank" rel="noopener">USCIS: Naturalization ceremonies</a></li>
       <li><a href="https://www.uscis.gov/citizenship/learn-about-citizenship/10-steps-to-naturalization" target="_blank" rel="noopener">USCIS: 10 steps to naturalization</a></li>
     </ul>
@@ -295,7 +336,7 @@ footer p{margin:0 0 8px}
     <div class="scroll"><table class="tbl">
       <tr><th>Week 1</th><td>Questions 1 to 45, about 9 new ones a day. Enter your ZIP code above and learn your four personal answers. Read the reading vocabulary list aloud once.</td></tr>
       <tr><th>Week 2</th><td>Questions 46 to 90, plus 5 minutes a day on what you missed. Write 5 dictated sentences a day from the writing vocabulary list. One mock test at the weekend.</td></tr>
-      <tr><th>Week 3</th><td>Questions 91 to 128, then your missed list only. Do the three USCIS interview vocabulary exercises. Two mock tests.</td></tr>
+      <tr><th>Week 3</th><td>Questions 91 to 128, then your missed list only. Do the two USCIS interview vocabulary self-tests and the commands exercise. Two mock tests.</td></tr>
       <tr><th>Week 4</th><td>Missed list and a mock test every other day, answered out loud. Re-read your own N-400. Check the four officials' names a few days before the interview.</td></tr>
     </table></div>
     <p class="hint">On the 65/20 list? Two weeks of the same routine on the 20 starred questions is enough.</p>
@@ -313,7 +354,8 @@ footer p{margin:0 0 8px}
       <li><a href="https://www.uscis.gov/sites/default/files/document/guides/writing_vocab.pdf" target="_blank" rel="noopener">Writing test vocabulary list (PDF)</a></li>
       <li><a href="https://www.uscis.gov/interactives/citizenship/self-tests/self-test-1.html" target="_blank" rel="noopener">Vocabulary for the interview: self-test 1</a></li>
       <li><a href="https://www.uscis.gov/interactives/citizenship/self-tests/self-test-2.html" target="_blank" rel="noopener">Vocabulary for the interview: self-test 2</a> <small>Reading and listening.</small></li>
-      <li><a href="https://www.uscis.gov/interactives/citizenship/vocabulary/test-3/uscis_test3.html" target="_blank" rel="noopener">Understanding commands for the interview</a> <small>Phrases like "please raise your right hand".</small></li>
+      <li><a href="https://www.uscis.gov/sites/default/files/document/guides/UnderstandingCommands_PracticeExercise.pdf" target="_blank" rel="noopener">Understanding commands: practice exercise (PDF)</a> <small>Phrases like "please raise your right hand".</small></li>
+      <li><a href="https://www.uscis.gov/sites/default/files/document/guides/understandingcommands_flashcardsforlearners.pdf" target="_blank" rel="noopener">Understanding commands: flash cards (PDF)</a></li>
       <li><a href="https://www.uscis.gov/sites/default/files/document/videos/Naturalization_Interview.mp4" target="_blank" rel="noopener">Video: the naturalization interview and test</a> <small>Made before the 2025 test, so its civics part shows the older 10-question format. 42 MB.</small></li>
     </ul>
     <h3>Other free resources</h3>
@@ -356,6 +398,8 @@ footer p{margin:0 0 8px}
   var P = { loc: {}, q: {}, tests: [] };
   try { var s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.q) P = s; } catch (e) {}
   if (!P.rw) P.rw = { rr: 0, rw: 0, wr: 0, ww: 0 };
+  if (!P.loc) P.loc = {};
+  if (!P.tests) P.tests = [];
   function save(){ try { localStorage.setItem(KEY, JSON.stringify(P)); } catch (e) {} }
 
   var Q = [], O = null, ZIP = null, W = { chapters: [], why: {} };
@@ -378,14 +422,16 @@ footer p{margin:0 0 8px}
     if ([23, 29, 61, 62].indexOf(q.id) < 0) return null;
     var st = place();
     if (!st) return { a: q.a, ask: true };
-    var name = O.states[st].name, dc = st === 'DC', terr = TERR[st];
+    var name = O.states[st].name, dc = st === 'DC', terr = TERR[st], many = st === 'VI' || st === 'MP';
+    var it = dc ? 'D.C.' : (many ? 'The ' + name : name), has = many ? ' have' : ' has';
     if (q.id === 23) {
-      if (dc || terr) return { a: [(dc ? 'D.C.' : name) + ' has no U.S. senators'], tag: 'Your answer for ' + name };
+      if (dc || terr) return { a: [it + has + ' no U.S. senators'], tag: 'Your answer for ' + name };
       return { a: O.parts.senators[st] || q.a, tag: 'Your senators for ' + name + '. Name one.' };
     }
     if (q.id === 29) {
       var r = myRep();
-      if (dc || terr) return { a: [r ? r[1] + ' (' + r[0] + ')' : '', (dc ? 'D.C.' : name) + ' has no voting representatives in Congress'].filter(Boolean), tag: 'Your answer for ' + name };
+      if (r && r[1] === 'Vacant') return { a: ['This seat is vacant right now. Check house.gov before your interview.'], tag: 'Your district: ' + name + ', ' + r[0] };
+      if (dc || terr) return { a: [r ? r[1] + ' (' + r[0] + ')' : '', it + has + ' no voting representatives in Congress'].filter(Boolean), tag: 'Your answer for ' + name };
       if (r) return { a: [r[1]], tag: 'Your representative: ' + name + ', ' + r[0] + ' district' };
       return { a: q.a, ask: true, tag: 'Choose your district at the top to see your representative.' };
     }
@@ -400,6 +446,8 @@ footer p{margin:0 0 8px}
 
   function renderYou(){
     var st = place(), reps = st ? repsHere() : [];
+    var sum = $('yous'); sum.textContent = st ? 'Your answers for ' + O.states[st].name : 'Where do you live?';
+    if (st) sum.appendChild(el('small', '', reps.length > 1 && !myRep() ? 'choose your district' : 'change'));
     $('state').value = st;
     $('repwrap').hidden = reps.length < 2;
     if (reps.length > 1) {
@@ -415,7 +463,7 @@ footer p{margin:0 0 8px}
       li.appendChild(el('b', '', p.ask ? 'Choose your district above' : p.a.join('  ·  ')));
       list.appendChild(li);
     });
-    $('checked').hidden = !st;
+    $('checked').hidden = !st; $('youdone').hidden = !st;
     if (O) $('checked').textContent = 'Officials last changed ' + O.changed + '. Checked daily against the official sources below.';
   }
 
@@ -424,12 +472,13 @@ footer p{margin:0 0 8px}
     if (z.length !== 5) return;
     (ZIP ? Promise.resolve(ZIP) : load('zip.json').then(function(d){ return ZIP = d; })).then(function(d){
       var st = d.z5[z] || d.p3[z.slice(0, 3)];
-      P.loc = { zip: z, state: st || P.loc.state || '', district: '' };
+      P.loc = { zip: z, state: st || '', district: '' };
       save(); renderYou(); render();
       if (!st) $('checked').hidden = false, $('checked').textContent = "We couldn't match that ZIP code. Please choose your state.";
     }).catch(function(){});
   });
   $('state').addEventListener('change', function(){ P.loc = { zip: '', state: this.value, district: '' }; $('zip').value = ''; save(); renderYou(); render(); });
+  $('youdone').addEventListener('click', function(){ $('youd').open = false; $('tabtop').scrollIntoView(); });
   $('rep').addEventListener('change', function(){ P.loc.district = this.value; save(); renderYou(); render(); });
 
   // ---------- progress ----------
@@ -441,6 +490,7 @@ footer p{margin:0 0 8px}
     if (right) { r.r++; r.s++; r.l = 'r'; } else { r.w++; r.s = 0; r.l = 'w'; }
     save();
   }
+  function today(){ var d = new Date(); return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
   function shuffle(a){ for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
 
   // ---------- one question card, shared by practice and mock test ----------
@@ -448,7 +498,7 @@ footer p{margin:0 0 8px}
   function say(text, rate){
     if (!CAN_SPEAK) return;
     speechSynthesis.cancel();
-    var u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = rate || 0.9;
+    var u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = (rate || 0.9) * (P.slow ? 0.75 : 1);
     speechSynthesis.speak(u);
   }
   function whyBox(parent, q){
@@ -456,11 +506,12 @@ footer p{margin:0 0 8px}
     var d = el('div', 'why'); d.appendChild(el('b', '', 'Why')); d.appendChild(document.createTextNode(y.w)); parent.appendChild(d);
   }
   function card(box, q, label, onGrade){
+    var had = box.contains(document.activeElement);
     box.textContent = '';
     var meta = el('div', 'meta'); meta.appendChild(el('span', '', label)); meta.appendChild(el('span', '', q.sec + (q.star ? '  ★ 65/20' : '')));
     box.appendChild(meta);
     var flip = el('div', 'flip'), inner = el('div', 'flip-in'), front = el('div', 'face front'), back = el('div', 'face back');
-    flip.tabIndex = 0; flip.setAttribute('role', 'button'); flip.setAttribute('aria-label', 'Flash card. Press to turn it over.');
+    flip.tabIndex = 0; flip.setAttribute('role', 'button'); flip.setAttribute('aria-pressed', 'false');
     front.appendChild(el('p', 'q', q.id + '. ' + q.q));
     front.appendChild(el('p', 'turn', 'Tap the card to see the answer'));
     var p = personal(q), ans = p ? p.a : q.a;
@@ -472,7 +523,7 @@ footer p{margin:0 0 8px}
     if (p && p.ask && !p.tag) back.appendChild(el('div', 'note', 'Enter your ZIP code at the top to see your own answer.'));
     back.appendChild(el('p', 'turn', 'Tap to turn back'));
     back.setAttribute('aria-hidden', 'true');
-    function turn(){ var on = inner.classList.toggle('on'); back.setAttribute('aria-hidden', !on); front.setAttribute('aria-hidden', on); if (on) back.scrollTop = 0; }
+    function turn(){ var on = inner.classList.toggle('on'); front.style.minHeight = on ? back.scrollHeight + 'px' : ''; flip.setAttribute('aria-pressed', on); back.setAttribute('aria-hidden', !on); front.setAttribute('aria-hidden', on); if (on) back.scrollTop = 0; }
     flip.addEventListener('click', turn);
     flip.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); turn(); } });
     inner.appendChild(front); inner.appendChild(back); flip.appendChild(inner); box.appendChild(flip);
@@ -481,9 +532,14 @@ footer p{margin:0 0 8px}
     g.appendChild(btn('btn good', '✓ Got it right', function(){ onGrade(true); }));
     box.appendChild(g);
     var r = P.q[q.id], foot = el('div', 'row'); foot.style.marginTop = '10px';
-    if (CAN_SPEAK) { var hear = btn('btn', '🔊 Hear it', function(){ say(q.q); }); hear.style.padding = '8px 12px'; hear.style.fontSize = '14px'; foot.appendChild(hear); }
+    if (CAN_SPEAK) {
+      var hear = btn('btn small', '🔊 Question', function(){ say(q.q); }), heara = btn('btn small', '🔊 Answer', function(){ say(ans.slice(0, 3).join('. Or, ')); });
+      hear.setAttribute('aria-label', 'Hear the question'); heara.setAttribute('aria-label', 'Hear the answer');
+      foot.appendChild(hear); foot.appendChild(heara);
+    }
     var tally = el('span', 'tally', r && (r.r + r.w) ? 'So far: ' + r.r + ' right, ' + r.w + ' missed' + (r.s >= 3 ? '. Mastered.' : '') : 'Not tried yet'); tally.style.margin = '0';
     foot.appendChild(tally); box.appendChild(foot);
+    if (had) flip.focus({ preventScroll: true });
   }
 
   // ---------- practice ----------
@@ -498,21 +554,29 @@ footer p{margin:0 0 8px}
       return true;
     });
   }
+  var left_out = 0;
   function deal(){
     var all = pool(), fresh = all.filter(function(q){ return !isMastered(q); });
     deck = shuffle((fresh.length ? fresh : all).slice()); at = 0;
+    left_out = all.length - deck.length;
   }
   function practice(){
     var box = $('pcard');
     if (at >= deck.length) deal();
+    $('pnote').hidden = !left_out;
+    $('pnote').textContent = left_out + (left_out === 1 ? ' card you have mastered is' : ' cards you have mastered are') + ' left out. To bring ' + (left_out === 1 ? 'it' : 'them') + ' back, use Reset my progress on the Progress tab.';
     if (!deck.length) {
       box.textContent = '';
       box.appendChild(el('p', 'q', $('set').value === 'missed' ? 'Nothing in your missed list. Nice work.' : 'No questions match.'));
+      box.appendChild(btn('btn go', 'Practice all questions', function(){ $('set').value = 'all'; $('topic').value = ''; deal(); practice(); }));
       return;
     }
     var left = pool().filter(function(q){ return !isMastered(q); }).length;
     card(box, deck[at], 'Card ' + (at + 1) + ' of ' + deck.length + (left ? '' : '  ·  all mastered, reviewing'), function(right){
-      grade(deck[at], right); at++; counts(); practice();
+      var q = deck[at];
+      grade(q, right);
+      if (!right) deck.splice(Math.min(deck.length, at + 4), 0, q);   // see it again soon
+      at++; counts(); practice();
     });
     // move between cards without grading them
     var nav = el('div', 'row two nav');
@@ -529,6 +593,7 @@ footer p{margin:0 0 8px}
   function inChapter(q, c){ return W.why[q.id] && W.why[q.id].c === c; }
   function learn(){
     var box = $('lcard'), ch = W.chapters.filter(function(c){ return c.n === P.learn.c; })[0];
+    var had = box.contains(document.activeElement);
     box.textContent = '';
     if (!ch) { box.appendChild(el('p', 'sub', 'The study notes could not be loaded. Practice still works.')); return; }
     var qs = Q.filter(function(q){ return inChapter(q, ch.n); }), n = qs.length + 2;
@@ -561,11 +626,14 @@ footer p{margin:0 0 8px}
     var last = i === n - 1, more = ch.n < W.chapters.length;
     var next = btn('btn go next', last ? (more ? 'Next chapter →' : 'Start again') : 'Next →', function(){
       if (!last) P.learn.i = i + 1; else P.learn = { c: more ? ch.n + 1 : 1, i: 0 };
-      $('chapter').value = P.learn.c; save(); learn(); $('learn').scrollIntoView();
+      $('chapter').value = P.learn.c; save(); learn();
+      if (last) $('learn').scrollIntoView();
     });
     back.disabled = i === 0; if (i === 0) back.style.visibility = 'hidden';
     nav.appendChild(back); nav.appendChild(next); box.appendChild(nav);
+    if (had) next.focus({ preventScroll: true });
   }
+  $('slow').addEventListener('change', function(){ P.slow = this.checked ? 1 : 0; save(); });
   $('chapter').addEventListener('change', function(){ P.learn = { c: +this.value, i: 0 }; save(); learn(); });
 
   // ---------- full screen ----------
@@ -594,26 +662,30 @@ footer p{margin:0 0 8px}
     if (!S) return;
     clearTimeout(S.t); if (CAN_SPEAK) speechSynthesis.cancel();
     S.node.remove(); S = null;
+    $('play').focus();
     if (lock) { lock.release().catch(function(){}); lock = null; }
     if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(function(){});
   }
   function frame(){
-    var q = S.qs[S.i], p = personal(q), ans = (p ? p.a : q.a), shown = ans.slice(0, 4), mid = S.node.querySelector('.mid');
-    S.node.querySelector('.where').textContent = 'Question ' + q.id + ' of 128' + (q.star ? '  ★' : '') + '  ·  ' + q.sec;
+    var q = S.qs[S.i], p = personal(q), ans = (p ? p.a : q.a), mid = S.node.querySelector('.mid');
+    var asks = /\b(two|three|four|five)\b/i.exec(q.q), shown = ans.slice(0, Math.max(4, asks ? { two: 2, three: 3, four: 4, five: 5 }[asks[1].toLowerCase()] : 1));
+    S.node.querySelector('.where').textContent = (S.i + 1) + ' of ' + S.qs.length + '  ·  Question ' + q.id + (q.star ? ' ★' : '') + '  ·  ' + (S.paused ? 'Paused. Tap to continue.' : q.sec);
     mid.textContent = '';
     mid.appendChild(el('p', 'sq', q.q));
     if (S.side) {
       var ul = el('ul', 'sa'); shown.forEach(function(a){ ul.appendChild(el('li', '', a)); }); mid.appendChild(ul);
-      if (ans.length > shown.length) var extra = ans.length - shown.length;
-      mid.appendChild(el('p', 'more', 'and ' + extra + ' more accepted answer' + (extra === 1 ? '' : 's')));
+      var extra = ans.length - shown.length;
+      if (extra > 0) mid.appendChild(el('p', 'more', 'and ' + extra + ' more accepted answer' + (extra === 1 ? '' : 's')));
     }
-    if (S.voice) say(S.side ? shown[0] : q.q, 0.85);
+    var spoken = S.side ? shown[0] : q.q, wait = S.secs;
+    if (S.voice && !S.paused) { say(spoken, 0.85); wait = Math.max(wait, Math.ceil(spoken.split(' ').length * 0.5) + 2); }   // long questions need longer than the timer
     var bar = S.node.querySelector('.line span');
     bar.style.transition = 'none'; bar.style.width = '0';
     bar.offsetWidth;   // restart the timer bar
-    bar.style.transition = 'width ' + S.secs + 's linear'; bar.style.width = S.paused ? '0' : '100%';
+    bar.style.transition = 'width ' + wait + 's linear'; bar.style.width = S.paused ? '0' : '100%';
     clearTimeout(S.t);
-    if (!S.paused) S.t = setTimeout(function(){ step(1); }, S.secs * 1000);
+    if (S.paused && CAN_SPEAK) speechSynthesis.cancel();
+    if (!S.paused) S.t = setTimeout(function(){ step(1); }, wait * 1000);
   }
   function step(d){
     if (d > 0) { if (S.side) { S.side = 0; S.i = (S.i + 1) % S.qs.length; } else S.side = 1; }
@@ -621,8 +693,11 @@ footer p{margin:0 0 8px}
     frame();
   }
   $('play').addEventListener('click', function(){
-    var qs = pool(); if (!qs.length) return;
+    if (S) return;   // already running: Enter on the button behind the overlay must not start a second one
+    var qs = pool(), me = this;
+    if (!qs.length) { me.textContent = 'No questions in this set'; setTimeout(function(){ me.textContent = '▶ Auto-play'; }, 2500); return; }
     var node = el('div'); node.id = 'show';
+    node.setAttribute('role', 'dialog'); node.setAttribute('aria-modal', 'true'); node.setAttribute('aria-label', 'Auto-play');
     var top = el('div', 'top'); top.appendChild(el('span', 'where')); 
     var x = el('button', 'x', 'Exit'); x.type = 'button'; x.addEventListener('click', function(e){ e.stopPropagation(); stop(); });
     top.appendChild(x); node.appendChild(top);
@@ -635,15 +710,17 @@ footer p{margin:0 0 8px}
     if (navigator.wakeLock) navigator.wakeLock.request('screen').then(function(l){ lock = l; }).catch(function(){});
     hit('quiz-play');
     frame();
+    x.focus();
   });
   document.addEventListener('keydown', function(e){
     if (S) {
       if (e.key === 'Escape') stop();
-      else if (e.key === ' ') { e.preventDefault(); S.paused = !S.paused; frame(); }
+      else if (e.key === ' ' || e.key === 'Enter') { if (e.target.tagName !== 'BUTTON') { e.preventDefault(); S.paused = !S.paused; frame(); } }
       else if (e.key === 'ArrowRight') step(1);
       else if (e.key === 'ArrowLeft') step(-1);
       return;
     }
+    if (e.key === 'Escape' && $('practice').classList.contains('fs')) { fullOff($('practice')); $('full').textContent = '⛶ Full screen'; return; }
     // left and right arrows move between cards in Practice and Learn
     if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
     if (/^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName)) return;
@@ -668,6 +745,11 @@ footer p{margin:0 0 8px}
       b.addEventListener('click', function(){ mockStart(o[1]); }); row.appendChild(b);
     });
     box.appendChild(row);
+    if (CAN_SPEAK) {
+      var lab = el('label', 'f opt'), cb = el('input'); cb.type = 'checkbox'; cb.checked = !!P.mvoice; lab.style.marginTop = '12px';
+      cb.addEventListener('change', function(){ P.mvoice = cb.checked ? 1 : 0; save(); });
+      lab.appendChild(cb); lab.appendChild(document.createTextNode(' Read each question aloud, as the officer would')); box.appendChild(lab);
+    }
   }
   function mockStart(star){
     var src = Q.filter(function(q){ return !star || q.star; });
@@ -682,40 +764,60 @@ footer p{margin:0 0 8px}
       if (right) T.right++; else T.wrong.push(T.qs[T.i]);
       T.i++; counts(); mockNext();
     });
+    if (P.mvoice) say(T.qs[T.i].q);
   }
+  var LAST = null;
   function mockEnd(){
-    var pass = T.right >= T.need, box = $('mcard');
-    P.tests.unshift({ d: new Date().toISOString().slice(0, 10), r: T.right, n: T.i, p: pass ? 1 : 0, s: T.star ? 1 : 0 });
+    LAST = { pass: T.right >= T.need, right: T.right, asked: T.i, need: T.need, wrong: T.wrong };
+    P.tests.unshift({ d: today(), r: T.right, n: T.i, p: LAST.pass ? 1 : 0, s: T.star ? 1 : 0 });
     P.tests = P.tests.slice(0, 20); save(); hit('quiz-mock');
+    T = null;
+    mockResult();
+  }
+  function mockResult(){
+    var box = $('mcard'), R = LAST;
     box.textContent = '';
-    box.appendChild(el('p', 'result', pass ? '✅ Passed: ' + T.right + ' right out of ' + T.i + ' asked' : 'Not yet: ' + T.right + ' right out of ' + T.i + ' asked'));
-    box.appendChild(el('p', 'sub', pass ? 'You reached ' + T.need + ' correct answers, so the test stopped.' : 'You needed ' + T.need + '. The questions below are now in your missed list.'));
-    if (T.wrong.length) {
+    box.appendChild(el('p', 'result', R.pass ? '✅ Passed: ' + R.right + ' right out of ' + R.asked + ' asked' : 'Not yet: ' + R.right + ' right out of ' + R.asked + ' asked'));
+    box.appendChild(el('p', 'sub', R.pass ? 'You reached ' + R.need + ' correct answers, so the test stopped.' : 'You needed ' + R.need + '. The questions below are now marked as missed on the Questions tab.'));
+    if (R.wrong.length) {
       var ul = el('ul', 'list');
-      T.wrong.forEach(function(q){ var li = el('li'), p = personal(q); li.appendChild(el('b', '', q.id + '. ' + q.q)); li.appendChild(el('small', '', (p ? p.a : q.a).join('  ·  '))); ul.appendChild(li); });
+      R.wrong.forEach(function(q){ var li = el('li'), p = personal(q); li.appendChild(el('b', '', q.id + '. ' + q.q)); li.appendChild(el('small', '', (p ? p.a : q.a).join('  ·  '))); ul.appendChild(li); });
       box.appendChild(ul);
     }
-    var again = el('button', 'btn go', 'Take another test'); again.type = 'button'; again.style.marginTop = '12px';
-    again.addEventListener('click', mockHome); box.appendChild(again);
-    T = null;
+    var again = btn('btn go', 'Take another test', function(){ LAST = null; mockHome(); }); again.style.marginTop = '12px';
+    box.appendChild(again);
   }
 
   // ---------- missed list and progress ----------
-  function counts(){ var n = Q.filter(isMissed).length; $('missedn').textContent = n ? '(' + n + ')' : ''; }
-  function missed(){
-    var list = $('missedlist'), m = Q.filter(isMissed); list.textContent = '';
-    if (!m.length) { list.appendChild(el('li', '', 'Nothing here yet. Questions you miss in practice or in a mock test show up here.')); return; }
+  function counts(){ var n = Q.filter(isMissed).length; $('missedn').textContent = n ? '(' + n + ' missed)' : ''; }
+  function list(){
+    var term = $('find').value.trim().toLowerCase(), which = $('which').value, box = $('qlist');
+    var m = Q.filter(function(q){
+      if (which === 'missed' && !isMissed(q)) return false;
+      if (which === 'star' && !q.star) return false;
+      if (!term) return true;
+      if (/^\d+$/.test(term)) return String(q.id) === term;
+      var p = personal(q);
+      return (q.q + ' ' + (p ? p.a : q.a).join(' ')).toLowerCase().indexOf(term) >= 0;
+    });
+    box.textContent = '';
     m.forEach(function(q){
       var li = el('li'), p = personal(q), r = P.q[q.id];
-      li.appendChild(el('b', '', q.id + '. ' + q.q));
+      li.appendChild(el('b', '', q.id + '. ' + q.q + (q.star ? '  ★' : '')));
       li.appendChild(el('small', '', (p ? p.a : q.a).join('  ·  ')));
-      li.appendChild(el('p', 'tally', r.r + ' right, ' + r.w + ' missed'));
-      list.appendChild(li);
+      if (r && (r.r + r.w)) li.appendChild(el('p', 'tally', r.r + ' right, ' + r.w + ' missed' + (r.l === 'w' ? '. Missed last time.' : '')));
+      box.appendChild(li);
     });
-    var li = el('li'), b = el('button', 'btn go', 'Practice these ' + m.length); b.type = 'button';
-    b.addEventListener('click', function(){ $('set').value = 'missed'; $('topic').value = ''; deal(); tab('practice'); });
-    li.appendChild(b); list.appendChild(li);
+    if (!m.length) box.appendChild(el('li', '', which === 'missed' && !term ? 'Nothing here yet. Questions you miss in practice or in a mock test show up here.' : 'No question matches.'));
+    $('listn').textContent = m.length + (m.length === 1 ? ' question' : ' questions');
+    var n = Q.filter(isMissed).length, b = $('pmissed');
+    b.hidden = !n; b.textContent = 'Practice the ' + n + ' I missed';
   }
+  $('find').addEventListener('input', list);
+  $('which').addEventListener('change', list);
+  $('pmissed').addEventListener('click', function(){ $('set').value = 'missed'; $('topic').value = ''; deal(); tab('practice'); });
+  $('printlist').addEventListener('click', function(){ window.print(); });
+  window.addEventListener('beforeprint', function(){ if (Q.length) list(); });   // printing from any tab prints this list
   function progress(){
     var tried = Q.filter(function(q){ return P.q[q.id] && (P.q[q.id].r + P.q[q.id].w); }).length;
     var mastered = Q.filter(isMastered).length, r = 0, w = 0;
@@ -737,7 +839,9 @@ footer p{margin:0 0 8px}
   }
   $('reset').addEventListener('click', function(){
     if (!confirm('Clear your practice history and mock tests on this device? Your ZIP code and state are kept.')) return;
-    P.q = {}; P.tests = []; P.rw = { rr: 0, rw: 0, wr: 0, ww: 0 }; save(); deal(); render(); progress();
+    P.q = {}; P.tests = []; P.rw = { rr: 0, rw: 0, wr: 0, ww: 0 }; save(); deal();
+    $('rcard').textContent = ''; $('wcard').textContent = '';
+    render(); progress();
   });
   function topics(){ var seen = []; Q.forEach(function(q){ if (seen.indexOf(q.sec) < 0) seen.push(q.sec); }); return seen; }
 
@@ -775,7 +879,7 @@ footer p{margin:0 0 8px}
       check.hidden = true; out.textContent = '';
       var ok = ta.value.trim() && plain(ta.value) === plain(sent);
       out.appendChild(el('div', ok ? 'you' : 'note', ok ? '✓ Correct: ' + sent : 'The sentence was: ' + sent));
-      if (ok) { P.rw.wr++; save(); out.appendChild(btn('btn go', 'Next sentence', writing)); return; }
+      if (ok) { P.rw.wr++; save(); tally.textContent = 'So far: ' + P.rw.wr + ' right, ' + P.rw.ww + ' missed.'; out.appendChild(btn('btn go', 'Next sentence', writing)); return; }
       out.appendChild(el('p', 'hint', "Compare it with what you wrote. Spelling, capital letter and punctuation mistakes don't fail you unless they change the meaning. Numbers can be words or digits. Don't abbreviate."));
       var row = el('div', 'row two'); row.style.marginTop = '10px';
       row.appendChild(btn('btn bad', '✗ I got it wrong', function(){ P.rw.ww++; save(); writing(); }));
@@ -783,8 +887,8 @@ footer p{margin:0 0 8px}
       out.appendChild(row);
     });
     check.style.marginTop = '10px';
-    box.appendChild(check); box.appendChild(out);
-    box.appendChild(el('p', 'tally', 'So far: ' + P.rw.wr + ' right, ' + P.rw.ww + ' missed.'));
+    var tally = el('p', 'tally', 'So far: ' + P.rw.wr + ' right, ' + P.rw.ww + ' missed.');
+    box.appendChild(check); box.appendChild(out); box.appendChild(tally);
   }
 
   // ---------- tabs ----------
@@ -797,22 +901,31 @@ footer p{margin:0 0 8px}
       b.setAttribute('aria-selected', on);
       if (on) bar.scrollLeft = b.offsetLeft - (bar.clientWidth - b.clientWidth) / 2;   // keep the chosen tab in view
     });
-    ['learn', 'practice', 'mock', 'missed', 'progress', 'english', 'interview', 'prep'].forEach(function(n){ $(n).hidden = n !== name; });
+    ['learn', 'practice', 'mock', 'list', 'progress', 'english', 'interview', 'prep'].forEach(function(n){ $(n).hidden = n !== name; });
     render();
+    var top = $('tabtop').getBoundingClientRect().top;
+    if (top < 0) window.scrollBy(0, top);   // bring the start of the new tab into view
+    edge();
   }
+  function edge(){ var bar = document.querySelector('.tabs'); bar.classList.toggle('more', bar.scrollLeft + bar.clientWidth < bar.scrollWidth - 4); }
+  document.querySelector('.tabs').addEventListener('scroll', edge);
+  window.addEventListener('resize', edge);
   function render(){
     if (!Q.length) return;
     counts();
     if (cur === 'learn') learn();
     if (cur === 'practice') practice();
-    if (cur === 'mock' && !T) mockHome();
+    if (cur === 'mock' && !T) { if (LAST) mockResult(); else mockHome(); }
     if (cur === 'mock' && T) mockNext();
-    if (cur === 'missed') missed();
+    if (cur === 'list') list();
     if (cur === 'progress') progress();
     if (cur === 'english' && !$('rcard').firstChild) { reading(); writing(); hit('quiz-english'); }
   }
   Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function(b){
-    b.addEventListener('click', function(){ tab(b.getAttribute('data-tab')); });
+    var name = b.getAttribute('data-tab');
+    b.id = 'tab-' + name; b.setAttribute('aria-controls', name);
+    $(name).setAttribute('role', 'tabpanel'); $(name).setAttribute('aria-labelledby', b.id);
+    b.addEventListener('click', function(){ tab(name); });
   });
 
   // ---------- start ----------
@@ -824,7 +937,9 @@ footer p{margin:0 0 8px}
       .forEach(function(c){ $('state').appendChild(new Option(O.states[c].name, c)); });
     topics().forEach(function(t){ $('topic').appendChild(new Option(t, t)); });
     if (P.loc.zip) $('zip').value = P.loc.zip;
-    renderYou(); deal(); render();
+    $('slow').checked = !!P.slow;
+    renderYou(); deal(); render(); edge();
+    if (place()) $('youd').open = false;   // already filled in on an earlier visit
   }).catch(function(){
     $('pcard').textContent = 'The questions could not be loaded. Please check your connection and reload.';
   });
