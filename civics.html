@@ -94,6 +94,11 @@ input[type=text],select{width:100%;padding:11px 12px;border:1px solid var(--line
 .res{margin:0;padding-left:18px;font-size:15px}
 .res li{margin:5px 0}
 .res small{color:var(--muted)}
+.tbl{width:100%;border-collapse:collapse;font-size:15px}
+.tbl th,.tbl td{text-align:left;vertical-align:top;padding:9px 8px 9px 0;border-top:1px solid var(--line)}
+.tbl tr:first-child th,.tbl tr:first-child td{border-top:0}
+.tbl th{font-weight:650;width:34%}
+.scroll{overflow-x:auto}
 footer{color:var(--muted);font-size:13px;padding:24px 0 48px;border-top:1px solid var(--line);margin-top:32px}
 footer p{margin:0 0 8px}
 @media (min-width:900px){body{font-size:17px}.wrap{max-width:820px}}
@@ -114,7 +119,7 @@ footer p{margin:0 0 8px}
 <section id="you">
   <div class="card">
     <h2>Where do you live?</h2>
-    <p class="sub">Four questions depend on your state. Enter your ZIP code and we'll fill in your answers. It is never sent anywhere.</p>
+    <p class="sub">This page is for the 2025 test, taken by everyone who filed Form N-400 on or after Oct 20, 2025. Four questions depend on your state. Enter your ZIP code and we'll fill in your answers. It is never sent anywhere.</p>
     <div class="grid">
       <div><label class="f" for="zip">ZIP code</label><input type="text" id="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="e.g. 75001"></div>
       <div><label class="f" for="state">State or territory</label><select id="state"><option value="">Choose…</option></select></div>
@@ -134,6 +139,7 @@ footer p{margin:0 0 8px}
   <button role="tab" data-tab="mock" aria-selected="false">Mock test</button>
   <button role="tab" data-tab="missed" aria-selected="false">Missed <span id="missedn"></span></button>
   <button role="tab" data-tab="progress" aria-selected="false">Progress</button>
+  <button role="tab" data-tab="interview" aria-selected="false">The interview</button>
   <button role="tab" data-tab="prep" aria-selected="false">How to prepare</button>
 </div>
 
@@ -173,24 +179,91 @@ footer p{margin:0 0 8px}
   </div>
 </section>
 
+<section id="interview" hidden>
+  <h2>What the interview includes</h2>
+  <p class="sub">One appointment with a USCIS officer. It has three parts, and the civics test is only one of them.</p>
+  <div class="card">
+    <h3 style="margin-top:0">1. Your application, under oath</h3>
+    <p style="margin:0 0 8px">The officer puts you under oath and goes through the questions and answers on your N-400. Re-read your own application before you go, and note anything that changed since you filed, such as travel, address, job or marital status.</p>
+    <h3>2. The English test</h3>
+    <div class="scroll"><table class="tbl">
+      <tr><th>Speaking</th><td>Judged during the conversation about your application. You pass if you generally understand and respond meaningfully. You may ask for a question to be repeated or rephrased.</td></tr>
+      <tr><th>Reading</th><td>Read 1 sentence out of 3 correctly, out loud.</td></tr>
+      <tr><th>Writing</th><td>Write 1 sentence out of 3 as the officer dictates it. Spelling, capital letters and punctuation mistakes don't fail you unless they change the meaning. Don't abbreviate words.</td></tr>
+    </table></div>
+    <h3>3. The civics test</h3>
+    <div class="scroll"><table class="tbl">
+      <tr><th>Filed N-400 on or after Oct 20, 2025</th><td><b>2025 test, the one on this page.</b> 128 questions to study. Asked up to 20, out loud. The officer stops at 12 right (pass) or 9 wrong (fail).</td></tr>
+      <tr><th>Filed before Oct 20, 2025</th><td>2008 test. 100 questions to study, asked up to 10, 6 right to pass. Use the <a href="https://www.uscis.gov/citizenship/civics-practice-test-2008" target="_blank" rel="noopener">official 2008 practice test</a> instead of this page.</td></tr>
+    </table></div>
+    <p class="hint">A different wording of a correct answer still counts.</p>
+
+    <h3>If you don't pass a part</h3>
+    <p style="margin:0 0 8px">You get one retest, 60 to 90 days after the first interview, on only the part you failed. Missing the retest counts as a failed attempt. Failing a second time means the application is denied.</p>
+    <h3>After the interview</h3>
+    <p style="margin:0 0 8px">You leave with a results notice (Form N-652). The decision is granted, continued or denied, and USCIS has 120 days from the interview to decide. You are not a citizen until you take the Oath of Allegiance at a ceremony, which may be the same day or scheduled later by mail. You hand in your green card at the ceremony.</p>
+
+    <h3>Who is exempt</h3>
+    <div class="scroll"><table class="tbl">
+      <tr><th>50/20</th><td>Age 50 or older with 20 years as a permanent resident when you file. No English test. Civics test in your own language, with an interpreter you bring.</td></tr>
+      <tr><th>55/15</th><td>Age 55 or older with 15 years as a permanent resident. Same as above.</td></tr>
+      <tr><th>65/20</th><td>Age 65 or older with 20 years as a permanent resident. No English test. Study only the 20 starred questions: asked 10, need 6.</td></tr>
+      <tr><th>Medical</th><td>A physical or developmental disability or mental impairment lasting 12 months or more may exempt you from English, civics or both. A licensed doctor or clinical psychologist completes Form N-648, which goes in with the N-400.</td></tr>
+    </table></div>
+    <h3>Sources</h3>
+    <ul class="res">
+      <li><a href="https://www.uscis.gov/citizenship/learn-about-citizenship/the-naturalization-interview-and-test" target="_blank" rel="noopener">USCIS: The naturalization interview and test</a></li>
+      <li><a href="https://www.uscis.gov/policy-manual/volume-12-part-e-chapter-2" target="_blank" rel="noopener">USCIS Policy Manual: English and civics testing</a></li>
+      <li><a href="https://www.uscis.gov/citizenship/exceptions-and-accommodations" target="_blank" rel="noopener">USCIS: Exceptions and accommodations</a></li>
+      <li><a href="https://www.uscis.gov/citizenship/learn-about-citizenship/naturalization-ceremonies" target="_blank" rel="noopener">USCIS: Naturalization ceremonies</a></li>
+      <li><a href="https://www.uscis.gov/citizenship/learn-about-citizenship/10-steps-to-naturalization" target="_blank" rel="noopener">USCIS: 10 steps to naturalization</a></li>
+    </ul>
+  </div>
+</section>
+
 <section id="prep" hidden>
   <h2>How to prepare</h2>
-  <p class="sub">The test is spoken: an officer asks up to 20 of the 128 questions and you need 12 right.</p>
+  <p class="sub">About 20 minutes a day for four weeks is a reasonable plan for a working adult.</p>
   <div class="card">
-    <h3 style="margin-top:0">Official USCIS materials</h3>
+    <h3 style="margin-top:0">A four-week plan</h3>
+    <div class="scroll"><table class="tbl">
+      <tr><th>Week 1</th><td>Questions 1 to 45, about 9 new ones a day. Enter your ZIP code above and learn your four personal answers. Read the reading vocabulary list aloud once.</td></tr>
+      <tr><th>Week 2</th><td>Questions 46 to 90, plus 5 minutes a day on what you missed. Write 5 dictated sentences a day from the writing vocabulary list. One mock test at the weekend.</td></tr>
+      <tr><th>Week 3</th><td>Questions 91 to 128, then your missed list only. Do the three USCIS interview vocabulary exercises. Two mock tests.</td></tr>
+      <tr><th>Week 4</th><td>Missed list and a mock test every other day, answered out loud. Re-read your own N-400. Check the four officials' names a few days before the interview.</td></tr>
+    </table></div>
+    <p class="hint">On the 65/20 list? Two weeks of the same routine on the 20 starred questions is enough.</p>
+
+    <h3>Official civics materials (2025 test)</h3>
     <ul class="res">
       <li><a href="https://www.uscis.gov/sites/default/files/document/questions-and-answers/2025-Civics-Test-128-Questions-and-Answers.pdf" target="_blank" rel="noopener">128 Civics Questions and Answers (PDF)</a> <small>The official list this page is built from.</small></li>
-      <li><a href="https://www.uscis.gov/sites/default/files/document/brochures/USCIS-2025-Civics-Test-Study-Guide.pdf" target="_blank" rel="noopener">One Nation, One People: 2025 Civics Test Study Guide (PDF)</a> <small>Explains the answers instead of just listing them. Large file, 39 MB.</small></li>
+      <li><a href="https://www.uscis.gov/sites/default/files/document/brochures/USCIS-2025-Civics-Test-Study-Guide.pdf" target="_blank" rel="noopener">One Nation, One People: 2025 Civics Test Study Guide (PDF)</a> <small>Explains the answers. Large file, 39 MB.</small></li>
       <li><a href="https://www.uscis.gov/citizenship/testupdates" target="_blank" rel="noopener">Test updates</a> <small>The names USCIS accepts for the President, Vice President, Speaker and Chief Justice.</small></li>
-      <li><a href="https://www.uscis.gov/citizenship-resource-center/naturalization-test-and-study-resources/2025-civics-test" target="_blank" rel="noopener">2025 Civics Test page</a> <small>Who takes which version of the test.</small></li>
-      <li><a href="https://www.uscis.gov/citizenship/find-study-materials-and-resources/study-for-the-test" target="_blank" rel="noopener">Study for the Test</a> <small>Reading and writing vocabulary for the English test.</small></li>
+      <li><a href="https://www.uscis.gov/citizenship/find-study-materials-and-resources/study-for-the-test" target="_blank" rel="noopener">Study for the Test</a> <small>The full USCIS catalogue. Its flash cards, audio and practice test are for the older 2008 test only.</small></li>
     </ul>
+    <h3>Official English and interview materials</h3>
+    <ul class="res">
+      <li><a href="https://www.uscis.gov/sites/default/files/document/guides/reading_vocab.pdf" target="_blank" rel="noopener">Reading test vocabulary list (PDF)</a></li>
+      <li><a href="https://www.uscis.gov/sites/default/files/document/guides/writing_vocab.pdf" target="_blank" rel="noopener">Writing test vocabulary list (PDF)</a></li>
+      <li><a href="https://www.uscis.gov/interactives/citizenship/self-tests/self-test-1.html" target="_blank" rel="noopener">Vocabulary for the interview: self-test 1</a></li>
+      <li><a href="https://www.uscis.gov/interactives/citizenship/self-tests/self-test-2.html" target="_blank" rel="noopener">Vocabulary for the interview: self-test 2</a> <small>Reading and listening.</small></li>
+      <li><a href="https://www.uscis.gov/interactives/citizenship/vocabulary/test-3/uscis_test3.html" target="_blank" rel="noopener">Understanding commands for the interview</a> <small>Phrases like "please raise your right hand".</small></li>
+      <li><a href="https://www.uscis.gov/sites/default/files/document/videos/Naturalization_Interview.mp4" target="_blank" rel="noopener">Video: the naturalization interview and test</a> <small>Made before the 2025 test, so its civics part shows the older 10-question format. 42 MB.</small></li>
+    </ul>
+    <h3>Other free resources</h3>
+    <p class="hint" style="margin-top:0">Not run by USCIS. We have not checked their answers, and videos can show officials' names that are out of date.</p>
+    <ul class="res">
+      <li><a href="https://usahello.org/citizenship/prepare/citizenship-test-questions/" target="_blank" rel="noopener">USAHello</a> <small>Nonprofit. The questions translated into 17 or more languages.</small></li>
+      <li><a href="https://www.youtube.com/playlist?list=PLflUo62nbX4Wr6ZC7QZSZmlYdOXDa_Bf_" target="_blank" rel="noopener">YouTube: 128 Civics Questions and Answers playlist</a> <small>By US Citizenship Test Org. Includes a slow version for English learners.</small></li>
+      <li><a href="https://www.uscitizenpod.com/" target="_blank" rel="noopener">US Citizenship Podcast</a> <small>Practice interviews based on the N-400.</small></li>
+    </ul>
+    <p class="hint">Watch out for videos titled "2025" or "2026" that still teach the old 100-question test.</p>
     <h3>Habits that help</h3>
     <ul class="res">
       <li>Say your answers out loud. The real test is a conversation, not a form.</li>
-      <li>Learn one short answer per question. Most questions accept several, and you only need one unless the question asks for more.</li>
+      <li>Learn one short answer per question. You only need one unless the question asks for more.</li>
       <li>Study a little every day and let the questions you know drop out.</li>
-      <li>Check the four officials' names again in the week of your interview.</li>
+      <li>Know your own N-400 as well as the civics answers.</li>
     </ul>
   </div>
 </section>
@@ -455,7 +528,7 @@ footer p{margin:0 0 8px}
   function tab(name){
     cur = name;
     Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function(b){ b.setAttribute('aria-selected', b.getAttribute('data-tab') === name); });
-    ['practice', 'mock', 'missed', 'progress', 'prep'].forEach(function(n){ $(n).hidden = n !== name; });
+    ['practice', 'mock', 'missed', 'progress', 'interview', 'prep'].forEach(function(n){ $(n).hidden = n !== name; });
     render();
   }
   function render(){
