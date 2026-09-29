@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Citizenship Test Practice: 2025 Civics Questions</title>
+<meta name="description" content="Free practice for the 2025 U.S. citizenship civics test: all 128 official questions, a mock test, your own senators, representative and governor, and a list of the questions you miss.">
+<meta name="theme-color" content="#14365c">
+<link rel="canonical" href="https://danpune.github.io/greencard-checklist/civics.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Citizenship Test Practice: 2025 Civics Questions">
+<meta property="og:description" content="All 128 official questions, a mock test, and your own senators, representative and governor.">
+<meta property="og:url" content="https://danpune.github.io/greencard-checklist/civics.html">
+<meta property="og:image" content="https://danpune.github.io/greencard-checklist/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314365c'/%3E%3Cpath d='M18 33l9 9 19-20' fill='none' stroke='%23fff' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --ink:#1c2430; --muted:#5b6573; --line:#e3dfd6;
+  --brand:#14365c; --brand-soft:#e7eef6; --ok:#1f7a4d; --ok-soft:#e3f3ea;
+  --warn:#9a3412; --warn-soft:#fdeee4; --note-soft:#f1efe8;
+  --radius:14px; --shadow:0 1px 2px rgba(20,30,45,.06),0 4px 16px rgba(20,30,45,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#10151c; --card:#171e27; --ink:#e7ebf0; --muted:#9aa5b3; --line:#27313d;
+    --brand:#8db7e6; --brand-soft:#1b2a3b; --ok:#5cc58f; --ok-soft:#16291f;
+    --warn:#f4a36f; --warn-soft:#2e1d13; --note-soft:#1c232c; --shadow:none;
+  }
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--brand)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+header{background:var(--brand);color:#fff;padding:28px 0 24px}
+@media (prefers-color-scheme: dark){header{background:#0c2340}}
+header a{color:inherit}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.8;margin:0 0 6px}
+h1{font-size:clamp(26px,6vw,36px);line-height:1.15;margin:0 0 10px;letter-spacing:-.01em}
+.lede{margin:0;opacity:.92;max-width:58ch}
+h2{font-size:20px;margin:0 0 4px}
+h3{font-size:16px;margin:16px 0 6px}
+.sub{color:var(--muted);margin:0 0 12px;font-size:14px}
+section{margin:22px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+button,select,input{font:inherit;color:inherit}
+.btn{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:600;font-size:15px;
+  padding:12px 16px;border-radius:10px;cursor:pointer}
+.btn.go{background:var(--brand);border-color:var(--brand);color:#fff}
+@media (prefers-color-scheme: dark){.btn.go{color:#0c2340}}
+.btn.good{background:var(--ok-soft);border-color:transparent;color:var(--ok)}
+.btn.bad{background:var(--warn-soft);border-color:transparent;color:var(--warn)}
+.btn:focus-visible,select:focus-visible,input:focus-visible,.tabs button:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.linkbtn{background:none;border:0;color:var(--muted);font-size:14px;cursor:pointer;text-decoration:underline;padding:10px 6px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.row.two>*{flex:1 1 140px}
+label.f{display:block;font-size:13px;color:var(--muted);margin:0 0 4px}
+input[type=text],select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:520px){.grid{grid-template-columns:1fr}}
+.mine{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.mine li{background:var(--bg);border-radius:10px;padding:10px 12px}
+.mine small{display:block;color:var(--muted);font-size:13px}
+.mine b{font-size:16px}
+.hint{font-size:13px;color:var(--muted);margin:10px 0 0}
+
+.tabs{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;appearance:none;border:1px solid var(--line);background:var(--card);padding:9px 14px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--brand);border-color:var(--brand);color:#fff}
+@media (prefers-color-scheme: dark){.tabs button[aria-selected=true]{color:#0c2340}}
+
+.meta{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted)}
+.q{font-size:clamp(20px,4.6vw,24px);font-weight:650;line-height:1.3;margin:10px 0 14px}
+.answers{margin:0 0 12px;padding-left:20px}
+.answers li{margin:3px 0}
+.note{background:var(--note-soft);border-radius:10px;padding:10px 12px;font-size:14px;margin:0 0 12px}
+.you{background:var(--brand-soft);color:var(--brand);border-radius:10px;padding:10px 12px;font-size:14px;margin:0 0 12px}
+.tally{font-size:13px;color:var(--muted);margin:12px 0 0}
+.bar{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin:6px 0 12px}
+.bar span{display:block;height:100%;background:var(--ok)}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat div{background:var(--bg);border-radius:10px;padding:12px;text-align:center}
+.stat b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+.stat small{color:var(--muted);font-size:13px}
+.list{list-style:none;margin:0;padding:0}
+.list li{padding:12px 0;border-top:1px solid var(--line)}
+.list li:first-child{border-top:0}
+.list b{display:block}
+.list small{color:var(--muted)}
+.result{font-size:20px;font-weight:650;margin:0 0 6px}
+.res{margin:0;padding-left:18px;font-size:15px}
+.res li{margin:5px 0}
+.res small{color:var(--muted)}
+footer{color:var(--muted);font-size:13px;padding:24px 0 48px;border-top:1px solid var(--line);margin-top:32px}
+footer p{margin:0 0 8px}
+@media (min-width:900px){body{font-size:17px}.wrap{max-width:820px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow"><a href="./">← Green card checklist</a></p>
+    <h1>Practice for the citizenship test</h1>
+    <p class="lede">All 128 official questions from the 2025 civics test, with your own senators, representative and governor filled in. Your progress and your ZIP code stay on this device.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="you">
+  <div class="card">
+    <h2>Where do you live?</h2>
+    <p class="sub">Four questions depend on your state. Enter your ZIP code and we'll fill in your answers. It is never sent anywhere.</p>
+    <div class="grid">
+      <div><label class="f" for="zip">ZIP code</label><input type="text" id="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="e.g. 75001"></div>
+      <div><label class="f" for="state">State or territory</label><select id="state"><option value="">Choose…</option></select></div>
+    </div>
+    <div id="repwrap" hidden style="margin-top:10px">
+      <label class="f" for="rep">Your U.S. representative</label>
+      <select id="rep"></select>
+      <p class="hint">A ZIP code can cover more than one district. Not sure which is yours? Look it up on the official site, then pick it here: <a href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener">house.gov/representatives/find-your-representative</a></p>
+    </div>
+    <ul class="mine" id="mine" hidden></ul>
+    <p class="hint" id="checked" hidden></p>
+  </div>
+</section>
+
+<div class="tabs" role="tablist" aria-label="Practice modes">
+  <button role="tab" data-tab="practice" aria-selected="true">Practice</button>
+  <button role="tab" data-tab="mock" aria-selected="false">Mock test</button>
+  <button role="tab" data-tab="missed" aria-selected="false">Missed <span id="missedn"></span></button>
+  <button role="tab" data-tab="progress" aria-selected="false">Progress</button>
+  <button role="tab" data-tab="prep" aria-selected="false">How to prepare</button>
+</div>
+
+<section id="practice">
+  <div class="row two" style="margin-bottom:12px">
+    <div><label class="f" for="set">Questions</label>
+      <select id="set">
+        <option value="all">All 128 questions</option>
+        <option value="star">65/20 list (20 questions)</option>
+        <option value="missed">Only the ones I missed</option>
+      </select></div>
+    <div><label class="f" for="topic">Topic</label><select id="topic"><option value="">All topics</option></select></div>
+  </div>
+  <div class="card" id="pcard" aria-live="polite"></div>
+</section>
+
+<section id="mock" hidden>
+  <div class="card" id="mcard" aria-live="polite"></div>
+</section>
+
+<section id="missed" hidden>
+  <h2>Questions you missed</h2>
+  <p class="sub">Every question whose last answer was wrong. Get it right once and it leaves this list.</p>
+  <div class="card"><ul class="list" id="missedlist"></ul></div>
+</section>
+
+<section id="progress" hidden>
+  <h2>Your progress</h2>
+  <p class="sub">Saved on this device only.</p>
+  <div class="card">
+    <div class="stat" id="stat"></div>
+    <h3>By topic</h3>
+    <div id="bytopic"></div>
+    <h3>Mock tests</h3>
+    <ul class="list" id="tests"></ul>
+    <button class="linkbtn" id="reset" type="button">Reset my progress</button>
+  </div>
+</section>
+
+<section id="prep" hidden>
+  <h2>How to prepare</h2>
+  <p class="sub">The test is spoken: an officer asks up to 20 of the 128 questions and you need 12 right.</p>
+  <div class="card">
+    <h3 style="margin-top:0">Official USCIS materials</h3>
+    <ul class="res">
+      <li><a href="https://www.uscis.gov/sites/default/files/document/questions-and-answers/2025-Civics-Test-128-Questions-and-Answers.pdf" target="_blank" rel="noopener">128 Civics Questions and Answers (PDF)</a> <small>The official list this page is built from.</small></li>
+      <li><a href="https://www.uscis.gov/sites/default/files/document/brochures/USCIS-2025-Civics-Test-Study-Guide.pdf" target="_blank" rel="noopener">One Nation, One People: 2025 Civics Test Study Guide (PDF)</a> <small>Explains the answers instead of just listing them. Large file, 39 MB.</small></li>
+      <li><a href="https://www.uscis.gov/citizenship/testupdates" target="_blank" rel="noopener">Test updates</a> <small>The names USCIS accepts for the President, Vice President, Speaker and Chief Justice.</small></li>
+      <li><a href="https://www.uscis.gov/citizenship-resource-center/naturalization-test-and-study-resources/2025-civics-test" target="_blank" rel="noopener">2025 Civics Test page</a> <small>Who takes which version of the test.</small></li>
+      <li><a href="https://www.uscis.gov/citizenship/find-study-materials-and-resources/study-for-the-test" target="_blank" rel="noopener">Study for the Test</a> <small>Reading and writing vocabulary for the English test.</small></li>
+    </ul>
+    <h3>Habits that help</h3>
+    <ul class="res">
+      <li>Say your answers out loud. The real test is a conversation, not a form.</li>
+      <li>Learn one short answer per question. Most questions accept several, and you only need one unless the question asks for more.</li>
+      <li>Study a little every day and let the questions you know drop out.</li>
+      <li>Check the four officials' names again in the week of your interview.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Not legal advice.</b> This is an unofficial practice tool and isn't connected to USCIS or any government agency. Questions and answers are from USCIS form M-1778 (09/25). USCIS says there may be other correct answers, and encourages you to use the ones listed.</p>
+    <p id="src">Names of officials come from senate.gov, clerk.house.gov, the National Governors Association and the USCIS test updates page. They change after elections and appointments, so confirm them before your interview.</p>
+    <p>This page keeps anonymous totals only, such as how many times it was opened. No cookies, no accounts. Your ZIP code, your state and your answers never leave this device.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var KEY = 'gc-civics-v1';
+  var LIVE = location.hostname === 'danpune.github.io';
+  function hit(key){ if (LIVE) fetch('https://abacus.jasoncameron.dev/hit/danpune-greencard-checklist/' + key).catch(function(){}); }
+  function $(id){ return document.getElementById(id); }
+  function el(tag, cls, text){ var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function load(u){ return fetch(u).then(function(r){ if (!r.ok) throw new Error(u); return r.json(); }); }
+
+  var P = { loc: {}, q: {}, tests: [] };
+  try { var s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.q) P = s; } catch (e) {}
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(P)); } catch (e) {} }
+
+  var Q = [], O = null, ZIP = null;
+
+  // ---------- your location and your personal answers ----------
+  var TERR = { PR: 1, GU: 1, VI: 1, AS: 1, MP: 1 };
+  function place(){ return O && P.loc.state && O.states[P.loc.state] ? P.loc.state : ''; }
+  function repsHere(){ return (O.parts.reps[place()] || []); }
+  function myRep(){
+    var r = repsHere();
+    if (r.length === 1) return r[0];
+    for (var i = 0; i < r.length; i++) if (r[i][0] === P.loc.district) return r[i];
+    return null;
+  }
+  // Answers for the questions that depend on who holds office or where you live.
+  function personal(q){
+    var f = O && O.parts.federal[q.id];
+    if (f) return { a: f, tag: 'Current answer from USCIS test updates' };
+    if ([23, 29, 61, 62].indexOf(q.id) < 0) return null;
+    var st = place();
+    if (!st) return { a: q.a, ask: true };
+    var name = O.states[st].name, dc = st === 'DC', terr = TERR[st];
+    if (q.id === 23) {
+      if (dc || terr) return { a: [(dc ? 'D.C.' : name) + ' has no U.S. senators'], tag: 'Your answer for ' + name };
+      return { a: O.parts.senators[st] || q.a, tag: 'Your senators for ' + name + '. Name one.' };
+    }
+    if (q.id === 29) {
+      var r = myRep();
+      if (dc || terr) return { a: [r ? r[1] + ' (' + r[0] + ')' : '', (dc ? 'D.C.' : name) + ' has no voting representatives in Congress'].filter(Boolean), tag: 'Your answer for ' + name };
+      if (r) return { a: [r[1]], tag: 'Your representative: ' + name + ', ' + r[0] + ' district' };
+      return { a: q.a, ask: true, tag: 'Choose your district at the top to see your representative.' };
+    }
+    if (q.id === 61) {
+      if (dc) return { a: ['D.C. does not have a governor'], tag: 'Your answer for D.C.' };
+      var g = O.parts.governors[st];
+      return g ? { a: [g], tag: 'Your governor: ' + name } : { a: q.a, ask: true };
+    }
+    if (dc) return { a: ['D.C. is not a state and does not have a capital'], tag: 'Your answer for D.C.' };
+    return { a: [O.states[st].capital], tag: 'Your capital: ' + name };
+  }
+
+  function renderYou(){
+    var st = place(), reps = st ? repsHere() : [];
+    $('state').value = st;
+    $('repwrap').hidden = reps.length < 2;
+    if (reps.length > 1) {
+      var sel = $('rep'); sel.textContent = '';
+      sel.appendChild(new Option('Choose your district…', ''));
+      reps.forEach(function(r){ sel.appendChild(new Option(r[0] + ' district: ' + r[1], r[0])); });
+      sel.value = myRep() ? P.loc.district : '';
+    }
+    var list = $('mine'); list.textContent = ''; list.hidden = !st;
+    if (st) [23, 29, 61, 62].forEach(function(id){
+      var q = Q[id - 1], p = personal(q), li = el('li');
+      li.appendChild(el('small', '', q.q));
+      li.appendChild(el('b', '', p.ask ? 'Choose your district above' : p.a.join('  ·  ')));
+      list.appendChild(li);
+    });
+    $('checked').hidden = !st;
+    if (O) $('checked').textContent = 'Officials last changed ' + O.changed + '. Checked daily against the official sources below.';
+  }
+
+  $('zip').addEventListener('input', function(){
+    var z = this.value.replace(/\D/g, '').slice(0, 5); this.value = z;
+    if (z.length !== 5) return;
+    (ZIP ? Promise.resolve(ZIP) : load('zip.json').then(function(d){ return ZIP = d; })).then(function(d){
+      var st = d.z5[z] || d.p3[z.slice(0, 3)];
+      P.loc = { zip: z, state: st || P.loc.state || '', district: '' };
+      save(); renderYou(); render();
+      if (!st) $('checked').hidden = false, $('checked').textContent = "We couldn't match that ZIP code. Please choose your state.";
+    }).catch(function(){});
+  });
+  $('state').addEventListener('change', function(){ P.loc = { zip: '', state: this.value, district: '' }; $('zip').value = ''; save(); renderYou(); render(); });
+  $('rep').addEventListener('change', function(){ P.loc.district = this.value; save(); renderYou(); render(); });
+
+  // ---------- progress ----------
+  function rec(id){ return P.q[id] || (P.q[id] = { r: 0, w: 0, s: 0, l: '' }); }
+  function isMissed(q){ return P.q[q.id] && P.q[q.id].l === 'w'; }
+  function isMastered(q){ return P.q[q.id] && P.q[q.id].s >= 3; }
+  function grade(q, right){
+    var r = rec(q.id);
+    if (right) { r.r++; r.s++; r.l = 'r'; } else { r.w++; r.s = 0; r.l = 'w'; }
+    save();
+  }
+  function shuffle(a){ for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+
+  // ---------- one question card, shared by practice and mock test ----------
+  function say(text){
+    if (!('speechSynthesis' in window)) return;
+    speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = 0.9;
+    speechSynthesis.speak(u);
+  }
+  function card(box, q, label, onGrade){
+    box.textContent = '';
+    var meta = el('div', 'meta'); meta.appendChild(el('span', '', label)); meta.appendChild(el('span', '', q.sec + (q.star ? '  ★ 65/20' : '')));
+    box.appendChild(meta);
+    box.appendChild(el('p', 'q', q.id + '. ' + q.q));
+    var top = el('div', 'row');
+    var show = el('button', 'btn go', 'Show answer'); show.type = 'button'; top.appendChild(show);
+    if ('speechSynthesis' in window) { var hear = el('button', 'btn', '🔊 Hear it'); hear.type = 'button'; hear.addEventListener('click', function(){ say(q.q); }); top.appendChild(hear); }
+    box.appendChild(top);
+    var back = el('div'); back.hidden = true; back.style.marginTop = '14px';
+    var p = personal(q), ans = p ? p.a : q.a;
+    if (p && p.tag) back.appendChild(el('div', 'you', p.tag));
+    var ul = el('ul', 'answers'); ans.forEach(function(a){ ul.appendChild(el('li', '', a)); }); back.appendChild(ul);
+    // the official note on these four is guidance for D.C. and the territories, already applied above
+    if (q.note && !(p && p.tag && [23, 29, 61, 62].indexOf(q.id) >= 0)) back.appendChild(el('div', 'note', q.note));
+    if (p && p.ask && !p.tag) back.appendChild(el('div', 'note', 'Enter your ZIP code at the top to see your own answer.'));
+    var g = el('div', 'row two');
+    var no = el('button', 'btn bad', '✗ Missed it'), yes = el('button', 'btn good', '✓ Got it right'); no.type = yes.type = 'button';
+    no.addEventListener('click', function(){ onGrade(false); }); yes.addEventListener('click', function(){ onGrade(true); });
+    g.appendChild(no); g.appendChild(yes); back.appendChild(g);
+    box.appendChild(back);
+    var r = P.q[q.id];
+    box.appendChild(el('p', 'tally', r && (r.r + r.w) ? 'So far: ' + r.r + ' right, ' + r.w + ' missed' + (r.s >= 3 ? '. Mastered.' : '') : 'Not tried yet'));
+    show.addEventListener('click', function(){ back.hidden = false; top.hidden = true; yes.focus(); });
+  }
+
+  // ---------- practice ----------
+  var deck = [], at = 0;
+  function pool(){
+    var set = $('set').value, topic = $('topic').value;
+    return Q.filter(function(q){
+      if (topic && q.sec !== topic) return false;
+      if (set === 'star') return q.star;
+      if (set === 'missed') return isMissed(q);
+      return true;
+    });
+  }
+  function deal(){
+    var all = pool(), fresh = all.filter(function(q){ return !isMastered(q); });
+    deck = shuffle((fresh.length ? fresh : all).slice()); at = 0;
+  }
+  function practice(){
+    var box = $('pcard');
+    if (at >= deck.length) deal();
+    if (!deck.length) {
+      box.textContent = '';
+      box.appendChild(el('p', 'q', $('set').value === 'missed' ? 'Nothing in your missed list. Nice work.' : 'No questions match.'));
+      return;
+    }
+    var left = pool().filter(function(q){ return !isMastered(q); }).length;
+    card(box, deck[at], 'Card ' + (at + 1) + ' of ' + deck.length + (left ? '' : '  ·  all mastered, reviewing'), function(right){
+      grade(deck[at], right); at++; counts(); practice();
+    });
+  }
+  $('set').addEventListener('change', function(){ deal(); practice(); });
+  $('topic').addEventListener('change', function(){ deal(); practice(); });
+
+  // ---------- mock test: 20 questions, 12 to pass (65/20: 10 and 6) ----------
+  var T = null;
+  function mockHome(){
+    var box = $('mcard'); box.textContent = '';
+    box.appendChild(el('h2', '', 'Mock test'));
+    box.appendChild(el('p', 'sub', 'Like the interview: questions are picked at random, and the test stops as soon as you have passed or can no longer pass.'));
+    var row = el('div', 'row two');
+    [['Standard: 20 questions, 12 to pass', false], ['65/20: 10 questions, 6 to pass', true]].forEach(function(o){
+      var b = el('button', 'btn' + (o[1] ? '' : ' go'), o[0]); b.type = 'button';
+      b.addEventListener('click', function(){ mockStart(o[1]); }); row.appendChild(b);
+    });
+    box.appendChild(row);
+  }
+  function mockStart(star){
+    var src = Q.filter(function(q){ return !star || q.star; });
+    T = { star: star, n: star ? 10 : 20, need: star ? 6 : 12, qs: shuffle(src.slice()).slice(0, star ? 10 : 20), i: 0, right: 0, wrong: [] };
+    mockNext();
+  }
+  function mockNext(){
+    var failAt = T.n - T.need + 1;
+    if (T.right >= T.need || T.wrong.length >= failAt || T.i >= T.n) return mockEnd();
+    card($('mcard'), T.qs[T.i], 'Question ' + (T.i + 1) + ' of up to ' + T.n + '  ·  ' + T.right + ' right', function(right){
+      grade(T.qs[T.i], right);
+      if (right) T.right++; else T.wrong.push(T.qs[T.i]);
+      T.i++; counts(); mockNext();
+    });
+  }
+  function mockEnd(){
+    var pass = T.right >= T.need, box = $('mcard');
+    P.tests.unshift({ d: new Date().toISOString().slice(0, 10), r: T.right, n: T.i, p: pass ? 1 : 0, s: T.star ? 1 : 0 });
+    P.tests = P.tests.slice(0, 20); save(); hit('quiz-mock');
+    box.textContent = '';
+    box.appendChild(el('p', 'result', pass ? '✅ Passed: ' + T.right + ' right out of ' + T.i + ' asked' : 'Not yet: ' + T.right + ' right out of ' + T.i + ' asked'));
+    box.appendChild(el('p', 'sub', pass ? 'You reached ' + T.need + ' correct answers, so the test stopped.' : 'You needed ' + T.need + '. The questions below are now in your missed list.'));
+    if (T.wrong.length) {
+      var ul = el('ul', 'list');
+      T.wrong.forEach(function(q){ var li = el('li'), p = personal(q); li.appendChild(el('b', '', q.id + '. ' + q.q)); li.appendChild(el('small', '', (p ? p.a : q.a).join('  ·  '))); ul.appendChild(li); });
+      box.appendChild(ul);
+    }
+    var again = el('button', 'btn go', 'Take another test'); again.type = 'button'; again.style.marginTop = '12px';
+    again.addEventListener('click', mockHome); box.appendChild(again);
+    T = null;
+  }
+
+  // ---------- missed list and progress ----------
+  function counts(){ var n = Q.filter(isMissed).length; $('missedn').textContent = n ? '(' + n + ')' : ''; }
+  function missed(){
+    var list = $('missedlist'), m = Q.filter(isMissed); list.textContent = '';
+    if (!m.length) { list.appendChild(el('li', '', 'Nothing here yet. Questions you miss in practice or in a mock test show up here.')); return; }
+    m.forEach(function(q){
+      var li = el('li'), p = personal(q), r = P.q[q.id];
+      li.appendChild(el('b', '', q.id + '. ' + q.q));
+      li.appendChild(el('small', '', (p ? p.a : q.a).join('  ·  ')));
+      li.appendChild(el('p', 'tally', r.r + ' right, ' + r.w + ' missed'));
+      list.appendChild(li);
+    });
+    var li = el('li'), b = el('button', 'btn go', 'Practice these ' + m.length); b.type = 'button';
+    b.addEventListener('click', function(){ $('set').value = 'missed'; $('topic').value = ''; deal(); tab('practice'); });
+    li.appendChild(b); list.appendChild(li);
+  }
+  function progress(){
+    var tried = Q.filter(function(q){ return P.q[q.id] && (P.q[q.id].r + P.q[q.id].w); }).length;
+    var mastered = Q.filter(isMastered).length, r = 0, w = 0;
+    Q.forEach(function(q){ var x = P.q[q.id]; if (x) { r += x.r; w += x.w; } });
+    var stat = $('stat'); stat.textContent = '';
+    [[mastered + ' / 128', 'mastered (right 3 times in a row)'], [tried + ' / 128', 'tried'], [(r + w ? Math.round(r / (r + w) * 100) : 0) + '%', 'answers right']].forEach(function(x){
+      var d = el('div'); d.appendChild(el('b', '', x[0])); d.appendChild(el('small', '', x[1])); stat.appendChild(d);
+    });
+    var by = $('bytopic'); by.textContent = '';
+    topics().forEach(function(t){
+      var qs = Q.filter(function(q){ return q.sec === t; }), m = qs.filter(isMastered).length;
+      var row = el('div', 'meta'); row.appendChild(el('span', '', t)); row.appendChild(el('span', '', m + ' of ' + qs.length + ' mastered')); by.appendChild(row);
+      var bar = el('div', 'bar'), fill = el('span'); fill.style.width = (m / qs.length * 100) + '%'; bar.appendChild(fill); by.appendChild(bar);
+    });
+    var tests = $('tests'); tests.textContent = '';
+    if (!P.tests.length) tests.appendChild(el('li', '', 'No mock tests yet.'));
+    P.tests.forEach(function(t){ tests.appendChild(el('li', '', t.d + '  ·  ' + (t.p ? 'Passed' : 'Not passed') + '  ·  ' + t.r + ' right of ' + t.n + ' asked' + (t.s ? '  ·  65/20' : ''))); });
+  }
+  $('reset').addEventListener('click', function(){
+    if (!confirm('Clear your practice history and mock tests on this device? Your ZIP code and state are kept.')) return;
+    P.q = {}; P.tests = []; save(); deal(); render(); progress();
+  });
+  function topics(){ var seen = []; Q.forEach(function(q){ if (seen.indexOf(q.sec) < 0) seen.push(q.sec); }); return seen; }
+
+  // ---------- tabs ----------
+  var cur = 'practice';
+  function tab(name){
+    cur = name;
+    Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function(b){ b.setAttribute('aria-selected', b.getAttribute('data-tab') === name); });
+    ['practice', 'mock', 'missed', 'progress', 'prep'].forEach(function(n){ $(n).hidden = n !== name; });
+    render();
+  }
+  function render(){
+    if (!Q.length) return;
+    counts();
+    if (cur === 'practice') practice();
+    if (cur === 'mock' && !T) mockHome();
+    if (cur === 'mock' && T) mockNext();
+    if (cur === 'missed') missed();
+    if (cur === 'progress') progress();
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function(b){
+    b.addEventListener('click', function(){ tab(b.getAttribute('data-tab')); });
+  });
+
+  // ---------- start ----------
+  Promise.all([load('questions.json'), load('officials.json')]).then(function(d){
+    Q = d[0]; O = d[1];
+    Object.keys(O.states).sort(function(a, b){ return O.states[a].name < O.states[b].name ? -1 : 1; })
+      .forEach(function(c){ $('state').appendChild(new Option(O.states[c].name, c)); });
+    topics().forEach(function(t){ $('topic').appendChild(new Option(t, t)); });
+    if (P.loc.zip) $('zip').value = P.loc.zip;
+    renderYou(); deal(); render();
+  }).catch(function(){
+    $('pcard').textContent = 'The questions could not be loaded. Please check your connection and reload.';
+  });
+
+  var counted = false;
+  try { counted = sessionStorage.getItem('gc-quiz') === '1'; sessionStorage.setItem('gc-quiz', '1'); } catch (e) {}
+  if (!counted) hit('quiz');
+})();
+</script>
+</body>
+</html>

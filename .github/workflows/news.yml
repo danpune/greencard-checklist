@@ -16,11 +16,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 update_news.py
+      - run: python3 update_officials.py
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add news.json
-          git diff --cached --quiet || (git commit -m "Refresh news.json" && git push)
+          git add news.json officials.json
+          git diff --cached --quiet || (git commit -m "Refresh news and officials" && git push)
   links:
     if: github.event.schedule != '17 12 * * *'
     runs-on: ubuntu-latest

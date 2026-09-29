@@ -1,0 +1,2395 @@
+{
+"changed": "2026-09-29",
+"parts": {
+"federal": {
+"30": [
+"Mike Johnson",
+"Johnson",
+"James Michael Johnson (birth name)"
+],
+"38": [
+"Donald J. Trump",
+"Donald Trump",
+"Trump"
+],
+"39": [
+"JD Vance",
+"Vance"
+],
+"57": [
+"John Roberts",
+"John G. Roberts, Jr.",
+"Roberts"
+]
+},
+"governors": {
+"AK": "Mike Dunleavy",
+"AL": "Kay Ivey",
+"AR": "Sarah Huckabee Sanders",
+"AS": "Pula’ali’i Nikolao Pula",
+"AZ": "Katie Hobbs",
+"CA": "Gavin Newsom",
+"CO": "Jared Polis",
+"CT": "Ned Lamont",
+"DE": "Matt Meyer",
+"FL": "Ron DeSantis",
+"GA": "Brian Kemp",
+"GU": "Lou Leon Guerrero",
+"HI": "Josh Green",
+"IA": "Kim Reynolds",
+"ID": "Brad Little",
+"IL": "JB Pritzker",
+"IN": "Mike Braun",
+"KS": "Laura Kelly",
+"KY": "Andy Beshear",
+"LA": "Jeff Landry",
+"MA": "Maura Healey",
+"MD": "Wes Moore",
+"ME": "Janet Mills",
+"MI": "Gretchen Whitmer",
+"MN": "Tim Walz",
+"MO": "Mike Kehoe",
+"MP": "David M. Apatang",
+"MS": "Tate Reeves",
+"MT": "Greg Gianforte",
+"NC": "Josh Stein",
+"ND": "Kelly Armstrong",
+"NE": "Jim Pillen",
+"NH": "Kelly Ayotte",
+"NJ": "Mikie Sherrill",
+"NM": "Michelle Lujan Grisham",
+"NV": "Joe Lombardo",
+"NY": "Kathy Hochul",
+"OH": "Mike DeWine",
+"OK": "Kevin Stitt",
+"OR": "Tina Kotek",
+"PA": "Josh Shapiro",
+"PR": "Jenniffer González-Colón",
+"RI": "Dan McKee",
+"SC": "Henry McMaster",
+"SD": "Larry Rhoden",
+"TN": "Bill Lee",
+"TX": "Greg Abbott",
+"UT": "Spencer Cox",
+"VA": "Abigail Spanberger",
+"VI": "Albert Bryan",
+"VT": "Phil Scott",
+"WA": "Bob Ferguson",
+"WI": "Tony Evers",
+"WV": "Patrick Morrisey",
+"WY": "Mark Gordon"
+},
+"reps": {
+"AK": [
+[
+"At Large",
+"Nicholas J. Begich III"
+]
+],
+"AL": [
+[
+"1st",
+"Barry Moore"
+],
+[
+"2nd",
+"Shomari Figures"
+],
+[
+"3rd",
+"Mike Rogers"
+],
+[
+"4th",
+"Robert B. Aderholt"
+],
+[
+"5th",
+"Dale W. Strong"
+],
+[
+"6th",
+"Gary J. Palmer"
+],
+[
+"7th",
+"Terri A. Sewell"
+]
+],
+"AQ": [
+[
+"Delegate",
+"Aumua Amata Coleman Radewagen"
+]
+],
+"AR": [
+[
+"1st",
+"Eric A. \"Rick\" Crawford"
+],
+[
+"2nd",
+"J. French Hill"
+],
+[
+"3rd",
+"Steve Womack"
+],
+[
+"4th",
+"Bruce Westerman"
+]
+],
+"AZ": [
+[
+"1st",
+"David Schweikert"
+],
+[
+"2nd",
+"Elijah Crane"
+],
+[
+"3rd",
+"Yassamin Ansari"
+],
+[
+"4th",
+"Greg Stanton"
+],
+[
+"5th",
+"Andy Biggs"
+],
+[
+"6th",
+"Juan Ciscomani"
+],
+[
+"7th",
+"Adelita S. Grijalva"
+],
+[
+"8th",
+"Abraham J. Hamadeh"
+],
+[
+"9th",
+"Paul A. Gosar"
+]
+],
+"CA": [
+[
+"1st",
+"James Gallagher"
+],
+[
+"2nd",
+"Jared Huffman"
+],
+[
+"3rd",
+"Kevin Kiley"
+],
+[
+"4th",
+"Mike Thompson"
+],
+[
+"5th",
+"Tom McClintock"
+],
+[
+"6th",
+"Ami Bera"
+],
+[
+"7th",
+"Doris O. Matsui"
+],
+[
+"8th",
+"John Garamendi"
+],
+[
+"9th",
+"Josh Harder"
+],
+[
+"10th",
+"Mark DeSaulnier"
+],
+[
+"11th",
+"Nancy Pelosi"
+],
+[
+"12th",
+"Lateefah Simon"
+],
+[
+"13th",
+"Adam Gray"
+],
+[
+"14th",
+"Aisha Wahab"
+],
+[
+"15th",
+"Kevin Mullin"
+],
+[
+"16th",
+"Sam T. Liccardo"
+],
+[
+"17th",
+"Ro Khanna"
+],
+[
+"18th",
+"Zoe Lofgren"
+],
+[
+"19th",
+"Jimmy Panetta"
+],
+[
+"20th",
+"Vince Fong"
+],
+[
+"21st",
+"Jim Costa"
+],
+[
+"22nd",
+"David G. Valadao"
+],
+[
+"23rd",
+"Jay Obernolte"
+],
+[
+"24th",
+"Salud O. Carbajal"
+],
+[
+"25th",
+"Raul Ruiz"
+],
+[
+"26th",
+"Julia Brownley"
+],
+[
+"27th",
+"George Whitesides"
+],
+[
+"28th",
+"Judy Chu"
+],
+[
+"29th",
+"Luz M. Rivas"
+],
+[
+"30th",
+"Laura Friedman"
+],
+[
+"31st",
+"Gilbert Ray Cisneros, Jr."
+],
+[
+"32nd",
+"Brad Sherman"
+],
+[
+"33rd",
+"Pete Aguilar"
+],
+[
+"34th",
+"Jimmy Gomez"
+],
+[
+"35th",
+"Norma J. Torres"
+],
+[
+"36th",
+"Ted Lieu"
+],
+[
+"37th",
+"Sydney Kamlager-Dove"
+],
+[
+"38th",
+"Linda T. Sánchez"
+],
+[
+"39th",
+"Mark Takano"
+],
+[
+"40th",
+"Young Kim"
+],
+[
+"41st",
+"Ken Calvert"
+],
+[
+"42nd",
+"Robert Garcia"
+],
+[
+"43rd",
+"Maxine Waters"
+],
+[
+"44th",
+"Nanette Diaz Barragán"
+],
+[
+"45th",
+"Derek Tran"
+],
+[
+"46th",
+"J. Luis Correa"
+],
+[
+"47th",
+"Dave Min"
+],
+[
+"48th",
+"Darrell Issa"
+],
+[
+"49th",
+"Mike Levin"
+],
+[
+"50th",
+"Scott H. Peters"
+],
+[
+"51st",
+"Sara Jacobs"
+],
+[
+"52nd",
+"Juan Vargas"
+]
+],
+"CO": [
+[
+"1st",
+"Diana DeGette"
+],
+[
+"2nd",
+"Joe Neguse"
+],
+[
+"3rd",
+"Jeff Hurd"
+],
+[
+"4th",
+"Lauren Boebert"
+],
+[
+"5th",
+"Jeff Crank"
+],
+[
+"6th",
+"Jason Crow"
+],
+[
+"7th",
+"Brittany Pettersen"
+],
+[
+"8th",
+"Gabe Evans"
+]
+],
+"CT": [
+[
+"1st",
+"John B. Larson"
+],
+[
+"2nd",
+"Joe Courtney"
+],
+[
+"3rd",
+"Rosa L. DeLauro"
+],
+[
+"4th",
+"James A. Himes"
+],
+[
+"5th",
+"Jahana Hayes"
+]
+],
+"DC": [
+[
+"Delegate",
+"Eleanor Holmes Norton"
+]
+],
+"DE": [
+[
+"At Large",
+"Sarah McBride"
+]
+],
+"FL": [
+[
+"1st",
+"Jimmy Patronis"
+],
+[
+"2nd",
+"Neal P. Dunn"
+],
+[
+"3rd",
+"Kat Cammack"
+],
+[
+"4th",
+"Aaron Bean"
+],
+[
+"5th",
+"John H. Rutherford"
+],
+[
+"6th",
+"Randy Fine"
+],
+[
+"7th",
+"Cory Mills"
+],
+[
+"8th",
+"Mike Haridopolos"
+],
+[
+"9th",
+"Darren Soto"
+],
+[
+"10th",
+"Maxwell Frost"
+],
+[
+"11th",
+"Daniel Webster"
+],
+[
+"12th",
+"Gus M. Bilirakis"
+],
+[
+"13th",
+"Anna Paulina Luna"
+],
+[
+"14th",
+"Kathy Castor"
+],
+[
+"15th",
+"Laurel M. Lee"
+],
+[
+"16th",
+"Vern Buchanan"
+],
+[
+"17th",
+"W. Gregory Steube"
+],
+[
+"18th",
+"Scott Franklin"
+],
+[
+"19th",
+"Byron Donalds"
+],
+[
+"20th",
+"Vacant"
+],
+[
+"21st",
+"Brian J. Mast"
+],
+[
+"22nd",
+"Lois Frankel"
+],
+[
+"23rd",
+"Jared Moskowitz"
+],
+[
+"24th",
+"Frederica S. Wilson"
+],
+[
+"25th",
+"Debbie Wasserman Schultz"
+],
+[
+"26th",
+"Mario Diaz-Balart"
+],
+[
+"27th",
+"Maria Elvira Salazar"
+],
+[
+"28th",
+"Carlos A. Gimenez"
+]
+],
+"GA": [
+[
+"1st",
+"Earl L. \"Buddy\" Carter"
+],
+[
+"2nd",
+"Sanford D. Bishop, Jr."
+],
+[
+"3rd",
+"Brian Jack"
+],
+[
+"4th",
+"Henry C. \"Hank\" Johnson, Jr."
+],
+[
+"5th",
+"Nikema Williams"
+],
+[
+"6th",
+"Lucy McBath"
+],
+[
+"7th",
+"Richard McCormick"
+],
+[
+"8th",
+"Austin Scott"
+],
+[
+"9th",
+"Andrew S. Clyde"
+],
+[
+"10th",
+"Mike Collins"
+],
+[
+"11th",
+"Barry Loudermilk"
+],
+[
+"12th",
+"Rick W. Allen"
+],
+[
+"13th",
+"Everton Blair Jr."
+],
+[
+"14th",
+"Clay Fuller"
+]
+],
+"GU": [
+[
+"Delegate",
+"James C. Moylan"
+]
+],
+"HI": [
+[
+"1st",
+"Ed Case"
+],
+[
+"2nd",
+"Jill N. Tokuda"
+]
+],
+"IA": [
+[
+"1st",
+"Mariannette Miller-Meeks"
+],
+[
+"2nd",
+"Ashley Hinson"
+],
+[
+"3rd",
+"Zachary Nunn"
+],
+[
+"4th",
+"Randy Feenstra"
+]
+],
+"ID": [
+[
+"1st",
+"Russ Fulcher"
+],
+[
+"2nd",
+"Michael K. Simpson"
+]
+],
+"IL": [
+[
+"1st",
+"Jonathan L. Jackson"
+],
+[
+"2nd",
+"Robin L. Kelly"
+],
+[
+"3rd",
+"Delia C. Ramirez"
+],
+[
+"4th",
+"Jesús G. \"Chuy\" García"
+],
+[
+"5th",
+"Mike Quigley"
+],
+[
+"6th",
+"Sean Casten"
+],
+[
+"7th",
+"Danny K. Davis"
+],
+[
+"8th",
+"Raja Krishnamoorthi"
+],
+[
+"9th",
+"Janice D. Schakowsky"
+],
+[
+"10th",
+"Bradley Scott Schneider"
+],
+[
+"11th",
+"Bill Foster"
+],
+[
+"12th",
+"Mike Bost"
+],
+[
+"13th",
+"Nikki Budzinski"
+],
+[
+"14th",
+"Lauren Underwood"
+],
+[
+"15th",
+"Mary E. Miller"
+],
+[
+"16th",
+"Darin LaHood"
+],
+[
+"17th",
+"Eric Sorensen"
+]
+],
+"IN": [
+[
+"1st",
+"Frank J. Mrvan"
+],
+[
+"2nd",
+"Rudy Yakym III"
+],
+[
+"3rd",
+"Marlin A. Stutzman"
+],
+[
+"4th",
+"James R. Baird"
+],
+[
+"5th",
+"Victoria Spartz"
+],
+[
+"6th",
+"Jefferson Shreve"
+],
+[
+"7th",
+"André Carson"
+],
+[
+"8th",
+"Mark B. Messmer"
+],
+[
+"9th",
+"Erin Houchin"
+]
+],
+"KS": [
+[
+"1st",
+"Tracey Mann"
+],
+[
+"2nd",
+"Derek Schmidt"
+],
+[
+"3rd",
+"Sharice Davids"
+],
+[
+"4th",
+"Ron Estes"
+]
+],
+"KY": [
+[
+"1st",
+"James Comer"
+],
+[
+"2nd",
+"Brett Guthrie"
+],
+[
+"3rd",
+"Morgan McGarvey"
+],
+[
+"4th",
+"Thomas Massie"
+],
+[
+"5th",
+"Harold Rogers"
+],
+[
+"6th",
+"Andy Barr"
+]
+],
+"LA": [
+[
+"1st",
+"Steve Scalise"
+],
+[
+"2nd",
+"Troy A. Carter"
+],
+[
+"3rd",
+"Clay Higgins"
+],
+[
+"4th",
+"Mike Johnson"
+],
+[
+"5th",
+"Julia Letlow"
+],
+[
+"6th",
+"Cleo Fields"
+]
+],
+"MA": [
+[
+"1st",
+"Richard E. Neal"
+],
+[
+"2nd",
+"James P. McGovern"
+],
+[
+"3rd",
+"Lori Trahan"
+],
+[
+"4th",
+"Jake Auchincloss"
+],
+[
+"5th",
+"Katherine M. Clark"
+],
+[
+"6th",
+"Seth Moulton"
+],
+[
+"7th",
+"Ayanna Pressley"
+],
+[
+"8th",
+"Stephen F. Lynch"
+],
+[
+"9th",
+"William R. Keating"
+]
+],
+"MD": [
+[
+"1st",
+"Andy Harris"
+],
+[
+"2nd",
+"Johnny Olszewski, Jr."
+],
+[
+"3rd",
+"Sarah Elfreth"
+],
+[
+"4th",
+"Glenn Ivey"
+],
+[
+"5th",
+"Steny H. Hoyer"
+],
+[
+"6th",
+"April McClain Delaney"
+],
+[
+"7th",
+"Kweisi Mfume"
+],
+[
+"8th",
+"Jamie Raskin"
+]
+],
+"ME": [
+[
+"1st",
+"Chellie Pingree"
+],
+[
+"2nd",
+"Jared F. Golden"
+]
+],
+"MI": [
+[
+"1st",
+"Jack Bergman"
+],
+[
+"2nd",
+"John R. Moolenaar"
+],
+[
+"3rd",
+"Hillary J. Scholten"
+],
+[
+"4th",
+"Bill Huizenga"
+],
+[
+"5th",
+"Tim Walberg"
+],
+[
+"6th",
+"Debbie Dingell"
+],
+[
+"7th",
+"Tom Barrett"
+],
+[
+"8th",
+"Kristen McDonald Rivet"
+],
+[
+"9th",
+"Lisa C. McClain"
+],
+[
+"10th",
+"John James"
+],
+[
+"11th",
+"Haley M. Stevens"
+],
+[
+"12th",
+"Rashida Tlaib"
+],
+[
+"13th",
+"Shri Thanedar"
+]
+],
+"MN": [
+[
+"1st",
+"Brad Finstad"
+],
+[
+"2nd",
+"Angie Craig"
+],
+[
+"3rd",
+"Kelly Morrison"
+],
+[
+"4th",
+"Betty McCollum"
+],
+[
+"5th",
+"Ilhan Omar"
+],
+[
+"6th",
+"Tom Emmer"
+],
+[
+"7th",
+"Michelle Fischbach"
+],
+[
+"8th",
+"Pete Stauber"
+]
+],
+"MO": [
+[
+"1st",
+"Wesley Bell"
+],
+[
+"2nd",
+"Ann Wagner"
+],
+[
+"3rd",
+"Robert F. Onder, Jr."
+],
+[
+"4th",
+"Mark Alford"
+],
+[
+"5th",
+"Emanuel Cleaver"
+],
+[
+"6th",
+"Sam Graves"
+],
+[
+"7th",
+"Eric Burlison"
+],
+[
+"8th",
+"Jason Smith"
+]
+],
+"MP": [
+[
+"Delegate",
+"Kimberlyn King-Hinds"
+]
+],
+"MS": [
+[
+"1st",
+"Trent Kelly"
+],
+[
+"2nd",
+"Bennie G. Thompson"
+],
+[
+"3rd",
+"Michael Guest"
+],
+[
+"4th",
+"Mike Ezell"
+]
+],
+"MT": [
+[
+"1st",
+"Ryan K. Zinke"
+],
+[
+"2nd",
+"Troy Downing"
+]
+],
+"NC": [
+[
+"1st",
+"Donald G. Davis"
+],
+[
+"2nd",
+"Deborah K. Ross"
+],
+[
+"3rd",
+"Gregory F. Murphy"
+],
+[
+"4th",
+"Valerie P. Foushee"
+],
+[
+"5th",
+"Virginia Foxx"
+],
+[
+"6th",
+"Addison P. McDowell"
+],
+[
+"7th",
+"David Rouzer"
+],
+[
+"8th",
+"Mark Harris"
+],
+[
+"9th",
+"Richard Hudson"
+],
+[
+"10th",
+"Pat Harrigan"
+],
+[
+"11th",
+"Chuck Edwards"
+],
+[
+"12th",
+"Alma S. Adams"
+],
+[
+"13th",
+"Brad Knott"
+],
+[
+"14th",
+"Tim Moore"
+]
+],
+"ND": [
+[
+"At Large",
+"Julie Fedorchak"
+]
+],
+"NE": [
+[
+"1st",
+"Mike Flood"
+],
+[
+"2nd",
+"Don Bacon"
+],
+[
+"3rd",
+"Adrian Smith"
+]
+],
+"NH": [
+[
+"1st",
+"Chris Pappas"
+],
+[
+"2nd",
+"Maggie Goodlander"
+]
+],
+"NJ": [
+[
+"1st",
+"Donald Norcross"
+],
+[
+"2nd",
+"Jefferson Van Drew"
+],
+[
+"3rd",
+"Herbert C. Conaway, Jr."
+],
+[
+"4th",
+"Christopher H. Smith"
+],
+[
+"5th",
+"Josh Gottheimer"
+],
+[
+"6th",
+"Frank Pallone, Jr."
+],
+[
+"7th",
+"Thomas H. Kean, Jr."
+],
+[
+"8th",
+"Robert Menendez"
+],
+[
+"9th",
+"Nellie Pou"
+],
+[
+"10th",
+"LaMonica McIver"
+],
+[
+"11th",
+"Analilia Mejia"
+],
+[
+"12th",
+"Bonnie Watson Coleman"
+]
+],
+"NM": [
+[
+"1st",
+"Melanie A. Stansbury"
+],
+[
+"2nd",
+"Gabe Vasquez"
+],
+[
+"3rd",
+"Teresa Leger Fernandez"
+]
+],
+"NV": [
+[
+"1st",
+"Dina Titus"
+],
+[
+"2nd",
+"Mark E. Amodei"
+],
+[
+"3rd",
+"Susie Lee"
+],
+[
+"4th",
+"Steven Horsford"
+]
+],
+"NY": [
+[
+"1st",
+"Nick LaLota"
+],
+[
+"2nd",
+"Andrew R. Garbarino"
+],
+[
+"3rd",
+"Thomas R. Suozzi"
+],
+[
+"4th",
+"Laura Gillen"
+],
+[
+"5th",
+"Gregory W. Meeks"
+],
+[
+"6th",
+"Grace Meng"
+],
+[
+"7th",
+"Nydia M. Velázquez"
+],
+[
+"8th",
+"Hakeem S. Jeffries"
+],
+[
+"9th",
+"Yvette D. Clarke"
+],
+[
+"10th",
+"Daniel S. Goldman"
+],
+[
+"11th",
+"Nicole Malliotakis"
+],
+[
+"12th",
+"Jerrold Nadler"
+],
+[
+"13th",
+"Adriano Espaillat"
+],
+[
+"14th",
+"Alexandria Ocasio-Cortez"
+],
+[
+"15th",
+"Ritchie Torres"
+],
+[
+"16th",
+"George Latimer"
+],
+[
+"17th",
+"Michael Lawler"
+],
+[
+"18th",
+"Patrick Ryan"
+],
+[
+"19th",
+"Josh Riley"
+],
+[
+"20th",
+"Paul Tonko"
+],
+[
+"21st",
+"Elise M. Stefanik"
+],
+[
+"22nd",
+"John W. Mannion"
+],
+[
+"23rd",
+"Nicholas A. Langworthy"
+],
+[
+"24th",
+"Claudia Tenney"
+],
+[
+"25th",
+"Joseph D. Morelle"
+],
+[
+"26th",
+"Timothy M. Kennedy"
+]
+],
+"OH": [
+[
+"1st",
+"Greg Landsman"
+],
+[
+"2nd",
+"David J. Taylor"
+],
+[
+"3rd",
+"Joyce Beatty"
+],
+[
+"4th",
+"Jim Jordan"
+],
+[
+"5th",
+"Robert E. Latta"
+],
+[
+"6th",
+"Michael A. Rulli"
+],
+[
+"7th",
+"Max L. Miller"
+],
+[
+"8th",
+"Warren Davidson"
+],
+[
+"9th",
+"Marcy Kaptur"
+],
+[
+"10th",
+"Michael R. Turner"
+],
+[
+"11th",
+"Shontel M. Brown"
+],
+[
+"12th",
+"Troy Balderson"
+],
+[
+"13th",
+"Emilia Strong Sykes"
+],
+[
+"14th",
+"David P. Joyce"
+],
+[
+"15th",
+"Mike Carey"
+]
+],
+"OK": [
+[
+"1st",
+"Kevin Hern"
+],
+[
+"2nd",
+"Josh Brecheen"
+],
+[
+"3rd",
+"Frank D. Lucas"
+],
+[
+"4th",
+"Tom Cole"
+],
+[
+"5th",
+"Stephanie I. Bice"
+]
+],
+"OR": [
+[
+"1st",
+"Suzanne Bonamici"
+],
+[
+"2nd",
+"Cliff Bentz"
+],
+[
+"3rd",
+"Maxine Dexter"
+],
+[
+"4th",
+"Val T. Hoyle"
+],
+[
+"5th",
+"Janelle S. Bynum"
+],
+[
+"6th",
+"Andrea Salinas"
+]
+],
+"PA": [
+[
+"1st",
+"Brian K. Fitzpatrick"
+],
+[
+"2nd",
+"Brendan F. Boyle"
+],
+[
+"3rd",
+"Dwight Evans"
+],
+[
+"4th",
+"Madeleine Dean"
+],
+[
+"5th",
+"Mary Gay Scanlon"
+],
+[
+"6th",
+"Chrissy Houlahan"
+],
+[
+"7th",
+"Ryan Mackenzie"
+],
+[
+"8th",
+"Robert P. Bresnahan, Jr."
+],
+[
+"9th",
+"Daniel Meuser"
+],
+[
+"10th",
+"Scott Perry"
+],
+[
+"11th",
+"Lloyd Smucker"
+],
+[
+"12th",
+"Summer L. Lee"
+],
+[
+"13th",
+"John Joyce"
+],
+[
+"14th",
+"Guy Reschenthaler"
+],
+[
+"15th",
+"Glenn Thompson"
+],
+[
+"16th",
+"Mike Kelly"
+],
+[
+"17th",
+"Christopher R. Deluzio"
+]
+],
+"PR": [
+[
+"Resident Commissioner",
+"Pablo José Hernández"
+]
+],
+"RI": [
+[
+"1st",
+"Gabe Amo"
+],
+[
+"2nd",
+"Seth Magaziner"
+]
+],
+"SC": [
+[
+"1st",
+"Nancy Mace"
+],
+[
+"2nd",
+"Joe Wilson"
+],
+[
+"3rd",
+"Sheri Biggs"
+],
+[
+"4th",
+"William R. Timmons IV"
+],
+[
+"5th",
+"Ralph Norman"
+],
+[
+"6th",
+"James E. Clyburn"
+],
+[
+"7th",
+"Russell Fry"
+]
+],
+"SD": [
+[
+"At Large",
+"Dusty Johnson"
+]
+],
+"TN": [
+[
+"1st",
+"Diana Harshbarger"
+],
+[
+"2nd",
+"Tim Burchett"
+],
+[
+"3rd",
+"Charles J. \"Chuck\" Fleischmann"
+],
+[
+"4th",
+"Scott DesJarlais"
+],
+[
+"5th",
+"Andrew Ogles"
+],
+[
+"6th",
+"John W. Rose"
+],
+[
+"7th",
+"Matt Van Epps"
+],
+[
+"8th",
+"David Kustoff"
+],
+[
+"9th",
+"Steve Cohen"
+]
+],
+"TX": [
+[
+"1st",
+"Nathaniel Moran"
+],
+[
+"2nd",
+"Dan Crenshaw"
+],
+[
+"3rd",
+"Keith Self"
+],
+[
+"4th",
+"Pat Fallon"
+],
+[
+"5th",
+"Lance Gooden"
+],
+[
+"6th",
+"Jake Ellzey"
+],
+[
+"7th",
+"Lizzie Fletcher"
+],
+[
+"8th",
+"Morgan Luttrell"
+],
+[
+"9th",
+"Al Green"
+],
+[
+"10th",
+"Michael T. McCaul"
+],
+[
+"11th",
+"August Pfluger"
+],
+[
+"12th",
+"Craig A. Goldman"
+],
+[
+"13th",
+"Ronny Jackson"
+],
+[
+"14th",
+"Randy K. Weber, Sr."
+],
+[
+"15th",
+"Monica De La Cruz"
+],
+[
+"16th",
+"Veronica Escobar"
+],
+[
+"17th",
+"Pete Sessions"
+],
+[
+"18th",
+"Christian D. Menefee"
+],
+[
+"19th",
+"Jodey C. Arrington"
+],
+[
+"20th",
+"Joaquin Castro"
+],
+[
+"21st",
+"Chip Roy"
+],
+[
+"22nd",
+"Troy E. Nehls"
+],
+[
+"23rd",
+"Vacant"
+],
+[
+"24th",
+"Beth Van Duyne"
+],
+[
+"25th",
+"Roger Williams"
+],
+[
+"26th",
+"Brandon Gill"
+],
+[
+"27th",
+"Michael Cloud"
+],
+[
+"28th",
+"Henry Cuellar"
+],
+[
+"29th",
+"Sylvia R. Garcia"
+],
+[
+"30th",
+"Jasmine Crockett"
+],
+[
+"31st",
+"John R. Carter"
+],
+[
+"32nd",
+"Julie Johnson"
+],
+[
+"33rd",
+"Marc A. Veasey"
+],
+[
+"34th",
+"Vicente Gonzalez"
+],
+[
+"35th",
+"Greg Casar"
+],
+[
+"36th",
+"Brian Babin"
+],
+[
+"37th",
+"Lloyd Doggett"
+],
+[
+"38th",
+"Wesley Hunt"
+]
+],
+"UT": [
+[
+"1st",
+"Blake D. Moore"
+],
+[
+"2nd",
+"Celeste Maloy"
+],
+[
+"3rd",
+"Mike Kennedy"
+],
+[
+"4th",
+"Burgess Owens"
+]
+],
+"VA": [
+[
+"1st",
+"Robert J. Wittman"
+],
+[
+"2nd",
+"Jennifer A. Kiggans"
+],
+[
+"3rd",
+"Robert C. \"Bobby\" Scott"
+],
+[
+"4th",
+"Jennifer L. McClellan"
+],
+[
+"5th",
+"John J. McGuire III"
+],
+[
+"6th",
+"Ben Cline"
+],
+[
+"7th",
+"Eugene Simon Vindman"
+],
+[
+"8th",
+"Donald S. Beyer, Jr."
+],
+[
+"9th",
+"H. Morgan Griffith"
+],
+[
+"10th",
+"Suhas Subramanyam"
+],
+[
+"11th",
+"James R. Walkinshaw"
+]
+],
+"VI": [
+[
+"Delegate",
+"Stacey E. Plaskett"
+]
+],
+"VT": [
+[
+"At Large",
+"Becca Balint"
+]
+],
+"WA": [
+[
+"1st",
+"Suzan K. DelBene"
+],
+[
+"2nd",
+"Rick Larsen"
+],
+[
+"3rd",
+"Marie Gluesenkamp Perez"
+],
+[
+"4th",
+"Dan Newhouse"
+],
+[
+"5th",
+"Michael Baumgartner"
+],
+[
+"6th",
+"Emily Randall"
+],
+[
+"7th",
+"Pramila Jayapal"
+],
+[
+"8th",
+"Kim Schrier"
+],
+[
+"9th",
+"Adam Smith"
+],
+[
+"10th",
+"Marilyn Strickland"
+]
+],
+"WI": [
+[
+"1st",
+"Bryan Steil"
+],
+[
+"2nd",
+"Mark Pocan"
+],
+[
+"3rd",
+"Derrick Van Orden"
+],
+[
+"4th",
+"Gwen Moore"
+],
+[
+"5th",
+"Scott Fitzgerald"
+],
+[
+"6th",
+"Glenn Grothman"
+],
+[
+"7th",
+"Thomas P. Tiffany"
+],
+[
+"8th",
+"Tony Wied"
+]
+],
+"WV": [
+[
+"1st",
+"Carol D. Miller"
+],
+[
+"2nd",
+"Riley M. Moore"
+]
+],
+"WY": [
+[
+"At Large",
+"Harriet M. Hageman"
+]
+]
+},
+"senators": {
+"AK": [
+"Dan Sullivan",
+"Lisa Murkowski"
+],
+"AL": [
+"Katie Boyd Britt",
+"Tommy Tuberville"
+],
+"AR": [
+"John Boozman",
+"Tom Cotton"
+],
+"AZ": [
+"Mark Kelly",
+"Ruben Gallego"
+],
+"CA": [
+"Adam B. Schiff",
+"Alex Padilla"
+],
+"CO": [
+"John W. Hickenlooper",
+"Michael F. Bennet"
+],
+"CT": [
+"Christopher Murphy",
+"Richard Blumenthal"
+],
+"DE": [
+"Christopher A. Coons",
+"Lisa Blunt Rochester"
+],
+"FL": [
+"Ashley Moody",
+"Rick Scott"
+],
+"GA": [
+"Jon Ossoff",
+"Raphael G. Warnock"
+],
+"HI": [
+"Brian Schatz",
+"Mazie K. Hirono"
+],
+"IA": [
+"Chuck Grassley",
+"Joni Ernst"
+],
+"ID": [
+"James E. Risch",
+"Mike Crapo"
+],
+"IL": [
+"Richard J. Durbin",
+"Tammy Duckworth"
+],
+"IN": [
+"Jim Banks",
+"Todd Young"
+],
+"KS": [
+"Jerry Moran",
+"Roger Marshall"
+],
+"KY": [
+"Mitch McConnell",
+"Rand Paul"
+],
+"LA": [
+"Bill Cassidy",
+"John Kennedy"
+],
+"MA": [
+"Edward J. Markey",
+"Elizabeth Warren"
+],
+"MD": [
+"Angela D. Alsobrooks",
+"Chris Van Hollen"
+],
+"ME": [
+"Angus S., Jr. King",
+"Susan M. Collins"
+],
+"MI": [
+"Elissa Slotkin",
+"Gary C. Peters"
+],
+"MN": [
+"Amy Klobuchar",
+"Tina Smith"
+],
+"MO": [
+"Eric Schmitt",
+"Josh Hawley"
+],
+"MS": [
+"Cindy Hyde-Smith",
+"Roger F. Wicker"
+],
+"MT": [
+"Steve Daines",
+"Tim Sheehy"
+],
+"NC": [
+"Ted Budd",
+"Thom Tillis"
+],
+"ND": [
+"John Hoeven",
+"Kevin Cramer"
+],
+"NE": [
+"Deb Fischer",
+"Pete Ricketts"
+],
+"NH": [
+"Jeanne Shaheen",
+"Margaret Wood Hassan"
+],
+"NJ": [
+"Andy Kim",
+"Cory A. Booker"
+],
+"NM": [
+"Ben Ray Luján",
+"Martin Heinrich"
+],
+"NV": [
+"Catherine Cortez Masto",
+"Jacky Rosen"
+],
+"NY": [
+"Charles E. Schumer",
+"Kirsten E. Gillibrand"
+],
+"OH": [
+"Bernie Moreno",
+"Jon Husted"
+],
+"OK": [
+"Alan Armstrong",
+"James Lankford"
+],
+"OR": [
+"Jeff Merkley",
+"Ron Wyden"
+],
+"PA": [
+"David McCormick",
+"John Fetterman"
+],
+"RI": [
+"Jack Reed",
+"Sheldon Whitehouse"
+],
+"SC": [
+"Darline Graham",
+"Tim Scott"
+],
+"SD": [
+"John Thune",
+"Mike Rounds"
+],
+"TN": [
+"Bill Hagerty",
+"Marsha Blackburn"
+],
+"TX": [
+"John Cornyn",
+"Ted Cruz"
+],
+"UT": [
+"John R. Curtis",
+"Mike Lee"
+],
+"VA": [
+"Mark R. Warner",
+"Tim Kaine"
+],
+"VT": [
+"Bernard Sanders",
+"Peter Welch"
+],
+"WA": [
+"Maria Cantwell",
+"Patty Murray"
+],
+"WI": [
+"Ron Johnson",
+"Tammy Baldwin"
+],
+"WV": [
+"James C. Justice",
+"Shelley Moore Capito"
+],
+"WY": [
+"Cynthia M. Lummis",
+"John Barrasso"
+]
+}
+},
+"sources": [
+"senate.gov",
+"clerk.house.gov",
+"nga.org",
+"uscis.gov/citizenship/testupdates"
+],
+"states": {
+"AK": {
+"capital": "Juneau",
+"name": "Alaska"
+},
+"AL": {
+"capital": "Montgomery",
+"name": "Alabama"
+},
+"AR": {
+"capital": "Little Rock",
+"name": "Arkansas"
+},
+"AS": {
+"capital": "Pago Pago",
+"name": "American Samoa"
+},
+"AZ": {
+"capital": "Phoenix",
+"name": "Arizona"
+},
+"CA": {
+"capital": "Sacramento",
+"name": "California"
+},
+"CO": {
+"capital": "Denver",
+"name": "Colorado"
+},
+"CT": {
+"capital": "Hartford",
+"name": "Connecticut"
+},
+"DC": {
+"capital": null,
+"name": "District of Columbia"
+},
+"DE": {
+"capital": "Dover",
+"name": "Delaware"
+},
+"FL": {
+"capital": "Tallahassee",
+"name": "Florida"
+},
+"GA": {
+"capital": "Atlanta",
+"name": "Georgia"
+},
+"GU": {
+"capital": "Hagåtña",
+"name": "Guam"
+},
+"HI": {
+"capital": "Honolulu",
+"name": "Hawaii"
+},
+"IA": {
+"capital": "Des Moines",
+"name": "Iowa"
+},
+"ID": {
+"capital": "Boise",
+"name": "Idaho"
+},
+"IL": {
+"capital": "Springfield",
+"name": "Illinois"
+},
+"IN": {
+"capital": "Indianapolis",
+"name": "Indiana"
+},
+"KS": {
+"capital": "Topeka",
+"name": "Kansas"
+},
+"KY": {
+"capital": "Frankfort",
+"name": "Kentucky"
+},
+"LA": {
+"capital": "Baton Rouge",
+"name": "Louisiana"
+},
+"MA": {
+"capital": "Boston",
+"name": "Massachusetts"
+},
+"MD": {
+"capital": "Annapolis",
+"name": "Maryland"
+},
+"ME": {
+"capital": "Augusta",
+"name": "Maine"
+},
+"MI": {
+"capital": "Lansing",
+"name": "Michigan"
+},
+"MN": {
+"capital": "Saint Paul",
+"name": "Minnesota"
+},
+"MO": {
+"capital": "Jefferson City",
+"name": "Missouri"
+},
+"MP": {
+"capital": "Saipan",
+"name": "Northern Mariana Islands"
+},
+"MS": {
+"capital": "Jackson",
+"name": "Mississippi"
+},
+"MT": {
+"capital": "Helena",
+"name": "Montana"
+},
+"NC": {
+"capital": "Raleigh",
+"name": "North Carolina"
+},
+"ND": {
+"capital": "Bismarck",
+"name": "North Dakota"
+},
+"NE": {
+"capital": "Lincoln",
+"name": "Nebraska"
+},
+"NH": {
+"capital": "Concord",
+"name": "New Hampshire"
+},
+"NJ": {
+"capital": "Trenton",
+"name": "New Jersey"
+},
+"NM": {
+"capital": "Santa Fe",
+"name": "New Mexico"
+},
+"NV": {
+"capital": "Carson City",
+"name": "Nevada"
+},
+"NY": {
+"capital": "Albany",
+"name": "New York"
+},
+"OH": {
+"capital": "Columbus",
+"name": "Ohio"
+},
+"OK": {
+"capital": "Oklahoma City",
+"name": "Oklahoma"
+},
+"OR": {
+"capital": "Salem",
+"name": "Oregon"
+},
+"PA": {
+"capital": "Harrisburg",
+"name": "Pennsylvania"
+},
+"PR": {
+"capital": "San Juan",
+"name": "Puerto Rico"
+},
+"RI": {
+"capital": "Providence",
+"name": "Rhode Island"
+},
+"SC": {
+"capital": "Columbia",
+"name": "South Carolina"
+},
+"SD": {
+"capital": "Pierre",
+"name": "South Dakota"
+},
+"TN": {
+"capital": "Nashville",
+"name": "Tennessee"
+},
+"TX": {
+"capital": "Austin",
+"name": "Texas"
+},
+"UT": {
+"capital": "Salt Lake City",
+"name": "Utah"
+},
+"VA": {
+"capital": "Richmond",
+"name": "Virginia"
+},
+"VI": {
+"capital": "Charlotte Amalie",
+"name": "U.S. Virgin Islands"
+},
+"VT": {
+"capital": "Montpelier",
+"name": "Vermont"
+},
+"WA": {
+"capital": "Olympia",
+"name": "Washington"
+},
+"WI": {
+"capital": "Madison",
+"name": "Wisconsin"
+},
+"WV": {
+"capital": "Charleston",
+"name": "West Virginia"
+},
+"WY": {
+"capital": "Cheyenne",
+"name": "Wyoming"
+}
+}
+}
