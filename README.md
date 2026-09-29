@@ -40,6 +40,7 @@ A simple, mobile-friendly checklist for people who just got a U.S. green card (l
 - The 10 official steps to naturalization in one picture, drawn on the page from `steps.json`. `make_steps_picture.py` draws `naturalization-steps.png` from the same file for saving and sharing
 - Works offline after the first visit and can be added to a phone's home screen (`sw.js`, `civics.webmanifest`). While online it always fetches the current page and the current officials
 - Progress, ZIP code and state are saved only in the visitor's own browser
+- A Mac screen saver with the same questions, answers and explanations, plus pictures, is a separate project: https://github.com/danpune/civics-screensaver
 
 ## How it stays current
 
