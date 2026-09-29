@@ -1,0 +1,656 @@
+{
+"source": "Based on the USCIS 2025 Civics Test Study Guide (M-1175). Entries marked s=1 also use standard historical sources where the guide is silent or imprecise.",
+"chapters": [
+{
+"n": 1,
+"title": "The U.S. Constitution",
+"learn": [
+"The U.S. Constitution",
+"When the Constitution was written",
+"What the Constitution says",
+"Why the Constitution is the most important document in the United States government"
+]
+},
+{
+"n": 2,
+"title": "The Legislative Branch (Congress)",
+"learn": [
+"The Legislative Branch of the U.S. government",
+"The House of Representatives",
+"The Senate",
+"The process for making federal laws"
+]
+},
+{
+"n": 3,
+"title": "The Executive Branch",
+"learn": [
+"The Executive Branch",
+"The President of the United States",
+"The agencies in the federal government"
+]
+},
+{
+"n": 4,
+"title": "The Judicial Branch",
+"learn": [
+"The Judicial Branch",
+"The Supreme Court"
+]
+},
+{
+"n": 5,
+"title": "Rights and Responsibilities",
+"learn": [
+"The Bill of Rights",
+"The rights and responsibilities of everyone living in the United States",
+"The rights and responsibilities of U.S. citizens"
+]
+},
+{
+"n": 6,
+"title": "U.S. Geography",
+"learn": [
+"U.S. states and territories",
+"The U.S. borders",
+"Mountains and rivers in the United States",
+"The U.S. capital"
+]
+},
+{
+"n": 7,
+"title": "Early American History",
+"learn": [
+"Early American history",
+"The Colonial Period (1607 to 1776)",
+"The people living in North America before 1776"
+]
+},
+{
+"n": 8,
+"title": "The American Revolutionary War and the Declaration of Independence",
+"learn": [
+"The American Revolutionary War",
+"The Declaration of Independence",
+"The creation of the United States of America"
+]
+},
+{
+"n": 9,
+"title": "A New Government and an Expanding Nation",
+"learn": [
+"The Constitutional Convention",
+"The conflicts caused by expansion",
+"The expansion of U.S. territory from the Atlantic Ocean to the Pacific Ocean"
+]
+},
+{
+"n": 10,
+"title": "The Civil War",
+"learn": [
+"Slavery during the 1800s",
+"The Civil War",
+"Abraham Lincoln",
+"The end of slavery in the U.S."
+]
+},
+{
+"n": 11,
+"title": "American History: 1900 to 2001",
+"learn": [
+"The wars the U.S. fought in the 1900s",
+"The Great Depression",
+"The Cold War",
+"The Civil Rights Movement",
+"September 11, 2001"
+]
+},
+{
+"n": 12,
+"title": "American Symbols and Holidays",
+"learn": [
+"The Statue of Liberty",
+"The American flag",
+"The national anthem",
+"National holidays that have special meaning in the United States"
+]
+}
+],
+"why": {
+"1": {
+"c": 1,
+"w": "The people of the United States are not governed by a king or a queen. They govern themselves by electing representatives who serve in the local, state, and U.S. governments."
+},
+"2": {
+"c": 1,
+"w": "The sixth section of the Constitution gives it this role. Everyone living in the United States must follow it, and so must the U.S. government, state governments, and local governments."
+},
+"3": {
+"c": 1,
+"w": "The Constitution sets up the government and describes its three branches. It lists powers of the federal government, like making treaties. Its amendments list basic rights of people living in the United States."
+},
+"4": {
+"c": 1,
+"w": "These are the first three words of the Constitution, in the Preamble. They show that the people are not governed by a king or a queen. The people govern themselves by electing representatives."
+},
+"5": {
+"c": 1,
+"w": "The Founders believed that self-government means the people should be able to change the Constitution. A change to the Constitution is called an amendment. It must be approved by three-fourths of the states, which means 38 out of the 50 states."
+},
+"6": {
+"c": 1,
+"w": "When the Constitution was written in 1787, it did not list the rights of individuals. So the first 10 amendments were added in 1791. They list basic rights, like freedom of speech and freedom of religion."
+},
+"7": {
+"c": 1,
+"w": "In 1787 the Constitution had a Preamble and seven sections. Every change added since then is called an amendment. The first 10 amendments are called the Bill of Rights."
+},
+"8": {
+"c": 8,
+"w": "Adopted on July 4, 1776, it announced that the American colonies were free from British control. In it, Thomas Jefferson wrote that everyone has the right to life, liberty, and the pursuit of happiness."
+},
+"9": {
+"c": 8,
+"w": "The colonists adopted it on July 4, 1776, during the American Revolutionary War. It is a “statement of freedom” from Great Britain. This is why Independence Day is celebrated on July 4th."
+},
+"10": {
+"c": 1,
+"w": "The Declaration of Independence says everyone has the right to liberty. The Constitution begins with “We the People,” which shows the idea of self-government: the people govern themselves by electing representatives, not by a king or queen."
+},
+"11": {
+"c": 8,
+"w": "Thomas Jefferson wrote these words about rights that everyone has. The document was adopted on July 4, 1776, and announced independence from Great Britain."
+},
+"12": {
+"c": 11,
+"w": "The U.S. economic system is called a capitalist economy, or a market economy. In it, the government does not control the economy, and people are free to start a business and make money."
+},
+"13": {
+"c": 1,
+"w": "The Founders feared that a President with too much power could become like a king or queen. Under the rule of law, the President and every level of government must follow the Constitution and the law."
+},
+"14": {
+"c": 9,
+"w": "The Declaration of Independence was adopted 11 years before the Constitution was written, and it highlights self-government. The Federalist Papers, by James Madison, Alexander Hamilton, and John Jay, supported passing the Constitution."
+},
+"15": {
+"c": 1,
+"w": "The Founders feared that one person or group with too much power could take over the country. So the Constitution gives each branch different powers: one makes laws, one enforces them, and one reviews them."
+},
+"16": {
+"c": 1,
+"w": "The first three sections of the Constitution set up these branches. Congress makes federal laws, the President leads the branch that enforces them, and the Supreme Court and other federal courts review them."
+},
+"17": {
+"c": 3,
+"w": "This branch enforces federal laws. The President leads it, with help from the Vice President, the Cabinet, and the Executive Departments and agencies."
+},
+"18": {
+"c": 2,
+"w": "The Founders believed the power to make laws is the most important power in government, so the first section of the Constitution describes Congress. Members write a bill, and a majority of both parts must vote for it."
+},
+"19": {
+"c": 2,
+"w": "At the Constitutional Convention, some Founders wanted representation based on how many people live in each state. Others wanted every state to have the same number. They agreed to have two parts of Congress."
+},
+"20": {
+"c": 2,
+"w": "The Constitution says Congress makes federal laws that everyone in the country must follow. For example, after Japan attacked Pearl Harbor, Congress voted to declare war."
+},
+"21": {
+"c": 2,
+"w": "Each of the 50 states has two senators, no matter how many people live there. Senators represent all the people of their state."
+},
+"22": {
+"c": 2,
+"w": "Senators serve longer terms than members of the House of Representatives, who are elected every two years. A senator must be at least 30 years old, a U.S. citizen, and live in the state."
+},
+"23": {
+"c": 2,
+"w": "Every state has two U.S. senators who represent all the people of the state. Names change after elections, so check senate.gov before the interview. D.C. and the U.S. territories have no U.S. senators."
+},
+"24": {
+"c": 2,
+"w": "Each state is divided into congressional districts, and each district elects one member. States with more people have more members, so California has 52 voting members and Wyoming has one."
+},
+"25": {
+"c": 2,
+"w": "House members face elections more often than senators, who serve six years. A House member must be at least 25 years old, a U.S. citizen, and live in the state where the district is located."
+},
+"26": {
+"c": 2,
+"w": "Frequent elections let voters quickly keep or replace their House member. This helps the House respond faster when people change their views on issues.",
+"s": 1
+},
+"27": {
+"c": 2,
+"w": "The Founders agreed that every state should have the same number of senators, no matter how many people live there. So Wyoming, the state with the least people, has as many senators as California, the state with the most."
+},
+"28": {
+"c": 2,
+"w": "At the Constitutional Convention, the Founders did not agree on how many representatives each state should have. They agreed on two parts of Congress. States with more people have more House members, but every state is equal in the Senate."
+},
+"29": {
+"c": 2,
+"w": "Each state is divided into congressional districts, and each district elects one member of the House. Names change after elections, so check house.gov. People in a territory may name its nonvoting Delegate or Resident Commissioner."
+},
+"30": {
+"c": 2,
+"w": "The Speaker is the leader of the House of Representatives. If both the President and Vice President can no longer serve, the Speaker becomes President. The name can change, so check uscis.gov/citizenship/testupdates before the interview."
+},
+"31": {
+"c": 2,
+"w": "A member of the House represents one congressional district. A senator represents all the people of the whole state, so everyone in a state has the same two senators."
+},
+"32": {
+"c": 2,
+"w": "Only U.S. citizens can vote in federal elections, which is how they choose U.S. Senators. A senator represents all the people of the state, not one district."
+},
+"33": {
+"c": 2,
+"w": "Each state is divided into congressional districts. Each district elects one person to serve in the House of Representatives. That person represents the people of one district, while U.S. Senators represent all the people of a state."
+},
+"34": {
+"c": 2,
+"w": "Each congressional district elects its own representative every two years. Voting in federal elections is a right only for U.S. citizens, so the citizens who live in that district choose who represents them."
+},
+"35": {
+"c": 2,
+"w": "The Founders agreed that states with more people should have more representatives in the House. California, the state with the most people, has 52 voting members. Wyoming, the state with the least people, has one."
+},
+"36": {
+"c": 3,
+"w": "U.S. citizens vote for President in November. A President can be reelected for four more years, but a person can only be elected President two times."
+},
+"37": {
+"c": 3,
+"w": "Franklin Roosevelt was elected President four times. In 1951, the 22nd Amendment was added, and it says a person can only be elected President two times. The limit keeps any one President from holding power for too long."
+},
+"38": {
+"c": 3,
+"w": "The President is in charge of the Executive Branch and is elected for four years. The person in this office changes, so check the current name on the USCIS test updates page before the interview."
+},
+"39": {
+"c": 3,
+"w": "The Vice President is the President of the Senate, an advisor to the President, and a member of the Cabinet. The person in this office changes, so check the current name on the USCIS test updates page before the interview."
+},
+"40": {
+"c": 3,
+"w": "The Constitution makes the Vice President next in line. Some Presidents have died while in office, and when this happened, the Vice President became President. If both cannot serve, the Speaker of the House becomes President."
+},
+"41": {
+"c": 3,
+"w": "Under the separation of powers, Congress makes federal laws and the Executive Branch enforces them. The President signs or vetoes bills, is in charge of the military, and appoints federal judges with the approval of the Senate."
+},
+"42": {
+"c": 3,
+"w": "Commander in Chief means the President is in charge of everyone serving in the U.S. military, also called the U.S. Armed Forces. The Founders believed the President should have the power to protect the people of the United States."
+},
+"43": {
+"c": 2,
+"w": "A bill must first pass both the House and the Senate by a majority vote. Then it goes to the President. If the President agrees and signs it, the bill becomes a law that everyone must follow."
+},
+"44": {
+"c": 2,
+"w": "A veto is the President’s refusal to approve a bill. If the President does not agree with a bill that Congress passed, the President can veto it. The bill then does not become law unless Congress votes to override the veto.",
+"s": 1
+},
+"45": {
+"c": 4,
+"w": "The Founders did not want federal judges to decide cases based on politics or elections, so judges are not elected. The President nominates a person, and the U.S. Senate must approve that person before they become a federal judge."
+},
+"46": {
+"c": 3,
+"w": "The President is in charge of the Executive Branch. The executive departments and agencies help the President enforce laws, protect the country, and provide services to the people. For example, USCIS is part of the Department of Homeland Security."
+},
+"47": {
+"c": 3,
+"w": "In government, a “cabinet” is another word for a “group of advisors.” The leaders of the executive departments are part of the President’s Cabinet. The President can also choose other people from the federal government to serve on it."
+},
+"48": {
+"c": 3,
+"w": "The leaders of the executive departments are part of the Cabinet, and most are called Secretaries, like the Secretary of Homeland Security. The leader of the Department of Justice is called the Attorney General. The Vice President is also a Cabinet member."
+},
+"49": {
+"c": 3,
+"w": "When citizens vote for President, they are choosing electors from their state. These electors cast the votes that decide who becomes President. The Founders created this system as a middle path between a vote by the people and a choice by Congress.",
+"s": 1
+},
+"50": {
+"c": 4,
+"w": "The Judicial Branch has the Supreme Court and other federal courts, sometimes called lower federal courts. These include the U.S. Courts of Appeals and the U.S. District Courts. The Supreme Court may review decisions from the lower federal courts."
+},
+"51": {
+"c": 4,
+"w": "The Constitution is the supreme law of the land, so laws that Congress writes must follow it. A person who thinks a law does not follow the Constitution can bring a legal case to a federal court to challenge it."
+},
+"52": {
+"c": 4,
+"w": "The Supreme Court may review decisions made by lower federal courts. No other court in the United States can change a Supreme Court decision, so its decision about a law or legal case is final."
+},
+"53": {
+"c": 4,
+"w": "The word “justice” is another word for “judge.” One of the nine justices is the Chief Justice, who leads the others. With nine justices, at least 5 must vote the same way to decide a case."
+},
+"54": {
+"c": 4,
+"w": "A decision needs a majority, which means more than half of the justices vote the same way. When 9 justices hear a case, at least 5 must agree. The majority then writes a decision that explains their reasons."
+},
+"55": {
+"c": 4,
+"w": "Supreme Court justices are not elected. The President nominates them, and the U.S. Senate must approve them. After that, they can keep their seat for life, or until they retire, without facing an election."
+},
+"56": {
+"c": 4,
+"w": "The Founders did not want Supreme Court justices to make decisions based on politics or elections. They wanted judges to decide based on the Constitution and the rule of law. This is why federal judges are not elected."
+},
+"57": {
+"c": 4,
+"w": "The Chief Justice leads the Supreme Court, for example by managing the courtroom and leading discussions about cases. The person in this job can change, so check the current name on the USCIS test updates page before the interview."
+},
+"58": {
+"c": 1,
+"w": "The Constitution gives the federal government powers to protect the people of the United States. It can create an army to defend the nation and make treaties with other countries. Only the U.S. government can print paper money and make coins."
+},
+"59": {
+"c": 1,
+"w": "Powers the Constitution does not give to the federal government are kept by the states or the people. States protect their people with police and fire departments, and each state has its own education system, from grade school to colleges."
+},
+"60": {
+"c": 1,
+"w": "The 10th Amendment is the last amendment in the Bill of Rights, added in 1791. It means powers the Constitution does not give to the federal government are kept by the states or by the people. For example, states provide schools and police."
+},
+"61": {
+"c": 1,
+"w": "The governor is the person in charge of the executive branch of a state government. The person in this job can change, so check the current name before the interview. Washington, D.C., does not have a governor because it is not a state."
+},
+"62": {
+"c": 6,
+"w": "Each state has its own capital city, just as Washington, D.C., is the capital of the United States. Washington, D.C., is not part of a state, so it has no state capital. Each U.S. territory also has its own capital."
+},
+"63": {
+"c": 5,
+"w": "Voting rights grew over time through amendments. The 15th Amendment (1870) protected male citizens of any race, and the 19th (1920) added women. The 24th (1964) banned poll taxes in federal elections, and the 26th (1971) gave the vote to citizens 18 and older."
+},
+"64": {
+"c": 5,
+"w": "Some rights belong only to U.S. citizens, not to everyone living in the country. For example, only U.S. citizens can vote for U.S. Representatives, U.S. Senators, and the President, and a person must be a U.S. citizen to be elected to Congress."
+},
+"65": {
+"c": 5,
+"w": "Some rights belong to everyone living in the United States, not only to citizens. Freedom of speech means people can say or write what they want without fear of going to jail. Freedom of religion means people can practice any religion, or none."
+},
+"66": {
+"c": 12,
+"w": "The flag is an important symbol of the United States and of freedom. When people say the Pledge, they stand, turn toward the flag, and put their right hand over their heart."
+},
+"67": {
+"c": 5,
+"w": "The Oath of Allegiance is said at a naturalization ceremony. Applicants raise their right hand and make important promises of loyalty to the United States. At that time, they become U.S. citizens."
+},
+"68": {
+"c": 5,
+"w": "Naturalization is the path for a lawful permanent resident who applies, completes the test and interview, and takes the Oath of Allegiance. Others are citizens by birth in the United States under the 14th Amendment, or derive citizenship under conditions set by Congress."
+},
+"69": {
+"c": 5,
+"w": "Civic participation means taking part in American democracy. People can write to a newspaper or publicly give their opinion about an issue or policy. U.S. citizens also vote to elect their representatives, senators, and President."
+},
+"70": {
+"c": 5,
+"w": "Americans can serve their country in many ways, not only in the military. Serving in the U.S. Armed Forces is voluntary. Obeying the law and paying income taxes are responsibilities of everyone living in the United States."
+},
+"71": {
+"c": 5,
+"w": "Paying taxes is part of following the rule of law, which means everyone must obey the law. Each year, people are required to send a federal income tax form to the U.S. government, usually by April 15."
+},
+"72": {
+"c": 5,
+"w": "The law requires almost all men ages 18 through 25 living in the United States, both citizens and immigrants, to register for the Selective Service. Like paying taxes, it is part of following the rule of law.",
+"s": 1
+},
+"73": {
+"c": 7,
+"w": "Many colonists who settled in Jamestown wanted economic opportunities, like land for farming or valuable metals like gold and silver. In 1620, the Pilgrims started a colony at Plymouth, in what is now Massachusetts. Many of them came for religious freedom.",
+"s": 1
+},
+"74": {
+"c": 7,
+"w": "Native Americans lived in North and South America for around 20,000 years before the Europeans arrived. There were many tribes, and each had its own culture, religion, language, and form of government. Native Americans are also called American Indians."
+},
+"75": {
+"c": 7,
+"w": "Colonists grew crops like tobacco and later cotton. Millions of African people were forced onto ships, taken to North and South America, and sold as slaves. In 1619, the first enslaved Africans were brought to the English colony at Jamestown.",
+"s": 1
+},
+"76": {
+"c": 8,
+"w": "In 1775, the colonists went to war with Great Britain because they did not have self-government. The war officially ended in 1783, when Great Britain signed a treaty agreeing that the United States was an independent country."
+},
+"77": {
+"c": 8,
+"w": "In the 1760s, Great Britain raised taxes on the colonies to help pay for a war. Colonists said taxation without representation was not fair. Britain then punished them with more taxes and laws, so many colonists wanted to govern themselves."
+},
+"78": {
+"c": 8,
+"w": "The Declaration of Independence is a “statement of freedom” from Great Britain. In it, Thomas Jefferson wrote that everyone has the right to life, liberty, and the pursuit of happiness."
+},
+"79": {
+"c": 8,
+"w": "The Declaration of Independence announced independence from Great Britain. This is why Americans celebrate Independence Day on July 4th. The tablet held by the Statue of Liberty also shows this date."
+},
+"80": {
+"c": 8,
+"w": "The colonists adopted the Declaration of Independence during the war and created the United States of America. In 1781, the British Army surrendered at the Battle of Yorktown in Virginia. After that, the major fighting ended, and a peace treaty followed in 1783.",
+"s": 1
+},
+"81": {
+"c": 8,
+"w": "England created 13 colonies on the East Coast of North America. When the colonists adopted the Declaration of Independence, the 13 colonies became the 13 original states. The 13 stripes on the flag represent the original colonies."
+},
+"82": {
+"c": 9,
+"w": "Leaders from around the country met in Philadelphia, Pennsylvania, at the Constitutional Convention and wrote the Constitution there. It was written 11 years after the Declaration of Independence, and it is the oldest written national constitution still in use.",
+"s": 1
+},
+"83": {
+"c": 9,
+"w": "Not everyone wanted the new Constitution, so the writers published essays in newspapers to support it. There were 85 essays, and all of them were signed with the name “Publius.”"
+},
+"84": {
+"c": 9,
+"w": "Many people did not like the Constitution in 1787 because it had no list of rights. The Federalist Papers argued for it in newspapers. Supporters also agreed to add a list of rights, and then many more people supported the Constitution."
+},
+"85": {
+"c": 8,
+"w": "A diplomat travels to other countries to represent the United States. Benjamin Franklin was a diplomat who helped negotiate the 1783 treaty in which Great Britain agreed that the United States was an independent nation.",
+"s": 1
+},
+"86": {
+"c": 8,
+"w": "George Washington was named general of the colonial army, called the Continental Army, in the American Revolutionary War. This is one reason he is called the “Father of Our Country.” Later he was elected the first President.",
+"s": 1
+},
+"87": {
+"c": 8,
+"w": "Thomas Jefferson wrote the Declaration of Independence as a statement of freedom from unfair treatment by Great Britain. In it, he wrote that everyone has the right to life, liberty, and the pursuit of happiness."
+},
+"88": {
+"c": 9,
+"w": "James Madison was one of the Founders who met in Philadelphia in 1787 and wrote the Constitution. He believed the country needed a new government, and he helped write the Federalist Papers to support passing the Constitution."
+},
+"89": {
+"c": 9,
+"w": "Alexander Hamilton was one of the leaders who believed the United States needed a new government. He came to the Constitutional Convention in 1787. With James Madison and John Jay, he wrote the Federalist Papers to support the Constitution."
+},
+"90": {
+"c": 9,
+"w": "France sold the land because it needed money to pay for wars in Europe. The territory included a large amount of land between the Mississippi River and the Rocky Mountains, and more people began moving west."
+},
+"91": {
+"c": 9,
+"w": "In 1846, the U.S. went to war with Mexico over Texas and other land in the southwest. Francis Scott Key wrote “The Star-Spangled Banner” about seeing the American flag after a battle during the War of 1812."
+},
+"92": {
+"c": 10,
+"w": "Eleven states in the South left the United States and tried to create their own country, the Confederate States of America. The war between the North and the South began in 1861. The biggest conflict between them was over slavery.",
+"s": 1
+},
+"93": {
+"c": 10,
+"w": "The Civil War was fought from 1861 – 1865. During the war, Abraham Lincoln signed the Emancipation Proclamation. The North won when the South surrendered in April 1865, and a few days later Lincoln was assassinated."
+},
+"94": {
+"c": 10,
+"w": "Abraham Lincoln was President from 1861 – 1865, the same years as the Civil War. During the war, he signed the Emancipation Proclamation. Presidents’ Day honors him and George Washington."
+},
+"95": {
+"c": 10,
+"w": "“Emancipation” means “freedom,” and “proclamation” means “announcement.” In 1863, during the Civil War, Abraham Lincoln announced that enslaved people in most Southern states were free. Most were not actually freed until the war ended in 1865."
+},
+"96": {
+"c": 10,
+"w": "When the North won the Civil War in 1865, enslaved people in the Confederate states were freed. On December 6, 1865, the 13th Amendment made slavery illegal everywhere in the United States. Juneteenth celebrates the end of slavery.",
+"s": 1
+},
+"97": {
+"c": 5,
+"w": "Some amendments added after the Bill of Rights describe who can be a U.S. citizen. Being born in the United States, under conditions this amendment sets, is one way to become a citizen. Naturalization is another way."
+},
+"98": {
+"c": 5,
+"w": "The 15th Amendment was added in 1870, soon after the Civil War ended in 1865. It says a male citizen of any race can vote. Women got the right to vote later, with the 19th Amendment in 1920."
+},
+"99": {
+"c": 10,
+"w": "Susan B. Anthony fought for women’s rights in the 1800s. She wanted women to be treated equally to men and to have the right to vote. She also believed that slavery should be illegal."
+},
+"100": {
+"c": 11,
+"w": "The U.S. fought in World War I from 1917 to 1918 and in World War II from 1941 to 1945. Veterans Day, on November 11, first marked the end of World War I."
+},
+"101": {
+"c": 11,
+"w": "World War I began in Europe in 1914, but the U.S. stayed out at first. German submarines kept sinking ships, including ships carrying Americans. In 1917, the U.S. joined the war on the Allied side.",
+"s": 1
+},
+"102": {
+"c": 5,
+"w": "In the 1800s, Susan B. Anthony and others fought for women’s right to vote. In 1920, soon after World War I ended in 1918, the 19th Amendment was added. It says women and men can vote."
+},
+"103": {
+"c": 11,
+"w": "The Great Depression was the worst time for the U.S. economy in American history. Banks and businesses around the country closed. Many people could not get a job, and many lost their homes and their money."
+},
+"104": {
+"c": 11,
+"w": "In 1929, prices on the U.S. stock market fell very fast. Many people and banks lost large amounts of money, and many businesses closed. This crash marked the start of the Great Depression.",
+"s": 1
+},
+"105": {
+"c": 11,
+"w": "Franklin Roosevelt was elected President four times and served from 1933 to 1945. His long time in office covered both the Great Depression and World War II. Later, the 22nd Amendment said a person can only be elected President two times."
+},
+"106": {
+"c": 11,
+"w": "On December 7, 1941, Japan attacked a U.S. naval base in Hawaii called Pearl Harbor. The next day, Congress voted to declare war. The power to declare war belongs to the federal government under the Constitution."
+},
+"107": {
+"c": 11,
+"w": "Before he was President, Dwight Eisenhower was a general in World War II. He became the 34th President in 1953 and served until 1961, during the Cold War with the Soviet Union."
+},
+"108": {
+"c": 11,
+"w": "In World War II, the U.S. and the Soviet Union fought on the same side. The Soviet Union was a communist country made up of Russia and other republics. After the war, the two did not trust each other, and the Cold War began.",
+"s": 1
+},
+"109": {
+"c": 11,
+"w": "In a communist country, the government plans the economy and controls most of the resources. Usually one political party controls the government. The Soviet Union was communist, and the U.S. wanted to stop other countries from becoming communist."
+},
+"110": {
+"c": 11,
+"w": "During the Cold War, the U.S. wanted to stop other countries from becoming communist. In 1950, communist North Korea invaded South Korea. The U.S. fought in the Korean War to stop communism from spreading to South Korea.",
+"s": 1
+},
+"111": {
+"c": 11,
+"w": "During the Cold War, the main concern of the United States was the spread of communism. Communist North Vietnam was fighting to take control of South Vietnam. The U.S. sent troops to try to stop communism from spreading there.",
+"s": 1
+},
+"112": {
+"c": 11,
+"w": "Many states had laws that separated people by race in schools, restaurants, and neighborhoods, or made voting harder based on race. The movement led Congress to pass the Civil Rights Act in 1964 and the Voting Rights Act in 1965."
+},
+"113": {
+"c": 11,
+"w": "Martin Luther King, Jr., led peaceful protests against racial discrimination. In 1963, he gave his famous “I Have a Dream” speech at the Lincoln Memorial. He was awarded the Nobel Prize for Peace in 1964."
+},
+"114": {
+"c": 11,
+"w": "In 1990, Iraq invaded its small neighbor, Kuwait, and took control of it. In 1991, the United States led many countries in a war that pushed Iraq’s military out of Kuwait.",
+"s": 1
+},
+"115": {
+"c": 11,
+"w": "Terrorists hijacked four airplanes and crashed two into the World Trade Center and one into the Pentagon. Passengers on the fourth plane fought the terrorists, and it crashed in Shanksville, Pennsylvania. Almost 3,000 people died.",
+"s": 1
+},
+"116": {
+"c": 11,
+"w": "After the attacks, the U.S. led efforts against terrorist groups around the world, often called the War on Terror. U.S. forces fought in Afghanistan starting in 2001 and in Iraq starting in 2003.",
+"s": 1
+},
+"117": {
+"c": 9,
+"w": "Native Americans, also called American Indians, lived in North America long before Europeans arrived. Each tribe had its own culture, language, and form of government. Today there are over 500 American Indian tribes in the United States."
+},
+"118": {
+"c": 11,
+"w": "An innovation is a new invention or a new way of doing something. During the Cold War, the U.S. and the Soviet Union both tried to send rockets into space. In 1969, the U.S. became the first country to land a person on the moon."
+},
+"119": {
+"c": 6,
+"w": "The city is named after George Washington, the first President. The letters “D.C.” mean “District of Columbia.” It sits between Maryland and Virginia, is not part of a state, and is controlled by the federal government."
+},
+"120": {
+"c": 12,
+"w": "France gave the statue to the United States in 1886 as a symbol of friendship. It stands on Liberty Island in New York Harbor, which is also home to Ellis Island, where more than 12 million immigrants arrived."
+},
+"121": {
+"c": 12,
+"w": "England created 13 colonies on the East Coast of North America. When they declared independence in 1776, they became the 13 original states. The flag’s red and white stripes represent those colonies."
+},
+"122": {
+"c": 12,
+"w": "The country began with 13 original states and grew to 50 states today. Hawaii became the 50th state on August 21, 1959. The 13 stripes still represent the original colonies."
+},
+"123": {
+"c": 12,
+"w": "Francis Scott Key wrote it about seeing the American flag after a battle during the War of 1812. “Banner” means flag. “Spangled” refers to the flag’s stars, which look like they are shining in the night sky."
+},
+"124": {
+"c": 12,
+"w": "“E Pluribus Unum” is Latin. It expresses the idea that many states, and many people, joined together to form one nation. The phrase appears on the Great Seal of the United States and on U.S. coins.",
+"s": 1
+},
+"125": {
+"c": 12,
+"w": "The Declaration of Independence was adopted on July 4, 1776. It announced independence from Great Britain and created the United States of America. That is why Americans celebrate on July 4 every year."
+},
+"126": {
+"c": 12,
+"w": "National holidays are also called “federal holidays” because Congress passed them and the President signed them into law. Many honor people or events from U.S. history, such as the end of slavery and the Declaration of Independence."
+},
+"127": {
+"c": 12,
+"w": "Memorial Day, the last Monday in May, honors men and women who died in service to the United States. It was first called Decoration Day, because people decorated graves with flowers, wreaths, and flags. It began soon after the Civil War.",
+"s": 1
+},
+"128": {
+"c": 12,
+"w": "Veterans Day is November 11, the day the fighting in World War I stopped in 1918, so it was first called Armistice Day. It honors everyone who has served in the U.S. military. Memorial Day honors those who died in service.",
+"s": 1
+}
+}
+}

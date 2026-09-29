@@ -72,11 +72,44 @@ input[type=text],select{width:100%;padding:11px 12px;border:1px solid var(--line
 .tabs button[aria-selected=true]{background:var(--brand);border-color:var(--brand);color:#fff}
 @media (prefers-color-scheme: dark){.tabs button[aria-selected=true]{color:#0c2340}}
 
+.flip{perspective:1400px;cursor:pointer;border-radius:14px;margin:10px 0 12px;position:relative}
+.flip:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+.flip-in{position:relative;transition:transform .45s;transform-style:preserve-3d}
+.flip-in.on{transform:rotateY(180deg)}
+@media (prefers-reduced-motion: reduce){.flip-in{transition:none}}
+.face{backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--bg);border:1px solid var(--line);border-radius:14px;
+  padding:18px 16px 12px;display:flex;flex-direction:column}
+.face.front{min-height:250px}
+.face.front .q{margin:auto 0}
+.face.back{position:absolute;inset:0;overflow:auto;transform:rotateY(180deg)}
+.face.back::before{content:"";margin-top:auto}   /* centres short answers; collapses when the list is long */
+.turn{margin:auto 0 0;padding-top:12px;text-align:center;font-size:13px;color:var(--muted)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.tools .btn{padding:9px 12px;font-size:14px}
+.fs{position:fixed;inset:0;z-index:20;background:var(--bg);overflow:auto;margin:0;padding:16px max(16px,4vw)}
+.fs .face.front{min-height:56vh}
+.fs .q{font-size:clamp(26px,4.6vw,46px)}
+.fs .answers{font-size:clamp(18px,2.6vw,28px)}
+.fs .why{font-size:clamp(16px,2vw,22px)}
+#show{position:fixed;inset:0;z-index:30;background:#0c2340;color:#fff;display:flex;flex-direction:column;padding:max(20px,4vh) max(20px,6vw);cursor:pointer}
+#show .top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:clamp(13px,1.6vw,18px);opacity:.75}
+#show .mid{margin:auto 0;max-width:min(1100px,92vw)}
+#show .sq{font-size:clamp(26px,5.2vw,64px);font-weight:650;line-height:1.2;margin:0}
+#show .sa{list-style:none;margin:.9em 0 0;padding:0;font-size:clamp(20px,3.4vw,42px);line-height:1.35;color:#9fd8b5}
+#show .sa li{margin:.15em 0}
+#show .more{font-size:clamp(14px,1.6vw,20px);opacity:.7;margin:.6em 0 0}
+#show .x{appearance:none;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.1);color:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;cursor:pointer}
+#show .line{height:4px;background:rgba(255,255,255,.18);border-radius:99px;overflow:hidden}
+#show .line span{display:block;height:100%;width:0;background:#9fd8b5}
 .meta{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted)}
 .q{font-size:clamp(20px,4.6vw,24px);font-weight:650;line-height:1.3;margin:10px 0 14px}
 .answers{margin:0 0 12px;padding-left:20px}
 .answers li{margin:3px 0}
 .note{background:var(--note-soft);border-radius:10px;padding:10px 12px;font-size:14px;margin:0 0 12px}
+.why{border-left:3px solid var(--brand);padding:2px 0 2px 12px;font-size:15px;margin:0 0 12px}
+.why b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.lq{font-size:clamp(19px,4.4vw,22px);font-weight:650;line-height:1.3;margin:10px 0 12px}
+.lt{font-size:clamp(22px,5vw,26px);font-weight:650;line-height:1.2;margin:8px 0 10px}
 .you{background:var(--brand-soft);color:var(--brand);border-radius:10px;padding:10px 12px;font-size:14px;margin:0 0 12px}
 .tally{font-size:13px;color:var(--muted);margin:12px 0 0}
 .bar{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin:6px 0 12px}
@@ -104,7 +137,7 @@ textarea:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
 .sent{font-size:clamp(20px,4.6vw,24px);font-weight:650;line-height:1.35;margin:10px 0 14px}
 footer{color:var(--muted);font-size:13px;padding:24px 0 48px;border-top:1px solid var(--line);margin-top:32px}
 footer p{margin:0 0 8px}
-@media (min-width:900px){body{font-size:17px}.wrap{max-width:820px}}
+@media (min-width:900px){body{font-size:17px}.wrap{max-width:820px}.tabs{flex-wrap:wrap;overflow:visible}}
 </style>
 </head>
 <body>
@@ -138,6 +171,7 @@ footer p{margin:0 0 8px}
 </section>
 
 <div class="tabs" role="tablist" aria-label="Practice modes">
+  <button role="tab" data-tab="learn" aria-selected="false">Learn</button>
   <button role="tab" data-tab="practice" aria-selected="true">Practice</button>
   <button role="tab" data-tab="mock" aria-selected="false">Mock test</button>
   <button role="tab" data-tab="missed" aria-selected="false">Missed <span id="missedn"></span></button>
@@ -147,6 +181,12 @@ footer p{margin:0 0 8px}
   <button role="tab" data-tab="prep" aria-selected="false">How to prepare</button>
 </div>
 
+<section id="learn" hidden>
+  <div style="margin-bottom:12px"><label class="f" for="chapter">Chapter</label><select id="chapter"></select></div>
+  <div class="card" id="lcard" aria-live="polite"></div>
+  <p class="hint">The "why" notes are based on the official USCIS 2025 Civics Test Study Guide. Where the guide is silent or imprecise, they use standard historical sources. The accepted answers are always the official ones. Each note was checked by a second reader.</p>
+</section>
+
 <section id="practice">
   <div class="row two" style="margin-bottom:12px">
     <div><label class="f" for="set">Questions</label>
@@ -154,10 +194,19 @@ footer p{margin:0 0 8px}
         <option value="all">All 128 questions</option>
         <option value="star">65/20 list (20 questions)</option>
         <option value="missed">Only the ones I missed</option>
+        <option value="chapter" hidden>The chapter I just read</option>
       </select></div>
     <div><label class="f" for="topic">Topic</label><select id="topic"><option value="">All topics</option></select></div>
   </div>
+  <div class="tools">
+    <button class="btn" id="full" type="button">⛶ Full screen</button>
+    <button class="btn" id="play" type="button">▶ Auto-play</button>
+    <label class="f" style="margin:0;display:flex;align-items:center;gap:6px">Seconds per side
+      <select id="secs" style="width:auto;padding:8px 10px"><option>5</option><option selected>8</option><option>12</option><option>20</option></select></label>
+    <label class="f" style="margin:0;display:flex;align-items:center;gap:6px"><input type="checkbox" id="voice" style="width:18px;height:18px"> Read aloud</label>
+  </div>
   <div class="card" id="pcard" aria-live="polite"></div>
+  <p class="hint">Auto-play fills the screen and goes through the questions on its own, like the screens in a USCIS waiting room. It uses the questions chosen above. Press Esc or Exit to stop.</p>
 </section>
 
 <section id="mock" hidden>
@@ -305,7 +354,8 @@ footer p{margin:0 0 8px}
   if (!P.rw) P.rw = { rr: 0, rw: 0, wr: 0, ww: 0 };
   function save(){ try { localStorage.setItem(KEY, JSON.stringify(P)); } catch (e) {} }
 
-  var Q = [], O = null, ZIP = null;
+  var Q = [], O = null, ZIP = null, W = { chapters: [], why: {} };
+  if (!P.learn) P.learn = { c: 1, i: 0 };
 
   // ---------- your location and your personal answers ----------
   var TERR = { PR: 1, GU: 1, VI: 1, AS: 1, MP: 1 };
@@ -397,30 +447,39 @@ footer p{margin:0 0 8px}
     var u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = rate || 0.9;
     speechSynthesis.speak(u);
   }
+  function whyBox(parent, q){
+    var y = W.why[q.id]; if (!y) return;
+    var d = el('div', 'why'); d.appendChild(el('b', '', 'Why')); d.appendChild(document.createTextNode(y.w)); parent.appendChild(d);
+  }
   function card(box, q, label, onGrade){
     box.textContent = '';
     var meta = el('div', 'meta'); meta.appendChild(el('span', '', label)); meta.appendChild(el('span', '', q.sec + (q.star ? '  ★ 65/20' : '')));
     box.appendChild(meta);
-    box.appendChild(el('p', 'q', q.id + '. ' + q.q));
-    var top = el('div', 'row');
-    var show = el('button', 'btn go', 'Show answer'); show.type = 'button'; top.appendChild(show);
-    if ('speechSynthesis' in window) { var hear = el('button', 'btn', '🔊 Hear it'); hear.type = 'button'; hear.addEventListener('click', function(){ say(q.q); }); top.appendChild(hear); }
-    box.appendChild(top);
-    var back = el('div'); back.hidden = true; back.style.marginTop = '14px';
+    var flip = el('div', 'flip'), inner = el('div', 'flip-in'), front = el('div', 'face front'), back = el('div', 'face back');
+    flip.tabIndex = 0; flip.setAttribute('role', 'button'); flip.setAttribute('aria-label', 'Flash card. Press to turn it over.');
+    front.appendChild(el('p', 'q', q.id + '. ' + q.q));
+    front.appendChild(el('p', 'turn', 'Tap the card to see the answer'));
     var p = personal(q), ans = p ? p.a : q.a;
     if (p && p.tag) back.appendChild(el('div', 'you', p.tag));
     var ul = el('ul', 'answers'); ans.forEach(function(a){ ul.appendChild(el('li', '', a)); }); back.appendChild(ul);
+    whyBox(back, q);
     // the official note on these four is guidance for D.C. and the territories, already applied above
     if (q.note && !(p && p.tag && [23, 29, 61, 62].indexOf(q.id) >= 0)) back.appendChild(el('div', 'note', q.note));
     if (p && p.ask && !p.tag) back.appendChild(el('div', 'note', 'Enter your ZIP code at the top to see your own answer.'));
+    back.appendChild(el('p', 'turn', 'Tap to turn back'));
+    back.setAttribute('aria-hidden', 'true');
+    function turn(){ var on = inner.classList.toggle('on'); back.setAttribute('aria-hidden', !on); front.setAttribute('aria-hidden', on); if (on) back.scrollTop = 0; }
+    flip.addEventListener('click', turn);
+    flip.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); turn(); } });
+    inner.appendChild(front); inner.appendChild(back); flip.appendChild(inner); box.appendChild(flip);
     var g = el('div', 'row two');
-    var no = el('button', 'btn bad', '✗ Missed it'), yes = el('button', 'btn good', '✓ Got it right'); no.type = yes.type = 'button';
-    no.addEventListener('click', function(){ onGrade(false); }); yes.addEventListener('click', function(){ onGrade(true); });
-    g.appendChild(no); g.appendChild(yes); back.appendChild(g);
-    box.appendChild(back);
-    var r = P.q[q.id];
-    box.appendChild(el('p', 'tally', r && (r.r + r.w) ? 'So far: ' + r.r + ' right, ' + r.w + ' missed' + (r.s >= 3 ? '. Mastered.' : '') : 'Not tried yet'));
-    show.addEventListener('click', function(){ back.hidden = false; top.hidden = true; yes.focus(); });
+    g.appendChild(btn('btn bad', '✗ Missed it', function(){ onGrade(false); }));
+    g.appendChild(btn('btn good', '✓ Got it right', function(){ onGrade(true); }));
+    box.appendChild(g);
+    var r = P.q[q.id], foot = el('div', 'row'); foot.style.marginTop = '10px';
+    if (CAN_SPEAK) { var hear = btn('btn', '🔊 Hear it', function(){ say(q.q); }); hear.style.padding = '8px 12px'; hear.style.fontSize = '14px'; foot.appendChild(hear); }
+    var tally = el('span', 'tally', r && (r.r + r.w) ? 'So far: ' + r.r + ' right, ' + r.w + ' missed' + (r.s >= 3 ? '. Mastered.' : '') : 'Not tried yet'); tally.style.margin = '0';
+    foot.appendChild(tally); box.appendChild(foot);
   }
 
   // ---------- practice ----------
@@ -431,6 +490,7 @@ footer p{margin:0 0 8px}
       if (topic && q.sec !== topic) return false;
       if (set === 'star') return q.star;
       if (set === 'missed') return isMissed(q);
+      if (set === 'chapter') return inChapter(q, P.learn.c);
       return true;
     });
   }
@@ -451,8 +511,131 @@ footer p{margin:0 0 8px}
       grade(deck[at], right); at++; counts(); practice();
     });
   }
-  $('set').addEventListener('change', function(){ deal(); practice(); });
+  $('set').addEventListener('change', function(){ if (this.value !== 'chapter') this.options[3].hidden = true; deal(); practice(); });
   $('topic').addEventListener('change', function(){ deal(); practice(); });
+
+  // ---------- learn: one chapter at a time, one screen per question ----------
+  function inChapter(q, c){ return W.why[q.id] && W.why[q.id].c === c; }
+  function learn(){
+    var box = $('lcard'), ch = W.chapters.filter(function(c){ return c.n === P.learn.c; })[0];
+    box.textContent = '';
+    if (!ch) { box.appendChild(el('p', 'sub', 'The study notes could not be loaded. Practice still works.')); return; }
+    var qs = Q.filter(function(q){ return inChapter(q, ch.n); }), n = qs.length + 2;
+    var i = Math.max(0, Math.min(P.learn.i, n - 1));
+    var meta = el('div', 'meta'); meta.appendChild(el('span', '', 'Chapter ' + ch.n + ' of ' + W.chapters.length)); meta.appendChild(el('span', '', (i + 1) + ' of ' + n));
+    box.appendChild(meta);
+    var bar = el('div', 'bar'), fill = el('span'); fill.style.width = ((i + 1) / n * 100) + '%'; bar.appendChild(fill); box.appendChild(bar);
+    if (i === 0) {
+      box.appendChild(el('p', 'lt', ch.title));
+      box.appendChild(el('p', 'sub', 'In this chapter you will learn about:'));
+      var ul = el('ul', 'answers'); ch.learn.forEach(function(t){ ul.appendChild(el('li', '', t)); }); box.appendChild(ul);
+      box.appendChild(el('p', 'tally', qs.length + ' test questions come from this chapter.'));
+    } else if (i === n - 1) {
+      box.appendChild(el('p', 'lt', 'End of chapter ' + ch.n));
+      box.appendChild(el('p', 'sub', 'Now see how many of these ' + qs.length + ' questions you can answer without looking.'));
+      box.appendChild(btn('btn go', 'Practice these ' + qs.length + ' questions', function(){
+        var o = $('set').options[3]; o.hidden = false; $('set').value = 'chapter'; $('topic').value = ''; deal(); tab('practice');
+      }));
+    } else {
+      var q = qs[i - 1], p = personal(q);
+      box.appendChild(el('p', 'lq', q.id + '. ' + q.q + (q.star ? '  ★' : '')));
+      if (p && p.tag) box.appendChild(el('div', 'you', p.tag));
+      var al = el('ul', 'answers'); (p ? p.a : q.a).forEach(function(a){ al.appendChild(el('li', '', a)); }); box.appendChild(al);
+      whyBox(box, q);
+      if (q.note && !(p && p.tag && [23, 29, 61, 62].indexOf(q.id) >= 0)) box.appendChild(el('div', 'note', q.note));
+      if (CAN_SPEAK) box.appendChild(btn('btn', '🔊 Hear the question', function(){ say(q.q); }));
+    }
+    var nav = el('div', 'row two'); nav.style.marginTop = '14px';
+    var back = btn('btn', '← Back', function(){ P.learn.i = i - 1; save(); learn(); });
+    var last = i === n - 1, more = ch.n < W.chapters.length;
+    var next = btn('btn go', last ? (more ? 'Next chapter →' : 'Start again') : 'Next →', function(){
+      if (!last) P.learn.i = i + 1; else P.learn = { c: more ? ch.n + 1 : 1, i: 0 };
+      $('chapter').value = P.learn.c; save(); learn(); $('learn').scrollIntoView();
+    });
+    back.disabled = i === 0; if (i === 0) back.style.visibility = 'hidden';
+    nav.appendChild(back); nav.appendChild(next); box.appendChild(nav);
+  }
+  $('chapter').addEventListener('change', function(){ P.learn = { c: +this.value, i: 0 }; save(); learn(); });
+
+  // ---------- full screen ----------
+  function fullOn(node){
+    node.classList.add('fs');
+    if (node.requestFullscreen) node.requestFullscreen().catch(function(){});   // iPhone has no such API; the CSS alone still fills the page
+  }
+  function fullOff(node){
+    node.classList.remove('fs');
+    if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(function(){});
+  }
+  $('full').addEventListener('click', function(){
+    var sec = $('practice'), on = !sec.classList.contains('fs');
+    if (on) fullOn(sec); else fullOff(sec);
+    this.textContent = on ? '✕ Exit full screen' : '⛶ Full screen';
+  });
+  document.addEventListener('fullscreenchange', function(){
+    if (document.fullscreenElement) return;
+    $('practice').classList.remove('fs'); $('full').textContent = '⛶ Full screen';
+    if (S) stop();
+  });
+
+  // ---------- auto-play: question, then answer, then the next one ----------
+  var S = null, lock = null;
+  function stop(){
+    if (!S) return;
+    clearTimeout(S.t); if (CAN_SPEAK) speechSynthesis.cancel();
+    S.node.remove(); S = null;
+    if (lock) { lock.release().catch(function(){}); lock = null; }
+    if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(function(){});
+  }
+  function frame(){
+    var q = S.qs[S.i], p = personal(q), ans = (p ? p.a : q.a), shown = ans.slice(0, 4), mid = S.node.querySelector('.mid');
+    S.node.querySelector('.where').textContent = 'Question ' + q.id + ' of 128' + (q.star ? '  ★' : '') + '  ·  ' + q.sec;
+    mid.textContent = '';
+    mid.appendChild(el('p', 'sq', q.q));
+    if (S.side) {
+      var ul = el('ul', 'sa'); shown.forEach(function(a){ ul.appendChild(el('li', '', a)); }); mid.appendChild(ul);
+      if (ans.length > shown.length) var extra = ans.length - shown.length;
+      mid.appendChild(el('p', 'more', 'and ' + extra + ' more accepted answer' + (extra === 1 ? '' : 's')));
+    }
+    if (S.voice) say(S.side ? shown[0] : q.q, 0.85);
+    var bar = S.node.querySelector('.line span');
+    bar.style.transition = 'none'; bar.style.width = '0';
+    bar.offsetWidth;   // restart the timer bar
+    bar.style.transition = 'width ' + S.secs + 's linear'; bar.style.width = S.paused ? '0' : '100%';
+    clearTimeout(S.t);
+    if (!S.paused) S.t = setTimeout(function(){ step(1); }, S.secs * 1000);
+  }
+  function step(d){
+    if (d > 0) { if (S.side) { S.side = 0; S.i = (S.i + 1) % S.qs.length; } else S.side = 1; }
+    else { if (S.side) S.side = 0; else { S.i = (S.i + S.qs.length - 1) % S.qs.length; S.side = 1; } }
+    frame();
+  }
+  $('play').addEventListener('click', function(){
+    var qs = pool(); if (!qs.length) return;
+    var node = el('div'); node.id = 'show';
+    var top = el('div', 'top'); top.appendChild(el('span', 'where')); 
+    var x = el('button', 'x', 'Exit'); x.type = 'button'; x.addEventListener('click', function(e){ e.stopPropagation(); stop(); });
+    top.appendChild(x); node.appendChild(top);
+    node.appendChild(el('div', 'mid'));
+    var line = el('div', 'line'); line.appendChild(el('span')); node.appendChild(line);
+    document.body.appendChild(node);
+    S = { node: node, qs: shuffle(qs.slice()), i: 0, side: 0, secs: +$('secs').value, voice: $('voice').checked && CAN_SPEAK, paused: false, t: 0 };
+    node.addEventListener('click', function(){ S.paused = !S.paused; frame(); });   // tap to pause or carry on
+    if (node.requestFullscreen) node.requestFullscreen().catch(function(){});
+    if (navigator.wakeLock) navigator.wakeLock.request('screen').then(function(l){ lock = l; }).catch(function(){});
+    hit('quiz-play');
+    frame();
+  });
+  document.addEventListener('keydown', function(e){
+    if (!S) return;
+    if (e.key === 'Escape') stop();
+    else if (e.key === ' ') { e.preventDefault(); S.paused = !S.paused; frame(); }
+    else if (e.key === 'ArrowRight') step(1);
+    else if (e.key === 'ArrowLeft') step(-1);
+  });
+  // the screen lock is dropped when the page is hidden; take it again when it comes back
+  document.addEventListener('visibilitychange', function(){
+    if (S && !document.hidden && navigator.wakeLock) navigator.wakeLock.request('screen').then(function(l){ lock = l; }).catch(function(){});
+  });
 
   // ---------- mock test: 20 questions, 12 to pass (65/20: 10 and 6) ----------
   var T = null;
@@ -595,12 +778,13 @@ footer p{margin:0 0 8px}
       b.setAttribute('aria-selected', on);
       if (on) bar.scrollLeft = b.offsetLeft - (bar.clientWidth - b.clientWidth) / 2;   // keep the chosen tab in view
     });
-    ['practice', 'mock', 'missed', 'progress', 'english', 'interview', 'prep'].forEach(function(n){ $(n).hidden = n !== name; });
+    ['learn', 'practice', 'mock', 'missed', 'progress', 'english', 'interview', 'prep'].forEach(function(n){ $(n).hidden = n !== name; });
     render();
   }
   function render(){
     if (!Q.length) return;
     counts();
+    if (cur === 'learn') learn();
     if (cur === 'practice') practice();
     if (cur === 'mock' && !T) mockHome();
     if (cur === 'mock' && T) mockNext();
@@ -613,8 +797,10 @@ footer p{margin:0 0 8px}
   });
 
   // ---------- start ----------
-  Promise.all([load('questions.json'), load('officials.json')]).then(function(d){
-    Q = d[0]; O = d[1];
+  Promise.all([load('questions.json'), load('officials.json'), load('why.json').catch(function(){ return W; })]).then(function(d){
+    Q = d[0]; O = d[1]; W = d[2];
+    W.chapters.forEach(function(c){ $('chapter').appendChild(new Option(c.n + '. ' + c.title, c.n)); });
+    $('chapter').value = P.learn.c;
     Object.keys(O.states).sort(function(a, b){ return O.states[a].name < O.states[b].name ? -1 : 1; })
       .forEach(function(c){ $('state').appendChild(new Option(O.states[c].name, c)); });
     topics().forEach(function(t){ $('topic').appendChild(new Option(t, t)); });
