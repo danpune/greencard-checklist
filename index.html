@@ -92,10 +92,10 @@ h2 .num{flex:none;width:28px;height:28px;border-radius:8px;background:var(--bran
 .item input{flex:none;appearance:none;width:24px;height:24px;margin:1px 0 0;border:2px solid var(--muted);
   border-radius:7px;cursor:pointer;display:grid;place-items:center;background:var(--card)}
 .item input:checked{background:var(--ok);border-color:var(--ok)}
-.item input:checked::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.item input:checked::after{content:"";width:6px;height:11px;border:solid var(--card);border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-1px)}
 .item input:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
 .body{flex:1;min-width:0}
-.item label{font-weight:650;cursor:pointer;display:block}
+.item label{font-weight:650;cursor:pointer;display:block;padding:8px 0;margin:-8px 0}   /* a taller tap target, same look */
 .item.done label{text-decoration:line-through;color:var(--muted)}
 .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;
   padding:2px 7px;border-radius:6px;margin-left:6px;vertical-align:2px;background:var(--note-soft);color:var(--muted)}
@@ -235,8 +235,8 @@ footer p{margin:0 0 8px}
   <div class="wrap">
     <p class="eyebrow">Reviewed September 2026</p>
     <h1>Green card approved? Here's what to do next.</h1>
-    <p class="lede">A simple checklist for new permanent residents: IDs, work, travel rules, taxes, and the road to citizenship. Tick things off as you go. Your progress is saved on this device only.</p>
-    <p class="lede" style="font-size:14px;opacity:.75">General information gathered from official pages, not legal advice. Independent and not affiliated with USCIS or any government agency.</p>
+    <p class="lede">A simple checklist for new permanent residents: IDs, work, travel rules, taxes, and the road to citizenship. Check things off as you go. Your progress is saved on this device only.</p>
+    <p class="lede" style="font-size:14px;opacity:.75">General information gathered from official pages, not legal advice. Independent and not connected to USCIS or any government agency.</p>
     <div class="actions">
       <a class="btn primary wa" href="#" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
@@ -302,7 +302,7 @@ footer p{margin:0 0 8px}
       <input type="checkbox" id="c-check-card">
       <div class="body">
         <label for="c-check-card">Check your card for mistakes <span class="tag must">Do now</span></label>
-        <p>Check your name, date of birth, country of birth, and the <b>"Resident Since"</b> date. That date starts your citizenship clock. If anything is wrong, fix it with Form I-90 (no fee if the error was made by DHS/USCIS).</p>
+        <p>Check your name, date of birth, country of birth, and the <b>"Resident Since"</b> date. The waiting time for citizenship is counted from that date. If anything is wrong, fix it with Form I-90 (no fee if the error was made by DHS/USCIS).</p>
         <svg class="cardfig" viewBox="0 0 320 124" role="img" aria-label="Sketch of the front of a green card. Resident Since and Card Expires are printed near the bottom.">
           <rect x="1" y="1" width="318" height="122" rx="10" fill="var(--ok-soft)" stroke="var(--line)"/>
           <text x="14" y="21" font-size="10" font-weight="700" letter-spacing=".08em" fill="var(--muted)">PERMANENT RESIDENT CARD · SKETCH</text>
@@ -331,7 +331,7 @@ footer p{margin:0 0 8px}
       <input type="checkbox" id="c-carry">
       <div class="body">
         <label for="c-carry">Carry your green card at all times <span class="tag must">Required</span></label>
-        <p>The law requires this for everyone 18 and older, and not carrying it can be a misdemeanor. Keep the original on you and a copy at home.</p>
+        <p>The law requires this for everyone 18 and older, and not carrying it can be a crime (a misdemeanor). Carry the original with you and keep a copy at home.</p>
         <div class="links">
           <a href="https://www.uscis.gov/alienregistration" target="_blank" rel="noopener">uscis.gov/alienregistration</a>
           <a href="https://www.uscis.gov/green-card/after-we-grant-your-green-card/rights-and-responsibilities-of-a-green-card-holder-permanent-resident" target="_blank" rel="noopener">uscis.gov/green-card/after-we-grant-your-green-card/rights-and-responsibilities-of-a-green-card-holder-permanent-resident</a>
@@ -349,8 +349,8 @@ footer p{margin:0 0 8px}
     <div class="item">
       <input type="checkbox" id="c-conditional">
       <div class="body">
-        <label for="c-conditional">Put your card's expiry date in your calendar</label>
-        <p>Most cards are good for 10 years. Renew with Form I-90 in the 6 months before it expires. Your status doesn't end when the card expires, but you need a valid card to work, travel and prove status. <span data-if="cond">A <b>2-year card</b> (usually marriage-based) is different: file Form I-751 in the 90 days before it expires.</span></p>
+        <label for="c-conditional">Put your card's expiration date in your calendar</label>
+        <p>Most cards are valid for 10 years. Renew with Form I-90 in the 6 months before it expires. Your status doesn't end when the card expires, but you need a valid card to work, travel and prove status. <span data-if="cond">A <b>2-year card</b> is different: file Form I-751 (marriage-based) or Form I-829 (investor) in the 90 days before it expires.</span></p>
         <div class="links">
           <a href="https://www.uscis.gov/sites/default/files/document/guides/M-618.pdf" target="_blank" rel="noopener">uscis.gov: Welcome to the United States guide (M-618, PDF)</a>
           <a href="https://www.uscis.gov/green-card/after-we-grant-your-green-card" target="_blank" rel="noopener">uscis.gov/green-card/after-we-grant-your-green-card</a>
@@ -370,14 +370,14 @@ footer p{margin:0 0 8px}
       <input type="checkbox" id="c-i9">
       <div class="body">
         <label for="c-i9">Update your I-9 with HR</label>
-        <p>Tell HR and the immigration team you've moved from H-1B/L-1/EAD to a green card, so they stop tracking visa expiry dates. Ask the attorney to close any pending H-1B filings. Once your green card is on file, your employer shouldn't ask you to re-verify it when it expires.</p>
+        <p>Tell HR and the immigration team you've moved from a work visa or work permit (H-1B, L-1, EAD) to a green card, so they stop tracking visa expiration dates. Ask the attorney to close any pending H-1B filings. Once your green card is on file, your employer shouldn't ask you to re-verify it when it expires.</p>
         <div class="links"><a href="https://www.uscis.gov/i-9-central/form-i-9-resources/handbook-for-employers-m-274/70-evidence-of-employment-authorization-for-certain-categories/71-lawful-permanent-residents-lpr" target="_blank" rel="noopener">uscis.gov/i-9-central/form-i-9-resources/handbook-for-employers-m-274/70-evidence-of-employment-authorization-for-certain-categories/71-lawful-permanent-residents-lpr</a></div>
       </div>
     </div>
   </div>
   <div class="callout tip" data-if="employer">
     <span class="ic" aria-hidden="true">💡</span>
-    <p><strong>Thinking of changing jobs?</strong> If your green card came through an employer, many immigration attorneys suggest staying about 6 months after approval to show you meant to take the job. That's common advice, not a law. You're now free to change jobs, freelance, do side gigs, or start an LLC (talk to a CPA first), and there's no more visa stamping.</p>
+    <p><strong>Thinking of changing jobs?</strong> If your green card came through an employer, many immigration attorneys suggest staying about 6 months after approval to show you meant to take the job. That's common advice, not a law. You're now free to change jobs, freelance, take extra work, or start a company (talk to an accountant first), and you no longer need a U.S. visa stamp in your passport.</p>
   </div>
 </section>
 
@@ -410,10 +410,11 @@ footer p{margin:0 0 8px}
       <div class="body">
         <label for="c-sss">Register for Selective Service <span class="tag must">Men 18–25</span></label>
         <p>Men must register before their 26th birthday (ages 18 through 25). Skipping it can cause problems on your citizenship application.</p>
-        <p><b>Past 26 and never registered?</b> You can no longer register. It can delay citizenship, but the law says a benefit can't be denied if you show the failure wasn't knowing and willful. Talk to an immigration attorney before you file the N-400.</p>
+        <p><b>Past 26 and never registered?</b> You can no longer register. USCIS says men who did not live in the U.S. between ages 18 and 26, or who kept lawful nonimmigrant status (such as F-1 or H-1B) that whole time, were not required to register. If you were required and didn't, it can delay citizenship, but the law says a benefit can't be denied if you show the failure wasn't knowing and willful. Talk to an immigration attorney before you file the N-400.</p>
         <div class="links">
           <a href="https://www.sss.gov/register/" target="_blank" rel="noopener">sss.gov/register</a>
           <a href="https://www.sss.gov/register/men-26-and-older/" target="_blank" rel="noopener">sss.gov/register/men-26-and-older</a>
+          <a href="https://www.uscis.gov/policy-manual/volume-12-part-d-chapter-7" target="_blank" rel="noopener">uscis.gov/policy-manual/volume-12-part-d-chapter-7</a>
         </div>
       </div>
     </div>
@@ -421,7 +422,7 @@ footer p{margin:0 0 8px}
       <input type="checkbox" id="c-age14">
       <div class="body">
         <label for="c-age14">Kids with green cards: replace the card when they turn 14 <span class="tag">Families</span></label>
-        <p>A child who is a permanent resident must register and file Form I-90 within 30 days of turning 14. It includes fingerprinting. Put the birthday in your calendar now.</p>
+        <p>A child who is a permanent resident must register and file Form I-90 in the 30 days after turning 14. It includes fingerprinting. Put the birthday in your calendar now.</p>
         <div class="links">
           <a href="https://www.uscis.gov/i-90" target="_blank" rel="noopener">uscis.gov/i-90</a>
           <a href="https://www.uscis.gov/sites/default/files/document/forms/i-90instr.pdf" target="_blank" rel="noopener">uscis.gov: Form I-90 instructions (PDF)</a>
@@ -439,22 +440,22 @@ footer p{margin:0 0 8px}
   </div>
   <div class="callout warn">
     <span class="ic" aria-hidden="true">⚠️</span>
-    <p><strong>Never register to vote or vote.</strong> DMV and other forms sometimes ask about voter registration. Say no. Never tick "U.S. citizen" on any form either (I-9, loans, job applications). This is one of the few mistakes that can cost you the green card and citizenship for good. <a href="https://www.usa.gov/who-can-vote" target="_blank" rel="noopener">usa.gov/who-can-vote</a></p>
+    <p><strong>Never register to vote or vote.</strong> Driver's license forms and other forms sometimes ask if you want to register to vote. Say no. Never check the "U.S. citizen" box on any form either (I-9, loans, job applications). This is one of the few mistakes that can make you lose your green card, and your chance of citizenship, permanently. <a href="https://www.usa.gov/who-can-vote" target="_blank" rel="noopener">usa.gov/who-can-vote</a></p>
   </div>
   <div class="callout warn">
     <span class="ic" aria-hidden="true">🌿</span>
-    <p><strong>Marijuana is still illegal under federal law</strong>, even in states where it's legal. Using it, or working in the cannabis industry, can hurt your citizenship application and your green card. <a href="https://www.uscis.gov/archive/uscis-issues-policy-guidance-clarifying-how-federal-controlled-substances-law-applies-to" target="_blank" rel="noopener">uscis.gov/archive/uscis-issues-policy-guidance-clarifying-how-federal-controlled-substances-law-applies-to</a></p>
+    <p><strong>Marijuana can still be illegal under federal law</strong>, even in states where it's legal. Using it, or working in the marijuana industry, can hurt your citizenship application and your green card. <a href="https://www.uscis.gov/policy-manual/volume-12-part-f-chapter-5#S-C-2" target="_blank" rel="noopener">uscis.gov/policy-manual/volume-12-part-f-chapter-5</a></p>
   </div>
 </section>
 
 <!-- 4. TRAVEL -->
 <section>
   <h2 id="travel"><span class="num">4</span>Travel</h2>
-  <p class="sub">Always carry your passport and green card. No U.S. visa needed to come back.</p>
+  <p class="sub">Always carry your passport and green card. No U.S. visa needed to come back from a trip under 1 year.</p>
 
   <div class="card" style="margin-bottom:12px">
     <div class="rules">
-      <div><b><span class="dot" style="background:var(--ok)"></span>Under 6 months</b><span>Fine.</span></div>
+      <div><b><span class="dot" style="background:var(--ok)"></span>Under 6 months</b><span>Usually fine. Many trips, or living mostly abroad, can still raise questions.</span></div>
       <div><b><span class="dot" style="background:#d99a1e"></span>6 to 12 months</b><span>USCIS assumes your "continuous residence" for citizenship is broken unless you can prove strong U.S. ties. Expect questions at the airport.</span></div>
       <div><b><span class="dot" style="background:var(--warn)"></span>1 year or more</b><span>Breaks continuous residence. Without a re-entry permit, your green card is generally treated as given up.</span></div>
     </div>
@@ -485,7 +486,7 @@ footer p{margin:0 0 8px}
       <input type="checkbox" id="c-reentry">
       <div class="body">
         <label for="c-reentry">Long trip planned? Get a re-entry permit first <span class="tag">If needed</span></label>
-        <p>If you might be away close to a year or longer, apply for a re-entry permit (Form I-131) <b>while you're still in the U.S.</b> Plan to stay for the biometrics appointment. It's usually good for up to 2 years. It protects your green card, but <b>not</b> your citizenship clock.</p>
+        <p>If you might be away close to a year or longer, apply for a re-entry permit (Form I-131) <b>while you're still in the U.S.</b> Plan to stay for the biometrics appointment (fingerprints and photo). It's usually valid for up to 2 years. It helps protect your green card, but <b>not</b> your continuous residence for citizenship.</p>
         <div class="links">
           <a href="https://www.uscis.gov/i-131" target="_blank" rel="noopener">uscis.gov/i-131</a>
           <a href="https://www.uscis.gov/green-card/after-we-grant-your-green-card/international-travel-as-a-permanent-resident" target="_blank" rel="noopener">uscis.gov/green-card/after-we-grant-your-green-card/international-travel-as-a-permanent-resident</a>
@@ -496,15 +497,15 @@ footer p{margin:0 0 8px}
 
   <div class="callout warn">
     <span class="ic" aria-hidden="true">🚫</span>
-    <p><strong>Never sign Form I-407 at the airport</strong> without talking to a lawyer. Signing it gives up your green card. It's voluntary, and you have the right to see an immigration judge instead. <a href="https://www.uscis.gov/i-407" target="_blank" rel="noopener">uscis.gov/i-407</a></p>
+    <p><strong>Never sign Form I-407 at the airport</strong> without talking to an immigration attorney. Signing it gives up your green card. It's voluntary, and you have the right to see an immigration judge instead. <a href="https://www.uscis.gov/i-407" target="_blank" rel="noopener">uscis.gov/i-407</a></p>
   </div>
   <div class="callout tip">
     <span class="ic" aria-hidden="true">🌍</span>
-    <p><strong>From a country on the 2025–26 travel restriction list?</strong> Green card holders are exempt from the entry ban. But USCIS has added extra screening for people from those countries, so expect more checks on filings like I-90, I-751 and N-400. <a href="https://www.uscis.gov/newsroom/alerts/update-on-uscis-strengthened-screening-and-vetting" target="_blank" rel="noopener">uscis.gov/newsroom/alerts/update-on-uscis-strengthened-screening-and-vetting</a></p>
+    <p><strong>From a country on the 2025–26 travel restriction list?</strong> Green card holders are exempt from these travel restrictions. But USCIS has added extra screening for people from those countries, so expect more checks on filings like I-90, I-751 and N-400. <a href="https://www.uscis.gov/newsroom/alerts/update-on-uscis-strengthened-screening-and-vetting" target="_blank" rel="noopener">uscis.gov/newsroom/alerts/update-on-uscis-strengthened-screening-and-vetting</a></p>
   </div>
   <div class="callout tip">
     <span class="ic" aria-hidden="true">🇨🇦</span>
-    <p><strong>Going to Canada?</strong> Green card holders don't need an eTA. Just carry your passport and green card. <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/eligibility.html" target="_blank" rel="noopener">canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/eligibility.html</a></p>
+    <p><strong>Going to Canada?</strong> Green card holders don't need an eTA (Canada's Electronic Travel Authorization). Just carry your passport and green card. <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/eligibility.html" target="_blank" rel="noopener">canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/eligibility.html</a></p>
   </div>
 </section>
 
@@ -517,7 +518,7 @@ footer p{margin:0 0 8px}
       <input type="checkbox" id="c-tax">
       <div class="body">
         <label for="c-tax">File taxes as a resident, every year <span class="tag must">Required</span></label>
-        <p>Report worldwide income. <b>Never</b> file as a nonresident, and don't claim to be a resident on a tax return in another country. Either can be treated as giving up your green card. Keep every return; the citizenship application asks about them.</p>
+        <p>Report worldwide income. Calling yourself a nonresident on a U.S. tax return can be treated as giving up your green card. First year here, or taxed in another country too? Ask a tax professional. Keep every return; the citizenship application asks about them.</p>
         <div class="links"><a href="https://www.irs.gov/individuals/international-taxpayers/introduction-to-residency-under-us-tax-law" target="_blank" rel="noopener">irs.gov/individuals/international-taxpayers/introduction-to-residency-under-us-tax-law</a></div>
       </div>
     </div>
@@ -527,13 +528,13 @@ footer p{margin:0 0 8px}
         <label for="c-transcripts">Download your IRS tax transcript every year and keep it <span class="tag must">Every year</span></label>
         <p>After you file each year, download that year's transcript into your citizenship folder. It's the IRS's own record of what you filed: not the same as filing, and not your copy of the return. Free.</p>
         <ul class="plain">
-          <li><b>N-400:</b> bring 5 years (3 on the marriage path). USCIS's checklist requires them after any trip of 6 months or more; on the marriage path they're one accepted way to document the marriage. Commonly requested at the interview.</li>
+          <li><b>N-400:</b> bring 5 years (3 on the 3-year path, married to a citizen). USCIS's checklist requires them after any trip of 6 months or more; on the 3-year path they're one accepted way to document the marriage. Commonly requested at the interview.</li>
           <li><b>Why yearly:</b> the "tax return transcript" only covers the current and 3 prior years.</li>
-          <li><b>Behind?</b> The "tax account transcript" in your IRS online account covers the current and 9 prior years. By mail: current and 3 prior, in 5 to 10 days.</li>
+          <li><b>Missed some years?</b> The "tax account transcript" in your IRS online account covers the current and 9 prior years. By mail: current and 3 prior, in 5 to 10 days.</li>
         </ul>
         <div class="links">
           <a href="https://www.irs.gov/individuals/get-transcript" target="_blank" rel="noopener">irs.gov/individuals/get-transcript</a>
-          <a href="https://www.irs.gov/individuals/tax-return-transcript-types-and-ways-to-order-them" target="_blank" rel="noopener">irs.gov: transcript types</a>
+          <a href="https://www.irs.gov/individuals/transcript-types-for-individuals-and-ways-to-order-them" target="_blank" rel="noopener">irs.gov: transcript types</a>
           <a href="https://www.uscis.gov/sites/default/files/document/guides/M-477.pdf" target="_blank" rel="noopener">uscis.gov: N-400 checklist (M-477)</a>
         </div>
       </div>
@@ -542,7 +543,7 @@ footer p{margin:0 0 8px}
       <input type="checkbox" id="c-fbar">
       <div class="body">
         <label for="c-fbar">Report foreign bank accounts <span class="tag">If you have them</span></label>
-        <p>If your foreign accounts add up to more than $10K at any point in the year, file an FBAR. Larger balances also need Form 8938 with your tax return: $50K at year-end or $75K at any time if single, $100K or $150K if married filing jointly.</p>
+        <p>If your foreign accounts add up to more than $10,000 at any point in the year, file an FBAR. Larger balances also need Form 8938 with your tax return. If single: more than $50,000 at year-end or $75,000 at any time. If married filing jointly: $100,000 or $150,000.</p>
         <div class="links">
           <a href="https://www.fincen.gov/report-foreign-bank-and-financial-accounts" target="_blank" rel="noopener">fincen.gov/report-foreign-bank-and-financial-accounts</a>
           <a href="https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements" target="_blank" rel="noopener">irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements</a>
@@ -562,8 +563,8 @@ footer p{margin:0 0 8px}
 <!-- 6. CITIZENSHIP -->
 <section>
   <h2 id="citizenship"><span class="num">6</span>Road to citizenship (N-400)</h2>
-  <p class="sub">Eligible after 5 years, or 3 if married to and living with a U.S. citizen. You can file 90 days early.</p>
-  <p class="sub" style="margin-top:-6px"><a href="civics.html#prep">See the whole process in one picture</a></p>
+  <p class="sub">Eligible after 5 years, or 3 if married to and living with a U.S. citizen for all 3 years. You can file 90 days early.</p>
+  <p class="sub" style="margin-top:-6px"><a href="civics.html#prep" style="display:inline-block;padding:6px 0">See the whole process in one picture</a></p>
 
   <div class="card" style="margin-bottom:12px">
     <div class="calc">
@@ -574,12 +575,12 @@ footer p{margin:0 0 8px}
         <div class="box"><small>Earliest filing date (3-year path, married to a citizen)</small><b id="d3">–</b><small id="u3"></small></div>
       </div>
       <p class="hint" id="tripnote" hidden></p>
-      <button class="calbtn" id="ics" type="button" hidden>📅 Add filing date to my calendar</button>
-      <p class="hint">This counts back 90 days from your 5-year (or 3-year) anniversary, as USCIS allows. Double-check with the official tool before filing: <a href="https://www.uscis.gov/citizenship-resource-center/learn-about-citizenship/naturalization-eligibility-tool-0" target="_blank" rel="noopener">uscis.gov/citizenship-resource-center/learn-about-citizenship/naturalization-eligibility-tool-0</a></p>
+      <button class="calbtn" id="ics" type="button" hidden>📅 Add 5-year date to my calendar</button>
+      <p class="hint">This counts back 90 days from your 5-year (or 3-year) anniversary, as USCIS allows. For the 3-year path, your spouse must have been a U.S. citizen, and married to and living with you, for the full 3 years before the day you file. Double-check with the official tool before filing: <a href="https://www.uscis.gov/citizenship-resource-center/learn-about-citizenship/naturalization-eligibility-tool-0" target="_blank" rel="noopener">uscis.gov/citizenship-resource-center/learn-about-citizenship/naturalization-eligibility-tool-0</a></p>
     </div>
     <div class="trips">
       <h3>Trip tracker</h3>
-      <p class="hint" style="margin-top:0">Add each trip outside the U.S. It flags long trips and adds up your days abroad. Saved on this device only.</p>
+      <p class="hint" style="margin-top:0">Add each trip outside the U.S. It flags long trips and adds up your days abroad. Saved on this device only. A browser can erase saved data, so keep your own travel log too.</p>
       <div class="row">
         <div><label for="tout">Left the U.S.</label><input type="date" id="tout"></div>
         <div><label for="tin">Came back</label><input type="date" id="tin"></div>
@@ -625,7 +626,7 @@ footer p{margin:0 0 8px}
       <input type="checkbox" id="c-civics">
       <div class="body">
         <label for="c-civics">Study for the new civics test</label>
-        <p>For applications filed on or after Oct 20, 2025: 128 questions to study, 20 asked, 12 correct to pass. <b>Practice here:</b> all 128 questions, a mock test, and your own senators, representative and governor.</p>
+        <p>For applications filed on or after Oct 20, 2025: 128 questions to study, up to 20 asked, 12 correct to pass. <b>Practice here:</b> all 128 questions, a mock test, and your own senators, representative and governor.</p>
         <div class="links">
           <a href="civics.html">Practice for the citizenship test</a><a href="https://www.uscis.gov/citizenship-resource-center/naturalization-test-and-study-resources/2025-civics-test" target="_blank" rel="noopener">uscis.gov/citizenship-resource-center/naturalization-test-and-study-resources/2025-civics-test</a></div>
       </div>
@@ -645,21 +646,21 @@ footer p{margin:0 0 8px}
 
   <div class="callout warn">
     <span class="ic" aria-hidden="true">⚠️</span>
-    <p><strong>Stricter since 2025.</strong> USCIS looks harder at "good moral character": taxes, tickets, and honesty on past forms. Neighborhood and employer checks are back in some cases, and social media may be reviewed. File taxes on time, pay tickets, and keep your answers the same on every form. <a href="https://www.uscis.gov/policy-manual/updates" target="_blank" rel="noopener">uscis.gov/policy-manual/updates</a></p>
+    <p><strong>Stricter since 2025.</strong> USCIS now checks "good moral character" more strictly: taxes, tickets, and honesty on past forms. Neighborhood and employer checks now apply to every applicant unless USCIS decides to skip them, and social media may be reviewed. File taxes on time, pay tickets, and tell the truth on every form. <a href="https://www.uscis.gov/policy-manual/updates" target="_blank" rel="noopener">uscis.gov/policy-manual/updates</a></p>
   </div>
 </section>
 
 <!-- 7. UNLOCKS -->
 <section>
   <h2 id="unlocks"><span class="num">7</span>What your green card unlocks</h2>
-  <p class="sub">Good to know, nothing to tick off.</p>
+  <p class="sub">Good to know, nothing to check off.</p>
   <div class="card">
     <div class="item" style="display:block">
       <ul class="plain" style="margin:0">
         <li><b>Sponsor family:</b> you can petition for your spouse and unmarried children (Form I-130). <a href="https://www.usa.gov/sponsor-family-member" target="_blank" rel="noopener">usa.gov/sponsor-family-member</a></li>
         <li><b>Work freely:</b> any employer, freelancing, or your own business.</li>
         <li><b>Student aid:</b> you can get federal student aid. In-state tuition depends on your state's rules. <a href="https://studentaid.gov/understand-aid/eligibility/requirements/non-us-citizens" target="_blank" rel="noopener">studentaid.gov/understand-aid/eligibility/requirements/non-us-citizens</a></li>
-        <li><b>Health coverage:</b> you can buy Marketplace plans. Many public benefits have a 5-year wait. <a href="https://www.healthcare.gov/immigrants/lawfully-present-immigrants/" target="_blank" rel="noopener">healthcare.gov/immigrants/lawfully-present-immigrants</a></li>
+        <li><b>Health coverage:</b> you can buy health insurance on the Health Insurance Marketplace. Many public benefits have a 5-year wait. <a href="https://www.healthcare.gov/immigrants/lawfully-present-immigrants/" target="_blank" rel="noopener">healthcare.gov/immigrants/lawfully-present-immigrants</a></li>
       </ul>
     </div>
   </div>
@@ -668,7 +669,7 @@ footer p{margin:0 0 8px}
 <!-- NEWS -->
 <section>
   <h2 id="news"><span class="num">📰</span>News &amp; updates</h2>
-  <p class="sub">Immigration rules change often. Here's how to stay on top of them.</p>
+  <p class="sub">Immigration rules change often. Here is how to follow the changes.</p>
   <div class="card sources" id="newscard" style="margin-bottom:12px" hidden>
     <h3>Latest USCIS alerts <span class="newsmeta" id="newsmeta"></span></h3>
     <ul class="newslist" id="newslist"></ul>
@@ -698,7 +699,7 @@ footer p{margin:0 0 8px}
       <summary>News sites <span>4</span></summary>
     <ul>
       <li>RedBus2US: news, guides and trackers: <a href="https://redbus2us.com/" target="_blank" rel="noopener">redbus2us.com</a></li>
-      <li>Reddy Neumann Brown: immigration law blog: <a href="https://www.rnlawgroup.com/news/" target="_blank" rel="noopener">rnlawgroup.com/news</a></li>
+      <li>Reddy Neumann Brown: immigration law blog: <a href="https://www.rnlawgroup.com/resources/blog/" target="_blank" rel="noopener">rnlawgroup.com/resources/blog</a></li>
       <li>Fragomen: insights and alerts from a global immigration law firm: <a href="https://www.fragomen.com/insights/index.html" target="_blank" rel="noopener">fragomen.com/insights</a></li>
       <li>Boundless: immigration news and plain-English guides: <a href="https://www.boundless.com/blog" target="_blank" rel="noopener">boundless.com/blog</a></li>
     </ul>
@@ -709,7 +710,7 @@ footer p{margin:0 0 8px}
       <li>The Immigration Mastermind: for immigrants and their families: <a href="https://podcasts.apple.com/us/podcast/the-immigration-mastermind/id1514882182" target="_blank" rel="noopener">podcasts.apple.com/us/podcast/the-immigration-mastermind/id1514882182</a></li>
       <li>Immigration Nerds: news and policy: <a href="https://podcasts.apple.com/us/podcast/immigration-nerds/id1400312981" target="_blank" rel="noopener">podcasts.apple.com/us/podcast/immigration-nerds/id1400312981</a></li>
       <li>Immigrantly: immigrant stories and identity: <a href="https://podcasts.apple.com/us/podcast/immigrantly-podcast/id1440233951" target="_blank" rel="noopener">podcasts.apple.com/us/podcast/immigrantly-podcast/id1440233951</a></li>
-      <li>Immigration Review: weekly court decisions, lawyer-level: <a href="https://podcasts.apple.com/us/podcast/immigration-review/id1511655047" target="_blank" rel="noopener">podcasts.apple.com/us/podcast/immigration-review/id1511655047</a></li>
+      <li>Immigration Review: weekly court decisions, made for attorneys: <a href="https://podcasts.apple.com/us/podcast/immigration-review/id1511655047" target="_blank" rel="noopener">podcasts.apple.com/us/podcast/immigration-review/id1511655047</a></li>
     </ul>
     </details>
     <details class="grp">
@@ -723,7 +724,7 @@ footer p{margin:0 0 8px}
   </div>
   <div class="callout tip">
     <span class="ic" aria-hidden="true">🔎</span>
-    <p><strong>Check before you act.</strong> Videos, podcasts and Reddit are great for real experiences and early news, but anyone can post. Confirm anything important on the official pages or with an attorney. USCIS will never ask you to pay by phone, gift card or payment app. <a href="https://www.uscis.gov/avoid-scams" target="_blank" rel="noopener">uscis.gov/avoid-scams</a></p>
+    <p><strong>Check before you act.</strong> Videos, podcasts and Reddit are great for real experiences and early news, but anyone can post. Confirm anything important on the official pages or with an attorney. USCIS will never ask you to pay by phone, gift card or payment app. <a href="https://www.uscis.gov/scams-fraud-and-misconduct/avoid-scams/common-scams" target="_blank" rel="noopener">uscis.gov: common scams</a></p>
   </div>
 </section>
 
@@ -740,7 +741,7 @@ footer p{margin:0 0 8px}
       <li>USCIS: Rights and responsibilities of a green card holder: <a href="https://www.uscis.gov/green-card/after-we-grant-your-green-card/rights-and-responsibilities-of-a-green-card-holder-permanent-resident" target="_blank" rel="noopener">uscis.gov/green-card/after-we-grant-your-green-card/rights-and-responsibilities-of-a-green-card-holder-permanent-resident</a></li>
       <li>USCIS: International travel as a permanent resident: <a href="https://www.uscis.gov/green-card/after-we-grant-your-green-card/international-travel-as-a-permanent-resident" target="_blank" rel="noopener">uscis.gov/green-card/after-we-grant-your-green-card/international-travel-as-a-permanent-resident</a></li>
       <li>USCIS: Alien registration requirement: <a href="https://www.uscis.gov/alienregistration" target="_blank" rel="noopener">uscis.gov/alienregistration</a></li>
-      <li>USCIS: Policy Manual, naturalization (continuous residence, physical presence, early filing): <a href="https://www.uscis.gov/policy-manual/volume-12-part-d-chapter-3" target="_blank" rel="noopener">uscis.gov/policy-manual/volume-12-part-d-chapter-3</a></li>
+      <li>USCIS: Policy Manual, naturalization (continuous residence, physical presence, early filing): <a href="https://www.uscis.gov/policy-manual/volume-12-part-d" target="_blank" rel="noopener">uscis.gov/policy-manual/volume-12-part-d</a></li>
       <li>USCIS: N-400 document checklist (M-477): <a href="https://www.uscis.gov/sites/default/files/document/guides/M-477.pdf" target="_blank" rel="noopener">uscis.gov/sites/default/files/document/guides/M-477.pdf</a></li>
       <li>IRS: Get transcript: <a href="https://www.irs.gov/individuals/get-transcript" target="_blank" rel="noopener">irs.gov/individuals/get-transcript</a></li>
       <li>USCIS: Fee schedule G-1055: <a href="https://www.uscis.gov/g-1055" target="_blank" rel="noopener">uscis.gov/g-1055</a></li>
@@ -756,7 +757,7 @@ footer p{margin:0 0 8px}
     <details class="grp">
       <summary>Guides &amp; community <span>5</span></summary>
     <ul>
-      <li>US Immigration FAQ (open source, every claim footnoted, last updated 2023): <a href="https://github.com/t3nsor/us-immigration-faq/blob/master/green-card.md" target="_blank" rel="noopener">github.com/t3nsor/us-immigration-faq/blob/master/green-card.md</a></li>
+      <li>US Immigration FAQ (open source, every claim footnoted, this page last updated 2022): <a href="https://github.com/t3nsor/us-immigration-faq/blob/master/green-card.md" target="_blank" rel="noopener">github.com/t3nsor/us-immigration-faq/blob/master/green-card.md</a></li>
       <li>CitizenPath: how travel affects citizenship: <a href="https://citizenpath.com/travel-abroad-affects-citizenship-eligibility/" target="_blank" rel="noopener">citizenpath.com/travel-abroad-affects-citizenship-eligibility</a></li>
       <li>Boundless: green card FAQs from Reddit: <a href="https://www.boundless.com/blog/green-card-reddit-faqs" target="_blank" rel="noopener">boundless.com/blog/green-card-reddit-faqs</a></li>
       <li>Reddy Neumann Brown: green card do's and don'ts for 2026: <a href="https://www.rnlawgroup.com/green-card-rules-in-2026-essential-dos-and-donts-for-new-lawful-permanent-residents/" target="_blank" rel="noopener">rnlawgroup.com/green-card-rules-in-2026-essential-dos-and-donts-for-new-lawful-permanent-residents</a></li>
@@ -767,7 +768,7 @@ footer p{margin:0 0 8px}
       <summary>Free tools (third-party, not affiliated) <span>2</span></summary>
     <ul>
       <li>CitizenCalc: turns your I-94 travel history into an N-400 trip list: <a href="https://citizencalc.com/" target="_blank" rel="noopener">citizencalc.com</a></li>
-      <li>2025 civics test flashcards (open source): <a href="https://github.com/QbitPrime/USCIS_2025_Civics_Test_Flashcard_Quiz" target="_blank" rel="noopener">github.com/QbitPrime/USCIS_2025_Civics_Test_Flashcard_Quiz</a></li>
+      <li>2025 civics test flash cards (open source): <a href="https://github.com/QbitPrime/USCIS_2025_Civics_Test_Flashcard_Quiz" target="_blank" rel="noopener">github.com/QbitPrime/USCIS_2025_Civics_Test_Flashcard_Quiz</a></li>
     </ul>
     </details>
   </div>
@@ -785,8 +786,8 @@ footer p{margin:0 0 8px}
 <footer>
   <div class="wrap">
     <p><b>Not legal advice.</b> This is an unofficial, community-made checklist and isn't connected to USCIS or any government agency. Rules and fees change, so always check the official links or talk to an immigration attorney about your own case.</p>
-    <p>Put together from official USCIS, SSA, CBP and IRS pages, immigration lawyer articles, and tips from people who've been through it. Last reviewed September 2026.</p>
-    <p>This page keeps anonymous totals only: visits, where they came from (such as search or a WhatsApp share) and which sections get used. No cookies, no accounts, and nothing about you is stored.</p>
+    <p>Put together from official USCIS, SSA, CBP and IRS pages, immigration attorney articles, and tips from people who have done this themselves. Last reviewed September 2026.</p>
+    <p>This page keeps anonymous totals only: visits, where they came from (such as search or a WhatsApp share) and which sections get used. No cookies and no accounts.</p>
     <p class="visits" id="visits" hidden>👀 <b id="visitcount">–</b> visits</p>
   </div>
 </footer>
@@ -879,7 +880,7 @@ footer p{margin:0 0 8px}
   update();
 
   document.getElementById('reset').addEventListener('click', function(){
-    if (!confirm('Clear all your ticks on this device?')) return;
+    if (!confirm('Clear all your check marks on this device?')) return;
     boxes.forEach(function(b){ b.checked = false; });
     update(); save();
   });
@@ -894,10 +895,12 @@ footer p{margin:0 0 8px}
   var toastEl = document.getElementById('toast'), toastTimer;
   function toast(t){
     toastEl.textContent = t; toastEl.classList.add('show');
-    clearTimeout(toastTimer); toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2000);
+    clearTimeout(toastTimer); toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 5000);
   }
+  var PHONE = navigator.share && /Mobi|Android|iPhone/i.test(navigator.userAgent);
+  if (PHONE) document.getElementById('copy').lastChild.textContent = ' Share';
   document.getElementById('copy').addEventListener('click', function(){
-    if (navigator.share && /Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+    if (PHONE) {
       navigator.share({ title: document.title, url: pageUrl + '?s=link' }).catch(function(){});
       return;
     }
@@ -920,14 +923,15 @@ footer p{margin:0 0 8px}
   function fmt(d){ return d.toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' }); }
   function parse(v){ var p = v.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
   function iso(d){ return d.getFullYear() + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0'); }
-  var DAY = 86400000;
+  var DAY = 86400000, YEAR = /^(19|20)\d\d-/;
   // Days abroad: the day you leave and the day you return count as days in the U.S.
   function daysAbroad(t){ return Math.max(0, Math.round((parse(t.back) - parse(t.out)) / DAY) - 1); }
-  function yearPlus(t){ return parse(t.back) >= addYears(parse(t.out), 1); }
+  function yearPlus(t){ return daysAbroad(t) >= 365; }   // USCIS: 1 year or more = 365 days or more
 
   function until(d){
     var days = Math.ceil((d - new Date()) / DAY);
-    if (days <= 0) return 'Filing window is open';
+    if (days < 0) return 'This date has passed';
+    if (days === 0) return 'Today';
     if (days < 60) return 'in ' + days + (days === 1 ? ' day' : ' days');
     var m = Math.round(days / 30.44), y = Math.floor(m / 12); m = m % 12;
     return 'in about ' + (y ? y + ' yr ' : '') + (m ? m + ' mo' : '');
@@ -939,7 +943,11 @@ footer p{margin:0 0 8px}
 
   function calc(){
     var out = document.getElementById('calcout'), note = document.getElementById('tripnote'), ics = document.getElementById('ics');
-    if (!since.value) { out.hidden = true; note.hidden = true; ics.hidden = true; earliest5 = null; return; }
+    if (!YEAR.test(since.value)) {   // empty, or a year still being typed
+      out.hidden = true; note.hidden = true; ics.hidden = true; earliest5 = null;
+      if (!since.value) try { localStorage.removeItem(KEY + '-since'); } catch (e) {}
+      return;
+    }
     var d = parse(since.value);
     var f5 = addYears(d, 5); f5.setDate(f5.getDate() - 90);
     var f3 = addYears(d, 3); f3.setDate(f3.getDate() - 90);
@@ -952,7 +960,7 @@ footer p{margin:0 0 8px}
       var r3 = addYears(lastBack, 2); r3.setDate(r3.getDate() + 1);
       if (r5 > f5) f5 = r5;
       if (r3 > f3) f3 = r3;
-      note.textContent = 'Your dates were moved later because of a trip of 1 year or more. After a trip that long, you can file 4 years + 1 day after returning (2 years + 1 day on the 3-year path).';
+      note.textContent = 'Your dates were moved later because of a trip of 1 year or more. The earliest date is 4 years + 1 day after you came back (2 years + 1 day on the 3-year path). If you file sooner than 4 years + 6 months after you came back (2 years + 6 months on the 3-year path), USCIS still assumes your continuous residence is broken unless you can prove strong U.S. ties.';
       note.hidden = false;
     }
     document.getElementById('d5').textContent = fmt(f5);
@@ -985,8 +993,8 @@ footer p{margin:0 0 8px}
     });
     if (!trips.length) { sum.hidden = true; return; }
     var msg = '<b>' + total + ' days abroad</b> across ' + trips.length + (trips.length === 1 ? ' trip' : ' trips') + '. ';
-    msg += 'For the 5-year path you need at least 913 days (30 months) inside the U.S. in the 5 years before filing, so keep days abroad under about 913. On the 3-year path, keep them under about 548. Only trips in the 5 (or 3) years before you file count, so ignore older ones. ';
-    if (long6) msg += '<br><b>Heads up:</b> trips flagged above can break continuous residence. Talk to an immigration attorney before filing.';
+    msg += 'For the 5-year path you need at least 913 days (30 months) inside the U.S. in the 5 years before filing. So keep your days abroad under about 913. On the 3-year path, keep them under about 548. Only trips in the 5 (or 3) years before you file count, so ignore older ones. ';
+    if (long6) msg += '<br><b>Important:</b> trips flagged above can break continuous residence. Talk to an immigration attorney before filing.';
     sum.innerHTML = msg; sum.hidden = false;
   }
   function persistTrips(){
@@ -995,8 +1003,8 @@ footer p{margin:0 0 8px}
   }
   document.getElementById('addtrip').addEventListener('click', function(){
     var o = document.getElementById('tout').value, b = document.getElementById('tin').value;
-    if (!o || !b) { toast('Pick both dates'); return; }
-    if (parse(b) < parse(o)) { toast('Return date is before departure'); return; }
+    if (!YEAR.test(o) || !YEAR.test(b)) { toast('Pick both dates'); return; }
+    if (parse(b) < parse(o)) { toast('The day you came back is before the day you left'); return; }
     trips.push({ out: o, back: b });
     document.getElementById('tout').value = ''; document.getElementById('tin').value = '';
     persistTrips();
@@ -1011,9 +1019,9 @@ footer p{margin:0 0 8px}
       'UID:' + Date.now() + '@greencard-checklist',
       'DTSTAMP:' + new Date().toISOString().replace(/[-:]/g,'').split('.')[0] + 'Z',
       'DTSTART;VALUE=DATE:' + iso(earliest5), 'DTEND;VALUE=DATE:' + iso(end),
-      'SUMMARY:Earliest date to file N-400 (U.S. citizenship)',
+      'SUMMARY:Earliest date to file N-400 for U.S. citizenship (5-year path)',
       'DESCRIPTION:Check eligibility and current fee first: https://www.uscis.gov/n-400',
-      'BEGIN:VALARM','TRIGGER:-P30D','ACTION:DISPLAY','DESCRIPTION:N-400 filing window opens in 30 days','END:VALARM',
+      'BEGIN:VALARM','TRIGGER:-P30D','ACTION:DISPLAY','DESCRIPTION:Earliest N-400 filing date is in 30 days','END:VALARM',
       'END:VEVENT','END:VCALENDAR'
     ].join('\r\n');
     var a = document.createElement('a');
@@ -1057,6 +1065,7 @@ footer p{margin:0 0 8px}
     if (!src) {
       var h = ''; try { h = new URL(document.referrer).hostname; } catch (e) {}
       src = !h ? 'direct'
+        : h === location.hostname ? 'site'
         : /(google|bing|duckduckgo|yahoo)\./.test(h) ? 'search'
         : /reddit|facebook|instagram|linkedin|youtube|twitter|whatsapp|^t\.co$|(^|\.)x\.com$/.test(h) ? 'social'
         : /github/.test(h) ? 'github' : 'other';

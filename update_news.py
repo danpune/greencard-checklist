@@ -7,8 +7,8 @@ from email.utils import parsedate_to_datetime
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"}
 ALERTS = "https://www.uscis.gov/news/rss-feed/22984"
 # Flags items that matter to someone who already has a green card.
-HIT = re.compile(r"green card|permanent resid|naturaliz|citizenship|civics|n-400|i-90\b|i-751|i-131|re-?entry|"
-                 r"\bfees?\b|travel|good moral|address|selective service|real id", re.I)
+HIT = re.compile(r"green card|permanent resid|naturaliz|citizenship(?! and immigration)|civics|n-400|i-90\b|i-751|i-131|re-?entry|"
+                 r"good moral|selective service", re.I)
 ALLOWED = ("https://www.uscis.gov/",)
 
 def get(url):

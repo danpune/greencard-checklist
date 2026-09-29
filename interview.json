@@ -32,7 +32,7 @@
 "n": "4",
 "group": "Citizenship claims, voting and taxes",
 "q": "Since you became a lawful permanent resident, have you called yourself a “nonresident alien” on a Federal, state, or local tax return or decided not to file a tax return because you considered yourself to be a nonresident?",
-"plain": "Since you became a permanent resident, have you called yourself a “nonresident alien” on a federal, state, or local tax return? Or have you decided not to file a tax return because you thought of yourself as a nonresident?",
+"plain": "Since you became a permanent resident, have you called yourself a “nonresident alien” on a federal, state, or local tax return? Or, since you became a permanent resident, have you decided not to file a tax return because you thought of yourself as a nonresident?",
 "words": [
 "nonresident alien",
 "tax return"
@@ -384,7 +384,7 @@
 "n": "17.a",
 "group": "Other conduct",
 "q": "Have you EVER engaged in prostitution, attempted to procure or import prostitutes or persons for the purpose of prostitution, or received any proceeds or money from prostitution?",
-"plain": "Have you EVER taken part in prostitution? Have you EVER tried to get, or bring into the country, prostitutes or other persons for prostitution? Have you EVER received any money from prostitution?",
+"plain": "Have you EVER taken part in prostitution? Have you EVER tried to get, or bring into the country, prostitutes or other persons for prostitution? Have you EVER received any proceeds or money from prostitution?",
 "words": [
 "engaged",
 "prostitution",
@@ -958,7 +958,7 @@
 },
 {
 "w": "proceeds",
-"m": "money received from an activity or sale",
+"m": "money or other property received from an activity or sale",
 "src": "plain"
 },
 {
@@ -1108,7 +1108,7 @@
 },
 {
 "w": "developmental disability",
-"m": "a serious, long-term condition that starts before age 22 and limits things like learning, language, movement, self-care, or living on your own",
+"m": "a long-term condition that begins while a person is growing up and limits things like learning, language, movement, self-care, or living on your own",
 "src": "plain"
 },
 {
@@ -1321,7 +1321,7 @@
 },
 {
 "w": "detention facility",
-"m": "a place where people are held by the government and are not allowed to leave",
+"m": "a place where people are held and are not allowed to leave",
 "src": "plain"
 },
 {

@@ -6,10 +6,10 @@ Sources, all read fresh on every run (stdlib only; run daily by .github/workflow
   representatives  clerk.house.gov member list (official)
   governors        nga.org, National Governors Association
   federal names    uscis.gov/citizenship/testupdates (the answers USCIS itself accepts)
-A source that fails, or returns an implausible count, keeps its previous data.
+A source that fails, or returns an implausible count, keeps its previous data and fails the run.
 """
 import html, json, re, sys, urllib.request, xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"}
 STATES = {  # postal code: (name, capital)
@@ -42,21 +42,28 @@ def clean(s):
 def senators():
     out = {}
     for m in ET.fromstring(get("https://www.senate.gov/general/contact_information/senators_cfm.xml")).iter("member"):
-        name = clean("%s %s" % (m.findtext("first_name"), m.findtext("last_name")))
-        out.setdefault(m.findtext("state").strip(), []).append(name)
-    assert sum(len(v) for v in out.values()) == 100 and all(len(v) == 2 for v in out.values()), "expected 100 senators, 2 per state"
+        first, _, suffix = clean(m.findtext("first_name")).partition(", ")   # "Angus S., Jr." + "King" -> "Angus S. King, Jr."
+        last = clean(m.findtext("last_name"))
+        assert first and last, "a senator without a name"
+        out.setdefault(m.findtext("state").strip(), []).append(first + " " + last + (", " + suffix if suffix else ""))
+    # a seat can be empty for a while, so a state may have one senator; never none, never three
+    assert len(out) == 50 and all(1 <= len(v) <= 2 for v in out.values()) and sum(map(len, out.values())) >= 95, "expected 50 states with 1 or 2 senators each, 95 or more in all"
     return {k: sorted(v) for k, v in out.items()}
+
+CONGRESS = []  # the number of the Congress the House list is for; the page compares it with the one in zipcd.json
 
 def representatives():
     out, named = {}, 0
-    for m in ET.fromstring(get("https://clerk.house.gov/xml/lists/MemberData.xml")).iter("member"):
+    root = ET.fromstring(get("https://clerk.house.gov/xml/lists/MemberData.xml"))
+    for m in root.iter("member"):
         # the statedistrict prefix is not always the postal code (American Samoa is "AQ"), so read the postal code itself
         state = m.find("member-info/state")
         code = state.get("postal-code") if state is not None and state.get("postal-code") else m.findtext("statedistrict").strip()[:2]
         name = clean(m.findtext("member-info/official-name"))
         named += bool(name)
         out.setdefault(code, []).append([clean(m.findtext("member-info/district")) or "At Large", name or "Vacant"])
-    assert named >= 425 and sorted(out) == sorted(STATES), "expected House members for exactly the 56 states and territories"
+    assert named >= 425 and sum(map(len, out.values())) == 441 and sorted(out) == sorted(STATES), "expected 441 House seats for exactly the 56 states and territories"
+    CONGRESS.append(int(root.findtext("title-info/congress-num")))
     key = lambda d: (0, int(re.sub(r"\D", "", d[0]))) if re.search(r"\d", d[0]) else (1, 0)
     return {k: sorted(v, key=key) for k, v in out.items()}
 
@@ -67,7 +74,7 @@ def governors():
         code = BY_NAME.get(clean(state).lower())
         if code:
             out[code] = clean(name)
-    assert len([c for c in out if c not in ("PR", "GU", "VI", "AS", "MP")]) == 50, "expected 50 state governors"
+    assert sorted(out) == sorted(c for c in STATES if c != "DC"), "expected 50 state and 5 territory governors"
     return out
 
 def federal():
@@ -96,13 +103,16 @@ for name, fn in (("senators", senators), ("reps", representatives), ("governors"
         parts[name] = old["parts"][name]
 print("failed:", failed or "none")
 
-new = {"changed": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+new = {"changed": datetime.now(timezone(timedelta(hours=-11))).strftime("%Y-%m-%d"),   # UTC-11: never a future date for any U.S. visitor
+       "congress": CONGRESS[0] if CONGRESS else old.get("congress"),
        "sources": ["senate.gov", "clerk.house.gov", "nga.org", "uscis.gov/citizenship/testupdates"],
        "states": {c: {"name": n, "capital": cap} for c, (n, cap) in STATES.items()},
        "parts": parts}
-if old.get("parts") == parts and old.get("states") == new["states"]:
+if old.get("parts") == parts and old.get("states") == new["states"] and old.get("congress") == new["congress"]:
     new["changed"] = old["changed"]  # no churn commits when nothing changed
 json.dump(new, open("officials.json", "w", encoding="utf-8"), indent=0, ensure_ascii=False, sort_keys=True)
 print("officials.json: %d senators, %d House seats, %d governors, federal %s, changed %s" % (
     sum(len(v) for v in parts["senators"].values()), sum(len(v) for v in parts["reps"].values()),
     len(parts["governors"]), sorted(parts["federal"]), new["changed"]))
+if failed:
+    sys.exit("kept the previous data for: " + "; ".join(failed))   # turns the run red, so GitHub emails the owner

@@ -1,7 +1,7 @@
 {
  "title": "The road to U.S. citizenship",
  "sub": "The 10 official steps, from green card to citizen",
- "source": "Steps from USCIS, “10 Steps to Naturalization”. Not legal advice.",
+ "source": "Unofficial guide, not made by USCIS. Not legal advice. Step titles are from USCIS, “10 Steps to Naturalization”.",
  "url": "danpune.github.io/greencard-checklist",
  "checked": "September 2026",
  "phases": [
@@ -17,7 +17,7 @@
     {
      "n": 2,
      "t": "Determine if you are eligible to become a U.S. citizen",
-     "d": "Usually 5 years as a permanent resident, or 3 if you are married to and living with a U.S. citizen.",
+     "d": "Usually 5 years as a permanent resident, or 3 if you are married to and living with a U.S. citizen for all 3 years.",
      "k": "You may file 90 days early"
     },
     {
@@ -58,7 +58,7 @@
      "n": 7,
      "t": "Receive a decision from USCIS on your Form N-400",
      "d": "Granted, continued or denied. Continued means USCIS needs more documents, or you retake a test 60 to 90 days later.",
-     "k": "Decision within 120 days"
+     "k": "USCIS has 120 days to decide"
     }
    ]
   },

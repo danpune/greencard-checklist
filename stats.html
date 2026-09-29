@@ -26,8 +26,8 @@ td:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:600
 <script>
 var groups = [
   ['Visits', [['visits', 'All visits'], ['quiz', 'Practice test page opened'], ['quiz-mock', 'Mock tests finished'], ['quiz-english', 'Reading and writing practice opened'], ['quiz-play', 'Auto-play started'], ['quiz-interview', 'Interview practice opened']]],
-  ['Where visits came from', [['src-direct', 'Typed or no referrer'], ['src-wa', 'WhatsApp share'], ['src-link', 'Copied link'], ['src-search', 'Search engine'], ['src-social', 'Social or video site'], ['src-github', 'GitHub'], ['src-other', 'Other site']]],
-  ['Sections where someone ticked an item', [['tick-first-week', 'First week'], ['tick-work', 'Work'], ['tick-ids', 'IDs'], ['tick-travel', 'Travel'], ['tick-money', 'Money'], ['tick-citizenship', 'Citizenship']]]
+  ['Where visits came from', [['src-direct', 'Typed or no referrer'], ['src-wa', 'WhatsApp share'], ['src-link', 'Copied link'], ['src-search', 'Search engine'], ['src-social', 'Social or video site'], ['src-github', 'GitHub'], ['src-site', 'Another page on this site'], ['src-other', 'Other site']]],
+  ['Sections where someone checked an item', [['tick-first-week', 'First week'], ['tick-work', 'Work'], ['tick-ids', 'IDs'], ['tick-travel', 'Travel'], ['tick-money', 'Money'], ['tick-citizenship', 'Citizenship']]]
 ];
 var out = document.getElementById('out');
 groups.forEach(function(g){
@@ -37,7 +37,7 @@ groups.forEach(function(g){
     var r = t.insertRow(), v = r.insertCell(); v.textContent = k[1];
     var n = r.insertCell(); n.textContent = '…';
     fetch('https://abacus.jasoncameron.dev/get/danpune-greencard-checklist/' + k[0])
-      .then(function(x){ return x.ok ? x.json() : { value: 0 }; })   // a key nobody has hit yet is a 404
+      .then(function(x){ if (x.status === 404) return { value: 0 }; if (!x.ok) throw 0; return x.json(); })   // a key nobody has hit yet is a 404
       .then(function(d){ n.textContent = (d.value || 0).toLocaleString(); })
       .catch(function(){ n.textContent = '?'; });
   });

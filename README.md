@@ -17,14 +17,14 @@ A simple, mobile-friendly checklist for people who just got a U.S. green card (l
 
 ## Features
 
-- Tick-box progress, saved only in your own browser (no accounts, no server)
+- Checkbox progress, saved only in your own browser (no accounts, no server)
 - "Skip what doesn't apply to you": hide items for things like Selective Service or foreign accounts, and the counts adjust
-- Sticky section bar with per-section progress (e.g. 2/5); ticked items collapse to their title
+- Sticky section bar with per-section progress (e.g. 2/5); checked items collapse to their title
 - "When can I apply?" calculator with a countdown and an add-to-calendar download
 - Trip tracker that flags trips of 6+ months and 1+ year
 - WhatsApp share, copy link, and print/PDF
 - Works in light and dark mode
-- Anonymous running totals (free Abacus counting API): visits, where they came from as one of a few fixed buckets, and which sections get used. No cookies, no IDs, nothing about the visitor is stored. Totals are on `stats.html`
+- Anonymous running totals (free Abacus counting API): visits, where they came from as one of a few fixed buckets, and which sections get used. No cookies, no IDs. The page sends nothing that identifies the visitor. As with any web server, GitHub Pages and Abacus see the visitor's IP address. Totals are on `stats.html`
 
 ## Citizenship test practice (`civics.html`)
 
@@ -35,7 +35,7 @@ A simple, mobile-friendly checklist for people who just got a U.S. green card (l
 - A searchable list of all 128 questions with your own answers filled in, which prints cleanly
 - Learn mode: twelve chapters matching the official study guide, with a short "why" for each of the 128 answers in `why.json`. The notes are based on the USCIS 2025 Civics Test Study Guide and were checked against it by a second reader
 - Reading and writing practice for the English test: read a sentence aloud, or write one as the page dictates it. The sentences use only words from the official USCIS reading and writing vocabulary lists
-- Enter a ZIP code to fill in your own senators, representative, governor and state capital. The ZIP code is matched on the device against `zip.json` and `zipcd.json` (built from U.S. Census Bureau files for the 119th Congress) and is never sent anywhere. A ZIP code in one congressional district picks it for you; one that crosses a line offers only the districts it touches
+- Enter a ZIP code to fill in your own senators, representative, governor and state capital. The ZIP code is matched on the device against `zip.json` and `zipcd.json` (built from U.S. Census Bureau files for the 119th Congress) and is never sent anywhere. A ZIP code in one congressional district picks it for you; one that crosses a line offers only the districts it touches; one that is not in the Census table, such as a PO box, shows every district in the state. `build_zip.py` rebuilds both files after each redistricting. The page compares the Congress number of `zipcd.json` with that of the House member list in `officials.json`, and stops picking a district when they differ
 - Interview practice: every yes-or-no question in Part 9 of Form N-400 (edition 01/20/25) in the form's exact words, with a plain-words version and word meanings, plus questions about you, the ten commands from the USCIS exercise, and the Oath of Allegiance. It explains what the questions mean and never how to answer them. Content is in `interview.json`
 - The 10 official steps to naturalization in one picture, drawn on the page from `steps.json`. `make_steps_picture.py` draws `naturalization-steps.png` from the same file for saving and sharing
 - Works offline after the first visit and can be added to a phone's home screen (`sw.js`, `civics.webmanifest`). While online it always fetches the current page and the current officials
@@ -44,9 +44,9 @@ A simple, mobile-friendly checklist for people who just got a U.S. green card (l
 ## How it stays current
 
 - `update_news.py` pulls the official USCIS Alerts RSS feed into `news.json`. A GitHub Action runs it every day and commits only when something changed.
-- `update_officials.py` rebuilds `officials.json` every day from senate.gov, clerk.house.gov, the National Governors Association and the USCIS test updates page. A source that fails or returns an implausible count keeps its previous data.
-- `check_links.py` runs every Monday and fails the workflow (GitHub emails the owner) if any link on the page returns 404 or 410.
-- All scripts are plain Python 3, standard library only. Run any of them by hand, for example `python3 update_news.py`.
+- `update_officials.py` rebuilds `officials.json` every day from senate.gov, clerk.house.gov, the National Governors Association and the USCIS test updates page. A source that fails or returns an implausible count keeps its previous data and fails the run, so GitHub emails the owner.
+- `check_links.py` runs every Monday and fails the workflow (GitHub emails the owner) if any link on either page returns 404 or 410, or points to a website that no longer exists. Links it cannot check (some sites answer 403 to scripts) are listed in the log.
+- The scripts are plain Python 3, standard library only. Run any of them by hand, for example `python3 update_news.py`. Only `make_steps_picture.py` needs more: Pillow, and the Arial fonts on a Mac.
 
 ## Disclaimer
 
