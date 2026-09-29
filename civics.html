@@ -84,6 +84,9 @@ input[type=text],select{width:100%;padding:11px 12px;border:1px solid var(--line
 .face.back{position:absolute;inset:0;overflow:auto;transform:rotateY(180deg)}
 .face.back::before{content:"";margin-top:auto}   /* centres short answers; collapses when the list is long */
 .turn{margin:auto 0 0;padding-top:12px;text-align:center;font-size:13px;color:var(--muted)}
+.nav{margin-top:8px}
+.nav .btn{padding:9px 12px;font-size:14px;font-weight:600;color:var(--muted)}
+.btn:disabled{opacity:.4;cursor:default}
 .tools{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
 .tools .btn{padding:9px 12px;font-size:14px}
 .fs{position:fixed;inset:0;z-index:20;background:var(--bg);overflow:auto;margin:0;padding:16px max(16px,4vw)}
@@ -206,6 +209,7 @@ footer p{margin:0 0 8px}
     <label class="f" style="margin:0;display:flex;align-items:center;gap:6px"><input type="checkbox" id="voice" style="width:18px;height:18px"> Read aloud</label>
   </div>
   <div class="card" id="pcard" aria-live="polite"></div>
+  <p class="hint">Use Previous and Next, or the left and right arrow keys, to move between cards without grading them.</p>
   <p class="hint">Auto-play fills the screen and goes through the questions on its own, like the screens in a USCIS waiting room. It uses the questions chosen above. Press Esc or Exit to stop.</p>
 </section>
 
@@ -510,6 +514,13 @@ footer p{margin:0 0 8px}
     card(box, deck[at], 'Card ' + (at + 1) + ' of ' + deck.length + (left ? '' : '  ·  all mastered, reviewing'), function(right){
       grade(deck[at], right); at++; counts(); practice();
     });
+    // move between cards without grading them
+    var nav = el('div', 'row two nav');
+    var prev = btn('btn prev', '← Previous', function(){ at--; practice(); });
+    var next = btn('btn next', 'Next →', function(){ at++; practice(); });
+    prev.disabled = at === 0;
+    nav.appendChild(prev); nav.appendChild(next);
+    box.insertBefore(nav, box.lastChild);
   }
   $('set').addEventListener('change', function(){ if (this.value !== 'chapter') this.options[3].hidden = true; deal(); practice(); });
   $('topic').addEventListener('change', function(){ deal(); practice(); });
@@ -546,9 +557,9 @@ footer p{margin:0 0 8px}
       if (CAN_SPEAK) box.appendChild(btn('btn', '🔊 Hear the question', function(){ say(q.q); }));
     }
     var nav = el('div', 'row two'); nav.style.marginTop = '14px';
-    var back = btn('btn', '← Back', function(){ P.learn.i = i - 1; save(); learn(); });
+    var back = btn('btn prev', '← Back', function(){ P.learn.i = i - 1; save(); learn(); });
     var last = i === n - 1, more = ch.n < W.chapters.length;
-    var next = btn('btn go', last ? (more ? 'Next chapter →' : 'Start again') : 'Next →', function(){
+    var next = btn('btn go next', last ? (more ? 'Next chapter →' : 'Start again') : 'Next →', function(){
       if (!last) P.learn.i = i + 1; else P.learn = { c: more ? ch.n + 1 : 1, i: 0 };
       $('chapter').value = P.learn.c; save(); learn(); $('learn').scrollIntoView();
     });
@@ -626,11 +637,19 @@ footer p{margin:0 0 8px}
     frame();
   });
   document.addEventListener('keydown', function(e){
-    if (!S) return;
-    if (e.key === 'Escape') stop();
-    else if (e.key === ' ') { e.preventDefault(); S.paused = !S.paused; frame(); }
-    else if (e.key === 'ArrowRight') step(1);
-    else if (e.key === 'ArrowLeft') step(-1);
+    if (S) {
+      if (e.key === 'Escape') stop();
+      else if (e.key === ' ') { e.preventDefault(); S.paused = !S.paused; frame(); }
+      else if (e.key === 'ArrowRight') step(1);
+      else if (e.key === 'ArrowLeft') step(-1);
+      return;
+    }
+    // left and right arrows move between cards in Practice and Learn
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    if (/^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName)) return;
+    var box = cur === 'practice' ? $('pcard') : cur === 'learn' ? $('lcard') : null;
+    var b = box && box.querySelector(e.key === 'ArrowLeft' ? '.prev' : '.next');
+    if (b && !b.disabled) b.click();
   });
   // the screen lock is dropped when the page is hidden; take it again when it comes back
   document.addEventListener('visibilitychange', function(){
