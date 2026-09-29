@@ -99,6 +99,9 @@ input[type=text],select{width:100%;padding:11px 12px;border:1px solid var(--line
 .tbl tr:first-child th,.tbl tr:first-child td{border-top:0}
 .tbl th{font-weight:650;width:34%}
 .scroll{overflow-x:auto}
+textarea{width:100%;min-height:76px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);font:inherit;color:inherit;resize:vertical}
+textarea:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.sent{font-size:clamp(20px,4.6vw,24px);font-weight:650;line-height:1.35;margin:10px 0 14px}
 footer{color:var(--muted);font-size:13px;padding:24px 0 48px;border-top:1px solid var(--line);margin-top:32px}
 footer p{margin:0 0 8px}
 @media (min-width:900px){body{font-size:17px}.wrap{max-width:820px}}
@@ -139,6 +142,7 @@ footer p{margin:0 0 8px}
   <button role="tab" data-tab="mock" aria-selected="false">Mock test</button>
   <button role="tab" data-tab="missed" aria-selected="false">Missed <span id="missedn"></span></button>
   <button role="tab" data-tab="progress" aria-selected="false">Progress</button>
+  <button role="tab" data-tab="english" aria-selected="false">Reading &amp; writing</button>
   <button role="tab" data-tab="interview" aria-selected="false">The interview</button>
   <button role="tab" data-tab="prep" aria-selected="false">How to prepare</button>
 </div>
@@ -173,10 +177,19 @@ footer p{margin:0 0 8px}
     <div class="stat" id="stat"></div>
     <h3>By topic</h3>
     <div id="bytopic"></div>
+    <h3>Reading and writing</h3>
+    <p class="tally" id="rwstat" style="margin-top:0"></p>
     <h3>Mock tests</h3>
     <ul class="list" id="tests"></ul>
     <button class="linkbtn" id="reset" type="button">Reset my progress</button>
   </div>
+</section>
+
+<section id="english" hidden>
+  <h2>Reading and writing practice</h2>
+  <p class="sub">In the interview you read 1 sentence out of 3 aloud, and write 1 out of 3 as the officer says it. USCIS does not publish the test sentences, so these are practice sentences that use only words from its official vocabulary lists.</p>
+  <div class="card" id="rcard"></div>
+  <div class="card" id="wcard" style="margin-top:12px"></div>
 </section>
 
 <section id="interview" hidden>
@@ -289,6 +302,7 @@ footer p{margin:0 0 8px}
 
   var P = { loc: {}, q: {}, tests: [] };
   try { var s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && s.q) P = s; } catch (e) {}
+  if (!P.rw) P.rw = { rr: 0, rw: 0, wr: 0, ww: 0 };
   function save(){ try { localStorage.setItem(KEY, JSON.stringify(P)); } catch (e) {} }
 
   var Q = [], O = null, ZIP = null;
@@ -376,10 +390,11 @@ footer p{margin:0 0 8px}
   function shuffle(a){ for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
 
   // ---------- one question card, shared by practice and mock test ----------
-  function say(text){
-    if (!('speechSynthesis' in window)) return;
+  var CAN_SPEAK = 'speechSynthesis' in window;
+  function say(text, rate){
+    if (!CAN_SPEAK) return;
     speechSynthesis.cancel();
-    var u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = 0.9;
+    var u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = rate || 0.9;
     speechSynthesis.speak(u);
   }
   function card(box, q, label, onGrade){
@@ -513,22 +528,74 @@ footer p{margin:0 0 8px}
       var row = el('div', 'meta'); row.appendChild(el('span', '', t)); row.appendChild(el('span', '', m + ' of ' + qs.length + ' mastered')); by.appendChild(row);
       var bar = el('div', 'bar'), fill = el('span'); fill.style.width = (m / qs.length * 100) + '%'; bar.appendChild(fill); by.appendChild(bar);
     });
+    $('rwstat').textContent = 'Reading: ' + P.rw.rr + ' right, ' + P.rw.rw + ' missed.  Writing: ' + P.rw.wr + ' right, ' + P.rw.ww + ' missed.';
     var tests = $('tests'); tests.textContent = '';
     if (!P.tests.length) tests.appendChild(el('li', '', 'No mock tests yet.'));
     P.tests.forEach(function(t){ tests.appendChild(el('li', '', t.d + '  ·  ' + (t.p ? 'Passed' : 'Not passed') + '  ·  ' + t.r + ' right of ' + t.n + ' asked' + (t.s ? '  ·  65/20' : ''))); });
   }
   $('reset').addEventListener('click', function(){
     if (!confirm('Clear your practice history and mock tests on this device? Your ZIP code and state are kept.')) return;
-    P.q = {}; P.tests = []; save(); deal(); render(); progress();
+    P.q = {}; P.tests = []; P.rw = { rr: 0, rw: 0, wr: 0, ww: 0 }; save(); deal(); render(); progress();
   });
   function topics(){ var seen = []; Q.forEach(function(q){ if (seen.indexOf(q.sec) < 0) seen.push(q.sec); }); return seen; }
+
+  // ---------- reading and writing practice ----------
+  // Practice sentences built only from the official USCIS reading and writing vocabulary lists.
+  var READ = ["Who was the first President?", "Who was the second President?", "Who was George Washington?", "Who was Abraham Lincoln?", "Who is the Father of Our Country?", "Who is on the dollar bill?", "Who lives in the White House?", "Where is the White House?", "What is the capital of the United States?", "What city is the capital of the United States?", "What was the first U.S. capital?", "What are the colors of the American flag?", "When is Flag Day?", "When is Independence Day?", "When is Labor Day?", "When is Memorial Day?", "When is Columbus Day?", "When is Thanksgiving?", "When is Presidents' Day?", "Who can vote?", "Why do people want to vote?", "Who elects Congress?", "Who elects the President?", "Where does Congress meet?", "How many Senators do we have?", "How many states do we have?", "What is the largest state?", "What state has the most people?", "What country is north of the United States?", "What country is south of the United States?", "What do we pay to the government?", "Why do people come to America?", "What is one right in the Bill of Rights?", "Who lived here first?"];
+  var WRITE = ["Washington was the first President.", "Adams was the second President.", "Lincoln was President during the Civil War.", "Washington is the Father of Our Country.", "Washington is on the dollar bill.", "The President lives in the White House.", "The White House is in Washington, D.C.", "Washington, D.C. is the capital of the United States.", "New York City was the first capital.", "The flag is red, white, and blue.", "The United States has fifty states.", "We have one hundred Senators.", "Alaska is the largest state.", "California has the most people.", "Canada is north of the United States.", "Mexico is south of the United States.", "Delaware was the first state.", "Citizens can vote.", "Citizens vote for the President in November.", "Citizens elect Congress.", "Congress meets in Washington, D.C.", "We pay taxes.", "People want to be free.", "People come here to be free.", "American Indians lived here first.", "Freedom of speech is one right.", "Citizens have the right to vote.", "People in the United States have freedom of speech.", "Flag Day is in June.", "Independence Day is in July.", "Labor Day is in September.", "Memorial Day is in May.", "Columbus Day is in October.", "Thanksgiving is in November.", "Presidents' Day is in February."];
+  function cycle(list){ var d = [], i = 0; return function(){ if (i >= d.length) { d = shuffle(list.slice()); i = 0; } return d[i++]; }; }
+  var nextRead = cycle(READ), nextWrite = cycle(WRITE);
+  function btn(cls, text, fn){ var b = el('button', cls, text); b.type = 'button'; b.addEventListener('click', fn); return b; }
+  function reading(){
+    var box = $('rcard'), sent = nextRead(); box.textContent = '';
+    box.appendChild(el('div', 'meta', 'Reading: read this sentence out loud'));
+    box.appendChild(el('p', 'sent', sent));
+    var row = el('div', 'row');
+    if (CAN_SPEAK) row.appendChild(btn('btn', '🔊 Hear it', function(){ say(sent, 0.8); }));
+    row.appendChild(btn('btn bad', '✗ Missed a word', function(){ P.rw.rw++; save(); reading(); }));
+    row.appendChild(btn('btn good', '✓ Read it correctly', function(){ P.rw.rr++; save(); reading(); }));
+    box.appendChild(row);
+    box.appendChild(el('p', 'tally', 'You fail a sentence if you leave out or change an important word, or pause for a long time. So far: ' + P.rw.rr + ' right, ' + P.rw.rw + ' missed.'));
+  }
+  function plain(t){ return t.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\bone hundred\b/g, '100').replace(/\bfifty\b/g, '50').replace(/\s+/g, ' ').trim(); }
+  function writing(){
+    var box = $('wcard'), sent = nextWrite(); box.textContent = '';
+    box.appendChild(el('div', 'meta', 'Writing: listen, then write the sentence'));
+    var top = el('div', 'row'); top.style.margin = '10px 0';
+    if (CAN_SPEAK) top.appendChild(btn('btn go', '🔊 Say the sentence', function(){ say(sent, 0.75); }));
+    else box.appendChild(el('div', 'note', "This browser can't read aloud. Ask someone to read the sentence to you: press Show the sentence, let them read it, and write it on paper."));
+    box.appendChild(top);
+    var ta = el('textarea'); ta.setAttribute('aria-label', 'Write the sentence you hear'); ta.placeholder = 'Write the sentence here, or on paper';
+    ta.spellcheck = false; ta.autocomplete = 'off'; ta.setAttribute('autocapitalize', 'sentences'); ta.setAttribute('autocorrect', 'off');
+    box.appendChild(ta);
+    var out = el('div'); out.style.marginTop = '12px';
+    var check = btn('btn', 'Check or show the sentence', function(){
+      check.hidden = true; out.textContent = '';
+      var ok = ta.value.trim() && plain(ta.value) === plain(sent);
+      out.appendChild(el('div', ok ? 'you' : 'note', ok ? '✓ Correct: ' + sent : 'The sentence was: ' + sent));
+      if (ok) { P.rw.wr++; save(); out.appendChild(btn('btn go', 'Next sentence', writing)); return; }
+      out.appendChild(el('p', 'hint', "Compare it with what you wrote. Spelling, capital letter and punctuation mistakes don't fail you unless they change the meaning. Numbers can be words or digits. Don't abbreviate."));
+      var row = el('div', 'row two'); row.style.marginTop = '10px';
+      row.appendChild(btn('btn bad', '✗ I got it wrong', function(){ P.rw.ww++; save(); writing(); }));
+      row.appendChild(btn('btn good', '✓ I got it right', function(){ P.rw.wr++; save(); writing(); }));
+      out.appendChild(row);
+    });
+    check.style.marginTop = '10px';
+    box.appendChild(check); box.appendChild(out);
+    box.appendChild(el('p', 'tally', 'So far: ' + P.rw.wr + ' right, ' + P.rw.ww + ' missed.'));
+  }
 
   // ---------- tabs ----------
   var cur = 'practice';
   function tab(name){
     cur = name;
-    Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function(b){ b.setAttribute('aria-selected', b.getAttribute('data-tab') === name); });
-    ['practice', 'mock', 'missed', 'progress', 'interview', 'prep'].forEach(function(n){ $(n).hidden = n !== name; });
+    var bar = document.querySelector('.tabs');
+    Array.prototype.forEach.call(bar.querySelectorAll('button'), function(b){
+      var on = b.getAttribute('data-tab') === name;
+      b.setAttribute('aria-selected', on);
+      if (on) bar.scrollLeft = b.offsetLeft - (bar.clientWidth - b.clientWidth) / 2;   // keep the chosen tab in view
+    });
+    ['practice', 'mock', 'missed', 'progress', 'english', 'interview', 'prep'].forEach(function(n){ $(n).hidden = n !== name; });
     render();
   }
   function render(){
@@ -539,6 +606,7 @@ footer p{margin:0 0 8px}
     if (cur === 'mock' && T) mockNext();
     if (cur === 'missed') missed();
     if (cur === 'progress') progress();
+    if (cur === 'english' && !$('rcard').firstChild) { reading(); writing(); hit('quiz-english'); }
   }
   Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function(b){
     b.addEventListener('click', function(){ tab(b.getAttribute('data-tab')); });

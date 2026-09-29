@@ -30,6 +30,7 @@ A simple, mobile-friendly checklist for people who just got a U.S. green card (l
 
 - All 128 questions and answers of the 2025 civics test, taken from USCIS form M-1778 (09/25), in `questions.json`
 - Practice cards with self-grading and a read-aloud button, a mock test that stops when the result is decided (20 questions, 12 to pass; 65/20: 10 and 6), a list of missed questions, and progress by topic
+- Reading and writing practice for the English test: read a sentence aloud, or write one as the page dictates it. The sentences use only words from the official USCIS reading and writing vocabulary lists
 - Enter a ZIP code to fill in your own senators, representative, governor and state capital. The ZIP code is matched on the device against `zip.json` (built from the U.S. Census 2020 ZCTA file) and is never sent anywhere
 - Progress, ZIP code and state are saved only in the visitor's own browser
 
