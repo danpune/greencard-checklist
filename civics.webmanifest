@@ -1,0 +1,15 @@
+{
+  "name": "Citizenship Test Practice",
+  "short_name": "Civics test",
+  "description": "Practice the 128 questions of the 2025 U.S. citizenship civics test. Works offline.",
+  "id": "/greencard-checklist/civics.html",
+  "start_url": "./civics.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f4ef",
+  "theme_color": "#14365c",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

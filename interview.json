@@ -1,0 +1,1489 @@
+{
+"source": "Form N-400, edition 01/20/25; USCIS \"Vocabulary for the Naturalization Interview: Self-Test 2\"; USCIS \"Understanding Commands for the Naturalization Interview\"",
+"ever": "When a question includes the word “EVER,” you must provide information about any of your actions or conduct that occurred anywhere in the world at any time, unless the question specifies otherwise.",
+"yesno": [
+{
+"n": "1",
+"group": "Citizenship claims, voting and taxes",
+"q": "Have you EVER claimed to be a U.S. citizen (in writing or any other way)?",
+"plain": "Have you EVER said you were a U.S. citizen, in writing or in any other way?",
+"words": [
+"claimed"
+]
+},
+{
+"n": "2",
+"group": "Citizenship claims, voting and taxes",
+"q": "Have you EVER registered to vote or voted in any Federal, state, or local election in the United States?",
+"plain": "Have you EVER registered to vote, or voted, in any federal, state, or local election in the United States?",
+"words": [],
+"note": "If you lawfully voted only in a local election where aliens are eligible to vote, you may answer “No.”"
+},
+{
+"n": "3",
+"group": "Citizenship claims, voting and taxes",
+"q": "Do you currently owe any overdue Federal, state, or local taxes in the United States?",
+"plain": "Right now, do you owe any federal, state, or local taxes in the United States that are past their due date?",
+"words": [
+"overdue"
+]
+},
+{
+"n": "4",
+"group": "Citizenship claims, voting and taxes",
+"q": "Since you became a lawful permanent resident, have you called yourself a “nonresident alien” on a Federal, state, or local tax return or decided not to file a tax return because you considered yourself to be a nonresident?",
+"plain": "Since you became a permanent resident, have you called yourself a “nonresident alien” on a federal, state, or local tax return? Or have you decided not to file a tax return because you thought of yourself as a nonresident?",
+"words": [
+"nonresident alien",
+"tax return"
+]
+},
+{
+"n": "5.a",
+"group": "Groups and beliefs",
+"q": "Have you EVER been a member of, involved in, or in any way associated with any Communist or totalitarian party anywhere in the world?",
+"plain": "Have you EVER been a member of, involved in, or connected in any way with any Communist or totalitarian party, anywhere in the world?",
+"words": [
+"associated with",
+"Communist party",
+"totalitarian"
+]
+},
+{
+"n": "5.b",
+"group": "Groups and beliefs",
+"q": "Have you EVER advocated (supported and promoted) any of the following, or been a member of, involved in, or in any way associated with any group anywhere in the world that advocated any of the following: opposition to all organized government?",
+"plain": "Have you EVER supported and promoted being against all organized government, or been a member of, involved in, or connected in any way with any group anywhere in the world that did?",
+"words": [
+"advocated",
+"associated with"
+]
+},
+{
+"n": "5.b",
+"group": "Groups and beliefs",
+"q": "Have you EVER advocated (supported and promoted) any of the following, or been a member of, involved in, or in any way associated with any group anywhere in the world that advocated any of the following: world communism?",
+"plain": "Have you EVER supported and promoted world communism, or been a member of, involved in, or connected in any way with any group anywhere in the world that did?",
+"words": [
+"advocated",
+"associated with",
+"world communism"
+]
+},
+{
+"n": "5.b",
+"group": "Groups and beliefs",
+"q": "Have you EVER advocated (supported and promoted) any of the following, or been a member of, involved in, or in any way associated with any group anywhere in the world that advocated any of the following: the establishment in the United States of a totalitarian dictatorship?",
+"plain": "Have you EVER supported and promoted setting up a totalitarian dictatorship in the United States, or been a member of, involved in, or connected in any way with any group anywhere in the world that did?",
+"words": [
+"advocated",
+"associated with",
+"totalitarian",
+"dictatorship"
+]
+},
+{
+"n": "5.b",
+"group": "Groups and beliefs",
+"q": "Have you EVER advocated (supported and promoted) any of the following, or been a member of, involved in, or in any way associated with any group anywhere in the world that advocated any of the following: the overthrow by force or violence or other unconstitutional means of the Government of the United States or all forms of law?",
+"plain": "Have you EVER supported and promoted overthrowing the Government of the United States, or all forms of law, by force, violence, or other unconstitutional means, or been a member of, involved in, or connected in any way with any group anywhere in the world that did?",
+"words": [
+"advocated",
+"associated with",
+"overthrow",
+"unconstitutional"
+]
+},
+{
+"n": "5.b",
+"group": "Groups and beliefs",
+"q": "Have you EVER advocated (supported and promoted) any of the following, or been a member of, involved in, or in any way associated with any group anywhere in the world that advocated any of the following: the unlawful assaulting or killing of any officer or officers of the Government of the United States or of any other organized government because of their official character?",
+"plain": "Have you EVER supported and promoted unlawfully attacking or killing any officer of the Government of the United States, or of any other organized government, because of the officer's official position, or been a member of, involved in, or connected in any way with any group anywhere in the world that did?",
+"words": [
+"advocated",
+"associated with",
+"assaulting",
+"official character"
+]
+},
+{
+"n": "5.b",
+"group": "Groups and beliefs",
+"q": "Have you EVER advocated (supported and promoted) any of the following, or been a member of, involved in, or in any way associated with any group anywhere in the world that advocated any of the following: the unlawful damage, injury, or destruction of property?",
+"plain": "Have you EVER supported and promoted unlawfully damaging, harming, or destroying property, or been a member of, involved in, or connected in any way with any group anywhere in the world that did?",
+"words": [
+"advocated",
+"associated with"
+]
+},
+{
+"n": "5.b",
+"group": "Groups and beliefs",
+"q": "Have you EVER advocated (supported and promoted) any of the following, or been a member of, involved in, or in any way associated with any group anywhere in the world that advocated any of the following: sabotage?",
+"plain": "Have you EVER supported and promoted sabotage, or been a member of, involved in, or connected in any way with any group anywhere in the world that did?",
+"words": [
+"advocated",
+"associated with",
+"sabotage"
+]
+},
+{
+"n": "6.a",
+"group": "Violence and harm",
+"q": "Have you EVER been a member of, involved in, or in any way associated with, or have you EVER provided money, a thing of value, services or labor, or any other assistance or support to a group that used a weapon or explosive with intent to harm another person or cause damage to property?",
+"plain": "Have you EVER been a member of, involved in, or connected in any way with a group that used a weapon or explosive in order to harm another person or damage property? Or have you EVER given such a group money, anything of value, services or labor, or any other help or support?",
+"words": [
+"associated with",
+"with intent to"
+]
+},
+{
+"n": "6.b",
+"group": "Violence and harm",
+"q": "Have you EVER been a member of, involved in, or in any way associated with, or have you EVER provided money, a thing of value, services or labor, or any other assistance or support to a group that engaged (participated) in kidnapping, assassination, or hijacking or sabotage of an airplane, ship, vehicle, or other mode of transportation?",
+"plain": "Have you EVER been a member of, involved in, or connected in any way with a group that took part in kidnapping, assassination, or the hijacking or sabotage of an airplane, ship, vehicle, or other kind of transportation? Or have you EVER given such a group money, anything of value, services or labor, or any other help or support?",
+"words": [
+"associated with",
+"engaged",
+"assassination",
+"hijacking",
+"sabotage",
+"kidnapping"
+]
+},
+{
+"n": "6.c",
+"group": "Violence and harm",
+"q": "Have you EVER been a member of, involved in, or in any way associated with, or have you EVER provided money, a thing of value, services or labor, or any other assistance or support to a group that threatened, attempted (tried), conspired (planned with others), prepared, planned, advocated for, or incited (encouraged) others to commit any of the acts listed in Item Numbers 6.a. or 6.b.?",
+"plain": "Have you EVER been a member of, involved in, or connected in any way with a group that threatened, tried, planned with others, prepared, planned, supported and promoted, or encouraged others to do any of the acts in 6.a or 6.b? Or have you EVER given such a group money, anything of value, services or labor, or any other help or support?",
+"words": [
+"associated with",
+"attempted",
+"conspired",
+"advocated",
+"incited"
+]
+},
+{
+"n": "7.a",
+"group": "Violence and harm",
+"q": "Have you EVER ordered, incited, called for, committed, assisted, helped with, or otherwise participated in any of the following: torture?",
+"plain": "Have you EVER ordered, encouraged, called for, done, helped with, or taken part in any other way in torture?",
+"words": [
+"incited",
+"assisted",
+"torture"
+]
+},
+{
+"n": "7.b",
+"group": "Violence and harm",
+"q": "Have you EVER ordered, incited, called for, committed, assisted, helped with, or otherwise participated in any of the following: genocide?",
+"plain": "Have you EVER ordered, encouraged, called for, done, helped with, or taken part in any other way in genocide?",
+"words": [
+"incited",
+"assisted",
+"genocide"
+]
+},
+{
+"n": "7.c",
+"group": "Violence and harm",
+"q": "Have you EVER ordered, incited, called for, committed, assisted, helped with, or otherwise participated in any of the following: killing or trying to kill any person?",
+"plain": "Have you EVER ordered, encouraged, called for, done, helped with, or taken part in any other way in killing or trying to kill any person?",
+"words": [
+"incited",
+"assisted"
+]
+},
+{
+"n": "7.d",
+"group": "Violence and harm",
+"q": "Have you EVER ordered, incited, called for, committed, assisted, helped with, or otherwise participated in any of the following: intentionally and severely injuring or trying to injure any person?",
+"plain": "Have you EVER ordered, encouraged, called for, done, helped with, or taken part in any other way in badly injuring any person on purpose, or trying to injure any person?",
+"words": [
+"incited",
+"assisted"
+]
+},
+{
+"n": "7.e",
+"group": "Violence and harm",
+"q": "Have you EVER ordered, incited, called for, committed, assisted, helped with, or otherwise participated in any of the following: any kind of sexual contact or activity with any person who did not consent (did not agree) or was unable to consent (could not agree), or was being forced or threatened by you or by someone else?",
+"plain": "Have you EVER ordered, encouraged, called for, done, helped with, or taken part in any other way in any kind of sexual contact or activity with a person who did not agree, could not agree, or was being forced or threatened by you or by someone else?",
+"words": [
+"incited",
+"assisted",
+"did not consent",
+"unable to consent"
+]
+},
+{
+"n": "7.f",
+"group": "Violence and harm",
+"q": "Have you EVER ordered, incited, called for, committed, assisted, helped with, or otherwise participated in any of the following: not letting someone practice his or her religion?",
+"plain": "Have you EVER ordered, encouraged, called for, done, helped with, or taken part in any other way in not letting someone practice his or her religion?",
+"words": [
+"incited",
+"assisted"
+]
+},
+{
+"n": "7.g",
+"group": "Violence and harm",
+"q": "Have you EVER ordered, incited, called for, committed, assisted, helped with, or otherwise participated in any of the following: causing harm or suffering to any person because of his or her race, religion, national origin, membership in a particular social group, or political opinion?",
+"plain": "Have you EVER ordered, encouraged, called for, done, helped with, or taken part in any other way in causing harm or suffering to any person because of his or her race, religion, national origin, membership in a particular social group, or political opinion?",
+"words": [
+"incited",
+"assisted",
+"national origin",
+"membership in a particular social group",
+"political opinion"
+]
+},
+{
+"n": "8.a",
+"group": "Military, police and armed groups",
+"q": "Have you EVER served in, been a member of, assisted (helped), or participated in any military or police unit?",
+"plain": "Have you EVER served in, been a member of, helped, or taken part in any military or police unit?",
+"words": [
+"assisted"
+]
+},
+{
+"n": "8.b",
+"group": "Military, police and armed groups",
+"q": "Have you EVER served in, been a member of, assisted (helped), or participated in any armed group (a group that carries weapons), for example: paramilitary unit (a group of people who act like a military group but are not part of the official military), self-defense unit, vigilante unit, rebel group, or guerrilla group?",
+"plain": "Have you EVER served in, been a member of, helped, or taken part in any armed group (a group that carries weapons)? Examples are a paramilitary unit, self-defense unit, vigilante unit, rebel group, or guerrilla group.",
+"words": [
+"assisted",
+"armed group",
+"paramilitary unit",
+"vigilante unit",
+"guerrilla group",
+"self-defense unit",
+"rebel group"
+]
+},
+{
+"n": "9",
+"group": "Military, police and armed groups",
+"q": "Have you EVER worked, volunteered, or otherwise served in a place where people were detained (forced to stay), for example, a prison, jail, prison camp (a camp where prisoners of war or political prisoners are kept), detention facility, or labor camp, or have you EVER directed or participated in any other activity that involved detaining people?",
+"plain": "Have you EVER worked, volunteered, or served in any other way in a place where people were forced to stay? Examples are a prison, jail, prison camp, detention facility, or labor camp. Or have you EVER directed or taken part in any other activity that involved detaining people?",
+"words": [
+"detained",
+"prison camp",
+"detention facility",
+"labor camp"
+]
+},
+{
+"n": "10.a",
+"group": "Military, police and armed groups",
+"q": "Were you EVER a part of any group, or did you EVER help any group, unit, or organization that used a weapon against any person, or threatened to do so?",
+"plain": "Were you EVER part of any group, or did you EVER help any group, unit, or organization, that used a weapon against any person or threatened to do so?",
+"words": []
+},
+{
+"n": "10.b",
+"group": "Military, police and armed groups",
+"q": "If you answered “Yes” to Item Number 10.a., when you were part of this group, or when you helped this group, did you ever use a weapon against another person?",
+"plain": "If you answered “Yes” to 10.a: while you were part of this group, or helping it, did you ever use a weapon against another person?",
+"words": []
+},
+{
+"n": "10.c",
+"group": "Military, police and armed groups",
+"q": "If you answered “Yes” to Item Number 10.a., when you were part of this group, or when you helped this group, did you ever threaten another person that you would use a weapon against that person?",
+"plain": "If you answered “Yes” to 10.a: while you were part of this group, or helping it, did you ever threaten another person that you would use a weapon against that person?",
+"words": []
+},
+{
+"n": "11",
+"group": "Military, police and armed groups",
+"q": "Have you EVER sold, provided, or transported weapons, or assisted any person in selling, providing, or transporting weapons, which you knew or believed would be used against another person?",
+"plain": "Have you EVER sold, provided, or transported weapons, or helped any person to do so, when you knew or believed the weapons would be used against another person?",
+"words": [
+"assisted"
+]
+},
+{
+"n": "12",
+"group": "Military, police and armed groups",
+"q": "Have you EVER received any weapons training, paramilitary training, or other military-type training?",
+"plain": "Have you EVER been given any weapons training, paramilitary training, or other military-type training?",
+"words": [
+"paramilitary unit"
+]
+},
+{
+"n": "13",
+"group": "Military, police and armed groups",
+"q": "Have you EVER recruited (asked), enlisted (signed up), conscripted (required to join), or used any person under 15 years of age to serve in or help an armed group, or attempted or worked with others to do so?",
+"plain": "Have you EVER recruited (asked), enlisted (signed up), conscripted (required to join), or used any person under 15 years old to serve in or help an armed group? Or have you EVER tried to, or worked with others to do so?",
+"words": [
+"recruited",
+"enlisted",
+"conscripted",
+"armed group",
+"attempted"
+]
+},
+{
+"n": "14",
+"group": "Military, police and armed groups",
+"q": "Have you EVER used any person under 15 years of age to take part in hostilities or attempted or worked with others to do so?",
+"plain": "Have you EVER used any person under 15 years old to take part in hostilities? Or have you EVER tried to, or worked with others to do so?",
+"words": [
+"attempted",
+"hostilities"
+],
+"note": "This could include participating in combat or providing services related to combat (such as serving as a messenger or transporting supplies)."
+},
+{
+"n": "15.a",
+"group": "Crimes and arrests",
+"q": "Have you EVER committed, agreed to commit, asked someone else to commit, helped commit, or tried to commit a crime or offense for which you were NOT arrested?",
+"plain": "Have you EVER committed a crime or offense, agreed to commit one, asked someone else to commit one, helped commit one, or tried to commit one, for which you were NOT arrested?",
+"words": [
+"offense",
+"sealed",
+"expunged"
+],
+"note": "If you answer “Yes” to any part of Item Number 15. below, complete the table below with each crime or offense even if your records have been sealed, expunged, or otherwise cleared. You must disclose this information even if someone, including a judge, law enforcement officer, or attorney, told you that it is no longer on your record, or told you that you do not have to disclose the information."
+},
+{
+"n": "15.b",
+"group": "Crimes and arrests",
+"q": "Have you EVER been arrested, cited, detained or confined by any law enforcement officer, military official (in the U.S. or elsewhere), or immigration official for any reason, or been charged with a crime or offense?",
+"plain": "Have you EVER been arrested, cited, detained, or confined by any law enforcement officer, military official (in the U.S. or elsewhere), or immigration official, for any reason? Or have you EVER been charged with a crime or offense?",
+"words": [
+"arrested",
+"cited",
+"detained",
+"confined",
+"charged",
+"offense",
+"sealed",
+"expunged"
+],
+"note": "If you answer “Yes” to any part of Item Number 15. below, complete the table below with each crime or offense even if your records have been sealed, expunged, or otherwise cleared. You must disclose this information even if someone, including a judge, law enforcement officer, or attorney, told you that it is no longer on your record, or told you that you do not have to disclose the information."
+},
+{
+"n": "16",
+"group": "Crimes and arrests",
+"q": "If you received a suspended sentence, were placed on probation, or were paroled, have you completed your suspended sentence, probation, or parole?",
+"plain": "If you were given a suspended sentence, put on probation, or paroled: have you completed your suspended sentence, probation, or parole?",
+"words": [
+"suspended sentence",
+"probation",
+"parole"
+]
+},
+{
+"n": "17.a",
+"group": "Other conduct",
+"q": "Have you EVER engaged in prostitution, attempted to procure or import prostitutes or persons for the purpose of prostitution, or received any proceeds or money from prostitution?",
+"plain": "Have you EVER taken part in prostitution? Have you EVER tried to get, or bring into the country, prostitutes or other persons for prostitution? Have you EVER received any money from prostitution?",
+"words": [
+"engaged",
+"prostitution",
+"attempted",
+"procure",
+"proceeds"
+]
+},
+{
+"n": "17.b",
+"group": "Other conduct",
+"q": "Have you EVER manufactured, cultivated, produced, distributed, dispensed, sold, or smuggled (trafficked) any controlled substances, illegal drugs, narcotics, or drug paraphernalia in violation of any law or regulation of a U.S. state, the United States, or a foreign country?",
+"plain": "Have you EVER made, grown, produced, distributed, given out, sold, or smuggled (trafficked) any controlled substances, illegal drugs, narcotics, or drug paraphernalia, against any law or regulation of a U.S. state, the United States, or a foreign country?",
+"words": [
+"cultivated",
+"dispensed",
+"smuggled",
+"controlled substance",
+"narcotics",
+"drug paraphernalia",
+"trafficked"
+]
+},
+{
+"n": "17.c",
+"group": "Other conduct",
+"q": "Have you EVER been married to more than one person at the same time?",
+"plain": "",
+"words": []
+},
+{
+"n": "17.d",
+"group": "Other conduct",
+"q": "Have you EVER married someone in order to obtain an immigration benefit?",
+"plain": "Have you EVER married someone in order to get an immigration benefit?",
+"words": [
+"immigration benefit"
+]
+},
+{
+"n": "17.e",
+"group": "Other conduct",
+"q": "Have you EVER helped anyone to enter, or try to enter, the United States illegally?",
+"plain": "",
+"words": []
+},
+{
+"n": "17.f",
+"group": "Other conduct",
+"q": "Have you EVER gambled illegally or received income from illegal gambling?",
+"plain": "",
+"words": [
+"gambled"
+]
+},
+{
+"n": "17.g",
+"group": "Other conduct",
+"q": "Have you EVER failed to support your dependents (pay child support) or to pay alimony (court-ordered financial support after divorce or separation)?",
+"plain": "Have you EVER failed to support your dependents (pay child support)? Have you EVER failed to pay alimony (financial support that a court ordered after divorce or separation)?",
+"words": [
+"support your dependents",
+"alimony"
+]
+},
+{
+"n": "17.h",
+"group": "Other conduct",
+"q": "Have you EVER made any misrepresentation to obtain any public benefit in the United States?",
+"plain": "Have you EVER given false or misleading information, in words or in documents, in order to get any public benefit in the United States?",
+"words": [
+"misrepresentation",
+"public benefit"
+]
+},
+{
+"n": "18",
+"group": "Other conduct",
+"q": "Have you EVER given any U.S. Government officials any information or documentation that was false, fraudulent, or misleading?",
+"plain": "Have you EVER given any U.S. Government official any information or document that was false, fraudulent, or misleading?",
+"words": [
+"fraudulent"
+]
+},
+{
+"n": "19",
+"group": "Immigration history",
+"q": "Have you EVER lied to any U.S. Government officials to gain entry or admission into the United States or to gain immigration benefits while in the United States?",
+"plain": "Have you EVER lied to any U.S. Government official in order to enter or be admitted into the United States, or in order to get immigration benefits while in the United States?",
+"words": [
+"admission",
+"immigration benefit"
+]
+},
+{
+"n": "20",
+"group": "Immigration history",
+"q": "Have you EVER been placed in removal, rescission, or deportation proceedings?",
+"plain": "Have you EVER been put in removal, rescission, or deportation proceedings (a formal legal case)?",
+"words": [
+"removal",
+"rescission",
+"deportation",
+"proceedings"
+]
+},
+{
+"n": "21",
+"group": "Immigration history",
+"q": "Have you EVER been removed or deported from the United States?",
+"plain": "",
+"words": [
+"removal",
+"deportation"
+]
+},
+{
+"n": "22.a",
+"group": "Selective Service and U.S. military",
+"q": "Are you a male who lived in the United States at any time between your 18th and 26th birthdays?",
+"plain": "Are you male, and did you live in the United States at any time between your 18th birthday and your 26th birthday?",
+"words": [
+"lawful nonimmigrant"
+],
+"note": "(Do not select “Yes” if you were a lawful nonimmigrant for all of that time period.)"
+},
+{
+"n": "22.b",
+"group": "Selective Service and U.S. military",
+"q": "If you answered “Yes,” to Item Number 22.a., did you register for the Selective Service?",
+"plain": "If you answered “Yes” to 22.a: did you register for the Selective Service?",
+"words": [
+"Selective Service"
+]
+},
+{
+"n": "23",
+"group": "Selective Service and U.S. military",
+"q": "Have you EVER left the United States to avoid being drafted in the U.S. armed forces?",
+"plain": "Have you EVER left the United States in order to avoid being drafted into the U.S. armed forces?",
+"words": [
+"drafted",
+"armed forces"
+]
+},
+{
+"n": "24",
+"group": "Selective Service and U.S. military",
+"q": "Have you EVER applied for any kind of exemption from military service in the U.S. armed forces?",
+"plain": "Have you EVER applied to be excused, in any way, from military service in the U.S. armed forces?",
+"words": [
+"exemption",
+"armed forces"
+]
+},
+{
+"n": "25",
+"group": "Selective Service and U.S. military",
+"q": "Have you EVER served in the U.S. armed forces?",
+"plain": "",
+"words": [
+"armed forces"
+]
+},
+{
+"n": "26.a",
+"group": "Selective Service and U.S. military",
+"q": "Are you currently a member of the U.S. armed forces?",
+"plain": "Are you a member of the U.S. armed forces now?",
+"words": [
+"armed forces"
+]
+},
+{
+"n": "26.b",
+"group": "Selective Service and U.S. military",
+"q": "If you answered “Yes” to Item Number 26.a., are you scheduled to deploy outside the United States, including to a vessel, within the next 3 months?",
+"plain": "If you answered “Yes” to 26.a: are you scheduled to deploy (be sent) outside the United States, including to a vessel (ship), within the next 3 months?",
+"words": [
+"deploy",
+"vessel"
+]
+},
+{
+"n": "26.c",
+"group": "Selective Service and U.S. military",
+"q": "If you answered “Yes,” to Item Number 26.a., are you currently stationed outside the United States?",
+"plain": "If you answered “Yes” to 26.a: are you stationed (based) outside the United States now?",
+"words": [
+"stationed"
+]
+},
+{
+"n": "26.d",
+"group": "Selective Service and U.S. military",
+"q": "If you answered “No” to Item Number 26.a., are you a former U.S. military service member who is currently residing outside of the U.S.?",
+"plain": "If you answered “No” to 26.a: are you a former U.S. military service member who now lives outside the United States?",
+"words": []
+},
+{
+"n": "27",
+"group": "Selective Service and U.S. military",
+"q": "Have you EVER been court-martialed or have you received a discharge characterized as other than honorable, bad conduct, or dishonorable, while in the U.S. armed forces?",
+"plain": "Have you EVER been court-martialed, or received a discharge described as other than honorable, bad conduct, or dishonorable, while in the U.S. armed forces?",
+"words": [
+"court-martialed",
+"discharge",
+"armed forces"
+]
+},
+{
+"n": "28",
+"group": "Selective Service and U.S. military",
+"q": "Have you EVER been discharged from training or service in the U.S. armed forces because you were an alien?",
+"plain": "Have you EVER been discharged (released) from training or service in the U.S. armed forces because you were an alien?",
+"words": [
+"discharge",
+"alien",
+"armed forces"
+]
+},
+{
+"n": "29",
+"group": "Selective Service and U.S. military",
+"q": "Have you EVER deserted from the U.S. armed forces?",
+"plain": "",
+"words": [
+"deserted",
+"armed forces"
+]
+},
+{
+"n": "30.a",
+"group": "Titles and the Oath",
+"q": "Do you now have, or did you EVER have, a hereditary title or an order of nobility in any foreign country?",
+"plain": "Do you have now, or did you EVER have, a hereditary title or an order of nobility in any foreign country?",
+"words": [
+"hereditary title",
+"order of nobility"
+]
+},
+{
+"n": "30.b",
+"group": "Titles and the Oath",
+"q": "If you answered “Yes,” to Item Number 30.a., are you willing to give up any inherited titles or orders of nobility that you have in a foreign country at your naturalization ceremony?",
+"plain": "If you answered “Yes” to 30.a: are you willing to give up, at your naturalization ceremony, any inherited titles or orders of nobility that you have in a foreign country?",
+"words": [
+"order of nobility",
+"naturalization ceremony"
+]
+},
+{
+"n": "31",
+"group": "Titles and the Oath",
+"q": "Do you support the Constitution and form of Government of the United States?",
+"plain": "Do you support the Constitution and the system of government of the United States?",
+"words": [
+"form of Government"
+]
+},
+{
+"n": "32",
+"group": "Titles and the Oath",
+"q": "Do you understand the full Oath of Allegiance to the United States (see Part 16. Oath of Allegiance)?",
+"plain": "Do you understand all of the Oath of Allegiance to the United States?",
+"words": [
+"Oath of Allegiance"
+]
+},
+{
+"n": "33",
+"group": "Titles and the Oath",
+"q": "Are you unable to take the Oath of Allegiance because of a physical or developmental disability or mental impairment?",
+"plain": "Because of a physical disability, a developmental disability, or a mental impairment, are you not able to take the Oath of Allegiance?",
+"words": [
+"Oath of Allegiance",
+"developmental disability",
+"mental impairment"
+]
+},
+{
+"n": "34",
+"group": "Titles and the Oath",
+"q": "Are you willing to take the full Oath of Allegiance to the United States?",
+"plain": "Are you willing to take the whole Oath of Allegiance to the United States?",
+"words": [
+"Oath of Allegiance"
+]
+},
+{
+"n": "35",
+"group": "Titles and the Oath",
+"q": "If the law requires it, are you willing to bear arms (carry weapons) on behalf of the United States?",
+"plain": "If the law requires it, are you willing to carry weapons on behalf of the United States?",
+"words": [
+"bear arms"
+]
+},
+{
+"n": "36",
+"group": "Titles and the Oath",
+"q": "If the law requires it, are you willing to perform noncombatant services (do something that does not include fighting in a war) in the U.S. armed forces?",
+"plain": "If the law requires it, are you willing to do work in the U.S. armed forces that does not include fighting in a war?",
+"words": [
+"noncombatant services",
+"armed forces"
+]
+},
+{
+"n": "37",
+"group": "Titles and the Oath",
+"q": "If the law requires it, are you willing to perform work of national importance under civilian direction (do non-military work that the U.S. Government says is important to the country)?",
+"plain": "If the law requires it, are you willing to do non-military work that the U.S. Government says is important to the country?",
+"words": [
+"work of national importance under civilian direction"
+]
+}
+],
+"vocab": [
+{
+"w": "EVER",
+"m": "anywhere in the world at any time, unless the question specifies otherwise",
+"src": "form"
+},
+{
+"w": "advocated",
+"m": "supported and promoted",
+"src": "form",
+"ex": "Mary advocated to change the working conditions at her job.",
+"same": "Mary supported getting better working conditions at her job."
+},
+{
+"w": "engaged",
+"m": "participated",
+"src": "form"
+},
+{
+"w": "attempted",
+"m": "tried",
+"src": "form"
+},
+{
+"w": "conspired",
+"m": "planned with others",
+"src": "form"
+},
+{
+"w": "incited",
+"m": "encouraged",
+"src": "form"
+},
+{
+"w": "did not consent",
+"m": "did not agree",
+"src": "form"
+},
+{
+"w": "unable to consent",
+"m": "could not agree",
+"src": "form"
+},
+{
+"w": "assisted",
+"m": "helped",
+"src": "form"
+},
+{
+"w": "armed group",
+"m": "a group that carries weapons",
+"src": "form"
+},
+{
+"w": "paramilitary unit",
+"m": "a group of people who act like a military group but are not part of the official military",
+"src": "form"
+},
+{
+"w": "detained",
+"m": "forced to stay",
+"src": "form"
+},
+{
+"w": "prison camp",
+"m": "a camp where prisoners of war or political prisoners are kept",
+"src": "form"
+},
+{
+"w": "recruited",
+"m": "asked",
+"src": "form"
+},
+{
+"w": "enlisted",
+"m": "signed up",
+"src": "form"
+},
+{
+"w": "conscripted",
+"m": "required to join",
+"src": "form"
+},
+{
+"w": "smuggled",
+"m": "trafficked",
+"src": "form"
+},
+{
+"w": "support your dependents",
+"m": "pay child support",
+"src": "form"
+},
+{
+"w": "alimony",
+"m": "court-ordered financial support after divorce or separation",
+"src": "form"
+},
+{
+"w": "bear arms",
+"m": "carry weapons",
+"src": "form"
+},
+{
+"w": "noncombatant services",
+"m": "do something that does not include fighting in a war",
+"src": "form"
+},
+{
+"w": "work of national importance under civilian direction",
+"m": "do non-military work that the U.S. Government says is important to the country",
+"src": "form"
+},
+{
+"w": "world communism",
+"m": "a revolutionary movement, the purpose of which is to establish eventually a Communist totalitarian dictatorship in any or all the countries of the world through the medium of an internationally coordinated Communist political movement",
+"src": "instructions"
+},
+{
+"w": "Communist party",
+"m": "includes the organization now known as the Communist Party of the United States of America, the Communist Party of any state or foreign state or subdivision thereof, and any unit or subdivision of any such organization",
+"src": "instructions"
+},
+{
+"w": "claimed",
+"m": "said, wrote, or showed in any other way that something is true",
+"src": "plain"
+},
+{
+"w": "overdue",
+"m": "not paid by the date it was due; late",
+"src": "plain"
+},
+{
+"w": "nonresident alien",
+"m": "a tax term for a noncitizen who is not treated as a U.S. resident for tax purposes",
+"src": "plain"
+},
+{
+"w": "associated with",
+"m": "connected to, or having a relationship with",
+"src": "plain"
+},
+{
+"w": "totalitarian",
+"m": "describes a government that has total control over people's lives and allows no opposition",
+"src": "plain"
+},
+{
+"w": "dictatorship",
+"m": "a government in which one person or a small group holds total power",
+"src": "plain"
+},
+{
+"w": "overthrow",
+"m": "to remove a government or ruler from power, usually by force",
+"src": "plain"
+},
+{
+"w": "unconstitutional",
+"m": "not allowed by a country's constitution",
+"src": "plain"
+},
+{
+"w": "assaulting",
+"m": "attacking someone, or trying to physically hurt them",
+"src": "plain"
+},
+{
+"w": "official character",
+"m": "a person's role or position as a government officer",
+"src": "plain"
+},
+{
+"w": "sabotage",
+"m": "deliberately damaging or destroying equipment, property, or systems, often to weaken a government or army",
+"src": "plain"
+},
+{
+"w": "assassination",
+"m": "the murder of an important person, usually for political reasons",
+"src": "plain"
+},
+{
+"w": "hijacking",
+"m": "taking control of a plane, ship, or other vehicle by force",
+"src": "plain"
+},
+{
+"w": "torture",
+"m": "causing severe physical or mental pain or suffering on purpose to a person who is held or controlled, usually by officials or others with power over them, for example to punish them or get information",
+"src": "plain"
+},
+{
+"w": "genocide",
+"m": "acts meant to destroy all or a significant part of a national, ethnic, racial, or religious group",
+"src": "plain"
+},
+{
+"w": "vigilante unit",
+"m": "a group that punishes people it believes are criminals, without legal authority",
+"src": "plain"
+},
+{
+"w": "guerrilla group",
+"m": "a small armed group that fights an army or government, often with surprise attacks",
+"src": "plain"
+},
+{
+"w": "arrested",
+"m": "taken into custody (held and not free to leave) by police or another official with legal power, for any reason",
+"src": "plain"
+},
+{
+"w": "cited",
+"m": "given an official written notice, such as a ticket, that says you may have broken a law or rule",
+"src": "plain"
+},
+{
+"w": "confined",
+"m": "kept in a place such as a jail or prison and not allowed to leave",
+"src": "plain"
+},
+{
+"w": "charged",
+"m": "formally accused of a crime or offense by a government official or court",
+"src": "plain"
+},
+{
+"w": "suspended sentence",
+"m": "a punishment a court gives but does not carry out, usually if the person follows conditions",
+"src": "plain"
+},
+{
+"w": "probation",
+"m": "a period of court supervision with conditions, instead of or after time in jail",
+"src": "plain"
+},
+{
+"w": "parole",
+"m": "release from prison before the full sentence ends, with conditions and supervision",
+"src": "plain"
+},
+{
+"w": "prostitution",
+"m": "having sex in exchange for money or other payment",
+"src": "plain"
+},
+{
+"w": "procure",
+"m": "to get or obtain someone or something, often by making arrangements",
+"src": "plain"
+},
+{
+"w": "proceeds",
+"m": "money received from an activity or sale",
+"src": "plain"
+},
+{
+"w": "cultivated",
+"m": "grew or raised plants",
+"src": "plain"
+},
+{
+"w": "dispensed",
+"m": "gave out or handed out",
+"src": "plain"
+},
+{
+"w": "controlled substance",
+"m": "a drug or chemical whose making, possession, or use is controlled by law",
+"src": "plain"
+},
+{
+"w": "narcotics",
+"m": "strong drugs that affect the mind and body and are controlled by law",
+"src": "plain"
+},
+{
+"w": "drug paraphernalia",
+"m": "equipment or objects used to make, use, hide, or sell illegal drugs",
+"src": "plain"
+},
+{
+"w": "immigration benefit",
+"m": "a status or permission from U.S. immigration authorities, such as a visa, green card, or citizenship",
+"src": "plain"
+},
+{
+"w": "misrepresentation",
+"m": "a false or misleading statement, document, or other evidence about facts",
+"src": "plain"
+},
+{
+"w": "public benefit",
+"m": "a benefit from a government agency or paid with government money, such as cash, food, housing, health, disability, unemployment, retirement, or education help, or a government grant, loan, or license",
+"src": "plain"
+},
+{
+"w": "fraudulent",
+"m": "false on purpose, in order to trick or cheat someone",
+"src": "plain"
+},
+{
+"w": "admission",
+"m": "being lawfully allowed into the United States after inspection by an immigration officer",
+"src": "plain"
+},
+{
+"w": "removal",
+"m": "an official order and process that sends a noncitizen out of the United States",
+"src": "plain"
+},
+{
+"w": "deportation",
+"m": "the older legal word for removal: officially sending a noncitizen out of the country",
+"src": "plain"
+},
+{
+"w": "rescission",
+"m": "a legal process that takes back (cancels) a person's lawful permanent resident status",
+"src": "plain"
+},
+{
+"w": "proceedings",
+"m": "a formal legal case or process, for example in immigration court",
+"src": "plain"
+},
+{
+"w": "Selective Service",
+"m": "the U.S. government agency that registers people who could be called into military service (drafted)",
+"src": "plain"
+},
+{
+"w": "drafted",
+"m": "required by law to join the armed forces",
+"src": "plain"
+},
+{
+"w": "armed forces",
+"m": "a country's military, such as its army, navy, and air force",
+"src": "plain"
+},
+{
+"w": "exemption",
+"m": "official permission not to do something that is normally required",
+"src": "plain"
+},
+{
+"w": "deploy",
+"m": "to be sent somewhere, often outside the country, for military duty",
+"src": "plain"
+},
+{
+"w": "vessel",
+"m": "a ship or large boat",
+"src": "plain"
+},
+{
+"w": "stationed",
+"m": "assigned to live and work at a certain military base or place",
+"src": "plain"
+},
+{
+"w": "court-martialed",
+"m": "put on trial in a military court for breaking military law",
+"src": "plain"
+},
+{
+"w": "discharge",
+"m": "the official ending of a person's service in the military",
+"src": "plain"
+},
+{
+"w": "deserted",
+"m": "left military service without permission, intending not to return or to avoid important duty",
+"src": "plain"
+},
+{
+"w": "alien",
+"m": "a person who is not a U.S. citizen or U.S. national",
+"src": "plain"
+},
+{
+"w": "hereditary title",
+"m": "a title of rank, such as prince or duke, passed down through a family",
+"src": "plain"
+},
+{
+"w": "order of nobility",
+"m": "membership in a noble class or order, usually given by a monarch or passed down in a family",
+"src": "plain"
+},
+{
+"w": "naturalization ceremony",
+"m": "the event where you take the Oath of Allegiance and become a U.S. citizen",
+"src": "plain"
+},
+{
+"w": "Oath of Allegiance",
+"m": "the formal promise of loyalty to the United States that you make to become a U.S. citizen",
+"src": "plain"
+},
+{
+"w": "developmental disability",
+"m": "a serious, long-term condition that starts before age 22 and limits things like learning, language, movement, self-care, or living on your own",
+"src": "plain"
+},
+{
+"w": "mental impairment",
+"m": "a mental or psychological condition, such as an intellectual disability, a learning disability, or a mental illness, that affects how a person thinks, understands, learns, or remembers",
+"src": "plain"
+},
+{
+"w": "hostilities",
+"m": "acts of war; fighting in a war or armed conflict. For Item 14 the form says this could include participating in combat or providing services related to combat (such as serving as a messenger or transporting supplies).",
+"src": "plain"
+},
+{
+"w": "trafficked",
+"m": "bought, sold, or moved illegally",
+"src": "plain"
+},
+{
+"w": "under oath",
+"m": "having formally promised to tell the truth",
+"src": "plain"
+},
+{
+"w": "penalty of perjury",
+"m": "a legal phrase: when you sign or speak under penalty of perjury, you formally state that what you say is true, with the same force as an oath",
+"src": "plain"
+},
+{
+"w": "affirm",
+"m": "to state formally that something is true; you may say this instead of “swear”",
+"src": "plain"
+},
+{
+"w": "habitually",
+"m": "often",
+"src": "uscis",
+"ex": "Michael is habitually late for work at the bank.",
+"same": "Michael is often late for work at the bank."
+},
+{
+"w": "verify",
+"m": "prove that something is true",
+"src": "uscis",
+"ex": "Can you verify this information?",
+"same": "Can you prove that this information is true?"
+},
+{
+"w": "marital status",
+"m": "whether you are married, divorced, single, or widowed now",
+"src": "uscis",
+"ex": "What is your marital status?",
+"same": "Are you married, divorced, single, or widowed now?"
+},
+{
+"w": "swear",
+"m": "promise",
+"src": "uscis",
+"ex": "I swear to tell the truth.",
+"same": "I promise to tell the truth."
+},
+{
+"w": "registered",
+"m": "signed up",
+"src": "uscis",
+"ex": "John registered for an English class at the community college.",
+"same": "John signed up for an English class at the community college."
+},
+{
+"w": "spouse",
+"m": "husband or wife",
+"src": "uscis",
+"ex": "Did your spouse go with you outside the United States last summer?",
+"same": "Did your husband (or wife) go with you last summer?"
+},
+{
+"w": "current home address",
+"m": "where you live now",
+"src": "uscis",
+"ex": "What is your current home address?",
+"same": "Where do you live?"
+},
+{
+"w": "date of birth",
+"m": "when you were born",
+"src": "uscis",
+"ex": "What is your date of birth?",
+"same": "When were you born?"
+},
+{
+"w": "failed to",
+"m": "did not",
+"src": "uscis",
+"ex": "Jim failed to send in his taxes on time.",
+"same": "Jim did not send in his taxes on time."
+},
+{
+"w": "federal",
+"m": "of the U.S. government",
+"src": "uscis",
+"ex": "Is that a federal government building?",
+"same": "Is that a U.S. government building?"
+},
+{
+"w": "exempt",
+"m": "not having to do something",
+"src": "uscis",
+"ex": "Jennifer was exempt from the final exam.",
+"same": "Jennifer did not have to take her final exam."
+},
+{
+"w": "prior",
+"m": "before",
+"src": "uscis",
+"ex": "Gary has prior experience teaching history.",
+"same": "Gary has taught history before."
+},
+{
+"w": "pending",
+"m": "not decided yet",
+"src": "uscis",
+"ex": "The decision on your loan application is pending.",
+"same": "Your loan application has not been approved yet."
+},
+{
+"w": "Have you ever",
+"m": "in your lifetime, have you",
+"src": "uscis",
+"ex": "Have you ever visited New York?",
+"same": "In your lifetime, have you visited New York?"
+},
+{
+"w": "member",
+"m": "a person who belongs to a group",
+"src": "uscis",
+"ex": "Scott is a member of the parent teacher association.",
+"same": "Scott belongs to the parent teacher association."
+},
+{
+"w": "resident",
+"m": "a person who lives in a place now",
+"src": "uscis",
+"ex": "I am a resident of Texas.",
+"same": "I live in Texas now."
+},
+{
+"w": "requested",
+"m": "asked for",
+"src": "uscis",
+"ex": "John requested information about the citizenship test.",
+"same": "John asked for information about the citizenship test."
+},
+{
+"w": "disability",
+"m": "a physical or mental impairment",
+"src": "uscis",
+"ex": "Barbara's disability made walking difficult for her.",
+"same": "Barbara had a physical impairment that made walking difficult."
+},
+{
+"w": "dependents",
+"m": "people you support financially",
+"src": "uscis",
+"ex": "Do you have any dependents?",
+"same": "Do you support anyone financially?"
+},
+{
+"w": "offense",
+"m": "an act that breaks a criminal law; it can be a serious crime or a minor one",
+"src": "plain"
+},
+{
+"w": "form of Government",
+"m": "the system or type of government a country has",
+"src": "plain"
+},
+{
+"w": "kidnapping",
+"m": "taking or holding a person against their will by force, threat, or trick",
+"src": "plain"
+},
+{
+"w": "with intent to",
+"m": "with the purpose of; planning to",
+"src": "plain"
+},
+{
+"w": "national origin",
+"m": "the country a person or the person's family comes from",
+"src": "plain"
+},
+{
+"w": "membership in a particular social group",
+"m": "belonging to a group of people who share a basic trait that they cannot change, or should not have to change, such as family ties or past experience",
+"src": "plain"
+},
+{
+"w": "political opinion",
+"m": "a person's beliefs about politics or government",
+"src": "plain"
+},
+{
+"w": "self-defense unit",
+"m": "an armed group formed by people to protect themselves or their community",
+"src": "plain"
+},
+{
+"w": "rebel group",
+"m": "an armed group that fights against the government of its own country",
+"src": "plain"
+},
+{
+"w": "detention facility",
+"m": "a place where people are held by the government and are not allowed to leave",
+"src": "plain"
+},
+{
+"w": "labor camp",
+"m": "a camp where people are held and forced to do hard work",
+"src": "plain"
+},
+{
+"w": "lawful nonimmigrant",
+"m": "a noncitizen who is in the United States legally in a temporary status, such as a student, visitor, or temporary worker",
+"src": "plain"
+},
+{
+"w": "gambled",
+"m": "played a game of chance or bet money on a result, hoping to win money",
+"src": "plain"
+},
+{
+"w": "tax return",
+"m": "a form you file with a tax agency, such as the IRS, to report your income and the tax you owe",
+"src": "plain"
+},
+{
+"w": "sealed",
+"m": "closed by a court, so the public cannot see the record",
+"src": "plain"
+},
+{
+"w": "expunged",
+"m": "erased or removed from official records by a court or by law",
+"src": "plain"
+}
+],
+"about": [
+{
+"part": "Part 2",
+"q": "What is your current legal name?"
+},
+{
+"part": "Part 2",
+"q": "Have you used any other names since birth?"
+},
+{
+"part": "Part 2",
+"q": "What is your date of birth?"
+},
+{
+"part": "Part 2",
+"q": "When did you become a lawful permanent resident?"
+},
+{
+"part": "Part 2",
+"q": "In what country were you born?"
+},
+{
+"part": "Part 2",
+"q": "What is your country of citizenship or nationality?"
+},
+{
+"part": "Part 4",
+"q": "What is your current physical address?"
+},
+{
+"part": "Part 4",
+"q": "When did you start living at your current address?"
+},
+{
+"part": "Part 4",
+"q": "Where else have you lived during the time the form asks about (the last 5 years for most applicants)?"
+},
+{
+"part": "Part 4",
+"q": "Is your current physical address also your mailing address?"
+},
+{
+"part": "Part 5",
+"q": "What is your current marital status?"
+},
+{
+"part": "Part 5",
+"q": "How many times have you been married?"
+},
+{
+"part": "Part 5",
+"q": "What is your current spouse's legal name?"
+},
+{
+"part": "Part 5",
+"q": "What is your spouse's date of birth?"
+},
+{
+"part": "Part 5",
+"q": "When did you marry your current spouse?"
+},
+{
+"part": "Part 5",
+"q": "Does your spouse live at the same address as you?"
+},
+{
+"part": "Part 5",
+"q": "How many times has your current spouse been married?"
+},
+{
+"part": "Part 6",
+"q": "How many children under 18 years of age do you have?"
+},
+{
+"part": "Part 6",
+"q": "What are your children's names and dates of birth?"
+},
+{
+"part": "Part 6",
+"q": "Do your children live with you?"
+},
+{
+"part": "Part 7",
+"q": "Where do you work or go to school now?"
+},
+{
+"part": "Part 7",
+"q": "What is your occupation or field of study?"
+},
+{
+"part": "Part 7",
+"q": "Where have you worked or gone to school during the time the form asks about (the last 5 years for most applicants)?"
+},
+{
+"part": "Part 8",
+"q": "What trips longer than 24 hours have you taken outside the United States during the time the form asks about (the last 5 years for most applicants)?"
+},
+{
+"part": "Part 8",
+"q": "For each trip, when did you leave, when did you return, and which countries did you visit?"
+},
+{
+"part": "Part 9",
+"q": "If you registered for the Selective Service, when did you register, and what is your Selective Service Number?"
+}
+],
+"commands": [
+"Please follow me.",
+"Raise your right hand.",
+"Sign your name here.",
+"Please be seated.",
+"Read this sentence.",
+"Please remain standing.",
+"Write this sentence here.",
+"Please wait here.",
+"Please hand me your passport.",
+"Please print your name."
+],
+"oath": {
+"text": "I hereby declare on oath, that I absolutely and entirely renounce and abjure all allegiance and fidelity to any foreign prince, potentate, state, or sovereignty, of whom or which I have heretofore been a subject or citizen; that I will support and defend the Constitution and laws of the United States of America against all enemies, foreign, and domestic; that I will bear true faith and allegiance to the same; that I will bear arms on behalf of the United States when required by the law; that I will perform noncombatant service in the armed forces of the United States when required by the law; that I will perform work of national importance under civilian direction when required by the law; and that I take this obligation freely, without any mental reservation or purpose of evasion; so help me God.",
+"plain": [
+"I state under oath that I completely give up all loyalty to any foreign ruler or country that I was a subject or citizen of before.",
+"I will support and defend the Constitution and laws of the United States against all enemies, from other countries and from inside the country.",
+"I will be truly faithful and loyal to the Constitution and laws of the United States.",
+"When the law requires it, I will carry weapons for the United States.",
+"When the law requires it, I will do service in the U.S. armed forces that does not include fighting.",
+"When the law requires it, I will do non-military work that the U.S. Government says is important to the country.",
+"I make this promise freely, with no secret intention to hold anything back and no plan to avoid it, and I ask God to help me."
+]
+},
+"edition": "01/20/25"
+}

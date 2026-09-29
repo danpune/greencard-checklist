@@ -35,7 +35,10 @@ A simple, mobile-friendly checklist for people who just got a U.S. green card (l
 - A searchable list of all 128 questions with your own answers filled in, which prints cleanly
 - Learn mode: twelve chapters matching the official study guide, with a short "why" for each of the 128 answers in `why.json`. The notes are based on the USCIS 2025 Civics Test Study Guide and were checked against it by a second reader
 - Reading and writing practice for the English test: read a sentence aloud, or write one as the page dictates it. The sentences use only words from the official USCIS reading and writing vocabulary lists
-- Enter a ZIP code to fill in your own senators, representative, governor and state capital. The ZIP code is matched on the device against `zip.json` (built from the U.S. Census 2020 ZCTA file) and is never sent anywhere
+- Enter a ZIP code to fill in your own senators, representative, governor and state capital. The ZIP code is matched on the device against `zip.json` and `zipcd.json` (built from U.S. Census Bureau files for the 119th Congress) and is never sent anywhere. A ZIP code in one congressional district picks it for you; one that crosses a line offers only the districts it touches
+- Interview practice: every yes-or-no question in Part 9 of Form N-400 (edition 01/20/25) in the form's exact words, with a plain-words version and word meanings, plus questions about you, the ten commands from the USCIS exercise, and the Oath of Allegiance. It explains what the questions mean and never how to answer them. Content is in `interview.json`
+- The 10 official steps to naturalization in one picture, drawn on the page from `steps.json`. `make_steps_picture.py` draws `naturalization-steps.png` from the same file for saving and sharing
+- Works offline after the first visit and can be added to a phone's home screen (`sw.js`, `civics.webmanifest`). While online it always fetches the current page and the current officials
 - Progress, ZIP code and state are saved only in the visitor's own browser
 
 ## How it stays current

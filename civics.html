@@ -7,6 +7,9 @@
 <meta name="description" content="Free practice for the 2025 U.S. citizenship civics test: all 128 official questions, a mock test, your own senators, representative and governor, and a list of the questions you miss.">
 <meta name="theme-color" content="#14365c">
 <link rel="canonical" href="https://danpune.github.io/greencard-checklist/civics.html">
+<link rel="manifest" href="civics.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Civics test">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Citizenship Test Practice: 2025 Civics Questions">
 <meta property="og:description" content="All 128 official questions, a mock test, and your own senators, representative and governor.">
@@ -97,6 +100,15 @@ input[type=text],select{width:100%;padding:11px 12px;border:1px solid var(--line
 ::placeholder{color:var(--muted);opacity:1}
 .eyebrow a{display:inline-block;padding:8px 0}
 .tabs.more{-webkit-mask-image:linear-gradient(to right,#000 82%,transparent);mask-image:linear-gradient(to right,#000 82%,transparent)}
+.more{margin-top:10px}
+.more summary,.fold summary{cursor:pointer;font-weight:650}
+.more summary{font-size:14px;color:var(--muted);padding:10px 0}
+.more .res{margin-top:6px}
+.fold{margin:0 0 8px;padding:0}
+.fold summary{padding:14px 16px}
+.fold[open] summary{border-bottom:1px solid var(--line);margin-bottom:12px}
+.fold>:not(summary){margin-left:16px;margin-right:16px}
+.fold>:last-child{margin-bottom:16px}
 .tools{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
 .tools .btn{padding:9px 12px;font-size:14px}
 .fs{position:fixed;inset:0;z-index:20;background:var(--bg);overflow:auto;margin:0;padding:16px max(16px,4vw)}
@@ -119,6 +131,31 @@ input[type=text],select{width:100%;padding:11px 12px;border:1px solid var(--line
 .answers{margin:0 0 12px;padding-left:20px}
 .answers li{margin:3px 0}
 .note{background:var(--note-soft);border-radius:10px;padding:10px 12px;font-size:14px;margin:0 0 12px}
+.tagline{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--note-soft);border-radius:6px;padding:2px 7px;margin-left:6px;vertical-align:1px}
+.words{list-style:none;margin:0 0 12px;padding:0}
+.words li{padding:8px 0;border-top:1px solid var(--line)}
+.words li:first-child{border-top:0}
+.words b{font-weight:650}
+.oath{white-space:pre-line;font-size:15px;line-height:1.6;margin:0 0 14px}
+.road{padding:18px 16px 6px}
+.ph{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;border-radius:999px;padding:5px 12px;margin:0 0 12px}
+.stp{position:relative;display:flex;gap:14px;padding:0 0 18px}
+.stp::before{content:"";position:absolute;left:17px;top:36px;bottom:0;width:2px;background:var(--line)}
+.road .phase:last-child .stp:last-child::before{display:none}
+.no{flex:none;width:36px;height:36px;border-radius:50%;color:#fff;font-weight:700;font-size:15px;display:grid;place-items:center;position:relative}
+.stp b{display:block;font-size:17px;line-height:1.3}
+.stp small{display:block;color:var(--muted);font-size:15px;margin-top:2px}
+.key{display:inline-block;font-size:13px;font-weight:700;border-radius:8px;padding:3px 9px;margin-top:7px}
+.p0 .ph,.p0 .no{background:#14365c}.p0 .key{background:#e7eef6;color:#14365c}
+.p1 .ph,.p1 .no{background:#1f6f8b}.p1 .key{background:#e3f1f5;color:#17566c}
+.p2 .ph,.p2 .no{background:#9a5b12}.p2 .key{background:#fbefd5;color:#7a4b00}
+.p3 .ph,.p3 .no{background:#1f7a4d}.p3 .key{background:#e3f3ea;color:#1a6640}
+@media (prefers-color-scheme: dark){
+  .p0 .ph,.p0 .no{background:#3d6ea6}.p0 .key{background:#1b2a3b;color:#a9cbf0}
+  .p1 .key{background:#14303a;color:#8fd0e6}
+  .p2 .key{background:#33250f;color:#f0c27a}
+  .p3 .key{background:#16291f;color:#7fd6a6}
+}
 .why{border-left:3px solid var(--brand);padding:2px 0 2px 12px;font-size:15px;margin:0 0 12px}
 .why b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .lq{font-size:clamp(19px,4.4vw,22px);font-weight:650;line-height:1.3;margin:10px 0 12px}
@@ -185,7 +222,7 @@ footer p{margin:0 0 8px}
     <div id="repwrap" hidden style="margin-top:10px">
       <label class="f" for="rep">Your U.S. representative</label>
       <select id="rep"></select>
-      <p class="hint">This list has every district in your state, because one ZIP code can cover more than one. Not sure which is yours? Look it up on the official site, then pick it here: <a href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener">house.gov/representatives/find-your-representative</a></p>
+      <p class="hint"><span id="rephint"></span><a href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener">house.gov/representatives/find-your-representative</a></p>
     </div>
     <ul class="mine" id="mine" hidden></ul>
     <p class="hint" id="checked" hidden></p>
@@ -200,9 +237,8 @@ footer p{margin:0 0 8px}
   <button role="tab" data-tab="mock" aria-selected="false">Mock test</button>
   <button role="tab" data-tab="list" aria-selected="false">Questions <span id="missedn"></span></button>
   <button role="tab" data-tab="progress" aria-selected="false">Progress</button>
-  <button role="tab" data-tab="english" aria-selected="false">English test</button>
   <button role="tab" data-tab="interview" aria-selected="false">Interview</button>
-  <button role="tab" data-tab="prep" aria-selected="false">Study plan</button>
+  <button role="tab" data-tab="prep" aria-selected="false">Guide</button>
 </div>
 
 <section id="learn" hidden>
@@ -227,15 +263,23 @@ footer p{margin:0 0 8px}
   <div class="tools" style="margin-top:12px">
     <button class="btn" id="full" type="button">⛶ Full screen</button>
     <button class="btn" id="play" type="button">▶ Auto-play</button>
-    <label class="f opt">Pace
-      <select id="secs"><option value="5">5 seconds</option><option value="8" selected>8 seconds</option><option value="12">12 seconds</option><option value="20">20 seconds</option></select></label>
-    <label class="f opt"><input type="checkbox" id="voice"> Read aloud</label>
-    <label class="f opt"><input type="checkbox" id="slow"> Slow voice</label>
   </div>
-  <p class="hint">Tap the card to turn it over. Use Previous and Next, or the left and right arrow keys, to move between cards without grading them. A card you miss comes back a few cards later.</p>
-  <p class="hint">Auto-play fills the screen and goes through the chosen questions on its own, like the screens in a USCIS waiting room. Pace is how long each side stays up. Press Esc or Exit to stop.</p>
-  <p class="hint">The 65/20 list is for people aged 65 or older who have been permanent residents for 20 years. They study only those 20 questions.</p>
-  <p class="hint">This is the 2025 test, for everyone who filed Form N-400 on or after Oct 20, 2025. If you filed earlier, see the Interview tab.</p>
+  <details class="more">
+    <summary>Options and help</summary>
+    <div class="tools">
+      <label class="f opt">Auto-play pace
+        <select id="secs"><option value="5">5 seconds</option><option value="8" selected>8 seconds</option><option value="12">12 seconds</option><option value="20">20 seconds</option></select></label>
+      <label class="f opt"><input type="checkbox" id="voice"> Read aloud in auto-play</label>
+      <label class="f opt"><input type="checkbox" id="slow"> Slow voice</label>
+    </div>
+    <ul class="res">
+      <li>Tap the card to turn it over. A card you miss comes back a few cards later.</li>
+      <li>Previous and Next, or the left and right arrow keys, move between cards without grading them.</li>
+      <li>Auto-play fills the screen and goes through the chosen questions on its own. Press Esc or Exit to stop.</li>
+      <li>The 65/20 list is for people aged 65 or older who have been permanent residents for 20 years. They study only those 20 questions.</li>
+      <li>This is the 2025 test, for everyone who filed Form N-400 on or after Oct 20, 2025. If you filed earlier, see the Guide tab.</li>
+    </ul>
+  </details>
 </section>
 
 <section id="mock" hidden>
@@ -271,24 +315,64 @@ footer p{margin:0 0 8px}
     <div id="bytopic"></div>
     <h3>Reading and writing</h3>
     <p class="tally" id="rwstat" style="margin-top:0"></p>
+    <p class="tally" id="ivstat" style="margin-top:4px"></p>
     <h3>Mock tests</h3>
     <ul class="list" id="tests"></ul>
     <button class="linkbtn" id="reset" type="button">Reset my progress</button>
   </div>
 </section>
 
-<section id="english" hidden>
-  <h2>Reading and writing practice</h2>
-  <p class="sub">In the interview you read 1 sentence out of 3 aloud, and write 1 out of 3 as the officer says it. USCIS does not publish the test sentences, so these are practice sentences that use only words from its official vocabulary lists.</p>
-  <div class="card" id="rcard"></div>
-  <div class="card" id="wcard" style="margin-top:12px"></div>
+<section id="interview" hidden>
+  <h2>Practise the interview</h2>
+  <p class="sub">The officer puts you under oath and asks the questions from your Form N-400 out loud. Practise understanding them here. Always answer truthfully, and the same way you answered on your form.</p>
+  <div class="row two" style="margin-bottom:10px">
+    <div><label class="f" for="imode">Practise</label>
+      <select id="imode">
+        <optgroup label="Your application (Form N-400)">
+          <option value="yesno">Yes or no questions</option>
+          <option value="about">Questions about you</option>
+          <option value="oath">The Oath of Allegiance</option>
+        </optgroup>
+        <optgroup label="The English test">
+          <option value="reading">Reading a sentence aloud</option>
+          <option value="writing">Writing a sentence</option>
+          <option value="words">Words to know</option>
+          <option value="commands">What the officer may tell you to do</option>
+        </optgroup>
+      </select></div>
+    <div id="igroupwrap"><label class="f" for="igroup">Topic</label><select id="igroup"><option value="">All topics</option></select></div>
+  </div>
+  <div class="card" id="icard"></div>
+  <div class="card" id="rcard" hidden></div>
+  <div class="card" id="wcard" hidden></div>
+  <p class="hint">This page helps you understand the questions. It cannot tell you how to answer them, and it is not legal advice. If you are not sure how a question applies to you, talk to an immigration attorney before your interview.</p>
+  <details class="more">
+    <summary>Where this comes from</summary>
+    <ul class="res">
+      <li>Questions are from Form N-400, edition 01/20/25, in the form's exact words. Where the form lists several things under one question, each is shown as its own question. Item 30.b leaves out the blank where you list your titles.</li>
+      <li>"The form adds" marks a note printed on the form itself, word for word.</li>
+      <li>Word meanings marked "form" are the form's own. Those marked "USCIS" are from the USCIS interview vocabulary self-test.</li>
+      <li>USCIS does not publish the reading and writing test sentences. The practice sentences use only words from its official vocabulary lists.</li>
+      <li>In the interview you read 1 sentence out of 3 aloud, and write 1 out of 3 as the officer says it.</li>
+    </ul>
+  </details>
 </section>
 
-<section id="interview" hidden>
-  <h2>What the interview includes</h2>
-  <p class="sub">One appointment with a USCIS officer. It has three parts, and the civics test is only one of them.</p>
-  <div class="card">
-    <h3 style="margin-top:0">1. Your application, under oath</h3>
+<section id="prep" hidden>
+  <h2>The whole process in one picture</h2>
+  <p class="sub">The 10 official steps from green card to citizen. The checklist helps with steps 2 and 3. This page helps with step 6.</p>
+  <div class="card road" id="road"></div>
+  <div class="row" style="margin:12px 0 0">
+    <a class="btn" href="naturalization-steps.png" download="naturalization-steps.png">Save this picture</a>
+    <button class="btn" id="shareroad" type="button" hidden>Share it</button>
+  </div>
+  <p class="hint">Steps and their titles are from USCIS, <a href="https://www.uscis.gov/citizenship/learn-about-citizenship/10-steps-to-naturalization" target="_blank" rel="noopener">10 Steps to Naturalization</a>. How long each step takes depends on your USCIS office: <a href="https://egov.uscis.gov/processing-times/" target="_blank" rel="noopener">check processing times</a>.</p>
+
+  <h2 style="margin-top:26px">At the interview</h2>
+  <p class="sub">One appointment with a USCIS officer. Tap a heading to open it.</p>
+  <details class="card fold">
+    <summary>What happens at the interview</summary>
+    <h3 style="margin-top:6px">1. Your application, under oath</h3>
     <p style="margin:0 0 8px">The officer puts you under oath and goes through the questions and answers on your N-400. Re-read your own application before you go, and note anything that changed since you filed, such as travel, address, job or marital status.</p>
     <h3>2. The English test</h3>
     <div class="scroll"><table class="tbl">
@@ -302,37 +386,28 @@ footer p{margin:0 0 8px}
       <tr><th>Filed before Oct 20, 2025</th><td>2008 test. 100 questions to study, asked up to 10, 6 right to pass. Use the <a href="https://www.uscis.gov/citizenship/civics-practice-test-2008" target="_blank" rel="noopener">official 2008 practice test</a> instead of this page.</td></tr>
     </table></div>
     <p class="hint">A different wording of a correct answer still counts.</p>
-
-    <h3>If you don't pass a part</h3>
+  </details>
+  <details class="card fold">
+    <summary>If you don't pass, and what comes after</summary>
+    <h3 style="margin-top:6px">If you don't pass a part</h3>
     <p style="margin:0 0 8px">You get one retest, 60 to 90 days after the first interview, on only the part you failed. Missing the retest counts as a failed attempt, unless USCIS excuses it. Failing a second time means the application is denied.</p>
     <h3>After the interview</h3>
     <p style="margin:0 0 8px">You leave with a results notice (Form N-652). The decision is granted, continued or denied, and USCIS has 120 days from the interview to decide. You are not a citizen until you take the Oath of Allegiance at a ceremony, which may be the same day or scheduled later by mail. You hand in your green card at the ceremony.</p>
-
-    <h3>Who is exempt</h3>
+  </details>
+  <details class="card fold">
+    <summary>Who is exempt from the tests</summary>
     <div class="scroll"><table class="tbl">
       <tr><th>50/20</th><td>Age 50 or older with 20 years as a permanent resident when you file. No English test. Civics test in your own language, with an interpreter you bring.</td></tr>
       <tr><th>55/15</th><td>Age 55 or older with 15 years as a permanent resident. Same as above.</td></tr>
       <tr><th>65/20</th><td>Age 65 or older with 20 years as a permanent resident. No English test. Study only the 20 starred questions: asked 10, need 6. You may take it in your own language, with an interpreter you bring.</td></tr>
       <tr><th>Medical</th><td>A physical or developmental disability or mental impairment that has lasted, or is expected to last, 12 months or more may exempt you from English, civics or both. A licensed doctor or clinical psychologist completes Form N-648, which goes in with the N-400.</td></tr>
     </table></div>
-    <h3>Sources</h3>
-    <ul class="res">
-      <li><a href="https://www.uscis.gov/citizenship/learn-about-citizenship/the-naturalization-interview-and-test" target="_blank" rel="noopener">USCIS: The naturalization interview and test</a></li>
-      <li><a href="https://www.uscis.gov/policy-manual/volume-12-part-e-chapter-2" target="_blank" rel="noopener">USCIS Policy Manual: English and civics testing</a></li>
-      <li><a href="https://www.uscis.gov/citizenship/exceptions-and-accommodations" target="_blank" rel="noopener">USCIS: Exceptions and accommodations</a></li>
-      <li><a href="https://www.uscis.gov/policy-manual/volume-12-part-e-chapter-3" target="_blank" rel="noopener">USCIS Policy Manual: medical disability exception</a></li>
-      <li><a href="https://www.uscis.gov/policy-manual/volume-12-part-b-chapter-4" target="_blank" rel="noopener">USCIS Policy Manual: results of the examination</a></li>
-      <li><a href="https://www.uscis.gov/citizenship/learn-about-citizenship/naturalization-ceremonies" target="_blank" rel="noopener">USCIS: Naturalization ceremonies</a></li>
-      <li><a href="https://www.uscis.gov/citizenship/learn-about-citizenship/10-steps-to-naturalization" target="_blank" rel="noopener">USCIS: 10 steps to naturalization</a></li>
-    </ul>
-  </div>
-</section>
+  </details>
 
-<section id="prep" hidden>
-  <h2>How to prepare</h2>
+  <h2 style="margin-top:26px">How to prepare</h2>
   <p class="sub">About 20 minutes a day for four weeks is a reasonable plan for a working adult.</p>
-  <div class="card">
-    <h3 style="margin-top:0">A four-week plan</h3>
+  <details class="card fold">
+    <summary>A four-week study plan</summary>
     <div class="scroll"><table class="tbl">
       <tr><th>Week 1</th><td>Questions 1 to 45, about 9 new ones a day. Enter your ZIP code above and learn your four personal answers. Read the reading vocabulary list aloud once.</td></tr>
       <tr><th>Week 2</th><td>Questions 46 to 90, plus 5 minutes a day on what you missed. Write 5 dictated sentences a day from the writing vocabulary list. One mock test at the weekend.</td></tr>
@@ -340,15 +415,24 @@ footer p{margin:0 0 8px}
       <tr><th>Week 4</th><td>Missed list and a mock test every other day, answered out loud. Re-read your own N-400. Check the four officials' names a few days before the interview.</td></tr>
     </table></div>
     <p class="hint">On the 65/20 list? Two weeks of the same routine on the 20 starred questions is enough.</p>
-
-    <h3>Official civics materials (2025 test)</h3>
+    <h3>Habits that help</h3>
+    <ul class="res">
+      <li>Say your answers out loud. The real test is a conversation, not a form.</li>
+      <li>Learn one short answer per question. You only need one unless the question asks for more.</li>
+      <li>Study a little every day and let the questions you know drop out.</li>
+      <li>Know your own N-400 as well as the civics answers.</li>
+    </ul>
+  </details>
+  <details class="card fold">
+    <summary>Official USCIS study materials</summary>
+    <h3 style="margin-top:6px">For the civics test (2025 version)</h3>
     <ul class="res">
       <li><a href="https://www.uscis.gov/sites/default/files/document/questions-and-answers/2025-Civics-Test-128-Questions-and-Answers.pdf" target="_blank" rel="noopener">128 Civics Questions and Answers (PDF)</a> <small>The official list this page is built from.</small></li>
       <li><a href="https://www.uscis.gov/sites/default/files/document/brochures/USCIS-2025-Civics-Test-Study-Guide.pdf" target="_blank" rel="noopener">One Nation, One People: 2025 Civics Test Study Guide (PDF)</a> <small>Explains the answers. Large file, 39 MB.</small></li>
       <li><a href="https://www.uscis.gov/citizenship/testupdates" target="_blank" rel="noopener">Test updates</a> <small>The names USCIS accepts for the President, Vice President, Speaker and Chief Justice.</small></li>
       <li><a href="https://www.uscis.gov/citizenship/find-study-materials-and-resources/study-for-the-test" target="_blank" rel="noopener">Study for the Test</a> <small>The full USCIS catalogue. Its flash cards, audio and practice test are for the older 2008 test only.</small></li>
     </ul>
-    <h3>Official English and interview materials</h3>
+    <h3>For the English test and the interview</h3>
     <ul class="res">
       <li><a href="https://www.uscis.gov/sites/default/files/document/guides/reading_vocab.pdf" target="_blank" rel="noopener">Reading test vocabulary list (PDF)</a></li>
       <li><a href="https://www.uscis.gov/sites/default/files/document/guides/writing_vocab.pdf" target="_blank" rel="noopener">Writing test vocabulary list (PDF)</a></li>
@@ -358,7 +442,9 @@ footer p{margin:0 0 8px}
       <li><a href="https://www.uscis.gov/sites/default/files/document/guides/understandingcommands_flashcardsforlearners.pdf" target="_blank" rel="noopener">Understanding commands: flash cards (PDF)</a></li>
       <li><a href="https://www.uscis.gov/sites/default/files/document/videos/Naturalization_Interview.mp4" target="_blank" rel="noopener">Video: the naturalization interview and test</a> <small>Made before the 2025 test, so its civics part shows the older 10-question format. 42 MB.</small></li>
     </ul>
-    <h3>Other free resources</h3>
+  </details>
+  <details class="card fold">
+    <summary>Other free resources</summary>
     <p class="hint" style="margin-top:0">Not run by USCIS. We have not checked their answers, and videos can show officials' names that are out of date.</p>
     <ul class="res">
       <li><a href="https://usahello.org/citizenship/prepare/citizenship-test-questions/" target="_blank" rel="noopener">USAHello</a> <small>Nonprofit. The questions translated into 17 or more languages.</small></li>
@@ -366,14 +452,28 @@ footer p{margin:0 0 8px}
       <li><a href="https://www.uscitizenpod.com/" target="_blank" rel="noopener">US Citizenship Podcast</a> <small>Practice interviews based on the N-400.</small></li>
     </ul>
     <p class="hint">Watch out for videos titled "2025" or "2026" that still teach the old 100-question test.</p>
-    <h3>Habits that help</h3>
+  </details>
+  <details class="card fold">
+    <summary>Use it without the internet</summary>
     <ul class="res">
-      <li>Say your answers out loud. The real test is a conversation, not a form.</li>
-      <li>Learn one short answer per question. You only need one unless the question asks for more.</li>
-      <li>Study a little every day and let the questions you know drop out.</li>
-      <li>Know your own N-400 as well as the civics answers.</li>
+      <li>After your first visit this page works offline, so you can practise on a train or in a waiting room.</li>
+      <li><b>iPhone:</b> open it in Safari, tap Share, then "Add to Home Screen".</li>
+      <li><b>Android:</b> open it in Chrome, tap the menu, then "Install app" or "Add to Home screen".</li>
+      <li>Names of officials are refreshed whenever you are online. Offline you see the last ones saved.</li>
     </ul>
-  </div>
+  </details>
+  <details class="card fold">
+    <summary>Sources</summary>
+    <ul class="res">
+      <li><a href="https://www.uscis.gov/citizenship/learn-about-citizenship/the-naturalization-interview-and-test" target="_blank" rel="noopener">USCIS: The naturalization interview and test</a></li>
+      <li><a href="https://www.uscis.gov/policy-manual/volume-12-part-e-chapter-2" target="_blank" rel="noopener">USCIS Policy Manual: English and civics testing</a></li>
+      <li><a href="https://www.uscis.gov/citizenship/exceptions-and-accommodations" target="_blank" rel="noopener">USCIS: Exceptions and accommodations</a></li>
+      <li><a href="https://www.uscis.gov/policy-manual/volume-12-part-e-chapter-3" target="_blank" rel="noopener">USCIS Policy Manual: medical disability exception</a></li>
+      <li><a href="https://www.uscis.gov/policy-manual/volume-12-part-b-chapter-4" target="_blank" rel="noopener">USCIS Policy Manual: results of the examination</a></li>
+      <li><a href="https://www.uscis.gov/citizenship/learn-about-citizenship/naturalization-ceremonies" target="_blank" rel="noopener">USCIS: Naturalization ceremonies</a></li>
+      <li><a href="https://www.uscis.gov/citizenship/learn-about-citizenship/10-steps-to-naturalization" target="_blank" rel="noopener">USCIS: 10 steps to naturalization</a></li>
+    </ul>
+  </details>
 </section>
 
 </main>
@@ -402,13 +502,21 @@ footer p{margin:0 0 8px}
   if (!P.tests) P.tests = [];
   function save(){ try { localStorage.setItem(KEY, JSON.stringify(P)); } catch (e) {} }
 
-  var Q = [], O = null, ZIP = null, W = { chapters: [], why: {} };
+  var Q = [], O = null, ZIP = null, CD = null, I = null, W = { chapters: [], why: {} };
   if (!P.learn) P.learn = { c: 1, i: 0 };
+  if (!P.iv) P.iv = {};
 
   // ---------- your location and your personal answers ----------
   var TERR = { PR: 1, GU: 1, VI: 1, AS: 1, MP: 1 };
   function place(){ return O && P.loc.state && O.states[P.loc.state] ? P.loc.state : ''; }
   function repsHere(){ return (O.parts.reps[place()] || []); }
+  function ord(n){ n = +n; var s = ['th', 'st', 'nd', 'rd'], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); }
+  // Districts a ZIP code lies in, from the Census table. A few ZIP codes cross district lines.
+  function districtsFor(z){
+    var e = CD && CD.p[z.slice(0, 3)], have = repsHere().map(function(r){ return r[0]; });
+    if (!e) return [];
+    return (e[1][z.slice(3)] || e[0]).split(',').map(ord).filter(function(d){ return have.indexOf(d) >= 0; });
+  }
   function myRep(){
     var r = repsHere();
     if (r.length === 1) return r[0];
@@ -452,9 +560,14 @@ footer p{margin:0 0 8px}
     $('repwrap').hidden = reps.length < 2;
     if (reps.length > 1) {
       var sel = $('rep'); sel.textContent = '';
+      var near = P.loc.near || [], some = near.length && !P.loc.all;
       sel.appendChild(new Option('Choose your district…', ''));
-      reps.forEach(function(r){ sel.appendChild(new Option(r[0] + ' district: ' + r[1], r[0])); });
+      reps.forEach(function(r){ if (!some || near.indexOf(r[0]) >= 0) sel.appendChild(new Option(r[0] + ' district: ' + r[1], r[0])); });
+      if (some) sel.appendChild(new Option('Show every district in ' + O.states[st].name, '*'));
       sel.value = myRep() ? P.loc.district : '';
+      $('rephint').textContent = !near.length ? 'This list has every district in your state, because one ZIP code can cover more than one. Not sure which is yours? Look it up on the official site, then pick it here: '
+        : near.length === 1 ? 'Your ZIP code is in the ' + near[0] + ' district. A few ZIP codes cross district lines, so check your address on the official site: '
+        : 'Your ZIP code covers ' + near.length + ' districts. Look up your address on the official site, then pick yours here: ';
     }
     var list = $('mine'); list.textContent = ''; list.hidden = !st;
     if (st) [23, 29, 61, 62].forEach(function(id){
@@ -474,12 +587,23 @@ footer p{margin:0 0 8px}
       var st = d.z5[z] || d.p3[z.slice(0, 3)];
       P.loc = { zip: z, state: st || '', district: '' };
       save(); renderYou(); render();
-      if (!st) $('checked').hidden = false, $('checked').textContent = "We couldn't match that ZIP code. Please choose your state.";
+      if (!st) { $('checked').hidden = false; $('checked').textContent = "We couldn't match that ZIP code. Please choose your state."; return; }
+      if (repsHere().length < 2) return;
+      return (CD ? Promise.resolve(CD) : load('zipcd.json').then(function(c){ return CD = c; })).then(function(){
+        if (P.loc.zip !== z) return;   // the person typed another ZIP code meanwhile
+        var near = districtsFor(z);
+        P.loc.near = near;
+        if (near.length === 1) P.loc.district = near[0];
+        save(); renderYou(); render();
+      });
     }).catch(function(){});
   });
   $('state').addEventListener('change', function(){ P.loc = { zip: '', state: this.value, district: '' }; $('zip').value = ''; save(); renderYou(); render(); });
   $('youdone').addEventListener('click', function(){ $('youd').open = false; $('tabtop').scrollIntoView(); });
-  $('rep').addEventListener('change', function(){ P.loc.district = this.value; save(); renderYou(); render(); });
+  $('rep').addEventListener('change', function(){
+    if (this.value === '*') { P.loc.all = 1; P.loc.district = ''; } else P.loc.district = this.value;
+    save(); renderYou(); render();
+  });
 
   // ---------- progress ----------
   function rec(id){ return P.q[id] || (P.q[id] = { r: 0, w: 0, s: 0, l: '' }); }
@@ -724,7 +848,7 @@ footer p{margin:0 0 8px}
     // left and right arrows move between cards in Practice and Learn
     if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
     if (/^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName)) return;
-    var box = cur === 'practice' ? $('pcard') : cur === 'learn' ? $('lcard') : null;
+    var box = cur === 'practice' ? $('pcard') : cur === 'learn' ? $('lcard') : cur === 'interview' ? $('icard') : null;
     var b = box && box.querySelector(e.key === 'ArrowLeft' ? '.prev' : '.next');
     if (b && !b.disabled) b.click();
   });
@@ -832,6 +956,7 @@ footer p{margin:0 0 8px}
       var row = el('div', 'meta'); row.appendChild(el('span', '', t)); row.appendChild(el('span', '', m + ' of ' + qs.length + ' mastered')); by.appendChild(row);
       var bar = el('div', 'bar'), fill = el('span'); fill.style.width = (m / qs.length * 100) + '%'; bar.appendChild(fill); by.appendChild(bar);
     });
+    $('ivstat').textContent = 'Interview questions you marked as understood: ' + Object.keys(P.iv).filter(function(k){ return P.iv[k] === 1; }).length + '.';
     $('rwstat').textContent = 'Reading: ' + P.rw.rr + ' right, ' + P.rw.rw + ' missed.  Writing: ' + P.rw.wr + ' right, ' + P.rw.ww + ' missed.';
     var tests = $('tests'); tests.textContent = '';
     if (!P.tests.length) tests.appendChild(el('li', '', 'No mock tests yet.'));
@@ -839,7 +964,7 @@ footer p{margin:0 0 8px}
   }
   $('reset').addEventListener('click', function(){
     if (!confirm('Clear your practice history and mock tests on this device? Your ZIP code and state are kept.')) return;
-    P.q = {}; P.tests = []; P.rw = { rr: 0, rw: 0, wr: 0, ww: 0 }; save(); deal();
+    P.q = {}; P.tests = []; P.iv = {}; P.rw = { rr: 0, rw: 0, wr: 0, ww: 0 }; save(); deal();
     $('rcard').textContent = ''; $('wcard').textContent = '';
     render(); progress();
   });
@@ -852,7 +977,9 @@ footer p{margin:0 0 8px}
   function cycle(list){ var d = [], i = 0; return function(){ if (i >= d.length) { d = shuffle(list.slice()); i = 0; } return d[i++]; }; }
   var nextRead = cycle(READ), nextWrite = cycle(WRITE);
   function btn(cls, text, fn){ var b = el('button', cls, text); b.type = 'button'; b.addEventListener('click', fn); return b; }
+  var english = 0;
   function reading(){
+    if (!english++) hit('quiz-english');
     var box = $('rcard'), sent = nextRead(); box.textContent = '';
     box.appendChild(el('div', 'meta', 'Reading: read this sentence out loud'));
     box.appendChild(el('p', 'sent', sent));
@@ -865,6 +992,7 @@ footer p{margin:0 0 8px}
   }
   function plain(t){ return t.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\bone hundred\b/g, '100').replace(/\bfifty\b/g, '50').replace(/\s+/g, ' ').trim(); }
   function writing(){
+    if (!english++) hit('quiz-english');
     var box = $('wcard'), sent = nextWrite(); box.textContent = '';
     box.appendChild(el('div', 'meta', 'Writing: listen, then write the sentence'));
     var top = el('div', 'row'); top.style.margin = '10px 0';
@@ -891,6 +1019,128 @@ footer p{margin:0 0 8px}
     box.appendChild(check); box.appendChild(out); box.appendChild(tally);
   }
 
+  // ---------- interview practice: understanding the questions on Form N-400 ----------
+  var ideck = [], iat = 0, iload = false;
+  function meaning(w){
+    for (var i = 0; i < I.vocab.length; i++) if (I.vocab[i].w.toLowerCase() === w.toLowerCase()) return I.vocab[i];
+    return null;
+  }
+  function wordList(parent, words){
+    var ul = el('ul', 'words');
+    words.forEach(function(v){
+      var li = el('li'); li.appendChild(el('b', '', v.w)); li.appendChild(document.createTextNode(': ' + v.m));
+      li.appendChild(el('span', 'tagline', v.src === 'form' ? 'form' : v.src === 'uscis' ? 'USCIS' : v.src === 'instructions' ? 'instructions' : 'plain words'));
+      if (v.ex) li.appendChild(el('p', 'tally', v.ex + ' = ' + v.same));
+      ul.appendChild(li);
+    });
+    parent.appendChild(ul);
+  }
+  function lines(box, intro, items){
+    box.textContent = '';
+    box.appendChild(el('p', 'sub', intro));
+    var ul = el('ul', 'words');
+    items.forEach(function(t){
+      var li = el('li'), row = el('div', 'row'); row.style.justifyContent = 'space-between'; row.style.flexWrap = 'nowrap';
+      row.appendChild(el('span', '', t));
+      if (CAN_SPEAK) { var b = btn('btn small', '🔊', function(){ say(t); }); b.setAttribute('aria-label', 'Hear: ' + t); row.appendChild(b); }
+      li.appendChild(row); ul.appendChild(li);
+    });
+    box.appendChild(ul);
+  }
+  function ideal(){ var g = $('igroup').value; ideck = I.yesno.filter(function(q){ return !g || q.group === g; }); iat = 0; }
+  function yesno(box){
+    var had = box.contains(document.activeElement);
+    box.textContent = '';
+    if (iat >= ideck.length) iat = 0;
+    var q = ideck[iat], known = ideck.filter(function(x){ return P.iv[x.n] === 1; }).length;
+    var meta = el('div', 'meta'); meta.appendChild(el('span', '', (iat + 1) + ' of ' + ideck.length + '  ·  Item ' + q.n)); meta.appendChild(el('span', '', q.group));
+    box.appendChild(meta);
+    box.appendChild(el('p', 'lq', q.q));
+    if (q.note) { var fn = el('div', 'note'); fn.appendChild(el('b', '', 'The form adds: ')); fn.appendChild(document.createTextNode(q.note)); box.appendChild(fn); }
+    var more = el('div'); more.hidden = true;
+    if (q.plain) { var y = el('div', 'why'); y.appendChild(el('b', '', 'In plain words')); y.appendChild(document.createTextNode(q.plain)); more.appendChild(y); }
+    var ws = (/\bEVER\b/.test(q.q) ? ['EVER'] : []).concat(q.words || []).map(meaning).filter(Boolean);
+    if (ws.length) wordList(more, ws);
+    if (!q.plain && !ws.length) more.appendChild(el('p', 'sub', 'This question is already in plain words.'));
+    var top = el('div', 'row');
+    var show = btn('btn go', 'What does it mean?', function(){ more.hidden = !more.hidden; show.textContent = more.hidden ? 'What does it mean?' : 'Hide the meaning'; });
+    top.appendChild(show);
+    if (CAN_SPEAK) { var h = btn('btn', '🔊 Hear it', function(){ say(q.q, 0.85); }); top.appendChild(h); }
+    box.appendChild(top); more.style.marginTop = '14px'; box.appendChild(more);
+    var g = el('div', 'row two'); g.style.marginTop = '12px';
+    g.appendChild(btn('btn bad', 'Study again', function(){ P.iv[q.n] = 0; save(); iat++; yesno(box); }));
+    g.appendChild(btn('btn good', '✓ I understand it', function(){ P.iv[q.n] = 1; save(); iat++; yesno(box); }));
+    box.appendChild(g);
+    var nav = el('div', 'row two nav');
+    var prev = btn('btn prev', '← Previous', function(){ iat--; yesno(box); }); prev.disabled = iat === 0;
+    nav.appendChild(prev); nav.appendChild(btn('btn next', 'Next →', function(){ iat++; yesno(box); }));
+    box.appendChild(nav);
+    box.appendChild(el('p', 'tally', 'You understand ' + known + ' of these ' + ideck.length + ' questions' + (P.iv[q.n] === 1 ? ', including this one.' : '.')));
+    if (had) show.focus({ preventScroll: true });
+  }
+  function interview(){
+    var box = $('icard'), mode = $('imode').value;
+    if (!I) {
+      if (iload) return;
+      iload = true;
+      box.textContent = 'Loading…';
+      load('interview.json').then(function(d){
+        I = d; hit('quiz-interview');
+        var seen = []; I.yesno.forEach(function(q){ if (seen.indexOf(q.group) < 0) { seen.push(q.group); $('igroup').appendChild(new Option(q.group, q.group)); } });
+        ideal(); interview();
+      }).catch(function(){ iload = false; box.textContent = 'The interview practice could not be loaded. Please check your connection and try again.'; });
+      return;
+    }
+    $('igroupwrap').hidden = mode !== 'yesno';
+    box.hidden = mode === 'reading' || mode === 'writing'; $('rcard').hidden = mode !== 'reading'; $('wcard').hidden = mode !== 'writing';
+    if (mode === 'reading') { if (!$('rcard').firstChild) reading(); return; }
+    if (mode === 'writing') { if (!$('wcard').firstChild) writing(); return; }
+    if (mode === 'yesno') return yesno(box);
+    if (mode === 'about') return lines(box, 'Examples of what the officer may ask about the first parts of your form. These are not an official script. Your answers must match what you wrote, so re-read your own form.', I.about.map(function(a){ return a.q; }));
+    if (mode === 'commands') return lines(box, 'Things the officer may tell you to do. These ten are from the USCIS exercise "Understanding Commands for the Naturalization Interview".', I.commands);
+    box.textContent = '';
+    if (mode === 'words') { box.appendChild(el('p', 'sub', I.vocab.length + ' words and phrases you may hear, in alphabetical order.')); wordList(box, I.vocab.slice().sort(function(a, b){ return a.w.toLowerCase() < b.w.toLowerCase() ? -1 : 1; })); return; }
+    box.appendChild(el('p', 'sub', 'You take this oath at your naturalization ceremony. The officer may ask whether you understand it and are willing to take it.'));
+    box.appendChild(el('p', 'oath', I.oath.text));
+    if (CAN_SPEAK) box.appendChild(btn('btn', '🔊 Hear the oath', function(){ say(I.oath.text, 0.85); }));
+    var y = el('div', 'why'); y.style.marginTop = '14px'; y.appendChild(el('b', '', 'In plain words'));
+    var ul = el('ul', 'answers'); I.oath.plain.forEach(function(t){ ul.appendChild(el('li', '', t)); }); y.appendChild(ul); box.appendChild(y);
+  }
+  $('imode').addEventListener('change', interview);
+  $('igroup').addEventListener('change', function(){ ideal(); interview(); });
+
+  // ---------- the ten steps, drawn from steps.json (the saved picture is drawn from the same file) ----------
+  var R = null, rload = false;
+  function road(){
+    var box = $('road');
+    if (box.firstChild) return;
+    if (!R) {
+      if (rload) return;
+      rload = true;
+      load('steps.json').then(function(d){ R = d; road(); }).catch(function(){ rload = false; box.textContent = 'The picture could not be loaded.'; });
+      return;
+    }
+    box.setAttribute('role', 'list'); box.setAttribute('aria-label', 'The ten steps to naturalization');
+    R.phases.forEach(function(ph, i){
+      var g = el('div', 'phase p' + i);
+      g.appendChild(el('p', 'ph', ph.name));
+      ph.steps.forEach(function(st){
+        var row = el('div', 'stp'), txt = el('div'); row.setAttribute('role', 'listitem');
+        row.appendChild(el('span', 'no', st.n)); 
+        txt.appendChild(el('b', '', st.t)); txt.appendChild(el('small', '', st.d));
+        if (st.k) txt.appendChild(el('span', 'key', st.k));
+        row.appendChild(txt); g.appendChild(row);
+      });
+      box.appendChild(g);
+    });
+  }
+  if (navigator.share) {
+    $('shareroad').hidden = false;
+    $('shareroad').addEventListener('click', function(){
+      navigator.share({ title: 'The road to U.S. citizenship', text: 'The 10 official steps from green card to citizen, in one picture.', url: location.origin + location.pathname.replace(/[^/]*$/, '') + 'naturalization-steps.png' }).catch(function(){});
+    });
+  }
+
   // ---------- tabs ----------
   var cur = 'practice';
   function tab(name){
@@ -901,7 +1151,7 @@ footer p{margin:0 0 8px}
       b.setAttribute('aria-selected', on);
       if (on) bar.scrollLeft = b.offsetLeft - (bar.clientWidth - b.clientWidth) / 2;   // keep the chosen tab in view
     });
-    ['learn', 'practice', 'mock', 'list', 'progress', 'english', 'interview', 'prep'].forEach(function(n){ $(n).hidden = n !== name; });
+    ['learn', 'practice', 'mock', 'list', 'progress', 'interview', 'prep'].forEach(function(n){ $(n).hidden = n !== name; });
     render();
     var top = $('tabtop').getBoundingClientRect().top;
     if (top < 0) window.scrollBy(0, top);   // bring the start of the new tab into view
@@ -918,8 +1168,9 @@ footer p{margin:0 0 8px}
     if (cur === 'mock' && !T) { if (LAST) mockResult(); else mockHome(); }
     if (cur === 'mock' && T) mockNext();
     if (cur === 'list') list();
+    if (cur === 'interview') interview();
+    if (cur === 'prep') road();
     if (cur === 'progress') progress();
-    if (cur === 'english' && !$('rcard').firstChild) { reading(); writing(); hit('quiz-english'); }
   }
   Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function(b){
     var name = b.getAttribute('data-tab');
@@ -938,11 +1189,15 @@ footer p{margin:0 0 8px}
     topics().forEach(function(t){ $('topic').appendChild(new Option(t, t)); });
     if (P.loc.zip) $('zip').value = P.loc.zip;
     $('slow').checked = !!P.slow;
-    renderYou(); deal(); render(); edge();
+    var want = location.hash.slice(1);
+    renderYou(); deal();
+    if (want && $('tab-' + want)) tab(want); else { render(); edge(); }
     if (place()) $('youd').open = false;   // already filled in on an earlier visit
   }).catch(function(){
     $('pcard').textContent = 'The questions could not be loaded. Please check your connection and reload.';
   });
+
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(function(){});
 
   var counted = false;
   try { counted = sessionStorage.getItem('gc-quiz') === '1'; sessionStorage.setItem('gc-quiz', '1'); } catch (e) {}

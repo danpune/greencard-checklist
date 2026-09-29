@@ -1,0 +1,89 @@
+{
+ "title": "The road to U.S. citizenship",
+ "sub": "The 10 official steps, from green card to citizen",
+ "source": "Steps from USCIS, “10 Steps to Naturalization”. Not legal advice.",
+ "url": "danpune.github.io/greencard-checklist",
+ "checked": "September 2026",
+ "phases": [
+  {
+   "name": "Before you apply",
+   "steps": [
+    {
+     "n": 1,
+     "t": "Determine if you are already a U.S. citizen",
+     "d": "Some people are already citizens through a parent. If that is not you, go to the next step.",
+     "k": ""
+    },
+    {
+     "n": 2,
+     "t": "Determine if you are eligible to become a U.S. citizen",
+     "d": "Usually 5 years as a permanent resident, or 3 if you are married to and living with a U.S. citizen.",
+     "k": "You may file 90 days early"
+    },
+    {
+     "n": 3,
+     "t": "Prepare your Form N-400",
+     "d": "Read the instructions and collect your documents, such as travel dates, addresses, jobs and tax transcripts.",
+     "k": "Keep a copy for your interview"
+    }
+   ]
+  },
+  {
+   "name": "Apply",
+   "steps": [
+    {
+     "n": 4,
+     "t": "Submit your Form N-400 and pay your fees",
+     "d": "File online or on paper. USCIS sends you a receipt notice.",
+     "k": "$710 online · $760 on paper"
+    },
+    {
+     "n": 5,
+     "t": "Go to your biometrics appointment, if applicable",
+     "d": "If USCIS needs your fingerprints and photo, it sends you an appointment notice.",
+     "k": "Only if USCIS asks"
+    }
+   ]
+  },
+  {
+   "name": "Interview and decision",
+   "steps": [
+    {
+     "n": 6,
+     "t": "Complete the interview",
+     "d": "An officer goes through your application under oath and gives you the English and civics tests. Bring your appointment notice.",
+     "k": "Civics: 12 right, of up to 20"
+    },
+    {
+     "n": 7,
+     "t": "Receive a decision from USCIS on your Form N-400",
+     "d": "Granted, continued or denied. Continued means USCIS needs more documents, or you retake a test 60 to 90 days later.",
+     "k": "Decision within 120 days"
+    }
+   ]
+  },
+  {
+   "name": "Become a citizen",
+   "steps": [
+    {
+     "n": 8,
+     "t": "Receive a notice to take the Oath of Allegiance",
+     "d": "The ceremony may be on the same day as your interview. If not, USCIS mails you a notice.",
+     "k": "Form N-445"
+    },
+    {
+     "n": 9,
+     "t": "Take the Oath of Allegiance to the United States",
+     "d": "Hand in your green card, take the oath, and receive your Certificate of Naturalization. You are not a citizen until you take the oath.",
+     "k": "Check your certificate for errors"
+    },
+    {
+     "n": 10,
+     "t": "Understanding U.S. citizenship",
+     "d": "Learn your rights and responsibilities as a citizen. Then apply for a passport, register to vote, and update your Social Security record.",
+     "k": "Passport · vote · Social Security"
+    }
+   ]
+  }
+ ]
+}
