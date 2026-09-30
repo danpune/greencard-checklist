@@ -28,7 +28,7 @@ A simple, mobile-friendly checklist for people who just got a U.S. green card (l
 
 ## Citizenship test practice (`civics.html`)
 
-- All 128 questions and answers of the 2025 civics test, taken from USCIS form M-1778 (09/25), in `questions.json`
+- All 128 questions and answers of the 2025 civics test, taken from USCIS M-1778 (09/25), in `questions.json`
 - Practice cards with self-grading and a read-aloud button, a mock test that stops when the result is decided (20 questions, 12 to pass; 65/20: 10 and 6), a list of missed questions, and progress by topic
 - Flash cards that turn over, a full-screen view, and an auto-play mode that goes through the questions on its own and keeps the screen awake
 - Previous and Next on every card, a card you miss comes back a few cards later, and you can hear the question or the answer, at normal or slow speed
