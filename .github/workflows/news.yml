@@ -17,6 +17,9 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v5
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6 (SHA-pinned)
+        with:
+          python-version: "3.12"   # ubuntu-latest moves to Ubuntu 26 on 2026-10-19; keep the scripts on a known Python
       - run: python3 update_news.py
       # one script failing must not stop the other, or the commit; the run still ends red
       - if: ${{ !cancelled() }}
@@ -33,4 +36,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v5
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6 (SHA-pinned)
+        with:
+          python-version: "3.12"   # ubuntu-latest moves to Ubuntu 26 on 2026-10-19; keep the scripts on a known Python
       - run: python3 check_links.py
