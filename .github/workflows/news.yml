@@ -11,15 +11,12 @@ concurrency:
 jobs:
   news:
     if: github.event.schedule != '43 12 * * 1'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # not -latest: uscis.gov answers this image's system python3, but 403s setup-python's build
     timeout-minutes: 5
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6 (SHA-pinned)
-        with:
-          python-version: "3.12"   # ubuntu-latest moves to Ubuntu 26 on 2026-10-19; keep the scripts on a known Python
       - run: python3 update_news.py
       # one script failing must not stop the other, or the commit; the run still ends red
       - if: ${{ !cancelled() }}
@@ -32,11 +29,8 @@ jobs:
           git diff --cached --quiet || (git commit -m "Refresh news and officials" && git push)
   links:
     if: github.event.schedule != '17 12 * * *'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # not -latest: uscis.gov answers this image's system python3, but 403s setup-python's build
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6 (SHA-pinned)
-        with:
-          python-version: "3.12"   # ubuntu-latest moves to Ubuntu 26 on 2026-10-19; keep the scripts on a known Python
       - run: python3 check_links.py
