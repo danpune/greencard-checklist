@@ -52,3 +52,7 @@ A simple, mobile-friendly checklist for people who just got a U.S. green card (l
 ## Disclaimer
 
 This is not legal advice. It's an unofficial, community-made checklist and isn't connected to USCIS or any government agency. Rules and fees change, so always check the official links or talk to an immigration attorney. Last reviewed September 2026.
+
+## Licence
+
+The answer explanations in `why.json` are MIT licensed (copyright 2026 danpune), the same terms as the [Civics Test screen saver](https://github.com/danpune/civics-screensaver/blob/main/LICENSE) that shows them. The 128 questions and answers are a U.S. government work (USCIS M-1778) and are not under copyright in the United States.
